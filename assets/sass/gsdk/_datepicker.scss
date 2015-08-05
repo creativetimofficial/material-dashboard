@@ -1,0 +1,221 @@
+/*!
+ * Datepicker for Bootstrap
+ *
+ * Copyright 2012 Stefan Petre
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ */
+ 
+/*  
+ *
+ *   SCSS by Creative Tim
+ *   http://www.creative-tim.com
+ *   
+ */
+ 
+.datepicker {
+    top: 0;
+    left: 0;
+    padding: 4px;
+    margin-top: 1px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    
+    > div {
+      display: none;
+    }
+    
+    table {
+         width: 100%;
+         margin: 0;
+    }
+    
+    td,
+    th {
+        text-align: center;
+        width: 20px;
+        height: 20px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+    }  
+    
+    td{
+        border-top: 1px solid $medium-gray;
+        text-align: center;   
+        p{
+            font-size: $font-size-small;
+            font-weight: $font-weight-normal;            
+            border-radius: 50%;
+            height: 29px;
+            line-height: 29px;
+            margin: 3px 0 8px;
+            width: 29px;
+        }
+        :hover{
+            cursor: pointer;
+        }
+    }
+    
+    th{
+         font-weight: $font-weight-light;
+          
+         &.switch-datepicker{
+             font-size: $font-paragraph;
+        }
+    }
+    
+    .prev p, 
+    .next p{
+        font-size: $font-size-h3;
+    }
+    
+    p:hover{
+         background: #eeeeee;
+    }
+    
+    .day.disabled {
+         color: #eeeeee;
+    }
+
+    td.old,
+    td.new {
+        color: #999999;
+        border-top: 0;
+    }
+    
+    td.active p,
+    td.active:hover p{
+        color: #ffffff;
+        background-color: $info-color;
+    }
+    
+    td.blue p,
+    td.blue:hover p{
+      background-color: $primary-color;
+    }
+    td.azure p,
+    td.azure:hover p{
+      background-color: $info-color;
+    }
+    td.green p,
+    td.green:hover p{
+      background-color: $success-color;
+    }
+    td.orange p,
+    td.orange:hover p{
+      background-color: $warning-color;
+    }
+    td.red p,
+    td.red:hover p{
+      background-color: $danger-color;
+    }
+    
+    span {
+        display: block;
+        width: 55px;
+        height: 54px;
+        line-height: 54px;
+        float: left;
+        margin: 2px;
+        cursor: pointer;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        
+        &.old {
+            color: #999999;
+        }
+    }
+    span.active,
+    span:focus,
+    span:hover,
+    span:active {
+        background-color: $info-color;
+    }
+    span.active{
+        color: #FFFFFF;
+    }
+    span:hover {
+        background: #eeeeee;
+    }
+    span.blue,
+    span.blue:hover{
+        background-color: $primary-color;
+    }
+    span.azure,
+    span.azure:hover{
+        background-color: $info-color;
+    }
+    span.green,
+    span.green:hover{
+        background-color: $success-color;
+    }
+    span.orange,
+    span.orange:hover{
+        background-color: $warning-color;
+    }
+    span.red,
+    span.red:hover{
+        background-color: $danger-color;
+    }
+    th.switch-datepicker {
+      width: 145px;
+    }
+    th.next,
+    th.prev {
+      font-size: 21px;
+    }
+    thead tr:first-child th {
+      cursor: pointer;
+    }
+    thead tr:first-child th:hover {
+      background: #eeeeee;
+    }
+    
+    &.dropdown-menu{    
+        border-radius: $border-radius-bottom; 
+        @include box-shadow(none);
+        @include transform-origin(none);
+        @include transform-scale(1);
+        @include transition($fast-transition-time, $transition-linear);
+        margin-top: -20px;
+    }
+    
+    &.dropdown-menu.open{
+        @include opacity(1);
+        visibility: visible;
+        margin-top: -1px;
+    } 
+    
+    .table-condensed > tbody > tr > td{
+        padding: 2px;
+    }
+    
+    .table-condensed > thead > tr > th{
+        padding: 0;
+    }
+}
+
+.input-append.date .add-on i,
+.input-prepend.date .add-on i {
+  display: block;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+}
+
+.datepicker-months thead{
+    padding: 0 0 3px;
+    display: block;
+}
+
+
+
+
+
+
+
+

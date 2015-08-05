@@ -1,0 +1,106 @@
+.table{
+   > thead > tr > th{
+       border-bottom-width: 1px;
+       font-size: $font-size-h5;
+       font-weight: $font-weight-light;
+   }  
+   
+   .radio,
+   .checkbox{
+       margin-top: 0;
+       margin-bottom: 0;
+       padding: 0;
+       width: 15px;
+   }
+   > thead > tr > th,
+   > tbody > tr > th,
+   > tfoot > tr > th,
+   > thead > tr > td,
+   > tbody > tr > td,
+   > tfoot > tr > td{
+       padding: 12px 8px;
+       vertical-align: middle;
+   }
+
+   .th-description{
+       max-width: 150px;
+   }
+   .td-price{
+       font-size: 26px;
+       font-weight: $font-weight-light;
+       margin-top: 5px;
+       text-align: right;
+   }
+   .td-total{
+        font-weight: $font-weight-bold;
+        font-size: $font-size-h5;
+        padding-top: 20px;
+        text-align: right;
+    }
+    
+   .td-actions .btn{
+        @include opacity(0.36);
+    
+        &.btn-xs{
+            padding-left: 3px;
+            padding-right: 3px;
+        }
+    }
+    
+    > tbody > tr{
+        position: relative;
+        
+        &:hover{
+            .td-actions .btn{
+                @include opacity(1);
+            }
+        }
+    }
+} 
+
+.table-shopping{
+    > thead > tr > th{
+        font-size: $font-size-h6;
+        text-transform: uppercase;
+        color: $dark-gray;
+        font-weight: $font-weight-normal;
+    }
+    > tbody > tr > td{
+        font-size: $font-paragraph;
+        
+        b{
+            display: block;
+            margin-bottom: 5px;
+        }
+    } 
+    .td-name,
+    .td-number{
+       font-weight: $font-weight-light;
+       font-size: $font-size-h4;
+   }
+    .td-name{
+        min-width: 200px;
+    }
+    .td-number{
+        text-align: right;
+        min-width: 70px;
+        
+        small{
+            margin-right: 3px;
+        }
+    }
+    
+    .img-container{
+        width: 120px;
+        height: 120px;
+        overflow: hidden;
+        display: block;
+        
+        border-radius: $border-radius-large;
+        
+        img{
+            width: 100%;
+        }    
+    }
+}
+

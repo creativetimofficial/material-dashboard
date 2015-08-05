@@ -1,0 +1,115 @@
+/*     General overwrite     */
+body{
+    font-family: "Helvetica Neue","Open Sans",Arial,sans-serif;
+}
+a{
+  color: $info-color;
+    
+  &:hover, &:focus{
+     color: $info-states-color; 
+     text-decoration: none; 
+  }
+}
+
+a:focus, a:active, 
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+select::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {
+    outline : 0;
+}
+.ui-slider-handle:focus,
+.navbar-toggle {
+    outline : 0 !important;
+}
+
+/*           Animations              */
+.form-control, 
+.input-group-addon, 
+.tagsinput,
+.navbar,
+.navbar .alert{
+    @include transition($general-transition-time, linear);
+}
+.tagsinput .tag,
+.tagsinput-remove-link,
+.filter,
+.btn-hover,
+[data-toggle="collapse"] i{
+    @include transition($fast-transition-time, linear);
+}
+ 
+.btn-morphing .fa,
+.btn-morphing .circle,
+.gsdk-collapse{
+    @include transition($slow-transition-time, linear);
+}
+
+.fa{
+    width: 18px;
+    text-align: center;
+}
+.margin-top{
+    margin-top: 50px;
+}
+
+
+/*       CT colors          */
+.ct-blue, 
+.checkbox-blue.checkbox.checked .second-icon,
+.checkbox-blue.checkbox.checked, 
+.radio-blue.radio.checked .second-icon,
+.radio-blue.radio.checked{
+    color: $primary-color;
+}
+.ct-azure,
+.checkbox-azure.checkbox.checked .second-icon,
+.radio-azure.radio.checked .second-icon,
+.checkbox-azure.checkbox.checked, 
+.radio-azure.radio.checked{
+    color: $info-color;
+}
+.ct-green, 
+.checkbox-green.checkbox.checked .second-icon, 
+.radio-green.radio.checked .second-icon, 
+.checkbox-green.checkbox.checked, 
+.radio-green.radio.checked{
+    color: $success-color;
+}
+.ct-orange, 
+.checkbox-orange.checkbox.checked .second-icon, 
+.radio-orange.radio.checked .second-icon, 
+.checkbox-orange.checkbox.checked, 
+.radio-orange.radio.checked{
+    color: $warning-color;
+}
+.ct-red, 
+.checkbox-red.checkbox.checked .second-icon, 
+.radio-red.radio.checked .second-icon, 
+.checkbox-red.checkbox.checked, 
+.radio-red.radio.checked{
+    color: $danger-color;
+}
+input.ct-blue + span.switch-left, 
+input.ct-blue + span + label + span.switch-right{
+    background-color:  $primary-color;
+}
+input.ct-azure + span.switch-left, 
+input.ct-azure + span + label + span.switch-right{
+    background-color:  $info-color;
+}
+input.ct-green + span.switch-left, 
+input.ct-green + span + label + span.switch-right{
+    background-color:  $success-color;
+}
+input.ct-orange + span.switch-left, 
+input.ct-orange + span + label + span.switch-right{
+    background-color:  $warning-color;
+}
+input.ct-red + span.switch-left, 
+input.ct-red + span + label + span.switch-right{
+    background-color:  $danger-color;
+}
+

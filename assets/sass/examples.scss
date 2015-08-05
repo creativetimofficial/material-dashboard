@@ -1,0 +1,403 @@
+// general small theme changes for all examples
+
+.section-title{
+    font-weight: 300;
+    display: inline-block;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #CCCCCC; 
+    color: #999;   
+}
+.section-sub-title{
+    font-style: italic;
+}
+.section-gray{
+    border-top: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;
+}
+.section-faq{
+    padding: 50px 0;
+    .section-title{
+        margin-bottom: 30px;
+    }
+    .row{
+        margin-bottom: 30px;
+    }
+}
+.space-50{
+    height: 50px;
+    display: block;
+}
+.space{
+    height: 100px;
+    display: block;
+}
+.parallax{
+  width:100%;
+  height:570px;
+  overflow: hidden;
+  display: block;
+}
+.parallax .small-info{
+    color: #FFFFFF;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.27);
+    top: 37%;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 2;
+}
+.parallax .small-info h3{
+    max-width: 790px;
+    margin: 0 auto;
+    line-height: 1.4;
+}
+.parallax .parallax-image img{
+    width: 100%;
+    position: relative;
+}
+
+.big-map{
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: relative;
+}
+.big-info{
+    margin-bottom: 60px;
+}
+
+.filter-black{
+    position: relative;
+}
+.filter-black:after{
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 1;
+    background-color: rgba(0,0,0,.66);
+    content: "";
+}
+.section-blog{
+    .card-background .image{
+        height: 440px;
+    }    
+}
+.container{
+    .about-us &,
+    .contact-us &,
+    .pricing &,
+    .blog-page &,
+    .ecommerce &,
+    .home &,
+    .product-page &,
+    .blog-post &{
+        max-width: 970px;
+    }
+}
+
+
+@media (max-width: 768px){
+    .parallax .parallax-image{
+         width: 100%;
+         height: 640px;
+         overflow: hidden;
+     }
+    .parallax .parallax-image img{
+       height: 100%;
+       width: auto;
+   }
+   .parallax .small-info {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    padding: 5px;
+    font-size: 20px !important ;
+   }
+}
+
+// theme changes for about us
+.about-us{
+    .team-presentation{
+        margin: 30px 0;
+    }
+    .clients-presentation{
+        margin: 30px 0;
+    }
+    .card-user{
+        margin: 70px 0px 0;
+    }
+    .hr-small{
+        margin: 15px 0;
+    }
+    .copyright a{
+        color: #FFFFFF;
+    }
+    .info .icon{
+        background: transparent;
+    }
+    .icon [class*="pe-"]{
+        color: #CCCCCC;
+        font-size: 74px;
+    }
+}
+
+// theme changes for contact us
+.contact-us{
+    .navbar-transparent{
+        background-color: rgba(0,0,0,.55);
+        padding: 0;
+    }
+    .parallax{
+        height: 500px;
+    }
+    .contact-info p{
+        font-size: 15px;
+    }
+    .company-description{
+        position: absolute;
+        right: 0;
+        top:220px;
+        background-color: rgba(0,0,0,.6);
+        z-index: 3;
+        padding: 20px 60px 20px 20px;
+        border-radius: 6px 0 0 6px;
+        color: #FFFFFF;
+
+        h4{
+            margin: 0;
+        }
+    }
+}
+
+// theme changes for blog page
+
+.blog-page{
+    .card{
+        margin-bottom: 60px;
+    }
+    .section-title{
+        margin-bottom: 40px;
+    }
+}
+
+// theme changes for ecommerce
+.ecommerce{
+    .section{
+        padding: 20px 0;
+    }
+    .section-title{
+        margin-bottom: 30px;
+    }
+    .footer-default{
+         border-top: 1px solid #e5e5e5
+    }
+}
+
+// theme changes for home
+.home{
+    .section-features-1{
+         .info .icon{
+             background: transparent;
+         }
+         .icon i{
+            color: #2ca8ff;
+            font-size: 80px;
+         }
+         .icon [class*="pe-7s-"]{
+             width: auto;
+             height: auto;
+         }
+    }
+    .section-features-2{
+        .info .icon{
+            margin-bottom: 10px;
+        }
+    }
+    .section-description{
+         h5{
+             margin-top: 40px;
+         }
+    }
+    
+    .img-container{
+        border-radius: 10px;  
+        overflow: hidden;
+        
+        img{
+            width: 100%;
+        }
+    }
+    
+    .section-testimonials{
+        .carousel-control{
+            left: -70px;
+            
+            .fa{
+                top: 40%;
+            }
+        }
+        .carousel-control.right{
+            right: -40px;
+            left: auto;
+        }
+    }
+    
+    .section-clients{
+        padding: 50px 0;
+        
+        .info .icon{
+             background: transparent;
+         }
+         .icon i{
+            color: #AAAAAA;
+         }
+         h3{
+             margin-top: 10px;
+         }
+    }
+    .social-line{
+        border-bottom: 1px solid #dddddd;
+    }
+    .carousel-indicators{
+        bottom: 0;
+    }
+    .carousel-indicators li{
+        margin:  1px 10px;
+        border-color: #00bbff;
+    }
+    .carousel-indicators .active{
+        background-color: #00bbff;
+    }
+    .carousel-inner > .item > img,
+    .carousel-inner > .item > a > img {
+        display: block;
+        margin: 0 auto;
+        height: auto;
+        border-radius: 10px;
+    }
+    .carousel.fade {
+      opacity: 1;
+    }
+    .carousel.fade .item {
+      -moz-transition: opacity ease-in-out .7s;
+      -o-transition: opacity ease-in-out .7s;
+      -webkit-transition: opacity ease-in-out .7s;
+      transition: opacity ease-in-out .7s;
+      left: 0 !important;
+      opacity: 0;
+      top:0;
+      position:absolute;
+      width: 100%;
+      display:block !important;
+      z-index:1;
+    }
+    .carousel.fade .item:first-child {
+      top:auto;
+      position:relative;
+    }
+    .carousel.fade .item.active {
+      opacity: 1;
+      -moz-transition: opacity ease-in-out .7s;
+      -o-transition: opacity ease-in-out .7s;
+      -webkit-transition: opacity ease-in-out .7s;
+      transition: opacity ease-in-out .7s;
+      z-index:2;
+    }    
+    
+}
+
+.product-page{
+  .tab-content{
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .nav-text {
+    margin: 10px 0 10px 0;
+    text-align: center;
+  
+    > li > a { 
+      width: 50%;
+      height: auto;
+      margin: 0 auto;
+      
+
+      img {
+        width: 100%;
+        height: auto;
+        text-align: center;
+        border-radius: 4px;
+      }
+    }
+  }
+  .product-details{
+    margin: 0 15px 15px;
+
+    .title{
+      margin-top: 0;
+      color: #333;
+      text-transform: uppercase;
+    }
+    .title, .price{
+      font-weight: 500;
+    }
+  }
+  .actions{
+    margin: 15px;
+  }
+  .container-border{
+    border-top: 1px solid #DDDDDD;
+
+    .title{
+      color: #333;
+      text-align: center;
+
+      h4{
+        font-weight: 500;
+        margin-bottom: 0;
+      }
+      p{
+        margin-bottom: 50px;
+      }
+    }
+  }
+  .viewed{
+    margin-top: 30px;
+  }
+}
+
+.blog-post{
+  .parallax{
+    height: 475px;
+  }
+  .title-blog{
+    text-align: left;
+    margin: 30px 0 15px;
+  }
+  .media-author{
+      .media-heading{
+        margin:5px 0;
+      }
+      p{
+        margin-bottom: 20px;
+      }
+  }
+  .bottom-border{
+    border-bottom: 1px solid #DDDDDD;
+  }
+  .top-border{
+    border-top: 1px solid #DDDDDD;
+  }
+  footer, .container-comments{
+    h3{
+      margin:10px 0 30px;
+    }
+  }
+}

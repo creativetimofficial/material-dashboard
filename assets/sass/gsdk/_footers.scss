@@ -1,0 +1,216 @@
+.footer{    
+    background-color: $white-color;
+    line-height: $line-height;
+        
+    nav > ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-weight: normal;
+        
+        a:not(.btn){
+            color: $dark-gray;
+            display: block;
+            margin-bottom: 3px;
+            &:hover,
+            &:focus{
+                color: $default-states-color;
+            }
+        }
+    }
+    .social-area{
+        padding: 15px 0;
+        h5{
+            padding-bottom: 15px;
+        }
+    }
+    .social-area > a:not(.btn){
+       color: $dark-gray;
+       display: inline-block;
+       vertical-align: top;
+       padding: $padding-social-a;
+       font-size: $font-size-large-navbar;
+       font-weight: normal;
+       line-height: $line-height;
+       text-align: center;
+       &:hover,
+       &:focus{
+           color: $default-states-color;
+       }
+    }
+    .copyright{
+        color: $default-states-color;
+        padding: 10px 15px;
+        margin: 15px 3px;
+        line-height: 20px;
+        text-align: center;
+    }
+    hr{
+        border-color: $medium-gray;
+    }
+    .title{
+        color: $default-states-color;
+    }
+}
+
+.footer:not(.footer-big){
+    nav > ul{
+       font-size: 16px;
+       li{
+            margin-left: 20px;
+            float: left;
+        }
+        a{
+            padding: 10px 0px;
+            margin: 15px 10px 15px 0px;
+        }
+    }
+}
+
+.footer-default{
+    background-color: $smoke-bg;
+}
+
+.footer-black,
+.footer-transparent{
+    background-color: $black-bg;
+    color: $medium-gray;
+    
+    nav > ul{
+        a{
+            color: $white-color;
+            &:hover,
+            &:focus{
+                color: $dark-gray;
+            }
+        }
+    }
+    .social-area > a:not(.btn){
+        color: $white-color;
+        &:hover,
+        &:focus{
+            color: $dark-gray;
+        }
+    }
+    .btn-social{
+        color: $white-color;
+    }
+    hr{
+        border-color: $black-hr;
+    }
+    .title{
+        color: $medium-gray;
+    }
+}
+
+.footer-transparent{
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+
+    .container{
+        z-index: 2;
+        position: relative;
+    }
+    
+    &::after{
+        @include black-filter(.8);    
+    }
+}
+
+.footer-big{
+    padding-top: 30px;
+    
+    hr{
+        margin-bottom: 0;
+        margin-top: 50px;
+    }
+    .copyright{
+        margin: 10px 0px 20px;
+    }
+    .social-area > *{
+        margin: 0 15px;
+    }
+    
+    nav > ul{ 
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-weight: normal;   
+        li{
+            float: none;
+        }
+        .btn{
+            margin-bottom: 5px;
+        }
+        .btn-social.btn-simple{
+            padding: 0 0 4px 0;
+        }
+    }
+    .form-group{
+        margin-top: 15px;
+    }
+    .numbers h4{
+        margin: $margin-bottom;
+    }
+}
+
+.social-line{
+    padding: $padding-large-vertical 0;
+    background-color: $white-color;
+    .title{
+        margin: $none;
+        line-height: $height-base;
+        font-size: $font-size-h4;
+    }
+    .btn{
+        width: 100%;
+    }
+}
+
+.social-line-black{
+    background-color: $black-bg;
+    color: #FFFFFF;
+}
+
+.subscribe-line{
+    background-color: #FFFFFF;
+    padding: 25px 0;
+    
+    .form-group{
+        margin: $none;
+    }
+    .form-control{
+         height: auto;
+         font-size: $font-size-h2;
+         border: $none;
+         padding: $none;
+         font-weight: $font-weight-light;
+         line-height: $line-height-lg;
+         background-color: $transparent-bg;
+    }
+    
+    .btn:not(.btn-lg){
+        margin-top: 7px;
+    }
+}
+
+.subscribe-line-black{
+    background-color: $black-bg;
+    
+    .form-control{
+        color: $white-color;
+    }
+}
+
+.subscribe-line-transparent{
+    @extend .footer-transparent;
+    .form-control{
+        color: $white-color;
+    }
+}
+
+
+
+
+

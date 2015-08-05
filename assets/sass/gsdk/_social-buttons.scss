@@ -1,0 +1,76 @@
+.btn-social { 
+	//@include btn-styles($default-color, $default-states-color);
+	opacity: 0.85;
+	padding: 8px 9px;
+
+	.fa {
+		font-size: 18px;
+		vertical-align: middle;
+		display: inline-block;
+	}
+
+	&.btn-round {
+		padding: 9px 10px;
+	}
+
+	&.btn-simple {
+		padding: 9px 5px;
+		font-size: 16px;
+
+		.fa{
+			font-size: 20px;
+			position: relative;
+			top: -2px;
+			width: 24px;
+		}
+	}
+
+}
+
+.btn-facebook {
+	@include social-buttons-color($social-facebook);
+}
+
+.btn-twitter {
+	@include social-buttons-color($social-twitter);
+}
+
+.btn-pinterest {
+	@include social-buttons-color($social-pinterest);
+}
+
+.btn-google {
+	@include social-buttons-color($social-google);
+}
+
+.btn-linkedin {
+	@include social-buttons-color($social-linkedin);
+}
+
+.btn-dribbble {
+	@include social-buttons-color($social-dribbble);
+}
+
+.btn-github {
+	@include social-buttons-color($social-github);
+}
+
+.btn-youtube {
+	@include social-buttons-color($social-youtube);
+}
+
+.btn-stumbleupon {
+	@include social-buttons-color($social-stumbleupon);
+}
+
+.btn-reddit {
+	@include social-buttons-color($social-reddit);
+}
+
+.btn-tumblr {
+	@include social-buttons-color($social-tumblr);
+}
+
+.btn-behance{
+	@include social-buttons-color($social-behance);
+}

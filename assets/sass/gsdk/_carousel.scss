@@ -1,0 +1,15 @@
+.carousel-control{
+    width: 8%;
+}
+.carousel-control .icon-prev, .carousel-control .icon-next, .carousel-control .fa, .carousel-control .fa {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+}
+.carousel-control .fa{
+    font-size: 35px;
+}
+.carousel-control.left, .carousel-control.right {
+    background-image: none;
+}

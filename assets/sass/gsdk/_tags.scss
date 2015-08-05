@@ -1,0 +1,118 @@
+.tagsinput {
+    height: $height-base;
+    overflow-y: auto;
+    text-align: left;
+    .tag {
+        cursor: pointer;
+        overflow: hidden;   
+        position: relative;        
+        margin: 5px 3px 5px 0;
+        @include label-style();
+    }
+    
+    .tag:hover{
+        padding-left: 10px;
+        padding-right: 14px;
+    }
+    
+    .tagsinput-add {
+        color: $black-color;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 14px;
+        padding: 5px 6px;
+        margin: 5px 0 0;
+        vertical-align: top;
+        @include opacity(0.8);
+        
+        &:hover,
+        &:focus{
+            @include opacity(1);
+        }
+    }
+    .tagsinput-add:before {
+        content: "\f067";
+        font-family: "FontAwesome";
+    }
+    
+    .tagsinput-remove-link {
+        color: $default-color;
+        cursor: pointer;
+        font-size: 12px;
+        padding: 2px 0;
+        position: absolute;
+        right: 0;
+        opacity: 0;
+        text-align: right;
+        text-decoration: none;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+    }
+    .tag:hover .tagsinput-remove-link {
+        opacity: 1;
+        padding-right: 6px;
+    }
+    .tagsinput-remove-link:before {
+        content: "\f00d";
+        font-family: "FontAwesome";
+    }
+    .tagsinput-add-container {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    input{
+        background: transparent;
+        border: none;
+        color: $black-color;
+        margin: 0;
+        outline: medium none !important;
+        padding: 0 0 0 5px;
+        vertical-align: top;
+        width: 30px;
+        height: 40px;
+    }
+    
+    &.tag-blue .tag, 
+    &.tag-blue .tagsinput-remove-link{
+         @include label-color($primary-color);
+    }
+    &.tag-azure .tag,
+    &.tag-azure .tagsinput-remove-link{
+         @include label-color($info-color);
+    }
+    &.tag-green .tag,
+    &.tag-green .tagsinput-remove-link{
+         @include label-color($success-color);
+    }
+    &.tag-orange .tag,
+    &.tag-orange .tagsinput-remove-link{
+         @include label-color($warning-color);
+    }
+    &.tag-red .tag,
+    &.tag-red .tagsinput-remove-link{
+         @include label-color($danger-color);
+    }
+    
+    &.tag-fill{
+        &.tag-blue .tag{
+            @include label-color-fill($primary-color);
+        }
+        &.tag-azure .tag{
+            @include label-color-fill($info-color);
+        }
+        &.tag-green .tag{
+            @include label-color-fill($success-color);
+        }
+        &.tag-orange .tag{
+            @include label-color-fill($warning-color);
+        }
+        &.tag-red .tag{
+            @include label-color-fill($danger-color);
+        }
+    } 
+    &.tag-fill .tagsinput-remove-link{
+        color: $white-color;
+    }
+       
+}
