@@ -1,0 +1,187 @@
+/*     General overwrite     */
+body,
+.wrapper{
+    min-height: 100vh;
+    position: relative;
+}
+a{
+  color: $info-color;
+    
+  &:hover, &:focus{
+     color: $info-states-color; 
+     text-decoration: none; 
+  }
+}
+
+a:focus, a:active, 
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+select::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {
+    outline : 0;
+}
+.ui-slider-handle:focus,
+.navbar-toggle {
+    outline : 0 !important;
+}
+
+/*           Animations              */
+.form-control, 
+.input-group-addon, 
+.tagsinput,
+.navbar,
+.navbar .alert{
+    @include transition($general-transition-time, $transition-linear);
+}
+
+.sidebar .nav a{
+    @include transition($fast-transition-time, $transition-ease-in);
+}
+
+.fa{
+    width: 18px;
+    text-align: center;
+}
+.margin-top{
+    margin-top: 50px;
+}
+
+.wrapper{
+    position: relative;
+    top: 0;
+    height: 100%;
+}
+
+.sidebar{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 260px;
+    display: block;
+    z-index: 1;
+    color: #fff;
+    font-weight: 200;
+    background-attachment: fixed;
+    
+    @include radial-gradient($icon-blue-color-top, $icon-blue-color-bottom);
+    
+    @include icon-gradient($purple-color-2, $purple-color-1);
+    
+    .sidebar-wrapper{
+        position: relative;
+        max-height: none;
+        min-height: 100%;
+        overflow: hidden;
+        width: 260px;
+    }
+    
+    .logo{
+        padding: 7px 15px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        
+        p{
+            float: left;
+            font-size: 20px;
+            margin: 10px 10px;
+            color: #FFFFFF;
+            line-height: 20px;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+        
+        .simple-text{
+            text-transform: uppercase;
+            padding: 10px 0;
+            display: block;
+            font-size: 18px;
+            color: #FFF;
+            text-align: center;
+            font-weight: 400;
+        }
+    }
+    
+    .logo-tim{
+        border-radius: 50%;
+        border: 1px solid #333;
+        display: block;
+        height: 61px;
+        width: 61px;
+        float: left;
+        overflow: hidden;
+        
+        img{
+            width: 60px;
+            height: 60px;
+        }
+    }
+    
+    .nav{
+        margin-top: 20px;
+        
+        li{
+            > a{
+                color: #FFFFFF;
+                margin: 5px 15px;
+                opacity: .86;
+                border-radius: 4px;
+            }
+            
+            &:hover > a{
+                background: rgba(255,255,255,0.13);
+                opacity: 1;
+            }
+            
+            &.active > a{
+                color: #FFFFFF;
+                opacity: 1;
+                background: rgba(255,255,255,0.23);  
+  
+            }
+        }
+        
+        p{
+            margin: 0;
+            line-height: 30px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        i{
+            font-size: 28px;
+            float: left;
+            margin-right: 15px;
+            line-height: 30px;
+            width: 30px;
+            text-align: center;
+        }
+    }
+    
+}
+
+.main-panel{
+    background: #fff;
+    position: relative;
+    z-index: 2;
+    float: right;
+    width: calc(100% - 260px);
+    box-shadow: 0 2px 4px rgba(0,0,0,.3);
+}
+
+.sidebar,
+.main-panel{
+    overflow: auto;
+    max-height: 100%;
+    height: 100%;
+    -webkit-transition-property: top,bottom;
+    transition-property: top,bottom;
+    -webkit-transition-duration: .2s,.2s;
+    transition-duration: .2s,.2s;
+    -webkit-transition-timing-function: linear,linear;
+    transition-timing-function: linear,linear;
+    -webkit-overflow-scrolling: touch;
+}
+
+

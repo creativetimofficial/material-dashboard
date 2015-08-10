@@ -10,72 +10,119 @@
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
     
-    <link href="bootstrap3/css/bootstrap.css" rel="stylesheet" />
-    <link href="assets/css/gsdk.css" rel="stylesheet"/>
-    
-    <link href="assets/css/demo.css" rel="stylesheet" /> 
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/light-bootstrap-table.css" rel="stylesheet"/>
         
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>  
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+    
     <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
     
 </head>
-<body>
-
-<nav class="navbar navbar-ct-azure navbar-icons" role="navigation-demo">
-    <div class="container">    
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Big Icons</a>
-        </div>
-        <div class="collapse navbar-collapse" id="navigation-example-2">       
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                   <a href="">
-                        <i class="pe-7s-search"></i>
-                        <p>Search</p>
-                    </a>
-                </li>
-                <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="pe-7s-home"></i>
-                            <p>Home
-                            <b class="caret"></b>
-                        </p>
-                      </a>
-                      <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                      </ul>
-                </li>
-                 <li>
-                   <a href="" >
-                        <i class="pe-7s-user"></i>
-                        <p>Account</p>
-                    </a>
-                </li>    
-            </ul>
-        </div>
-    </div>
-</nav> 
+<body> 
 
 <div class="wrapper">
-     <div class="container">    
+    <div class="sidebar">
+    	<div class="sidebar-wrapper">
+            <div class="logo">
+                <a href="http://www.creative-tim.com" class="simple-text">
+<!--
+                    <div class="logo-tim">        
+                        <img alt="New logo" src="assets/img/new_logo.png">
+                    </div>
+                    <p>Creative <br> Tim</p>
+                    <div class="clearfix"></div>
+-->
+                    Creative Tim
+                </a>
+            </div>
+                       
+            <ul class="nav">
+                <li class="active">
+                    <a href="/dashboard">
+                        <i class="pe-7s-graph"></i> 
+                        <p>Dashboard</p>
+                    </a>            
+                </li>
+                <li>
+                    <a href="/submissions">
+                        <i class="pe-7s-user"></i> 
+                        <p>User Profile</p>
+                    </a>
+                </li> 
+                <li>
+                    <a href="/downloads">
+                        <i class="pe-7s-note2"></i> 
+                        <p>Table List</p>
+                    </a>        
+                </li>
+                <li>
+                    <a href="/account">
+                        <i class="pe-7s-news-paper"></i> 
+                        <p>Typography</p>
+                    </a>        
+                </li>
+                <li>
+                    <a href="/account">
+                        <i class="pe-7s-science"></i> 
+                        <p>Icons</p>
+                    </a>        
+                </li>
+            </ul> 
+    	</div>
+    </div>
     
-         here is the content
-     </div>   
+    <div class="main-panel container-fluid">
+        <nav class="navbar navbar-default navbar-icons" role="navigation-demo">
+            <div class="container">    
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Big Icons</a>
+                </div>
+                <div class="collapse navbar-collapse" id="navigation-example-2">       
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                           <a href="">
+                                <i class="pe-7s-search"></i>
+                                <p>Search</p>
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="pe-7s-home"></i>
+                                    <p>Home
+                                    <b class="caret"></b>
+                                </p>
+                              </a>
+                              <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                              </ul>
+                        </li>
+                         <li>
+                           <a href="" >
+                                <i class="pe-7s-user"></i>
+                                <p>Account</p>
+                            </a>
+                        </li>    
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        here is the content
+    </div>   
 </div>
 
 
@@ -84,7 +131,7 @@
     <script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
 	<script src="assets/js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
 
-	<script src="bootstrap3/js/bootstrap.js" type="text/javascript"></script>
+	<script src="assets/js/bootstrap.js" type="text/javascript"></script>
 	
 	<!--  Plugins -->
 	<script src="assets/js/gsdk-checkbox.js"></script>

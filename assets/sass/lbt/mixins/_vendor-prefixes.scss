@@ -61,6 +61,18 @@
     background: -o-linear-gradient(top,  $top-color 0%,$bottom-color 100%);
     background: -ms-linear-gradient(top,  $top-color 0%,$bottom-color 100%);
     background: linear-gradient(to bottom,  $top-color 0%,$bottom-color 100%);
+    background-size: 300% 300%;
+}
+
+@mixin radial-gradient($extern-color, $center-color){
+    background: $extern-color;
+    background: -moz-radial-gradient(center, ellipse cover, $center-color 0%, $extern-color 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,$center-color), color-stop(100%,$extern-color)); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover, $center-color 0%,$extern-color 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover, $center-color 0%,$extern-color 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover, $center-color 0%,$extern-color 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center, $center-color 0%,$extern-color 100%); /* W3C */
+    background-size: 550% 450%;
 }
 
 @mixin vertical-align {
