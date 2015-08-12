@@ -61,7 +61,7 @@
     background: -o-linear-gradient(top,  $top-color 0%,$bottom-color 100%);
     background: -ms-linear-gradient(top,  $top-color 0%,$bottom-color 100%);
     background: linear-gradient(to bottom,  $top-color 0%,$bottom-color 100%);
-    background-size: 300% 300%;
+    background-size: 150% 150%;
 }
 
 @mixin radial-gradient($extern-color, $center-color){

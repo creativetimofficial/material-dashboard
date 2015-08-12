@@ -1,519 +1,230 @@
-.ct-chart .ct-label {
-  fill: rgba(0, 0, 0, 0.4);
-  font-size: 14px;
+@mixin ct-responsive-svg-container($width: 100%, $ratio: $ct-container-ratio) {
+  display: block;
+  position: relative;
+  width: $width;
+
+  &:before {
+    display: block;
+    float: left;
+    content: "";
+    width: 0;
+    height: 0;
+    padding-bottom: $ratio * 100%;
+  }
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  > svg {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
-.ct-chart .ct-grid {
-  stroke: rgba(0, 0, 0, 0.2);
-  stroke-width: 1px;
-  stroke-dasharray: 2px;
+
+@mixin ct-align-justify($ct-text-align: $ct-text-align, $ct-text-justify: $ct-text-justify) {
+  -webkit-box-align: $ct-text-align;
+  -webkit-align-items: $ct-text-align;
+  -ms-flex-align: $ct-text-align;
+  align-items: $ct-text-align;
+  -webkit-box-pack: $ct-text-justify;
+  -webkit-justify-content: $ct-text-justify;
+  -ms-flex-pack: $ct-text-justify;
+  justify-content: $ct-text-justify;
+  // Fallback to text-align for non-flex browsers
+  @if($ct-text-justify == 'flex-start') {
+    text-align: left;
+  } @else if ($ct-text-justify == 'flex-end') {
+    text-align: right;
+  } @else {
+    text-align: center;
+  }
 }
-.ct-chart .ct-point {
-  stroke-width: 10px;
-  stroke-linecap: round;
+
+@mixin ct-flex() {
+  // Fallback to block
+  display: block;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
 }
-.ct-chart .ct-line {
+
+@mixin ct-chart-label($ct-text-color: $ct-text-color, $ct-text-size: $ct-text-size, $ct-text-line-height: $ct-text-line-height) {
+  fill: $ct-text-color;
+  color: $ct-text-color;
+  font-size: $ct-text-size;
+  line-height: $ct-text-line-height;
+}
+
+@mixin ct-chart-grid($ct-grid-color: $ct-grid-color, $ct-grid-width: $ct-grid-width, $ct-grid-dasharray: $ct-grid-dasharray) {
+  stroke: $ct-grid-color;
+  stroke-width: $ct-grid-width;
+
+  @if ($ct-grid-dasharray) {
+    stroke-dasharray: $ct-grid-dasharray;
+  }
+}
+
+@mixin ct-chart-point($ct-point-size: $ct-point-size, $ct-point-shape: $ct-point-shape) {
+  stroke-width: $ct-point-size;
+  stroke-linecap: $ct-point-shape;
+}
+
+@mixin ct-chart-line($ct-line-width: $ct-line-width, $ct-line-dasharray: $ct-line-dasharray) {
   fill: none;
-  stroke-width: 3px;
+  stroke-width: $ct-line-width;
+
+  @if ($ct-line-dasharray) {
+    stroke-dasharray: $ct-line-dasharray;
+  }
 }
-.ct-chart .ct-area {
+
+@mixin ct-chart-area($ct-area-opacity: $ct-area-opacity) {
   stroke: none;
-  fill-opacity: 0.1;
-}
-.ct-chart .ct-bar {
-  fill: none;
-  stroke-width: 10px;
-}
-.ct-chart .ct-slice.ct-donut {
-  fill: none;
-  stroke-width: 60px;
-}
-.ct-chart .ct-series.ct-series-a .ct-point, .ct-chart .ct-series.ct-series-a .ct-line, .ct-chart .ct-series.ct-series-a .ct-bar, .ct-chart .ct-series.ct-series-a .ct-slice.ct-donut {
-  stroke: rgba(91, 202, 255, 0.98);
-}
-.ct-chart .ct-series.ct-series-a .ct-slice:not(.ct-donut), .ct-chart .ct-series.ct-series-a .ct-area {
-  fill: rgba(91, 202, 255, 0.98);
-}
-.ct-chart .ct-series.ct-series-b .ct-point, .ct-chart .ct-series.ct-series-b .ct-line, .ct-chart .ct-series.ct-series-b .ct-bar, .ct-chart .ct-series.ct-series-b .ct-slice.ct-donut {
-  stroke: rgba(76, 217, 100, 0.98);
-}
-.ct-chart .ct-series.ct-series-b .ct-slice:not(.ct-donut), .ct-chart .ct-series.ct-series-b .ct-area {
-  fill: rgba(76, 217, 100, 0.98);
-}
-.ct-chart .ct-series.ct-series-c .ct-point, .ct-chart .ct-series.ct-series-c .ct-line, .ct-chart .ct-series.ct-series-c .ct-bar, .ct-chart .ct-series.ct-series-c .ct-slice.ct-donut {
-  stroke: rgba(255, 149, 0, 0.98);
-}
-.ct-chart .ct-series.ct-series-c .ct-slice:not(.ct-donut), .ct-chart .ct-series.ct-series-c .ct-area {
-  fill: rgba(255, 149, 0, 0.98);
-}
-.ct-chart .ct-series.ct-series-d .ct-point, .ct-chart .ct-series.ct-series-d .ct-line, .ct-chart .ct-series.ct-series-d .ct-bar, .ct-chart .ct-series.ct-series-d .ct-slice.ct-donut {
-  stroke: rgba(255, 76, 64, 0.98);
-}
-.ct-chart .ct-series.ct-series-d .ct-slice:not(.ct-donut), .ct-chart .ct-series.ct-series-d .ct-area {
-  fill: rgba(255, 76, 64, 0.98);
-}
-.ct-chart .ct-series.ct-series-e .ct-point, .ct-chart .ct-series.ct-series-e .ct-line, .ct-chart .ct-series.ct-series-e .ct-bar, .ct-chart .ct-series.ct-series-e .ct-slice.ct-donut {
-  stroke: rgba(52, 172, 220, 0.98);
-}
-.ct-chart .ct-series.ct-series-e .ct-slice:not(.ct-donut), .ct-chart .ct-series.ct-series-e .ct-area {
-  fill: rgba(52, 172, 220, 0.98);
-}
-.ct-chart.ct-square {
-  display: block;
-  position: relative;
-  width: 100%;
-}
-.ct-chart.ct-square:before {
-  display: block;
-  float: left;
-  content: "";
-  width: 0;
-  height: 0;
-  padding-bottom: 100%;
-}
-.ct-chart.ct-square:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.ct-chart.ct-square > svg {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.ct-chart.ct-minor-second {
-  display: block;
-  position: relative;
-  width: 100%;
-}
-.ct-chart.ct-minor-second:before {
-  display: block;
-  float: left;
-  content: "";
-  width: 0;
-  height: 0;
-  padding-bottom: 93.75%;
-}
-.ct-chart.ct-minor-second:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.ct-chart.ct-minor-second > svg {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.ct-chart.ct-major-second {
-  display: block;
-  position: relative;
-  width: 100%;
-}
-.ct-chart.ct-major-second:before {
-  display: block;
-  float: left;
-  content: "";
-  width: 0;
-  height: 0;
-  padding-bottom: 88.88889%;
-}
-.ct-chart.ct-major-second:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.ct-chart.ct-major-second > svg {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.ct-chart.ct-minor-third {
-  display: block;
-  position: relative;
-  width: 100%;
-}
-.ct-chart.ct-minor-third:before {
-  display: block;
-  float: left;
-  content: "";
-  width: 0;
-  height: 0;
-  padding-bottom: 83.33333%;
-}
-.ct-chart.ct-minor-third:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.ct-chart.ct-minor-third > svg {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.ct-chart.ct-major-third {
-  display: block;
-  position: relative;
-  width: 100%;
-}
-.ct-chart.ct-major-third:before {
-  display: block;
-  float: left;
-  content: "";
-  width: 0;
-  height: 0;
-  padding-bottom: 80%;
-}
-.ct-chart.ct-major-third:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.ct-chart.ct-major-third > svg {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.ct-chart.ct-perfect-fourth {
-  display: block;
-  position: relative;
-  width: 100%;
-}
-.ct-chart.ct-perfect-fourth:before {
-  display: block;
-  float: left;
-  content: "";
-  width: 0;
-  height: 0;
-  padding-bottom: 75%;
-}
-.ct-chart.ct-perfect-fourth:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.ct-chart.ct-perfect-fourth > svg {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.ct-chart.ct-perfect-fifth {
-  display: block;
-  position: relative;
-  width: 100%;
-}
-.ct-chart.ct-perfect-fifth:before {
-  display: block;
-  float: left;
-  content: "";
-  width: 0;
-  height: 0;
-  padding-bottom: 66.66667%;
-}
-.ct-chart.ct-perfect-fifth:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.ct-chart.ct-perfect-fifth > svg {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.ct-chart.ct-minor-sixth {
-  display: block;
-  position: relative;
-  width: 100%;
-}
-.ct-chart.ct-minor-sixth:before {
-  display: block;
-  float: left;
-  content: "";
-  width: 0;
-  height: 0;
-  padding-bottom: 62.5%;
-}
-.ct-chart.ct-minor-sixth:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.ct-chart.ct-minor-sixth > svg {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.ct-chart.ct-golden-section {
-  display: block;
-  position: relative;
-  width: 100%;
-}
-.ct-chart.ct-golden-section:before {
-  display: block;
-  float: left;
-  content: "";
-  width: 0;
-  height: 0;
-  padding-bottom: 61.8047%;
-}
-.ct-chart.ct-golden-section:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.ct-chart.ct-golden-section > svg {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.ct-chart.ct-major-sixth {
-  display: block;
-  position: relative;
-  width: 100%;
-}
-.ct-chart.ct-major-sixth:before {
-  display: block;
-  float: left;
-  content: "";
-  width: 0;
-  height: 0;
-  padding-bottom: 60%;
-}
-.ct-chart.ct-major-sixth:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.ct-chart.ct-major-sixth > svg {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.ct-chart.ct-minor-seventh {
-  display: block;
-  position: relative;
-  width: 100%;
-}
-.ct-chart.ct-minor-seventh:before {
-  display: block;
-  float: left;
-  content: "";
-  width: 0;
-  height: 0;
-  padding-bottom: 56.25%;
-}
-.ct-chart.ct-minor-seventh:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.ct-chart.ct-minor-seventh > svg {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.ct-chart.ct-major-seventh {
-  display: block;
-  position: relative;
-  width: 100%;
-}
-.ct-chart.ct-major-seventh:before {
-  display: block;
-  float: left;
-  content: "";
-  width: 0;
-  height: 0;
-  padding-bottom: 53.33333%;
-}
-.ct-chart.ct-major-seventh:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.ct-chart.ct-major-seventh > svg {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.ct-chart.ct-octave {
-  display: block;
-  position: relative;
-  width: 100%;
-}
-.ct-chart.ct-octave:before {
-  display: block;
-  float: left;
-  content: "";
-  width: 0;
-  height: 0;
-  padding-bottom: 50%;
-}
-.ct-chart.ct-octave:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.ct-chart.ct-octave > svg {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.ct-chart.ct-major-tenth {
-  display: block;
-  position: relative;
-  width: 100%;
-}
-.ct-chart.ct-major-tenth:before {
-  display: block;
-  float: left;
-  content: "";
-  width: 0;
-  height: 0;
-  padding-bottom: 40%;
-}
-.ct-chart.ct-major-tenth:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.ct-chart.ct-major-tenth > svg {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.ct-chart.ct-major-eleventh {
-  display: block;
-  position: relative;
-  width: 100%;
-}
-.ct-chart.ct-major-eleventh:before {
-  display: block;
-  float: left;
-  content: "";
-  width: 0;
-  height: 0;
-  padding-bottom: 37.5%;
-}
-.ct-chart.ct-major-eleventh:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.ct-chart.ct-major-eleventh > svg {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.ct-chart.ct-major-twelfth {
-  display: block;
-  position: relative;
-  width: 100%;
-}
-.ct-chart.ct-major-twelfth:before {
-  display: block;
-  float: left;
-  content: "";
-  width: 0;
-  height: 0;
-  padding-bottom: 33.33333%;
-}
-.ct-chart.ct-major-twelfth:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.ct-chart.ct-major-twelfth > svg {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.ct-chart.ct-double-octave {
-  display: block;
-  position: relative;
-  width: 100%;
-}
-.ct-chart.ct-double-octave:before {
-  display: block;
-  float: left;
-  content: "";
-  width: 0;
-  height: 0;
-  padding-bottom: 25%;
-}
-.ct-chart.ct-double-octave:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.ct-chart.ct-double-octave > svg {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  fill-opacity: $ct-area-opacity;
 }
 
-// Get Shit Done Kit Colors
+@mixin ct-chart-bar($ct-bar-width: $ct-bar-width) {
+  fill: none;
+  stroke-width: $ct-bar-width;
+}
 
-.ct-blue{
-    stroke: $blue-navbar !important;
+@mixin ct-chart-donut($ct-donut-width: $ct-donut-width) {
+  fill: none;
+  stroke-width: $ct-donut-width;
 }
-.ct-azure{
-    stroke: $azure-navbar !important;
+
+@mixin ct-chart-series-color($color) {
+  .#{$ct-class-point}, .#{$ct-class-line}, .#{$ct-class-bar}, .#{$ct-class-slice-donut} {
+    stroke: $color;
+  }
+
+  .#{$ct-class-slice-pie}, .#{$ct-class-area} {
+    fill: $color;
+  }
 }
-.ct-green{
-    stroke: $green-navbar !important;
+
+@mixin ct-chart($ct-container-ratio: $ct-container-ratio, $ct-text-color: $ct-text-color, $ct-text-size: $ct-text-size, $ct-grid-color: $ct-grid-color, $ct-grid-width: $ct-grid-width, $ct-grid-dasharray: $ct-grid-dasharray, $ct-point-size: $ct-point-size, $ct-point-shape: $ct-point-shape, $ct-line-width: $ct-line-width, $ct-bar-width: $ct-bar-width, $ct-donut-width: $ct-donut-width, $ct-series-names: $ct-series-names, $ct-series-colors: $ct-series-colors) {
+
+  .#{$ct-class-label} {
+    @include ct-chart-label($ct-text-color, $ct-text-size);
+  }
+
+  .#{$ct-class-chart-line} .#{$ct-class-label},
+  .#{$ct-class-chart-bar} .#{$ct-class-label} {
+    @include ct-flex();
+  }
+
+  .#{$ct-class-label}.#{$ct-class-horizontal}.#{$ct-class-start} {
+    @include ct-align-justify(flex-end, flex-start);
+    // Fallback for browsers that don't support foreignObjects
+    text-anchor: start;
+  }
+
+  .#{$ct-class-label}.#{$ct-class-horizontal}.#{$ct-class-end} {
+    @include ct-align-justify(flex-start, flex-start);
+    // Fallback for browsers that don't support foreignObjects
+    text-anchor: start;
+  }
+
+  .#{$ct-class-label}.#{$ct-class-vertical}.#{$ct-class-start} {
+    @include ct-align-justify(flex-end, flex-end);
+    // Fallback for browsers that don't support foreignObjects
+    text-anchor: end;
+  }
+
+  .#{$ct-class-label}.#{$ct-class-vertical}.#{$ct-class-end} {
+    @include ct-align-justify(flex-end, flex-start);
+    // Fallback for browsers that don't support foreignObjects
+    text-anchor: start;
+  }
+
+  .#{$ct-class-chart-bar} .#{$ct-class-label}.#{$ct-class-horizontal}.#{$ct-class-start} {
+    @include ct-align-justify(flex-end, center);
+    // Fallback for browsers that don't support foreignObjects
+    text-anchor: start;
+  }
+
+  .#{$ct-class-chart-bar} .#{$ct-class-label}.#{$ct-class-horizontal}.#{$ct-class-end} {
+    @include ct-align-justify(flex-start, center);
+    // Fallback for browsers that don't support foreignObjects
+    text-anchor: start;
+  }
+
+  .#{$ct-class-chart-bar}.#{$ct-class-horizontal-bars} .#{$ct-class-label}.#{$ct-class-horizontal}.#{$ct-class-start} {
+    @include ct-align-justify(flex-end, flex-start);
+    // Fallback for browsers that don't support foreignObjects
+    text-anchor: start;
+  }
+
+  .#{$ct-class-chart-bar}.#{$ct-class-horizontal-bars} .#{$ct-class-label}.#{$ct-class-horizontal}.#{$ct-class-end} {
+    @include ct-align-justify(flex-start, flex-start);
+    // Fallback for browsers that don't support foreignObjects
+    text-anchor: start;
+  }
+
+  .#{$ct-class-chart-bar}.#{$ct-class-horizontal-bars} .#{$ct-class-label}.#{$ct-class-vertical}.#{$ct-class-start} {
+    //@include ct-chart-label($ct-text-color, $ct-text-size, center, $ct-vertical-text-justify);
+    @include ct-align-justify(center, flex-end);
+    // Fallback for browsers that don't support foreignObjects
+    text-anchor: end;
+  }
+
+  .#{$ct-class-chart-bar}.#{$ct-class-horizontal-bars} .#{$ct-class-label}.#{$ct-class-vertical}.#{$ct-class-end} {
+    @include ct-align-justify(center, flex-start);
+    // Fallback for browsers that don't support foreignObjects
+    text-anchor: end;
+  }
+
+  .#{$ct-class-grid} {
+    @include ct-chart-grid($ct-grid-color, $ct-grid-width, $ct-grid-dasharray);
+  }
+
+  .#{$ct-class-point} {
+    @include ct-chart-point($ct-point-size, $ct-point-shape);
+  }
+
+  .#{$ct-class-line} {
+    @include ct-chart-line($ct-line-width);
+  }
+
+  .#{$ct-class-area} {
+    @include ct-chart-area();
+  }
+
+  .#{$ct-class-bar} {
+    @include ct-chart-bar($ct-bar-width);
+  }
+
+  .#{$ct-class-slice-donut} {
+    @include ct-chart-donut($ct-donut-width);
+  }
+
+  @if $ct-include-colored-series {
+    @for $i from 0 to length($ct-series-names) {
+      .#{$ct-class-series}-#{nth($ct-series-names, $i + 1)} {
+        $color: nth($ct-series-colors, $i + 1);
+
+        @include ct-chart-series-color($color);
+      }
+    }
+  }
 }
-.ct-orange{
-    stroke: $orange-navbar !important;
-}
-.ct-red{
-    stroke: $red-navbar !important;
+
+@if $ct-include-classes {
+  @include ct-chart();
+
+  @if $ct-include-alternative-responsive-containers {
+    @for $i from 0 to length($ct-scales-names) {
+      .#{nth($ct-scales-names, $i + 1)} {
+        @include ct-responsive-svg-container($ratio: nth($ct-scales, $i + 1));
+      }
+    }
+  }
 }

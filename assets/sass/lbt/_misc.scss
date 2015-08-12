@@ -51,7 +51,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 .wrapper{
     position: relative;
     top: 0;
-    height: 100%;
+    height: 100vh;
 }
 
 .sidebar{
@@ -64,11 +64,8 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
     z-index: 1;
     color: #fff;
     font-weight: 200;
-    background-attachment: fixed;
-    
-    @include radial-gradient($icon-blue-color-top, $icon-blue-color-bottom);
-    
-    @include icon-gradient($purple-color-2, $purple-color-1);
+    background-size: cover;
+    background-position: center center;
     
     .sidebar-wrapper{
         position: relative;
@@ -76,29 +73,31 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
         min-height: 100%;
         overflow: hidden;
         width: 260px;
+        z-index: 4;
     }
     
     .logo{
-        padding: 7px 15px;
+        padding: $navbar-padding-a;
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         
         p{
             float: left;
             font-size: 20px;
             margin: 10px 10px;
-            color: #FFFFFF;
+            color: $white-color;
             line-height: 20px;
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         }
         
         .simple-text{
             text-transform: uppercase;
-            padding: 10px 0;
+            padding: $padding-small-vertical $padding-zero;
             display: block;
-            font-size: 18px;
-            color: #FFF;
+            font-size: $font-size-large;
+            color: $white-color;
             text-align: center;
-            font-weight: 400;
+            font-weight: $font-weight-normal;
+            line-height: 30px;
         }
     }
     
@@ -159,15 +158,59 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
         }
     }
     
+    &:after,
+    &:before{
+        display: block;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    
+    &:before{
+        opacity: .3;
+        background: #000000;
+    }
+    
+    &:after{
+        @include icon-gradient($black-color-top, $black-color-bottom);
+       z-index: 2;
+       opacity: .8;
+    }
+    &[data-color="blue"]:after{
+        @include icon-gradient($blue-color-top, $blue-color-bottom);
+    }
+    &[data-color="azure"]:after{
+        @include icon-gradient($azure-color-top, $azure-color-bottom);
+    }
+    &[data-color="green"]:after{
+        @include icon-gradient($green-color-top, $green-color-bottom);
+    }
+    &[data-color="orange"]:after{
+        @include icon-gradient($orange-color-top, $orange-color-bottom);
+    }
+    &[data-color="red"]:after{
+        @include icon-gradient($red-color-top, $red-color-bottom);
+    }
+    &[data-color="purple"]:after{
+        @include icon-gradient($purple-color-top, $purple-color-bottom);
+    }
 }
 
 .main-panel{
-    background: #fff;
+    background: rgba(203,203,210,.15);
     position: relative;
     z-index: 2;
     float: right;
-    width: calc(100% - 260px);
-    box-shadow: 0 2px 4px rgba(0,0,0,.3);
+    width: $sidebar-width;
+    min-height: calc(100% - 170px);
+    
+    .content{
+        padding: 10px 15px;
+    }
 }
 
 .sidebar,

@@ -72,7 +72,7 @@ function initDemoChartist(){
       high: 20
     };
 
-    Chartist.Line('#chartPerformance', dataPerformance, optionsPerformance);
+    //Chartist.Line('#chartPerformance', dataPerformance, optionsPerformance);
     
     var dataStock = {
       labels: ['2009', '2010', '2011', '2012', '2013', '2014'],
@@ -100,27 +100,29 @@ function initDemoChartist(){
      
     var $chart = $('#chartStock');
     
-    Chartist.Line('#chartStock', dataStock, optionsStock);     
+    //Chartist.Line('#chartStock', dataStock, optionsStock);     
     
     var dataSales = {
-      labels: ['2009', '2010', '2011', '2012', '2013', '2014'],
+      labels: ['9:00AM', '12:00AM', '3:00PM', '6:00PM', '9:00PM', '12:00PM', '3:00AM', '6:00AM'],
       series: [
-        [287, 385, 490, 492, 554, 586, 698, 695, 752, 788, 846, 944],
-        [67, 152, 143, 240, 287, 335, 435, 437, 539, 542, 544, 647],
-        [23, 113, 67, 108, 190, 239, 307, 308, 439, 410, 410, 509]
+        [0, 285, 120, 90, 70, 54, 44, 32, 22, 11, 4, 2, 2],
+        [0, 100, 48, 40, 28, 23, 15, 10, 6, 3, 1, 1, 0],
       ]
     };
     
     var optionsSales = {
       lineSmooth: false,
-      axisY: {
-        offset: 40
-      },
       low: 0,
-      high: 1000     
+      high: 400,
+      showArea: true,
+      height: "245px",
+      axisX: {
+        showGrid: false
+      }
     };
 
-    Chartist.Line('#chartSales', dataSales, optionsSales);
+    Chartist.Line('#chartHours', dataSales, optionsSales);
+    
 
     var data = {
       labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
@@ -131,10 +133,11 @@ function initDemoChartist(){
     };
     
     var options = {
-      seriesBarDistance: 10,
-       axisX: {
+        seriesBarDistance: 10,
+        axisX: {
             showGrid: false
-        }
+        },
+        height: "245px"
     };
     
     var responsiveOptions = [
@@ -178,7 +181,7 @@ function initDemoChartist(){
       }]
     ];
     
-    Chartist.Bar('#chartViews', dataViews, optionsViews, responsiveOptionsViews);
+    //Chartist.Bar('#chartViews', dataViews, optionsViews, responsiveOptionsViews);
 
     var dataPreferences = {
         series: [
@@ -197,13 +200,14 @@ function initDemoChartist(){
         }
     };
 
-    //Chartist.Pie('#chartPreferences', dataPreferences, optionsPreferences);
+    Chartist.Pie('#chartPreferences', dataPreferences, optionsPreferences);
     
     Chartist.Pie('#chartPreferences', {
-      labels: ['46%','28%','15%','11%'],
-      series: [46, 28, 15, 11]
+      labels: ['62%','32%','6%'],
+      series: [62, 32, 6]
     });
-
+    
+    
 }
 
 

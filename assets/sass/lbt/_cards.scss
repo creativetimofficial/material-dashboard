@@ -1,8 +1,8 @@
 .card{
-    border-radius: $border-radius-large;
-    box-shadow: 0 1px 4px rgba(0,0,0,.23);
+    border-radius: $border-radius-base;
+    box-shadow: 0 1px 2px rgba(0,0,0,.05),0 0 0 1px rgba(63,63,68,.1);
     background-color: #FFFFFF;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     
     .image{
         width: 100%;
@@ -56,7 +56,7 @@
         }
     }
     .title{
-        margin: $margin-bottom;
+        margin: $none;
         color: $black-color;
         font-weight: $font-weight-light;
     }
@@ -75,6 +75,15 @@
         padding: 0;
         background-color: $transparent-bg;
         line-height: 30px;
+        
+        .legend{
+            padding: 5px 0;
+        }
+        
+        hr{
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
     }
     .footer div{
         display: inline-block;
@@ -111,6 +120,11 @@
         background-color: $medium-gray;
         content: "";
         position: absolute;
+    }
+    
+    .ct-chart{
+        margin: 30px 0;
+        height: 245px;
     }
 }
 .card-user{

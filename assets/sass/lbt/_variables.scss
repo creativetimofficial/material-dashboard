@@ -87,6 +87,8 @@ $padding-label-horizontal:     12px !default;
 $margin-large-vertical:        30px !default;
 $margin-base-vertical:         15px !default;
 
+$padding-zero:                   0px !default;
+
 $margin-bottom:                0 0 10px 0 !default;
 $border-radius-small:           3px !default;
 $border-radius-base:            4px !default;
@@ -125,6 +127,8 @@ $line-height-general:          1.5 !default;
 $line-height:                 20px !default;
 $line-height-lg:              54px !default;
 
+$sidebar-width:               calc(100% - 260px) !default;
+
 
 $border-radius-top:        10px 10px 0 0 !default;
 $border-radius-bottom:     0 0 10px 10px !default;
@@ -147,7 +151,7 @@ $transition-ease-out:             ease-out !default;
 
 
 $navbar-padding-a:               10px 15px;
-$navbar-margin-a:                15px  3px;
+$navbar-margin-a:                10px  3px;
 
 $padding-social-a:               10px  5px;
 
@@ -157,7 +161,7 @@ $navbar-margin-a-btn-round:      16px 3px;
 $navbar-padding-a-icons:         6px 15px;
 $navbar-margin-a-icons:          6px  3px;
 
-$navbar-padding-brand:           20px 15px;
+$navbar-padding-brand:           15px 15px;
 $navbar-margin-brand:             5px  0px;
 
 $navbar-margin-brand-icons:      12px auto;
@@ -193,32 +197,32 @@ $green-navbar:              rgba(#4CD964, .98);
 $orange-navbar:             rgba(#FF9500, .98);
 $red-navbar:                rgba(#FF4C40, .98);
 
-$icon-default-color-top:	#d9d9d9 !default;
-$icon-default-color-bottom: #909297 !default;
+$default-color-top:	#d9d9d9 !default;
+$default-color-bottom: #909297 !default;
 
-$icon-blue-color-top: 		#4087ea;
-$icon-blue-color-bottom: 	#533ce1;
+$blue-color-top: 		            #4087ea;
+$blue-color-bottom: 	            #533ce1;
 
-$icon-azure-color-top:   	#45c0fd;
-$icon-azure-color-bottom: 	#4091ff;
+$azure-color-top:   	            #45c0fd;
+$azure-color-bottom:            	#4091ff;
 
-$icon-green-color-top: 	    #a1eb3a;
-$icon-green-color-bottom: 	#6dc030;
+$green-color-top: 	                #a1eb3a;
+$green-color-bottom: 	            #6dc030;
 
-$icon-orange-color-top: 	#ffb33b;
-$icon-orange-color-bottom: 	#ff5221;
+$orange-color-top: 	                #ffb33b;
+$orange-color-bottom: 	            #ff5221;
 
-$icon-red-color-top: 	    #ff3b30;
-$icon-red-color-bottom: 	#bb0502;
+$red-color-top: 	                #ff3b30;
+$red-color-bottom: 	                #bb0502;
 
-$purple-color-1: 	#df55e1;
-$purple-color-2: 	#943bea;
+$purple-color-top: 	                #df55e1;
+$purple-color-bottom: 	            #943bea;
 
-$icon-pink-color-top: 		#ff2a63;
-$icon-pink-color-bottom: 	#ff2e2e;
+$pink-color-top: 		            #ff2a63;
+$pink-color-bottom: 	            #ff2e2e;
 
-$icon-black-color-top:	 	#787878;
-$icon-black-color-bottom: 	#343434;
+$black-color-top:	 	            #787878;
+$black-color-bottom: 	            #343434;
 
 $social-facebook: 			#3b5998;
 $social-twitter: 			#55acee;

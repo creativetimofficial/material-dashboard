@@ -1,4 +1,3 @@
-
 .nav {
     > li{
         > a:hover,
@@ -10,9 +9,10 @@
 .navbar{
     border: $none;
     font-size: $font-size-navbar;
+    border-radius: 0;
     
     .navbar-brand {
-        font-weight: $font-weight-bold;
+        font-weight: $font-weight-normal;
         margin: $navbar-margin-brand;
         padding: $navbar-padding-brand;
         font-size: $font-size-large-navbar;
@@ -46,6 +46,12 @@
        // @include center-item();
     }
     
+    &.fixed{
+        width: calc(100% - $sidebar-width);
+        right: 0;
+        left: auto;
+        border-radius: 0;
+    }
 
 }
 
