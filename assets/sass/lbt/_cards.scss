@@ -3,12 +3,12 @@
     box-shadow: 0 1px 2px rgba(0,0,0,.05),0 0 0 1px rgba(63,63,68,.1);
     background-color: #FFFFFF;
     margin-bottom: 30px;
-    
+        
     .image{
         width: 100%;
         overflow: hidden;
         height: 260px;
-        border-radius: $border-radius-large-top;
+        border-radius: $border-radius-base $border-radius-base 0 0;
         position: relative;
         -webkit-transform-style: preserve-3d;
         -moz-transform-style: preserve-3d;
@@ -46,8 +46,13 @@
     .content{
         padding: 15px 15px 10px 15px;
     }
-    .category{
+    .header{
+        padding: 15px 15px 0;
+    }
+    .category,
+    label{
         font-size: $font-size-base;
+        font-weight: $font-weight-normal;
         color: $dark-gray;
         margin-bottom: 0px;
         
@@ -55,6 +60,13 @@
             font-size: $font-paragraph;
         }
     }
+    
+    label{
+        font-size: $font-size-small;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+    }
+
     .title{
         margin: $none;
         color: $black-color;
@@ -123,8 +135,32 @@
     }
     
     .ct-chart{
-        margin: 30px 0;
+        margin: 30px 0 30px;
         height: 245px;
+    }
+    
+    form{
+        [class*="col-"]{
+            padding: 6px;
+        }
+        [class*="col-"]:first-child{
+            padding-left: 15px;
+        }
+        [class*="col-"]:last-child{
+            padding-right: 15px;
+        }
+    }
+    
+    .table{
+        tbody td:first-child,
+        thead th:first-child{
+            padding-left: 15px;
+        }
+        
+        tbody td:last-child,
+        thead th:last-child{
+            padding-right: 15px;
+        }
     }
 }
 .card-user{

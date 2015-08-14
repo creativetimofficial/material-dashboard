@@ -36,10 +36,14 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
     @include transition($general-transition-time, $transition-linear);
 }
 
-.sidebar .nav a{
+.sidebar .nav a,
+.table > tbody > tr .td-actions .btn{
     @include transition($fast-transition-time, $transition-ease-in);
 }
 
+.btn{
+    @include transition($ultra-fast-transition-time, $transition-ease-in);
+}
 .fa{
     width: 18px;
     text-align: center;
@@ -181,22 +185,22 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
        opacity: .8;
     }
     &[data-color="blue"]:after{
-        @include icon-gradient($blue-color-top, $blue-color-bottom);
+        @include icon-gradient($new-dark-blue, $blue-color-bottom);
     }
     &[data-color="azure"]:after{
-        @include icon-gradient($azure-color-top, $azure-color-bottom);
+        @include icon-gradient($new-blue, $azure-color-bottom);
     }
     &[data-color="green"]:after{
-        @include icon-gradient($green-color-top, $green-color-bottom);
+        @include icon-gradient($new-green, $green-color-bottom);
     }
     &[data-color="orange"]:after{
         @include icon-gradient($orange-color-top, $orange-color-bottom);
     }
     &[data-color="red"]:after{
-        @include icon-gradient($red-color-top, $red-color-bottom);
+        @include icon-gradient($new-red, $red-color-bottom);
     }
     &[data-color="purple"]:after{
-        @include icon-gradient($purple-color-top, $purple-color-bottom);
+        @include icon-gradient($new-purple, $purple-color-bottom);
     }
 }
 

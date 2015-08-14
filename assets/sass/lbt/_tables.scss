@@ -1,16 +1,23 @@
+.table-full-width{
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
 .table{
-   > thead > tr > th{
-       border-bottom-width: 1px;
-       font-size: $font-size-h5;
-       font-weight: $font-weight-light;
-   }  
    
    .radio,
    .checkbox{
-       margin-top: 0;
-       margin-bottom: 0;
-       padding: 0;
-       width: 15px;
+        position: relative;
+        height: 20px;
+        display: block;
+        width: 20px;
+        padding: 0px 0px;
+        margin: 0px 5px;
+        text-align: center;
+        
+        .icons{
+            left: 5px;
+        }
    }
    > thead > tr > th,
    > tbody > tr > th,
@@ -21,23 +28,16 @@
        padding: 12px 8px;
        vertical-align: middle;
    }
-
-   .th-description{
-       max-width: 150px;
-   }
-   .td-price{
-       font-size: 26px;
-       font-weight: $font-weight-light;
-       margin-top: 5px;
-       text-align: right;
-   }
-   .td-total{
-        font-weight: $font-weight-bold;
-        font-size: $font-size-h5;
-        padding-top: 20px;
-        text-align: right;
+   
+    > thead > tr > th{
+        border-bottom-width: 1px;
+        font-size: $font-size-small;
+        text-transform: uppercase;
+        color: $dark-gray;
+        font-weight: $font-weight-normal;
+        padding-bottom: 5px;
     }
-    
+
    .td-actions .btn{
         @include opacity(0.36);
     
@@ -45,6 +45,9 @@
             padding-left: 3px;
             padding-right: 3px;
         }
+    }
+    .td-actions{
+        min-width: 90px;
     }
     
     > tbody > tr{
@@ -57,50 +60,3 @@
         }
     }
 } 
-
-.table-shopping{
-    > thead > tr > th{
-        font-size: $font-size-h6;
-        text-transform: uppercase;
-        color: $dark-gray;
-        font-weight: $font-weight-normal;
-    }
-    > tbody > tr > td{
-        font-size: $font-paragraph;
-        
-        b{
-            display: block;
-            margin-bottom: 5px;
-        }
-    } 
-    .td-name,
-    .td-number{
-       font-weight: $font-weight-light;
-       font-size: $font-size-h4;
-   }
-    .td-name{
-        min-width: 200px;
-    }
-    .td-number{
-        text-align: right;
-        min-width: 70px;
-        
-        small{
-            margin-right: 3px;
-        }
-    }
-    
-    .img-container{
-        width: 120px;
-        height: 120px;
-        overflow: hidden;
-        display: block;
-        
-        border-radius: $border-radius-large;
-        
-        img{
-            width: 100%;
-        }    
-    }
-}
-

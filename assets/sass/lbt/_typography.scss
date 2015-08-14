@@ -52,7 +52,6 @@ h1 small, h2 small, h3 small, h1 .small, h2 .small, h3 .small {
 
 h1 .subtitle{
     display: block;
-    font-family: 'Grand Hotel',cursive;
     margin: 0 0 $margin-large-vertical;   
 }
 
@@ -60,15 +59,15 @@ h1 .subtitle{
     color: #1D62F0 !important;
 }
 .text-info, .text-info:hover{
-    color: #109CFF !important;
+    color: $info-color !important;
 }
 .text-success, .text-success:hover{
-    color: #0C9C14 !important;
+    color: $success-color !important;
 }
 .text-warning, .text-warning:hover{
-    color: #ED8D00 !important;
+    color: $warning-color !important;
 }
 .text-danger, .text-danger:hover{
-    color: #EE2D20 !important;
+    color: $danger-color !important;
 }
 

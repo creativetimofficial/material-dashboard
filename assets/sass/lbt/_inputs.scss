@@ -13,17 +13,18 @@
 
 .form-control {
     background-color: $white-bg;
-    border: 1px solid $medium-gray;
+    border: 1px solid $light-gray;
     border-radius: $border-radius-base;
-    color: #444444;
-    @include input-size($padding-base-vertical, $padding-base-horizontal, $height-base);
+    color: #565656;
+    @include input-size($padding-base-vertical, $padding-base-horizontal - 4, $height-base);
     @include box-shadow(none);
     
     &:focus{
            background-color: $white-bg;
-           border: 1px solid $dark-gray;
+           border: 1px solid $medium-dark-gray;
            @include box-shadow(none);
-           outline: 0 !important;       
+           outline: 0 !important;    
+           color: #333333;   
     }
     
     .has-success &,
@@ -118,7 +119,7 @@
     border-left: 0 none;
 }
 .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
-    background-color: $light-gray;
+    background-color: $smoke-bg;
     color: $default-color;
     cursor: not-allowed;
 }
