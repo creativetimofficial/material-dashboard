@@ -10,7 +10,7 @@ $(document).ready(function(){
     window_width = $(window).width();
     
     // Init navigation toggle for small screens   
-    if(window_width < 768){
+    if(window_width <= 991){
         gsdk.initRightMenu();   
     }
      
@@ -86,7 +86,7 @@ $(document).ready(function(){
 
 // activate collapse right menu when the windows is resized 
 $(window).resize(function(){
-    if($(window).width() < 768){
+    if($(window).width() <= 991){
         gsdk.initRightMenu();   
     }
 });

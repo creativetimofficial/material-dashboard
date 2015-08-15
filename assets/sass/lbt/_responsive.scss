@@ -1,5 +1,5 @@
 
-@media (min-width: 768px){
+@media (min-width: 992px){    
     .navbar-form {
         margin-top: 21px;
         margin-bottom: 21px;
@@ -61,11 +61,32 @@
     body > .navbar-collapse.collapse{
         display: none !important;
     }
+    
+    .card{
+        form{
+            [class*="col-"]{
+                padding: 6px;
+            }
+            [class*="col-"]:first-child{
+                padding-left: 15px;
+            }
+            [class*="col-"]:last-child{
+                padding-right: 15px;
+            }
+        }
+    }
 }
 
 /*          Changes for small display      */
 
-@media (max-width: 767px){ 
+@media (max-width: 991px){ 
+    .sidebar{
+        display: none;
+    }
+    
+    .main-panel{
+        width: 100%;
+    }
     .navbar-transparent{
         padding-top: 15px;
         background-color: rgba(0, 0, 0, 0.45);
@@ -157,7 +178,7 @@
     }
     
     .navbar-header .navbar-toggle {
-        margin-top: 12px;
+        margin: 10px 15px 10px 0;
         width: 40px;
         height: 40px;
     }
@@ -329,5 +350,18 @@
         border: 1px solid #dddddd;
         -ms-overflow-style: -ms-autohiding-scrollbar;
         -webkit-overflow-scrolling: touch;
+    }
+}
+
+
+@media (max-width: 991px) {
+    .navbar-collapse.collapse.in {
+        display: block;
+    }
+    .navbar-header .collapse, .navbar-toggle {
+        display:block !important;
+    }
+    .navbar-header {
+        float:none;
     }
 }

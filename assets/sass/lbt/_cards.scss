@@ -139,18 +139,6 @@
         height: 245px;
     }
     
-    form{
-        [class*="col-"]{
-            padding: 6px;
-        }
-        [class*="col-"]:first-child{
-            padding-left: 15px;
-        }
-        [class*="col-"]:last-child{
-            padding-right: 15px;
-        }
-    }
-    
     .table{
         tbody td:first-child,
         thead th:first-child{

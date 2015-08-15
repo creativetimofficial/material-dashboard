@@ -69,6 +69,9 @@ h1 .subtitle {
   display: block;
   margin: 0 0 30px; }
 
+.text-muted {
+  color: #9A9A9A; }
+
 .text-primary, .text-primary:hover {
   color: #1D62F0 !important; }
 
@@ -98,6 +101,7 @@ a {
 
 a:focus, a:active,
 button::-moz-focus-inner,
+input::-moz-focus-inner,
 input[type="reset"]::-moz-focus-inner,
 input[type="button"]::-moz-focus-inner,
 input[type="submit"]::-moz-focus-inner,
@@ -106,7 +110,8 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   outline: 0; }
 
 .ui-slider-handle:focus,
-.navbar-toggle {
+.navbar-toggle,
+input:focus {
   outline: 0 !important; }
 
 /*           Animations              */
@@ -2758,12 +2763,6 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   .card .ct-chart {
     margin: 30px 0 30px;
     height: 245px; }
-  .card form [class*="col-"] {
-    padding: 6px; }
-  .card form [class*="col-"]:first-child {
-    padding-left: 15px; }
-  .card form [class*="col-"]:last-child {
-    padding-right: 15px; }
   .card .table tbody td:first-child,
   .card .table thead th:first-child {
     padding-left: 15px; }
@@ -3773,7 +3772,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 .nbs-flexisel-nav-right {
   right: 0; }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navbar-form {
     margin-top: 21px;
     margin-bottom: 21px;
@@ -3839,9 +3838,22 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
     margin-left: 0; }
 
   body > .navbar-collapse.collapse {
-    display: none !important; } }
+    display: none !important; }
+
+  .card form [class*="col-"] {
+    padding: 6px; }
+  .card form [class*="col-"]:first-child {
+    padding-left: 15px; }
+  .card form [class*="col-"]:last-child {
+    padding-right: 15px; } }
 /*          Changes for small display      */
-@media (max-width: 767px) {
+@media (max-width: 991px) {
+  .sidebar {
+    display: none; }
+
+  .main-panel {
+    width: 100%; }
+
   .navbar-transparent {
     padding-top: 15px;
     background-color: rgba(0, 0, 0, 0.45); }
@@ -3961,7 +3973,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
     margin: 0 auto; }
 
   .navbar-header .navbar-toggle {
-    margin-top: 12px;
+    margin: 10px 15px 10px 0;
     width: 40px;
     height: 40px; }
 
@@ -4249,6 +4261,15 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
     border: 1px solid #dddddd;
     -ms-overflow-style: -ms-autohiding-scrollbar;
     -webkit-overflow-scrolling: touch; } }
+@media (max-width: 991px) {
+  .navbar-collapse.collapse.in {
+    display: block; }
+
+  .navbar-header .collapse, .navbar-toggle {
+    display: block !important; }
+
+  .navbar-header {
+    float: none; } }
 /*!
  * Datepicker for Bootstrap
  *
