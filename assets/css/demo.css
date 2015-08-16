@@ -34,3 +34,10 @@
     color: #aaa;
     font-size: 13px;
 }
+
+
+#map{ 
+    position:relative; 
+    width:100%; 
+    height: calc(100% - 60px);
+}

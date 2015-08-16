@@ -32,6 +32,7 @@
          > li > a [class^="fa"]{
              font-size: $font-size-large + 1;   
              position: relative;
+             line-height: 16px;
              top: 1px;
         }
     }

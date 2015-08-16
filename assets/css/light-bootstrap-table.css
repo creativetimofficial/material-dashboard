@@ -172,6 +172,16 @@ input:focus {
     overflow: hidden;
     width: 260px;
     z-index: 4; }
+  .sidebar .sidebar-background {
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    display: block;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center center; }
   .sidebar .logo {
     padding: 10px 15px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
@@ -237,7 +247,7 @@ input:focus {
     height: 100%;
     top: 0;
     left: 0;
-    z-index: 1; }
+    z-index: 2; }
   .sidebar:before {
     opacity: .3;
     background: #000000; }
@@ -250,7 +260,7 @@ input:focus {
     background: -ms-linear-gradient(top, #787878 0%, #343434 100%);
     background: linear-gradient(to bottom, #787878 0%, #343434 100%);
     background-size: 150% 150%;
-    z-index: 2;
+    z-index: 3;
     opacity: .8; }
   .sidebar[data-color="blue"]:after {
     background: #1F77D0;
@@ -313,9 +323,14 @@ input:focus {
   z-index: 2;
   float: right;
   width: calc(100% - 260px);
-  min-height: calc(100% - 170px); }
-  .main-panel .content {
-    padding: 10px 15px; }
+  min-height: 100%; }
+  .main-panel > .content {
+    padding: 30px 15px;
+    min-height: calc(100% - 133px); }
+  .main-panel > .footer {
+    border-top: 1px solid #e7e7e7; }
+  .main-panel .navbar {
+    margin-bottom: 0; }
 
 .sidebar,
 .main-panel {
@@ -1578,6 +1593,7 @@ input:focus {
   .navbar .navbar-nav > li > a [class^="fa"] {
     font-size: 19px;
     position: relative;
+    line-height: 16px;
     top: 1px; }
   .navbar .btn {
     margin: 15px 3px;
@@ -1794,22 +1810,22 @@ input:focus {
   .footer .copyright {
     color: #777777;
     padding: 10px 15px;
-    margin: 15px 3px;
+    margin: 10px 3px;
     line-height: 20px;
-    text-align: center; }
+    font-size: 14px; }
   .footer hr {
     border-color: #DDDDDD; }
   .footer .title {
     color: #777777; }
 
 .footer:not(.footer-big) nav > ul {
-  font-size: 16px; }
+  font-size: 14px; }
   .footer:not(.footer-big) nav > ul li {
     margin-left: 20px;
     float: left; }
   .footer:not(.footer-big) nav > ul a {
     padding: 10px 0px;
-    margin: 15px 10px 15px 0px; }
+    margin: 10px 10px 10px 0px; }
 
 .footer-default {
   background-color: #F5F5F5; }

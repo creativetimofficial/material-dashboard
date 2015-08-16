@@ -9,9 +9,12 @@ var navbar_initialized = false;
 $(document).ready(function(){
     window_width = $(window).width();
     
+    // check if there is an image set for the sidebar's background
+    lbd.checkSidebarImage();
+    
     // Init navigation toggle for small screens   
     if(window_width <= 991){
-        gsdk.initRightMenu();   
+        lbd.initRightMenu();   
     }
      
     // Activate Morpghing Buttons 
@@ -65,35 +68,45 @@ $(document).ready(function(){
     demo.initPickColor();
     
      // Make the images from the card fill the hole space
-    gsdk.fitBackgroundForCards();
+    lbd.fitBackgroundForCards();
 
     // Init icon search action for the navbar
-    gsdk.initNavbarSearch();
+    lbd.initNavbarSearch();
     
     // Init popovers 
-    gsdk.initPopovers();
+    lbd.initPopovers();
     
     // Init Collapse Areas
-    gsdk.initCollapseArea();
+    lbd.initCollapseArea();
     
     // Init Sliders
-    gsdk.initSliders();
+    lbd.initSliders();
     
     //  Init video card actions
-    gsdk.initVideoCards();
+    lbd.initVideoCards();
       
 });
 
 // activate collapse right menu when the windows is resized 
 $(window).resize(function(){
     if($(window).width() <= 991){
-        gsdk.initRightMenu();   
+        lbd.initRightMenu();   
     }
 });
     
-gsdk = {
+lbd = {
     misc:{
         navbar_menu_visible: 0
+    },
+    
+    checkSidebarImage: function(){
+        $sidebar = $('.sidebar');
+        image_src = $sidebar.data('image');
+        
+        if(image_src !== undefined){
+            sidebar_container = '<div class="sidebar-background" style="background-image: url(' + image_src + ') "/>'
+            $sidebar.append(sidebar_container);
+        }  
     },
     initRightMenu: function(){  
          if(!navbar_initialized){
@@ -128,9 +141,9 @@ gsdk = {
              $navbar.find('button').addClass('btn-simple btn-block');
             
              $toggle.click(function (){    
-                if(gsdk.misc.navbar_menu_visible == 1) {
+                if(lbd.misc.navbar_menu_visible == 1) {
                     $('html').removeClass('nav-open'); 
-                    gsdk.misc.navbar_menu_visible = 0;
+                    lbd.misc.navbar_menu_visible = 0;
                     $('#bodyClick').remove();
                      setTimeout(function(){
                         $toggle.removeClass('toggled');
@@ -144,7 +157,7 @@ gsdk = {
                     div = '<div id="bodyClick"></div>';
                     $(div).appendTo("body").click(function() {
                         $('html').removeClass('nav-open');
-                        gsdk.misc.navbar_menu_visible = 0;
+                        lbd.misc.navbar_menu_visible = 0;
                         $('#bodyClick').remove();
                          setTimeout(function(){
                             $toggle.removeClass('toggled');
@@ -152,7 +165,7 @@ gsdk = {
                     });
                    
                     $('html').addClass('nav-open');
-                    gsdk.misc.navbar_menu_visible = 1;
+                    lbd.misc.navbar_menu_visible = 1;
                     
                 }
             });

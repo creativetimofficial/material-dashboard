@@ -82,6 +82,18 @@ input:focus {
         z-index: 4;
     }
     
+    .sidebar-background{
+        position: absolute;
+        z-index: 1;
+        height: 100%;
+        width: 100%;
+        display: block;
+        top: 0;
+        left: 0;
+        background-size: cover;
+        background-position: center center;
+    }
+    
     .logo{
         padding: $navbar-padding-a;
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -173,7 +185,7 @@ input:focus {
         height: 100%;
         top: 0;
         left: 0;
-        z-index: 1;
+        z-index: 2;
     }
     
     &:before{
@@ -183,7 +195,7 @@ input:focus {
     
     &:after{
         @include icon-gradient($black-color-top, $black-color-bottom);
-       z-index: 2;
+       z-index: 3;
        opacity: .8;
     }
     &[data-color="blue"]:after{
@@ -212,10 +224,19 @@ input:focus {
     z-index: 2;
     float: right;
     width: $sidebar-width;
-    min-height: calc(100% - 170px);
+    min-height: 100%;
     
-    .content{
-        padding: 10px 15px;
+    > .content{
+        padding: 30px 15px;
+        min-height: calc(100% - 133px);
+    }
+    
+    > .footer{
+        border-top: 1px solid #e7e7e7;
+    }
+    
+    .navbar{
+        margin-bottom: 0;
     }
 }
 

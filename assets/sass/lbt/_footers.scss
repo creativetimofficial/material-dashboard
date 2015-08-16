@@ -1,7 +1,7 @@
 .footer{    
     background-color: $white-color;
     line-height: $line-height;
-        
+    
     nav > ul{
         list-style: none;
         margin: 0;
@@ -41,9 +41,9 @@
     .copyright{
         color: $default-states-color;
         padding: 10px 15px;
-        margin: 15px 3px;
+        margin: 10px 3px;
         line-height: 20px;
-        text-align: center;
+        font-size: $font-size-base;
     }
     hr{
         border-color: $medium-gray;
@@ -55,14 +55,14 @@
 
 .footer:not(.footer-big){
     nav > ul{
-       font-size: 16px;
+       font-size: $font-size-base;
        li{
             margin-left: 20px;
             float: left;
         }
         a{
             padding: 10px 0px;
-            margin: 15px 10px 15px 0px;
+            margin: 10px 10px 10px 0px;
         }
     }
 }
