@@ -11,7 +11,9 @@
     <meta name="viewport" content="width=device-width" />
     
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/animate.min.css" rel="stylesheet"/>
     <link href="assets/css/light-bootstrap-table.css" rel="stylesheet"/>
+    
     
     <!--  CSS for Demo Purpose, don't include it in your project     -->
     <link href="assets/css/demo.css" rel="stylesheet" />
@@ -73,6 +75,12 @@
                     <a href="maps.html">
                         <i class="pe-7s-map-marker"></i> 
                         <p>Maps</p>
+                    </a>        
+                </li>
+                <li>
+                    <a href="notifications.html">
+                        <i class="pe-7s-bell"></i> 
+                        <p>Notifications</p>
                     </a>        
                 </li>
             </ul> 
@@ -406,6 +414,8 @@
 	<script src="assets/js/bootstrap-datepicker.js"></script>
 	<script src="assets/js/chartist.min.js"></script>
     <script src="assets/js/jquery.tagsinput.js"></script>
+    <script src="assets/js/bootstrap-notify.js"></script>
+    
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 	
 	<script src="assets/js/get-shit-done.js"></script>
@@ -414,6 +424,16 @@
 	<script type="text/javascript">
     	$(document).ready(function(){
         	initDemoChartist();
+        	
+        	$.notify({
+            	icon: 'pe-7s-gift',
+            	message: "Welcome to <b>Light Bootstrap Dashboard</b> - a beautiful freebie for every web developer."
+            	
+            },{
+                type: 'info',
+                timer: 4000
+            });
+            
     	});
 	</script>
     

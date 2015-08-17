@@ -113,7 +113,7 @@ $font-size-h1:                 52px !default;
 $font-size-h2:                 36px !default;
 $font-size-h3:                 28px !default;
 $font-size-h4:                 22px !default;
-$font-size-h5:                 18px !default;
+$font-size-h5:                 16px !default;
 $font-size-h6:                 14px !default;
 $font-paragraph:               16px !default;
 $font-size-navbar:             16px !default;
@@ -192,15 +192,6 @@ $width-icon-message:			 40px;
 $height-icon-message-sm: 		 20px;
 $width-icon-message-sm:			 20px;
 
-
-
-$white-navbar:              rgba(#FFFFFF, .96);
-$blue-navbar:               rgba(#34ACDC, .98);
-$azure-navbar:              rgba(#5BCAFF, .98);
-$green-navbar:              rgba(#4CD964, .98);
-$orange-navbar:             rgba(#FF9500, .98);
-$red-navbar:                rgba(#FF4C40, .98);
-
 $default-color-top:	#d9d9d9 !default;
 $default-color-bottom: #909297 !default;
 
@@ -253,7 +244,7 @@ $new-blue:            #1DC7EA;
 $new-purple:          #9368E9;
 $new-red:             #FB404B;
 $new-green:           #87CB16;
-$new-yellow:          #FFA534;
+$new-orange:          #FFA534;
 $new-dark-blue:       #1F77D0;
 $new-black:           #5e5e5e;
 
@@ -264,6 +255,11 @@ $bottombar-x:          bottombar-x !default;
 $bottombar-back:       bottombar-back !default;
 
 
-
+$white-navbar:              rgba(#FFFFFF, .96);
+$blue-navbar:               lighten($new-dark-blue, 10%);
+$azure-navbar:              lighten($new-blue, 15%);
+$green-navbar:              lighten($new-green, 10%);
+$orange-navbar:             lighten($new-orange, 10%);
+$red-navbar:                lighten($new-red, 10%);
 
 

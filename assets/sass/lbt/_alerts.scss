@@ -21,6 +21,47 @@
     .navbar:not(.navbar-transparent) &{
         top: 70px;
     }
+    
+    span[data-notify="icon"]{
+        font-size: 30px;
+        display: block;
+        left: 15px;
+        position: absolute;
+        top: 50%;
+        margin-top: -15px;
+    }
+    
+    button.close{
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        margin-top: -13px;
+        z-index: 1033;
+        background-color: #FFFFFF;
+        display: block;
+        border-radius: 50%;
+        opacity: .4;
+        line-height: 11px;
+        width: 25px;
+        height: 25px;
+        outline: 0 !important;
+        text-align: center;
+        padding: 3px;
+        font-weight: 300;
+        
+        &:hover{
+            opacity: .55;
+        }
+    }
+    
+    &[data-notify="container"]{
+        padding: 10px 45px 10px 20px;
+        border-radius: $border-radius-base;
+    }
+    
+    &.alert-with-icon{
+        padding-left: 65px;
+    }
 }
 .alert-info{
      background-color: $azure-navbar;
@@ -34,4 +75,3 @@
 .alert-danger {
      background-color: $red-navbar;
 }
-

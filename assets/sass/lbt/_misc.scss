@@ -20,8 +20,8 @@ input[type="reset"]::-moz-focus-inner,
 input[type="button"]::-moz-focus-inner,
 input[type="submit"]::-moz-focus-inner,
 select::-moz-focus-inner,
-input[type="file"] > input[type="button"]::-moz-focus-inner {
-    outline : 0;
+input[type="file"] > input[type="button"]::-moz-focus-inner{
+    outline:0;
 }
 .ui-slider-handle:focus,
 .navbar-toggle,
@@ -228,7 +228,7 @@ input:focus {
     
     > .content{
         padding: 30px 15px;
-        min-height: calc(100% - 133px);
+        min-height: calc(100% - 123px);
     }
     
     > .footer{

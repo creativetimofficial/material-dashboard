@@ -150,6 +150,15 @@
             padding-right: 15px;
         }
     }
+    
+    .alert{
+        border-radius: $border-radius-base;
+        position: relative;
+        
+        &.alert-with-icon{
+            padding-left: 65px;
+        }
+    }
 }
 .card-user{
     .image{

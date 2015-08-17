@@ -1,6 +1,20 @@
 /*           Font Smoothing      */
-
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .navbar, .brand, .btn-simple, a, .td-name, td{
+body,
+h1, .h1, 
+h2, .h2, 
+h3, .h3, 
+h4, .h4, 
+h5, .h5, 
+h6, .h6, 
+p, 
+.navbar, 
+.brand, 
+.btn-simple,
+.alert, 
+a, 
+.td-name, 
+td,
+button.close{
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     font-family: "Roboto","Helvetica Neue",Arial,sans-serif;
@@ -8,7 +22,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .navbar, .brand, .btn-s
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4{
-    font-weight: $font-weight-normal;
+    font-weight: $font-weight-light;
     margin: $margin-large-vertical 0 $margin-base-vertical;
 }
 

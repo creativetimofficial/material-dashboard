@@ -20,14 +20,29 @@
   to {
     -ms-transform: rotate(360deg); } }
 /*           Font Smoothing      */
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .navbar, .brand, .btn-simple, a, .td-name, td {
+body,
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6,
+p,
+.navbar,
+.brand,
+.btn-simple,
+.alert,
+a,
+.td-name,
+td,
+button.close {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-family: "Roboto","Helvetica Neue",Arial,sans-serif;
   font-weight: 400; }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
-  font-weight: 400;
+  font-weight: 300;
   margin: 30px 0 15px; }
 
 h1, .h1 {
@@ -45,7 +60,7 @@ h4, .h4 {
   line-height: 30px; }
 
 h5, .h5 {
-  font-size: 18px;
+  font-size: 16px;
   margin-bottom: 15px; }
 
 h6, .h6 {
@@ -326,7 +341,7 @@ input:focus {
   min-height: 100%; }
   .main-panel > .content {
     padding: 30px 15px;
-    min-height: calc(100% - 133px); }
+    min-height: calc(100% - 123px); }
   .main-panel > .footer {
     border-top: 1px solid #e7e7e7; }
   .main-panel .navbar {
@@ -951,18 +966,49 @@ input:focus {
     z-index: 3; }
   .navbar:not(.navbar-transparent) .alert {
     top: 70px; }
+  .alert span[data-notify="icon"] {
+    font-size: 30px;
+    display: block;
+    left: 15px;
+    position: absolute;
+    top: 50%;
+    margin-top: -15px; }
+  .alert button.close {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -13px;
+    z-index: 1033;
+    background-color: #FFFFFF;
+    display: block;
+    border-radius: 50%;
+    opacity: .4;
+    line-height: 11px;
+    width: 25px;
+    height: 25px;
+    outline: 0 !important;
+    text-align: center;
+    padding: 3px;
+    font-weight: 300; }
+    .alert button.close:hover {
+      opacity: .55; }
+  .alert[data-notify="container"] {
+    padding: 10px 45px 10px 20px;
+    border-radius: 4px; }
+  .alert.alert-with-icon {
+    padding-left: 65px; }
 
 .alert-info {
-  background-color: rgba(91, 202, 255, 0.98); }
+  background-color: #63d8f1; }
 
 .alert-success {
-  background-color: rgba(76, 217, 100, 0.98); }
+  background-color: #a1e82c; }
 
 .alert-warning {
-  background-color: rgba(255, 149, 0, 0.98); }
+  background-color: #ffbc67; }
 
 .alert-danger {
-  background-color: rgba(255, 76, 64, 0.98); }
+  background-color: #fc727a; }
 
 .table-full-width {
   margin-left: -15px;
@@ -1272,7 +1318,7 @@ input:focus {
 
 .popover-title {
   font-size: 16px;
-  background-color: rgba(91, 202, 255, 0.98);
+  background-color: #63d8f1;
   font-weight: normal;
   line-height: 22px;
   padding: 8px 15px;
@@ -1291,7 +1337,7 @@ input:focus {
   margin-left: 0; }
 
 .popover.bottom .arrow:after {
-  border-bottom-color: rgba(91, 202, 255, 0.98); }
+  border-bottom-color: #63d8f1; }
 
 .popover-filter {
   position: fixed;
@@ -1747,19 +1793,19 @@ input:focus {
     border-bottom: 1px solid rgba(255, 255, 255, 0.6); }
 
 .navbar-ct-blue {
-  background-color: rgba(52, 172, 220, 0.98); }
+  background-color: #4091e2; }
 
 .navbar-ct-azure {
-  background-color: rgba(91, 202, 255, 0.98); }
+  background-color: #63d8f1; }
 
 .navbar-ct-green {
-  background-color: rgba(76, 217, 100, 0.98); }
+  background-color: #a1e82c; }
 
 .navbar-ct-orange {
-  background-color: rgba(255, 149, 0, 0.98); }
+  background-color: #ffbc67; }
 
 .navbar-ct-red {
-  background-color: rgba(255, 76, 64, 0.98); }
+  background-color: #fc727a; }
 
 .navbar-transparent {
   padding-top: 15px;
@@ -2246,7 +2292,7 @@ input:focus {
 
 .btn-morphing span {
   color: #9A9A9A;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 40px; }
 
 .circle {
@@ -2785,6 +2831,11 @@ input:focus {
   .card .table tbody td:last-child,
   .card .table thead th:last-child {
     padding-right: 15px; }
+  .card .alert {
+    border-radius: 4px;
+    position: relative; }
+    .card .alert.alert-with-icon {
+      padding-left: 65px; }
 
 .card-user .image {
   height: 110px; }
@@ -3052,7 +3103,7 @@ input:focus {
   border-radius: 0; }
 
 .panel-title {
-  font-size: 18px; }
+  font-size: 16px; }
 
 .panel-title a:hover, .panel-title a:focus {
   text-decoration: none; }
