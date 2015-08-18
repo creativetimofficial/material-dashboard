@@ -21,6 +21,7 @@
          > li > a {
              padding: $navbar-padding-a;
              margin: $navbar-margin-a;
+             position: relative;
          }
          > li > a.btn{
              margin: $navbar-margin-a-btn;
@@ -34,6 +35,22 @@
              position: relative;
              line-height: 16px;
              top: 1px;
+        }
+        
+        .notification{
+            position: absolute;
+            background-color: #FB404B;
+            text-align: center;
+            border-radius: 10px;
+            min-width: 18px;
+            padding: 0 5px;
+            height: 18px;
+            font-size: 12px;
+            color: #FFFFFF;
+            font-weight: bold;
+            line-height: 18px;
+            top: 0px;
+            left: 7px;
         }
     }
     .btn{

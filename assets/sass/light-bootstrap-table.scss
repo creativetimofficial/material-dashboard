@@ -5,38 +5,23 @@
 
 // Core CSS
 @import "lbt/misc";
+@import "lbt/sidebar-and-main-panel";
 @import "lbt/buttons";
 @import "lbt/inputs";
-@import "lbt/progress-bars";
-@import "lbt/sliders";
+
 @import "lbt/alerts";
 @import "lbt/tables";
-@import "lbt/labels";
-@import "lbt/tags";
-@import "lbt/tooltips-and-popovers";
-@import "lbt/sections";
+
 @import "lbt/checkbox-radio-switch";
 @import "lbt/navbars";
 @import "lbt/footers";
 
 // Fancy Stuff
 
-@import "lbt/social-buttons";
-@import "lbt/morphing-buttons";
 @import "lbt/dropdown";
-//@import "lbt/icons";
-
-@import "lbt/tabs-navs-pagination";
-@import "lbt/media";
 @import "lbt/cards";
-@import "lbt/collapse";
-@import "lbt/carousel";
-@import "lbt/modal";
 @import "lbt/chartist";
-
-@import "lbt/flexisel";
 @import "lbt/responsive";
-@import "lbt/datepicker";
 
 
 

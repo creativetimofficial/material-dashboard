@@ -10,18 +10,26 @@
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
     
+    
+    <!-- Bootstrap core CSS     -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Animation library for notifications   -->
+    <link href="assets/css/animate.min.css" rel="stylesheet"/>
+    
+    <!--  Light Bootstrap Table core CSS    -->
     <link href="assets/css/light-bootstrap-table.css" rel="stylesheet"/>
-        
+    
+    
     <!--  CSS for Demo Purpose, don't include it in your project     -->
     <link href="assets/css/demo.css" rel="stylesheet" />
+    
         
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
-    
     <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
-    
+
 </head>
 <body> 
 
@@ -108,6 +116,7 @@
                               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <i class="fa fa-globe"></i>
                                     <b class="caret"></b>
+                                    <span class="notification">5</span>
                               </a>
                               <ul class="dropdown-menu">
                                 <li><a href="#">Action</a></li>
@@ -165,49 +174,32 @@
 
 </body>
 
+        <!--   Core JS Files   -->
     <script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
-	<script src="assets/js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
-
 	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
 	
-	<!--  Plugins -->
-	<script src="assets/js/gsdk-checkbox.js"></script>
-	<script src="assets/js/gsdk-morphing.js"></script>
-	<script src="assets/js/gsdk-radio.js"></script>
-	<script src="assets/js/gsdk-bootstrapswitch.js"></script>
-	<script src="assets/js/bootstrap-select.js"></script>
-	<script src="assets/js/bootstrap-datepicker.js"></script>
+	<!--  Checkbox, Radio & Switch Plugins -->
+	<script src="assets/js/bootstrap-checkbox-radio-switch.js"></script>
+	
+	<!--  Charts Plugin -->
 	<script src="assets/js/chartist.min.js"></script>
-    <script src="assets/js/jquery.tagsinput.js"></script>
+
+    <!--  Notifications Plugin    -->
+    <script src="assets/js/bootstrap-notify.js"></script>
+    
+    <!--  Google Maps Plugin    -->
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 	
-	<script src="assets/js/get-shit-done.js"></script>
+    <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
+	<script src="assets/js/light-bootstrap-dashboard.js"></script>
+	
+	<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
 	<script src="assets/js/demo.js"></script>
     
     <script>
         $().ready(function(){
-            initGoogleMaps(); 
+            demo.initGoogleMaps(); 
         });
-        
-        function initGoogleMaps(){
-            var myLatlng = new google.maps.LatLng(40.748817, -73.985428);
-            var mapOptions = {
-              zoom: 13,
-              center: myLatlng,
-              scrollwheel: false, //we disable de scroll over the map, it is a really annoing when you scroll through page
-              styles: [{"featureType":"water","stylers":[{"saturation":43},{"lightness":-11},{"hue":"#0088ff"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"hue":"#ff0000"},{"saturation":-100},{"lightness":99}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#808080"},{"lightness":54}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#ece2d9"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#ccdca1"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#767676"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"poi","stylers":[{"visibility":"off"}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#b8cb93"}]},{"featureType":"poi.park","stylers":[{"visibility":"on"}]},{"featureType":"poi.sports_complex","stylers":[{"visibility":"on"}]},{"featureType":"poi.medical","stylers":[{"visibility":"on"}]},{"featureType":"poi.business","stylers":[{"visibility":"simplified"}]}]
-        
-            }
-            var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-            
-            var marker = new google.maps.Marker({
-                position: myLatlng,
-                title:"Hello World!"
-            });
-            
-            // To add the marker to the map, call setMap();
-            marker.setMap(map);
-        }
     </script>
     
 </html>

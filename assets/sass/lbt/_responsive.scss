@@ -1,13 +1,9 @@
-
 @media (min-width: 992px){    
     .navbar-form {
         margin-top: 21px;
         margin-bottom: 21px;
         padding-left: 5px;
         padding-right: 5px;
-    }
-    .navbar-search-form{
-        display: none;   
     }
     .navbar-nav > li > .dropdown-menu, .dropdown .dropdown-menu{
         @include transform-scale(0);
@@ -112,12 +108,18 @@
         display: none !important;
     }
     
+    .navbar-nav > li{
+        float: none;
+        position: relative;
+        display: block;
+    }
+    
     body > .navbar-collapse {
         position: fixed;
         display: block;
         top: 0;
         height: 100%;
-        width: 230px;
+        width: 250px;
         right: 0;
         z-index: 1032;
         visibility: visible;
@@ -125,24 +127,23 @@
         overflow-y: visible;
         border-top: none;
         text-align: left;
-        @include transform-translate-x(230px);
+        padding: 0;
+        
+        @include transform-translate-x(250px);
         @include transition (0.33s, cubic-bezier(0.685, 0.0473, 0.346, 1));
-        ul {
+        > ul {
             position: relative;
-            z-index: 3;
+            z-index: 4;
             overflow-y:scroll;
-            height: 95%;
+            height: 100vh;
+            width: 100%;
         }
         .nav > li{
-            border-bottom: 1px solid;
-            &:last-child {
-            border-bottom: 0;
-            }
             & > a{
-            margin: 15px 20px;
+                padding: 30px 25px;
             }
         }
-        &::after{
+        &::before{
             top: 0;
             left: 0;
             height: 100%;
@@ -153,19 +154,16 @@
             content: "";
             z-index: 1;   
         }
-        &.has-image::after{
-            @include black-filter(.8);
-        }
     }   
     .nav-open .navbar-collapse{
         @include transform-translate-x(0px);
     }
     .nav-open .navbar .container{
-        left: -230px;
+        left: -250px;
     }
     .nav-open .wrapper{
         left: 0;
-        @include transform-translate-x(-230px);
+        @include transform-translate-x(-250px);
     }
     .navbar-toggle .icon-bar {
           display: block;
@@ -228,10 +226,12 @@
       100% {opacity: 1;}
     }
     
-    
+    .dropdown-menu .divider{
+        background-color: rgba(229, 229, 229, 0.15);
+    }
     
     .navbar-nav {
-        margin: 1px -15px;
+        margin: 1px 0;
 
         .open .dropdown-menu > li {
             & > a{
@@ -249,9 +249,17 @@
     }
     
     [class*="navbar-"] .navbar-nav {
-        & > li > a, > li > a:hover, > li > a:focus, .active > a, .active > a:hover, .active > a:focus, .open .dropdown-menu > li > a, .open .dropdown-menu > li > a:hover, .open .dropdown-menu > li > a:focus, .navbar-nav .open .dropdown-menu > li > a:active {
+        & > li > a, 
+        > li > a:hover, 
+        > li > a:focus, 
+        .active > a, 
+        .active > a:hover, 
+        .active > a:focus, 
+        .open .dropdown-menu > li > a, 
+        .open .dropdown-menu > li > a:hover, 
+        .open .dropdown-menu > li > a:focus, 
+        .navbar-nav .open .dropdown-menu > li > a:active {
             color: white;
-           
         }
 
         & > li > a,
@@ -294,7 +302,7 @@
         opacity: 0;
         top: 0;
         left: auto;
-        right: 230px;
+        right: 250px;
         content: "";
         z-index: 9999;
         overflow-x: hidden;
@@ -337,24 +345,9 @@
         width: 100%;
     }
         
-}
-
-//overwrite table responsive for 768px screens
-
-@media (max-width: 768px){
-    .table-responsive {
-        width: 100%;
-        margin-bottom: 15px;
-        overflow-x: scroll;
-        overflow-y: hidden;
-        border: 1px solid #dddddd;
-        -ms-overflow-style: -ms-autohiding-scrollbar;
-        -webkit-overflow-scrolling: touch;
+    .navbar-collapse.collapse{
+        height: 100% !important;
     }
-}
-
-
-@media (max-width: 991px) {
     .navbar-collapse.collapse.in {
         display: block;
     }
@@ -364,4 +357,48 @@
     .navbar-header {
         float:none;
     }
+    .navbar-nav .open .dropdown-menu {
+        position: static;
+        float: none;
+        width: auto;
+        margin-top: 0;
+        background-color: transparent;
+        border: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+    .navbar-collapse{
+        .nav p{
+            font-size: $font-size-base;
+            margin: 0;
+        }
+        
+        [class^="pe-7s-"]{
+            float: left;
+            font-size: 20px;
+            margin-right: 10px;
+        }
+    }
 }
+
+//overwrite table responsive for 768px screens
+
+@media (min-width: 768px){
+    .table-full-width{
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}
+
+@media (max-width: 768px){
+    .table-responsive {
+        width: 100%;
+        margin-bottom: 15px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+}
+

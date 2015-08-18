@@ -10,20 +10,26 @@
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
     
+    
+    <!-- Bootstrap core CSS     -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Animation library for notifications   -->
     <link href="assets/css/animate.min.css" rel="stylesheet"/>
+    
+    <!--  Light Bootstrap Table core CSS    -->
     <link href="assets/css/light-bootstrap-table.css" rel="stylesheet"/>
     
     
     <!--  CSS for Demo Purpose, don't include it in your project     -->
     <link href="assets/css/demo.css" rel="stylesheet" />
+    
         
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
-    
     <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
-    
+
 </head>
 <body> 
 
@@ -97,7 +103,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Dashboard</a>
+                    <a class="navbar-brand" href="#">Notifications</a>
                 </div>
                 <div class="collapse navbar-collapse">       
                     <ul class="nav navbar-nav navbar-left">
@@ -110,6 +116,7 @@
                               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <i class="fa fa-globe"></i>
                                     <b class="caret"></b>
+                                    <span class="notification">5</span>
                               </a>
                               <ul class="dropdown-menu">
                                 <li><a href="#">Action</a></li>
@@ -222,24 +229,24 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-2 col-md-offset-3">
-                                    <button class="btn btn-default btn-block" onclick="showNotification('top','left')">Top Left</button>
+                                    <button class="btn btn-default btn-block" onclick="demo.showNotification('top','left')">Top Left</button>
                                 </div>
                                 <div class="col-md-2">
-                                    <button class="btn btn-default btn-block" onclick="showNotification('top','center')">Top Center</button>                                
+                                    <button class="btn btn-default btn-block" onclick="demo.showNotification('top','center')">Top Center</button>                                
                                 </div>
                                 <div class="col-md-2">
-                                    <button class="btn btn-default btn-block" onclick="showNotification('top','right')">Top Right</button>
+                                    <button class="btn btn-default btn-block" onclick="demo.showNotification('top','right')">Top Right</button>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-2 col-md-offset-3">
-                                    <button class="btn btn-default btn-block" onclick="showNotification('bottom','left')">Bottom Left</button>
+                                    <button class="btn btn-default btn-block" onclick="demo.showNotification('bottom','left')">Bottom Left</button>
                                 </div>
                                 <div class="col-md-2">
-                                    <button class="btn btn-default btn-block" onclick="showNotification('bottom','center')">Bottom Center</button>
+                                    <button class="btn btn-default btn-block" onclick="demo.showNotification('bottom','center')">Bottom Center</button>
                                 </div>
                                 <div class="col-md-2">
-                                    <button class="btn btn-default btn-block" onclick="showNotification('bottom','right')">Bottom Right</button>
+                                    <button class="btn btn-default btn-block" onclick="demo.showNotification('bottom','right')">Bottom Right</button>
                                 </div>
                             </div>
                         </div>
@@ -287,46 +294,26 @@
 
 </body>
 
+        <!--   Core JS Files   -->
     <script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
-	<script src="assets/js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
-
 	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
 	
-	<!--  Plugins -->
-	<script src="assets/js/gsdk-checkbox.js"></script>
-	<script src="assets/js/gsdk-morphing.js"></script>
-	<script src="assets/js/gsdk-radio.js"></script>
-	<script src="assets/js/gsdk-bootstrapswitch.js"></script>
-	<script src="assets/js/bootstrap-select.js"></script>
-	<script src="assets/js/bootstrap-datepicker.js"></script>
+	<!--  Checkbox, Radio & Switch Plugins -->
+	<script src="assets/js/bootstrap-checkbox-radio-switch.js"></script>
+	
+	<!--  Charts Plugin -->
 	<script src="assets/js/chartist.min.js"></script>
-    <script src="assets/js/jquery.tagsinput.js"></script>
+
+    <!--  Notifications Plugin    -->
     <script src="assets/js/bootstrap-notify.js"></script>
     
+    <!--  Google Maps Plugin    -->
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 	
-	<script src="assets/js/get-shit-done.js"></script>
+    <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
+	<script src="assets/js/light-bootstrap-dashboard.js"></script>
+	
+	<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
 	<script src="assets/js/demo.js"></script>
 	
-	<script type="text/javascript">
-    	type = ['','info','success','warning','danger'];
-    	
-    	function showNotification(from, align){
-        	color = Math.floor((Math.random() * 4) + 1);
-        	
-        	$.notify({
-            	icon: "pe-7s-gift",
-            	message: "Welcome to <b>Light Bootstrap Dashboard</b> - a beautiful freebie for every web developer."
-            	
-            },{
-                type: type[color],
-                timer: 4000,
-                placement: {
-                    from: from,
-                    align: align
-                }
-            });
-    	}
-	</script>
-    
 </html>
