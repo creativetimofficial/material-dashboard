@@ -338,6 +338,11 @@ body > .navbar-collapse:after {
   background: linear-gradient(to bottom, #787878 0%, #343434 100%);
   background-size: 150% 150%;
   z-index: 3;
+  opacity: 1;
+}
+.sidebar[data-image]:after, .sidebar.has-image:after,
+body > .navbar-collapse[data-image]:after,
+body > .navbar-collapse.has-image:after {
   opacity: .77;
 }
 .sidebar[data-color="blue"]:after,
@@ -375,13 +380,13 @@ body > .navbar-collapse[data-color="green"]:after {
 }
 .sidebar[data-color="orange"]:after,
 body > .navbar-collapse[data-color="orange"]:after {
-  background: #ffb33b;
-  background: -moz-linear-gradient(top, #ffb33b 0%, #ff5221 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffb33b), color-stop(100%, #ff5221));
-  background: -webkit-linear-gradient(top, #ffb33b 0%, #ff5221 100%);
-  background: -o-linear-gradient(top, #ffb33b 0%, #ff5221 100%);
-  background: -ms-linear-gradient(top, #ffb33b 0%, #ff5221 100%);
-  background: linear-gradient(to bottom, #ffb33b 0%, #ff5221 100%);
+  background: #FFA534;
+  background: -moz-linear-gradient(top, #FFA534 0%, #ff5221 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FFA534), color-stop(100%, #ff5221));
+  background: -webkit-linear-gradient(top, #FFA534 0%, #ff5221 100%);
+  background: -o-linear-gradient(top, #FFA534 0%, #ff5221 100%);
+  background: -ms-linear-gradient(top, #FFA534 0%, #ff5221 100%);
+  background: linear-gradient(to bottom, #FFA534 0%, #ff5221 100%);
   background-size: 150% 150%;
 }
 .sidebar[data-color="red"]:after,
@@ -1865,6 +1870,9 @@ body > .navbar-collapse[data-color="purple"]:after {
 .card .footer hr {
   margin-top: 5px;
   margin-bottom: 5px;
+}
+.card .stats {
+  color: #a9a9a9;
 }
 .card .footer div {
   display: inline-block;

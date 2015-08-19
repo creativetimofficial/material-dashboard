@@ -117,7 +117,7 @@
 
 
 .sidebar,
-body > .navbar-collapse,{
+body > .navbar-collapse{
     &:after,
     &:before{
         display: block;
@@ -138,8 +138,14 @@ body > .navbar-collapse,{
     &:after{
        @include icon-gradient($black-color-top, $black-color-bottom);
        z-index: 3;
-       opacity: .77;
+       opacity: 1;
     }
+    
+    &[data-image]:after,
+    &.has-image:after{
+        opacity: .77;
+    }
+    
     &[data-color="blue"]:after{
         @include icon-gradient($new-dark-blue, $blue-color-bottom);
     }
@@ -150,7 +156,7 @@ body > .navbar-collapse,{
         @include icon-gradient($new-green, $green-color-bottom);
     }
     &[data-color="orange"]:after{
-        @include icon-gradient($orange-color-top, $orange-color-bottom);
+        @include icon-gradient($new-orange, $orange-color-bottom);
     }
     &[data-color="red"]:after{
         @include icon-gradient($new-red, $red-color-bottom);
