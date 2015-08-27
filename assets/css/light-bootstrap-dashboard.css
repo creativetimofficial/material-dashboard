@@ -2843,7 +2843,7 @@ body > .navbar-collapse[data-color="purple"]:after {
     position: relative;
     z-index: 4;
     overflow-y: scroll;
-    height: 100vh;
+    height: calc(100vh - 61px);
     width: 100%;
   }
   body > .navbar-collapse .nav > li > a {
@@ -2859,6 +2859,10 @@ body > .navbar-collapse[data-color="purple"]:after {
     display: block;
     content: "";
     z-index: 1;
+  }
+  body > .navbar-collapse .logo {
+    position: relative;
+    z-index: 4;
   }
 
   .nav-open .navbar-collapse {
@@ -3323,13 +3327,17 @@ body > .navbar-collapse[data-color="purple"]:after {
     margin-right: 10px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .table-full-width {
     margin-left: -15px;
     margin-right: -15px;
   }
+
+  .table-responsive {
+    overflow: visible;
+  }
 }
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .table-responsive {
     width: 100%;
     margin-bottom: 15px;

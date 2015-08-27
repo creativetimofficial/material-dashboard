@@ -64,7 +64,10 @@ lbd = {
             
             $sidebar = $('.sidebar');
             sidebar_color = $sidebar.data('color');
-                         
+            
+            $logo = $sidebar.find('.logo').first();
+            logo_content = $logo[0].outerHTML;
+                    
             ul_content = '';
              
             $navbar.attr('data-color',sidebar_color);
@@ -80,7 +83,10 @@ lbd = {
             });
              
             ul_content = '<ul class="nav navbar-nav">' + ul_content + '</ul>';
-            $navbar.html(ul_content);
+            
+            navbar_content = logo_content + ul_content;
+            
+            $navbar.html(navbar_content);
              
             $('body').append($navbar);
              

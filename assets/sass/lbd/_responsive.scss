@@ -135,7 +135,7 @@
             position: relative;
             z-index: 4;
             overflow-y:scroll;
-            height: 100vh;
+            height: calc(100vh - 61px);
             width: 100%;
         }
         .nav > li{
@@ -153,6 +153,11 @@
             display: block;
             content: "";
             z-index: 1;   
+        }
+        
+        .logo{
+            position: relative;
+            z-index: 4;
         }
     }   
     .nav-open .navbar-collapse{
@@ -383,14 +388,18 @@
 
 //overwrite table responsive for 768px screens
 
-@media (min-width: 768px){
+@media (min-width: 992px){
     .table-full-width{
         margin-left: -15px;
         margin-right: -15px;
     }
+    .table-responsive{
+        overflow: visible;
+    }
+
 }
 
-@media (max-width: 768px){
+@media (max-width: 991px){
     .table-responsive {
         width: 100%;
         margin-bottom: 15px;
