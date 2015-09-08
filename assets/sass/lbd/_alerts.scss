@@ -54,8 +54,13 @@
         }
     }
     
+    .close ~ span{
+        display: block;
+        max-width: 89%;
+    }
+    
     &[data-notify="container"]{
-        padding: 10px 45px 10px 20px;
+        padding: 10px 10px 10px 20px;
         border-radius: $border-radius-base;
     }
     
