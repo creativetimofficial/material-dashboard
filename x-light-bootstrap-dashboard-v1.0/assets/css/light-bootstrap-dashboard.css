@@ -310,6 +310,46 @@ input:focus {
   text-align: center;
 }
 
+.sidebar .logo,
+body > .navbar-collapse .logo {
+  padding: 10px 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.sidebar .logo p,
+body > .navbar-collapse .logo p {
+  float: left;
+  font-size: 20px;
+  margin: 10px 10px;
+  color: #FFFFFF;
+  line-height: 20px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.sidebar .logo .simple-text,
+body > .navbar-collapse .logo .simple-text {
+  text-transform: uppercase;
+  padding: 5px 0px;
+  display: block;
+  font-size: 18px;
+  color: #FFFFFF;
+  text-align: center;
+  font-weight: 400;
+  line-height: 30px;
+}
+.sidebar .logo-tim,
+body > .navbar-collapse .logo-tim {
+  border-radius: 50%;
+  border: 1px solid #333;
+  display: block;
+  height: 61px;
+  width: 61px;
+  float: left;
+  overflow: hidden;
+}
+.sidebar .logo-tim img,
+body > .navbar-collapse .logo-tim img {
+  width: 60px;
+  height: 60px;
+}
 .sidebar:after, .sidebar:before,
 body > .navbar-collapse:after,
 body > .navbar-collapse:before {
@@ -959,8 +999,12 @@ body > .navbar-collapse[data-color="purple"]:after {
 .alert button.close:hover {
   opacity: .55;
 }
+.alert .close ~ span {
+  display: block;
+  max-width: 89%;
+}
 .alert[data-notify="container"] {
-  padding: 10px 45px 10px 20px;
+  padding: 10px 10px 10px 20px;
   border-radius: 4px;
 }
 .alert.alert-with-icon {
@@ -2843,7 +2887,7 @@ body > .navbar-collapse[data-color="purple"]:after {
     position: relative;
     z-index: 4;
     overflow-y: scroll;
-    height: 100vh;
+    height: calc(100vh - 61px);
     width: 100%;
   }
   body > .navbar-collapse .nav > li > a {
@@ -2859,6 +2903,10 @@ body > .navbar-collapse[data-color="purple"]:after {
     display: block;
     content: "";
     z-index: 1;
+  }
+  body > .navbar-collapse .logo {
+    position: relative;
+    z-index: 4;
   }
 
   .nav-open .navbar-collapse {
@@ -3323,13 +3371,17 @@ body > .navbar-collapse[data-color="purple"]:after {
     margin-right: 10px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .table-full-width {
     margin-left: -15px;
     margin-right: -15px;
   }
+
+  .table-responsive {
+    overflow: visible;
+  }
 }
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .table-responsive {
     width: 100%;
     margin-bottom: 15px;
