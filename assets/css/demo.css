@@ -4,13 +4,13 @@
         margin-bottom: 40px;
         position: relative;
     }
-    
+
     .typo-line .category{
         transform: translateY(-50%);
         top: 50%;
         left: 0px;
         position: absolute;
-    }   
+    }
 }
 
 .all-icons [class*="pe-"]{
@@ -35,12 +35,27 @@
     font-size: 13px;
 }
 
-#map{ 
-    position:relative; 
-    width:100%; 
+#map{
+    position:relative;
+    width:100%;
     height: calc(100% - 60px);
 }
 
 .places-buttons .btn{
     margin-bottom: 30px
+}
+.sidebar .nav > li.active-pro{
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+}
+.sidebar .nav > li.active-pro a{
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 1;
+    color: #FFFFFF;
+}
+
+.table-upgrade td:nth-child(2),
+.table-upgrade td:nth-child(3){
+    text-align: center;
 }
