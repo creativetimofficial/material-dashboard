@@ -59,3 +59,7 @@
 .table-upgrade td:nth-child(3){
     text-align: center;
 }
+.space-70{
+    height: 70px;
+    display: block;
+}
