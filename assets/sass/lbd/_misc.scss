@@ -6,14 +6,14 @@ body,
 }
 a{
   color: $info-color;
-    
+
   &:hover, &:focus{
-     color: $info-states-color; 
-     text-decoration: none; 
+     color: $info-states-color;
+     text-decoration: none;
   }
 }
 
-a:focus, a:active, 
+a:focus, a:active,
 button::-moz-focus-inner,
 input::-moz-focus-inner,
 input[type="reset"]::-moz-focus-inner,
@@ -30,8 +30,8 @@ input:focus {
 }
 
 /*           Animations              */
-.form-control, 
-.input-group-addon, 
+.form-control,
+.input-group-addon,
 .tagsinput,
 .navbar,
 .navbar .alert{
@@ -60,3 +60,10 @@ input:focus {
     height: 100vh;
 }
 
+.navigation-example{
+    background-image: url('../img/bg.jpg');
+    background-position: center center;
+    background-size: cover;
+    margin-top: 0;
+    min-height: 740px;
+}

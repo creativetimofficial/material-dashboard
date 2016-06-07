@@ -10,7 +10,7 @@
     font-weight: 200;
     background-size: cover;
     background-position: center center;
-    
+
     .sidebar-wrapper{
         position: relative;
         max-height: none;
@@ -19,7 +19,7 @@
         width: 260px;
         z-index: 4;
     }
-    
+
     .sidebar-background{
         position: absolute;
         z-index: 1;
@@ -31,11 +31,11 @@
         background-size: cover;
         background-position: center center;
     }
-    
+
     .logo{
         padding: $navbar-padding-a;
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        
+
         p{
             float: left;
             font-size: 20px;
@@ -44,7 +44,7 @@
             line-height: 20px;
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         }
-        
+
         .simple-text{
             text-transform: uppercase;
             padding: $padding-small-vertical $padding-zero;
@@ -56,7 +56,7 @@
             line-height: 30px;
         }
     }
-    
+
     .logo-tim{
         border-radius: 50%;
         border: 1px solid #333;
@@ -65,16 +65,16 @@
         width: 61px;
         float: left;
         overflow: hidden;
-        
+
         img{
             width: 60px;
             height: 60px;
         }
     }
-    
+
     .nav{
         margin-top: 20px;
-        
+
         li{
             > a{
                 color: #FFFFFF;
@@ -82,20 +82,20 @@
                 opacity: .86;
                 border-radius: 4px;
             }
-            
+
             &:hover > a{
                 background: rgba(255,255,255,0.13);
                 opacity: 1;
             }
-            
+
             &.active > a{
                 color: #FFFFFF;
                 opacity: 1;
-                background: rgba(255,255,255,0.23);  
-  
+                background: rgba(255,255,255,0.23);
+
             }
         }
-        
+
         p{
             margin: 0;
             line-height: 30px;
@@ -103,7 +103,7 @@
             font-weight: 600;
             text-transform: uppercase;
         }
-        
+
         i{
             font-size: 28px;
             float: left;
@@ -121,7 +121,7 @@ body > .navbar-collapse{
     .logo{
         padding: $navbar-padding-a;
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        
+
         p{
             float: left;
             font-size: 20px;
@@ -130,7 +130,7 @@ body > .navbar-collapse{
             line-height: 20px;
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         }
-        
+
         .simple-text{
             text-transform: uppercase;
             padding: $padding-small-vertical $padding-zero;
@@ -142,7 +142,7 @@ body > .navbar-collapse{
             line-height: 30px;
         }
     }
-    
+
     .logo-tim{
         border-radius: 50%;
         border: 1px solid #333;
@@ -151,13 +151,13 @@ body > .navbar-collapse{
         width: 61px;
         float: left;
         overflow: hidden;
-        
+
         img{
             width: 60px;
             height: 60px;
         }
     }
-    
+
     &:after,
     &:before{
         display: block;
@@ -169,23 +169,23 @@ body > .navbar-collapse{
         left: 0;
         z-index: 2;
     }
-    
+
     &:before{
         opacity: .33;
         background: #000000;
     }
-    
+
     &:after{
        @include icon-gradient($black-color-top, $black-color-bottom);
        z-index: 3;
        opacity: 1;
     }
-    
+
     &[data-image]:after,
     &.has-image:after{
         opacity: .77;
     }
-    
+
     &[data-color="blue"]:after{
         @include icon-gradient($new-dark-blue, $blue-color-bottom);
     }
@@ -214,17 +214,17 @@ body > .navbar-collapse{
     float: right;
     width: $sidebar-width;
     min-height: 100%;
-    
+
     > .content{
         padding: 30px 15px;
         min-height: calc(100% - 123px);
     }
-    
+
     > .footer{
         border-top: 1px solid #e7e7e7;
     }
-    
-    .navbar{
+
+    > .navbar{
         margin-bottom: 0;
     }
 }

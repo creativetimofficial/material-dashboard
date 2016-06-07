@@ -1,10 +1,10 @@
 type = ['','info','success','warning','danger'];
-    	
+
 
 demo = {
     initPickColor: function(){
         $('.pick-class-label').click(function(){
-            var new_class = $(this).attr('new-class');  
+            var new_class = $(this).attr('new-class');
             var old_class = $('#display-buttons').attr('data-class');
             var display_div = $('#display-buttons');
             if(display_div.length) {
@@ -15,9 +15,30 @@ demo = {
             }
         });
     },
-    
-    initChartist: function(){    
-        
+
+    initSliders: function(){
+        // Sliders for demo purpose
+        $('#sliderRegular').noUiSlider({
+            start: 40,
+            connect: "lower",
+            range: {
+                min: 0,
+                max: 100
+            }
+        });
+
+        $('#sliderDouble').noUiSlider({
+            start: [20, 60] ,
+            connect: true,
+            range: {
+                min: 0,
+                max: 100
+            }
+        });
+    },
+
+    initChartist: function(){
+
         var dataSales = {
           labels: ['9:00AM', '12:00AM', '3:00PM', '6:00PM', '9:00PM', '12:00PM', '3:00AM', '6:00AM'],
           series: [
@@ -26,7 +47,7 @@ demo = {
             [23, 113, 67, 108, 190, 239, 307, 308, 439, 410, 410, 509]
           ]
         };
-        
+
         var optionsSales = {
           lineSmooth: false,
           low: 0,
@@ -42,7 +63,7 @@ demo = {
           showLine: false,
           showPoint: false,
         };
-        
+
         var responsiveSales = [
           ['screen and (max-width: 640px)', {
             axisX: {
@@ -52,10 +73,10 @@ demo = {
             }
           }]
         ];
-    
+
         Chartist.Line('#chartHours', dataSales, optionsSales, responsiveSales);
-        
-    
+
+
         var data = {
           labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
           series: [
@@ -63,7 +84,7 @@ demo = {
             [412, 243, 280, 580, 453, 353, 300, 364, 368, 410, 636, 695]
           ]
         };
-        
+
         var options = {
             seriesBarDistance: 10,
             axisX: {
@@ -71,7 +92,7 @@ demo = {
             },
             height: "245px"
         };
-        
+
         var responsiveOptions = [
           ['screen and (max-width: 640px)', {
             seriesBarDistance: 5,
@@ -82,15 +103,15 @@ demo = {
             }
           }]
         ];
-        
+
         Chartist.Bar('#chartActivity', data, options, responsiveOptions);
-    
+
         var dataPreferences = {
             series: [
                 [25, 30, 20, 25]
             ]
         };
-        
+
         var optionsPreferences = {
             donut: true,
             donutWidth: 40,
@@ -101,15 +122,15 @@ demo = {
                 showGrid: false
             }
         };
-    
+
         Chartist.Pie('#chartPreferences', dataPreferences, optionsPreferences);
-        
+
         Chartist.Pie('#chartPreferences', {
           labels: ['62%','32%','6%'],
           series: [62, 32, 6]
-        });   
+        });
     },
-    
+
     initGoogleMaps: function(){
         var myLatlng = new google.maps.LatLng(40.748817, -73.985428);
         var mapOptions = {
@@ -117,26 +138,26 @@ demo = {
           center: myLatlng,
           scrollwheel: false, //we disable de scroll over the map, it is a really annoing when you scroll through page
           styles: [{"featureType":"water","stylers":[{"saturation":43},{"lightness":-11},{"hue":"#0088ff"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"hue":"#ff0000"},{"saturation":-100},{"lightness":99}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#808080"},{"lightness":54}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#ece2d9"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#ccdca1"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#767676"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"poi","stylers":[{"visibility":"off"}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#b8cb93"}]},{"featureType":"poi.park","stylers":[{"visibility":"on"}]},{"featureType":"poi.sports_complex","stylers":[{"visibility":"on"}]},{"featureType":"poi.medical","stylers":[{"visibility":"on"}]},{"featureType":"poi.business","stylers":[{"visibility":"simplified"}]}]
-    
+
         }
         var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-        
+
         var marker = new google.maps.Marker({
             position: myLatlng,
             title:"Hello World!"
         });
-        
+
         // To add the marker to the map, call setMap();
         marker.setMap(map);
     },
-    
+
 	showNotification: function(from, align){
     	color = Math.floor((Math.random() * 4) + 1);
-    	
+
     	$.notify({
         	icon: "pe-7s-gift",
         	message: "Welcome to <b>Light Bootstrap Dashboard</b> - a beautiful freebie for every web developer."
-        	
+
         },{
             type: type[color],
             timer: 4000,
@@ -147,6 +168,5 @@ demo = {
         });
 	}
 
-    
-}
 
+}
