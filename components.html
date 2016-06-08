@@ -711,7 +711,7 @@
 											<div class="col-md-6">
 												<div class="form-group label-static">
 													<label class="control-label">Datepicker</label>
-													<input type="text" class="datepicker form-control" value="03/12/2016" />
+													<input type="text" class="form-control datetimepicker" value="03/12/2016" />
 												</div>
 											</div>
 										</div>
@@ -888,18 +888,6 @@
 	                    <div class="tim-typo">
 	                        <h6><span class="tim-note">Header 6</span>The Life of Material Kit</h6>
 	                    </div>
-						<div class="tim-typo">
-	                        <h1 class="title"><span class="tim-note">Header 1 Title</span>The Life of Material Kit </h1>
-	                    </div>
-	                    <div class="tim-typo">
-	                        <h2 class="title"><span class="tim-note">Header 2 Title</span>The Life of Material Kit</h2>
-	                    </div>
-	                    <div class="tim-typo">
-	                        <h3 class="title"><span class="tim-note">Header 3 Title</span>The Life of Material Kit</h3>
-	                    </div>
-	                    <div class="tim-typo">
-	                        <h4 class="title"><span class="tim-note">Header 4 Title</span>The Life of Material Kit</h4>
-	                    </div>
 	                    <div class="tim-typo">
 	                        <p><span class="tim-note">Paragraph</span>
 	                            I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at.</p>
@@ -1045,8 +1033,12 @@
     <!--  Notifications Plugin    -->
     <script src="assets/js/bootstrap-notify.js"></script>
 
+	<!--  Plugin for Date Time Picker and Full Calendar Plugin-->
+	<script src="assets/js/moment.min.js"></script>
+
 	<!--	Plugin for the Datepicker, full documentation here: http://www.eyecon.ro/bootstrap-datepicker/ -->
-	<script src="assets/js/bootstrap-datepicker.js" type="text/javascript"></script>
+	<script src="assets/js/bootstrap-datetimepicker.js" type="text/javascript"></script>
+
 
 	<!--	Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
 	<script src="assets/js/jasny-bootstrap.min.js"></script>
@@ -1055,7 +1047,7 @@
 	<script src="assets/js/nouislider.min.js" type="text/javascript"></script>
 
     <!--  Google Maps Plugin    -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
 
     <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
 	<script src="assets/js/light-bootstrap-dashboard.js"></script>
@@ -1066,8 +1058,7 @@
 	<script type="text/javascript">
     	$(document).ready(function(){
 
-			demo.initSliders();
-        	demo.initChartist();
+			demo.initFormExtendedDatetimepickers();
 
         	/*$.notify({
             	icon: 'pe-7s-gift',

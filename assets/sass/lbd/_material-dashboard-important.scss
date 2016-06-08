@@ -1,3 +1,10 @@
+// Variables for datetimepicker //
+$padding-default-vertical:     10px !default;
+
+
+
+
+
 @import "mk/variables";
 @import "mk/mixins";
 @import "mk/shadows";
@@ -18,4 +25,4 @@
 @import "mk/typography";
 
 @import "mk/plugins/_plugin-nouislider";
-@import "mk/plugins/_plugin-datepicker";
+@import "mk/plugins/_datetime-picker";

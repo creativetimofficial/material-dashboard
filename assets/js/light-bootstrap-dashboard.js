@@ -23,12 +23,6 @@ $(document).ready(function(){
     //  Activate the tooltips
     $('[rel="tooltip"]').tooltip();
 
-    // Activate Datepicker
-    if($('.datepicker').length != 0){
-        $('.datepicker').datepicker({
-             weekStart:1
-        });
-    }
 
     //      Activate the switches with icons
     if($('.switch').length != 0){
