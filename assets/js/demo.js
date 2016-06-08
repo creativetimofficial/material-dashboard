@@ -28,8 +28,7 @@ demo = {
                 today: 'fa fa-screenshot',
                 clear: 'fa fa-trash',
                 close: 'fa fa-remove'
-            },
-            inline:true
+            }
          });
 
     },

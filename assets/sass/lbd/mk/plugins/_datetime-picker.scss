@@ -50,7 +50,7 @@ $bs-datetimepicker-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25) !default;
 
         &.bottom {
 
-            &:before {
+            /*&:before {
                 border-bottom: 11px solid rgba(0, 0, 0, 0.2);
                 border-left: 11px solid rgba(0, 0, 0, 0);
                 border-right: 11px solid rgba(0, 0, 0, 0);
@@ -70,7 +70,7 @@ $bs-datetimepicker-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25) !default;
                 position: absolute;
                 left: 12px;
                 top: -10px;
-            }
+            }*/
         }
 
         &.top {
@@ -82,7 +82,7 @@ $bs-datetimepicker-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25) !default;
                 margin-bottom: 5px;
             }
 
-            &:before {
+            /*&:before {
                 border-top: 11px solid rgba(0, 0, 0, 0.2);
                 border-left: 11px solid rgba(0, 0, 0, 0);
                 border-right: 11px solid rgba(0, 0, 0, 0);
@@ -106,7 +106,7 @@ $bs-datetimepicker-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25) !default;
                 left: 12px;
                 bottom: -10px;
                 top: auto;
-            }
+            }*/
         }
 
 

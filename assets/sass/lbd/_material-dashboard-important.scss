@@ -15,6 +15,7 @@ $padding-default-vertical:     10px !default;
 @import "mk/checkboxes";
 @import "mk/togglebutton";
 @import "mk/radios";
+@import "mk/dropdown";
 @import "mk/inputs";
 @import "mk/navbar";
 @import "mk/ripples";
@@ -23,6 +24,8 @@ $padding-default-vertical:     10px !default;
 @import "mk/tabs";
 @import "mk/pills";
 @import "mk/typography";
+@import "mk/dialogs";
+@import "mk/footers";
 
 @import "mk/plugins/_plugin-nouislider";
 @import "mk/plugins/_datetime-picker";
