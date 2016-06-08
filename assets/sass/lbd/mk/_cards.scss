@@ -71,6 +71,10 @@
     }
 
     .header{
+        padding: $margin-base-vertical $padding-large-horizontal 0px;
+    }
+
+    .header-raised{
         @include shadow-big();
         margin: $margin-base;
         border-radius: $border-radius-base;
@@ -203,8 +207,8 @@
             color: $gray-color;
         }
         .stats{
-            float: right;
-            line-height: 30px;
+            //float: right;
+            //line-height: 30px;
             color: $gray-color;
 
             .material-icons{
@@ -278,7 +282,7 @@
 .card-nav-tabs{
     margin-top: 45px;
 
-    .header{
+    .header-raised{
         margin-top: -$margin-base * 2;
     }
     .nav-tabs{

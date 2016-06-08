@@ -71,11 +71,11 @@
 .tim-white-buttons {
     background-color: #777777;
 }
-.title{
+/*.title{
     margin-top: 30px;
     margin-bottom: 25px;
     min-height: 32px;
-}
+}*/
 .title.text-center{
     margin-bottom: 50px;
 }
