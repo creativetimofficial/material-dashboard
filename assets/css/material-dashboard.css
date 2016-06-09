@@ -5083,6 +5083,7 @@ select.form-control[multiple], .form-group.is-focused select.form-control[multip
 .table .checkbox {
   margin-top: 0;
   margin-bottom: 0;
+  margin-left: 20px;
   padding: 0;
   width: 15px;
 }
@@ -5198,34 +5199,22 @@ h6, .h6 {
   font-weight: 600;
 }
 
-.title,
+/*.title,
 .card-title,
 .info-title,
 .footer-brand,
 .footer-big h5,
 .footer-big h4,
-.media .media-heading {
-  font-weight: 700;
-  font-family: "Roboto Slab", "Times New Roman", serif;
-}
-.title,
-.title a,
-.card-title,
-.card-title a,
-.info-title,
-.info-title a,
-.footer-brand,
-.footer-brand a,
-.footer-big h5,
-.footer-big h5 a,
-.footer-big h4,
-.footer-big h4 a,
-.media .media-heading,
-.media .media-heading a {
-  color: #333333;
-  text-decoration: none;
-}
+.media .media-heading{
+    font-weight: $font-weight-extra-bold;
+    font-family: $font-family-serif;
 
+    &,
+    a{
+        color: $black-color;
+        text-decoration: none;
+    }
+}*/
 h2.title {
   margin-bottom: 30px;
 }
