@@ -4915,6 +4915,7 @@ select.form-control[multiple], .form-group.is-focused select.form-control[multip
 .alert {
   border: 0;
   border-radius: 0;
+  position: relative;
   padding: 20px 15px;
   line-height: 20px;
 }
