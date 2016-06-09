@@ -5390,6 +5390,7 @@ footer .footer-brand:hover, footer .footer-brand:focus {
 }
 footer .copyright {
   padding: 15px 0;
+  margin: 0;
 }
 footer .copyright .material-icons {
   font-size: 18px;
