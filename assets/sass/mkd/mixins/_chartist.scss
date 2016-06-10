@@ -67,13 +67,13 @@ $ct-include-alternative-responsive-containers: $ct-include-classes !default;
 // Series names and colors. This can be extended or customized as desired. Just add more series and colors.
 $ct-series-names: (a, b, c, d, e, f, g, h, i, j, k, l, m, n, o) !default;
 $ct-series-colors: (
-  $new-blue,
-  $new-red,
-  $new-orange,
-  $new-purple,
-  $new-green,
-  $new-dark-blue,
-  $new-black,
+  $brand-info,
+  $brand-danger,
+  $brand-warning,
+  $brand-primary,
+  $brand-success,
+  $font-background-light-grey,
+  $gray-color,
   $social-google,
   $social-tumblr,
   $social-youtube,

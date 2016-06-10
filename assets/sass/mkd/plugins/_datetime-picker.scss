@@ -4,12 +4,12 @@
  * https://github.com/Eonasdan/bootstrap-datetimepicker/
  */
 $bs-datetimepicker-timepicker-font-size: 1.2em !default;
-$bs-datetimepicker-active-bg: $info-color !default;
+$bs-datetimepicker-active-bg: $brand-info !default;
 $bs-datetimepicker-active-color: $white-color !default;
 $bs-datetimepicker-border-radius: $border-radius-base;
-$bs-datetimepicker-btn-simple-hover-bg: $light-gray !default;
-$bs-datetimepicker-disabled-color: $medium-gray !default;
-$bs-datetimepicker-alternate-color: $medium-gray !default;
+$bs-datetimepicker-btn-simple-hover-bg: $background-light-grey !default;
+$bs-datetimepicker-disabled-color: $gray-color !default;
+$bs-datetimepicker-alternate-color: $gray-color !default;
 $bs-datetimepicker-secondary-border-color: #ccc !default;
 $bs-datetimepicker-secondary-border-color-rgba: rgba(0, 0, 0, 0.2) !default;
 $bs-datetimepicker-primary-border-color: white !default;
@@ -287,11 +287,11 @@ $bs-datetimepicker-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25) !default;
 
             &.dow{
                 text-align: center;
-                border-bottom: 1px solid $light-gray;
+                border-bottom: 1px solid $background-light-grey;
                 font-size: $font-size-small;
                 text-transform: uppercase;
-                color: $dark-gray;
-                font-weight: $font-weight-normal;
+                color: $gray-color;
+                font-weight: $font-weight-default;
                 padding-bottom: 5px;
                 padding-top: $padding-default-vertical;
             }

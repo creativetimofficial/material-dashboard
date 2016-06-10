@@ -1,25 +1,37 @@
-@import "lbd/variables";
-@import "lbd/mixins";
+//variables and mixins
+@import "mkd/variables";
+@import "mkd/mixins";
+@import "mkd/shadows";
 
-//@import "lbd/typography";
+
+//plugin css
+@import "mkd/plugins/_datetime-picker";
+@import "mkd/plugins/_plugin-nouislider";
+
 
 // Core CSS
-@import "lbd/misc";
-@import "lbd/sidebar-and-main-panel";
-//@import "lbd/buttons";
-//@import "lbd/inputs";
+@import "mkd/typography";
+@import "mkd/sidebar-and-main-panel";
+@import "mkd/buttons";
+@import "mkd/misc";
+@import "mkd/inputs";
+@import "mkd/forms";
+@import "mkd/alerts";
+@import "mkd/tables";
+@import "mkd/checkboxes";
+@import "mkd/radios";
+@import "mkd/togglebutton";
+@import "mkd/ripples";
+@import "mkd/pills";
+@import "mkd/dialogs";
+@import "mkd/navbars";
+@import "mkd/footers";
 
-//@import "lbd/alerts";
-//@import "lbd/tables";
-
-//@import "lbd/checkbox-radio-switch";
-//@import "lbd/navbars";
-//@import "lbd/footers";
 
 // Fancy Stuff
-//@import "lbd/dropdown";
-//@import "lbd/cards";
-@import "lbd/chartist";
-@import "lbd/responsive";
-
-@import "lbd/material-dashboard-important";
+@import "mkd/dropdown";
+@import "mkd/cards";
+@import "mkd/images";
+@import "mkd/tabs";
+@import "mkd/chartist";
+@import "mkd/responsive";

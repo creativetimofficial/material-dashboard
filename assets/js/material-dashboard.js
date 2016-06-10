@@ -13,11 +13,11 @@ $(document).ready(function(){
     window_width = $(window).width();
 
     // check if there is an image set for the sidebar's background
-    lbd.checkSidebarImage();
+    mkd.checkSidebarImage();
 
     // Init navigation toggle for small screens
     if(window_width <= 991){
-        lbd.initRightMenu();
+        mkd.initRightMenu();
     }
 
     //  Activate the tooltips
@@ -44,11 +44,11 @@ $(document).ready(function(){
 // activate collapse right menu when the windows is resized
 $(window).resize(function(){
     if($(window).width() <= 991){
-        lbd.initRightMenu();
+        mkd.initRightMenu();
     }
 });
 
-lbd = {
+mkd = {
     misc:{
         navbar_menu_visible: 0
     },
@@ -110,9 +110,9 @@ lbd = {
              $navbar.find('button').addClass('btn-simple btn-block');
 
              $toggle.click(function (){
-                if(lbd.misc.navbar_menu_visible == 1) {
+                if(mkd.misc.navbar_menu_visible == 1) {
                     $('html').removeClass('nav-open');
-                    lbd.misc.navbar_menu_visible = 0;
+                    mkd.misc.navbar_menu_visible = 0;
                     $('#bodyClick').remove();
                      setTimeout(function(){
                         $toggle.removeClass('toggled');
@@ -126,7 +126,7 @@ lbd = {
                     div = '<div id="bodyClick"></div>';
                     $(div).appendTo("body").click(function() {
                         $('html').removeClass('nav-open');
-                        lbd.misc.navbar_menu_visible = 0;
+                        mkd.misc.navbar_menu_visible = 0;
                         $('#bodyClick').remove();
                          setTimeout(function(){
                             $toggle.removeClass('toggled');
@@ -134,7 +134,7 @@ lbd = {
                     });
 
                     $('html').addClass('nav-open');
-                    lbd.misc.navbar_menu_visible = 1;
+                    mkd.misc.navbar_menu_visible = 1;
 
                 }
             });

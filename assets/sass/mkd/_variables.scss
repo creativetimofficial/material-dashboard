@@ -222,3 +222,24 @@ $background-light-grey:     #E8E7E3 !default;
 $background-lighter-grey:   #F0EFEB !default;
 $font-background-light-grey: #9C9B99 !default;
 $font-hover-background-light-grey: #5E5E5C !default;
+
+
+// variables from lbd
+
+$transition-ease-in:              ease-in !default;
+$transition-ease-out:             ease-out !default;
+$ultra-fast-transition-time:      60ms  !default;
+$navbar-padding-a:               10px 15px;
+$padding-zero:                   0px !default;
+$sidebar-width:               calc(100% - 260px) !default;
+$topbar-back:          topbar-back !default;
+$bottombar-back:       bottombar-back !default;
+$topbar-x:             topbar-x !default;
+$bottombar-x:          bottombar-x !default;
+$margin-bottom:                0 0 10px 0 !default;
+$margin-base-vertical:         15px !default;
+
+// Variables for datetimepicker //
+$padding-default-vertical:     10px !default;
+$medium-pale-bg:             #F1EAE0 !default;
+$pale-bg:                    #F9F7F3 !default;

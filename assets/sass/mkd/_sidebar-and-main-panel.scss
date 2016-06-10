@@ -1,3 +1,9 @@
+.wrapper{
+    position: relative;
+    top: 0;
+    height: 100vh;
+}
+
 .sidebar{
     position: absolute;
     top: 0;
@@ -52,7 +58,7 @@
             font-size: $font-size-large;
             color: $white-color;
             text-align: center;
-            font-weight: $font-weight-normal;
+            font-weight: $font-weight-default;
             line-height: 30px;
         }
     }
@@ -138,7 +144,7 @@ body > .navbar-collapse{
             font-size: $font-size-large;
             color: $white-color;
             text-align: center;
-            font-weight: $font-weight-normal;
+            font-weight: $font-weight-default;
             line-height: 30px;
         }
     }
@@ -176,7 +182,7 @@ body > .navbar-collapse{
     }
 
     &:after{
-       @include icon-gradient($black-color-top, $black-color-bottom);
+       @include icon-gradient($font-background-light-grey, $background-lighter-grey);
        z-index: 3;
        opacity: 1;
     }
@@ -187,22 +193,22 @@ body > .navbar-collapse{
     }
 
     &[data-color="blue"]:after{
-        @include icon-gradient($new-dark-blue, $blue-color-bottom);
+        @include icon-gradient($font-background-light-grey, $brand-info);
     }
     &[data-color="azure"]:after{
-        @include icon-gradient($new-blue, $azure-color-bottom);
+        @include icon-gradient($brand-info, $amber);
     }
     &[data-color="green"]:after{
-        @include icon-gradient($new-green, $green-color-bottom);
+        @include icon-gradient($brand-success, $green);
     }
     &[data-color="orange"]:after{
-        @include icon-gradient($new-orange, $orange-color-bottom);
+        @include icon-gradient($brand-warning, $orange);
     }
     &[data-color="red"]:after{
-        @include icon-gradient($new-red, $red-color-bottom);
+        @include icon-gradient($brand-danger, $red);
     }
     &[data-color="purple"]:after{
-        @include icon-gradient($new-purple, $purple-color-bottom);
+        @include icon-gradient($brand-primary, $purple);
     }
 }
 
