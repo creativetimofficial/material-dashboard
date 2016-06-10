@@ -1,3 +1,41 @@
+.white-text{
+    color: $white-color;
+
+    .card-title a,
+    .card-title,
+    .icon i{
+        color: $white-color;
+    }
+
+    .icon i{
+        border-color: rgba(255, 255, 255, 0.25);
+    }
+    .author a,
+    .footer .stats,
+    .category,
+    .card-description{
+        color: $white-transparent;
+    }
+
+    .author a{
+        &:hover,
+        &:focus,
+        &:active{
+            color: $white-color;
+        }
+    }
+
+    border-radius: $border-radius-large;
+
+        h1,
+        h2,
+        h3{
+            small{
+                color: $white-transparent;
+            }
+        }
+
+}
 .card {
 
     display: inline-block;
@@ -99,72 +137,36 @@
 
     }
 
-    .header-primary,
-    .content-primary{
+    [data-background-color="primary"]{
         background: linear-gradient(60deg, $purple-400, $purple-700);
+
+        @extend .white-text;
     }
-    .header-info,
-    .content-info{
+    [data-background-color="info"]{
         background: linear-gradient(60deg, $cyan-400, $cyan-700);
+
+        @extend .white-text;
     }
-    .header-success,
-    .content-success{
+    [data-background-color="success"]{
         background: linear-gradient(60deg, $green-400, $green-700);
+
+        @extend .white-text;
     }
-    .header-warning,
-    .content-warning{
+    [data-background-color="warning"]{
         background: linear-gradient(60deg, $orange-400, $orange-700);
+
+        @extend .white-text;
     }
-    .header-danger,
-    .content-danger{
+    [data-background-color="danger"]{
         background: linear-gradient(60deg, $red-400, $red-700);
+
+        @extend .white-text;
     }
 
-    .header-rose,
-    .content-rose{
+    [data-background-color="rose"]{
         background: linear-gradient(60deg, $pink-400, $pink-700);
-    }
 
-    [class*="header-"],
-    [class*="content-"]{
-        color: $white-color;
-
-        .card-title a,
-        .card-title,
-        .icon i{
-            color: $white-color;
-        }
-
-        .icon i{
-            border-color: rgba(255, 255, 255, 0.25);
-        }
-        .author a,
-        .footer .stats,
-        .category,
-        .card-description{
-            color: $white-transparent;
-        }
-
-        .author a{
-            &:hover,
-            &:focus,
-            &:active{
-                color: $white-color;
-            }
-        }
-
-    }
-
-    [class*="content-"]{
-        border-radius: $border-radius-large;
-
-        h1,
-        h2,
-        h3{
-            small{
-                color: $white-transparent;
-            }
-        }
+        @extend .white-text;
     }
 
     img{
@@ -220,8 +222,8 @@
             color: $gray-color;
         }
         .stats{
-            //float: right;
-            //line-height: 30px;
+            float: right;
+            line-height: 30px;
             color: $gray-color;
 
             .material-icons{
