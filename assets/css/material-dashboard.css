@@ -647,17 +647,17 @@ h2.title {
   margin-top: 20px;
 }
 .sidebar .nav li > a {
-  color: #FFFFFF;
   margin: 5px 15px;
   opacity: .86;
   border-radius: 4px;
+  color: #000000;
 }
 .sidebar .nav li:hover > a {
   background: rgba(255, 255, 255, 0.13);
   opacity: 1;
 }
 .sidebar .nav li.active > a {
-  color: #FFFFFF;
+  color: #000000;
   opacity: 1;
   background: rgba(255, 255, 255, 0.23);
 }
@@ -697,7 +697,7 @@ body > .navbar-collapse .logo .simple-text {
   padding: 5px 0px;
   display: block;
   font-size: 18px;
-  color: #FFFFFF;
+  color: #000000;
   text-align: center;
   font-weight: 400;
   line-height: 30px;
@@ -732,18 +732,9 @@ body > .navbar-collapse:before {
 .sidebar:before,
 body > .navbar-collapse:before {
   opacity: .33;
-  background: #000000;
 }
 .sidebar:after,
 body > .navbar-collapse:after {
-  background: #9C9B99;
-  background: -moz-linear-gradient(top, #9C9B99 0%, #F0EFEB 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #9C9B99), color-stop(100%, #F0EFEB));
-  background: -webkit-linear-gradient(top, #9C9B99 0%, #F0EFEB 100%);
-  background: -o-linear-gradient(top, #9C9B99 0%, #F0EFEB 100%);
-  background: -ms-linear-gradient(top, #9C9B99 0%, #F0EFEB 100%);
-  background: linear-gradient(to bottom, #9C9B99 0%, #F0EFEB 100%);
-  background-size: 150% 150%;
   z-index: 3;
   opacity: 1;
 }
@@ -3903,13 +3894,16 @@ footer .copyright .material-icons {
   position: relative;
   width: 100%;
   margin-bottom: 30px;
+  box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
   border-radius: 6px;
   color: rgba(0,0,0, 0.87);
   background: #fff;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 .card .card-height-indicator {
   margin-top: 100%;
+}
+.card .header-sm-raised + .content {
+  padding-top: 50px;
 }
 .card .card-image {
   height: 60%;
@@ -3919,7 +3913,6 @@ footer .copyright .material-icons {
   margin-right: 15px;
   margin-top: -30px;
   border-radius: 6px;
-  box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
 }
 .card .card-image img {
   width: 100%;
@@ -3962,7 +3955,6 @@ footer .copyright .material-icons {
   padding: 15px 16px 0px;
 }
 .card .header-raised {
-  box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
   margin: 15px;
   border-radius: 3px;
   padding: 15px 0;
@@ -3972,7 +3964,6 @@ footer .copyright .material-icons {
   color: #FFFFFF;
 }
 .card .header-sm-raised {
-  box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
   border-radius: 3px;
   padding: 10px;
   background-color: #FFFFFF;
@@ -4030,8 +4021,25 @@ footer .copyright .material-icons {
 .card .author a .ripple-container {
   display: none;
 }
+.card .chart-title {
+  position: absolute;
+  top: 25px;
+  width: 100%;
+  text-align: center;
+}
+.card .chart-title h3 {
+  margin: 0;
+  color: #FFFFFF;
+}
+.card .chart-title h6 {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.4);
+}
 .card .footer {
   margin-top: 15px;
+}
+.card .footer .content {
+  display: block;
 }
 .card .footer div {
   display: inline-block;
@@ -4048,6 +4056,9 @@ footer .copyright .material-icons {
   position: relative;
   top: 4px;
   font-size: 18px;
+}
+.card .footer h6 {
+  color: #999999;
 }
 .carousel .card {
   max-width: 650px;
@@ -4349,6 +4360,17 @@ footer .copyright .material-icons {
 .card-product .category,
 .card-product .card-description {
   text-align: center;
+}
+
+.page-header {
+  height: 60vh;
+  background-position: top center;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 .img-thumbnail {
@@ -5101,6 +5123,41 @@ footer .copyright .material-icons {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.ct-big-chart-white {
+  background-color: #e91e63;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+  padding: 22px;
+}
+
+.ct-blue {
+  stroke: #9c27b0 !important;
+}
+
+.ct-azure {
+  stroke: #00bcd4 !important;
+}
+
+.ct-green {
+  stroke: #4caf50 !important;
+}
+
+.ct-orange {
+  stroke: #ff9800 !important;
+}
+
+.ct-red {
+  stroke: #f44336 !important;
+}
+
+.ct-white {
+  stroke: #FFFFFF !important;
+}
+
+.ct-rose {
+  stroke: #e91e63 !important;
 }
 
 @media (min-width: 992px) {

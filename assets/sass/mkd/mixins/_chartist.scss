@@ -33,6 +33,9 @@ $ct-text-align: flex-start !default;
 $ct-text-justify: flex-start !default;
 $ct-text-line-height: 1;
 
+.ct-big-chart-white{
+    $ct-grid-color: rgba(250, 250, 250, 0.7) !default;
+}
 // Grid styles
 $ct-grid-color: rgba(0, 0, 0, 0.2) !default;
 $ct-grid-dasharray: 2px !default;
@@ -67,6 +70,7 @@ $ct-include-alternative-responsive-containers: $ct-include-classes !default;
 // Series names and colors. This can be extended or customized as desired. Just add more series and colors.
 $ct-series-names: (a, b, c, d, e, f, g, h, i, j, k, l, m, n, o) !default;
 $ct-series-colors: (
+
   $brand-info,
   $brand-danger,
   $brand-warning,

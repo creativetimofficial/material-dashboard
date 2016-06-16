@@ -146,6 +146,88 @@ demo = {
           labels: ['62%','32%','6%'],
           series: [62, 32, 6]
         });
+
+        /*  **************** ChartPrice - single line ******************** */
+
+/*5        var chart = new Chartist.Line('#chartColor', {
+  labels: ['M', 'T', 'W', 'T', 'F'],
+  series: [
+     [0.05, 0.1, 0.2, 0.21, 0.17]
+  ]
+}, {
+  showPoint: true,
+  lineSmooth: true,
+  showArea: true,
+  fullWidth: true,
+
+  axisX: {
+    showGrid: false,
+    showLabel: true,
+    offset: 30
+  },
+  axisY: {
+    showGrid: false,
+    showLabel: true,
+    offset: 40
+  },
+  chartPadding: 0,
+  low: 0,
+  height:"200px",
+  classNames: {
+              line: 'ct-line ct-white'
+          }
+});*/
+
+
+        // Chart legend hide
+        Chart.defaults.global.legend.display = false;
+
+        //Default font family for all text
+        Chart.defaults.global.defaultFontColor = "white";
+
+        
+
+        var ctx = document.getElementsByClassName("ct-big-chart-white");
+        var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+            datasets: [{
+
+                data: [12, 17, 3, 5, 2, 3],
+                borderWidth: 1,
+                backgroundColor: "#f06292",
+                borderColor: "#fff",
+                pointStyle:'circle',
+                pointHitRadius: 3,
+                radius:0,
+                defaultFontColor: 'white',
+
+
+
+            }]
+        },
+        options: {
+            scales: {
+                xAxes: [{
+
+                            gridLines: {
+                                display:false
+                            }
+                        }],
+                yAxes: [{
+                            gridLines: {
+                                display:false
+                            }
+                        }]
+            }
+
+
+
+
+            }
+        });
+
     },
 
     initGoogleMaps: function(){

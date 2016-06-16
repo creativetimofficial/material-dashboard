@@ -42,17 +42,20 @@
     position: relative;
     width: 100%;
     margin-bottom: 30px;
+    @include shadow-big();
+    border-radius: $border-radius-large;
+    color: $mdb-card-body-text;
+    background: $mdb-card-body-background;
+
+    //@include shadow-2dp();
 
     .card-height-indicator {
         margin-top: 100%;
     }
 
-
-    border-radius: $border-radius-large;
-    color: $mdb-card-body-text;
-    background: $mdb-card-body-background;
-
-    @include shadow-2dp();
+    .header-sm-raised + .content{
+        padding-top: 50px;
+    }
 
     .card-image {
         height: 60%;
@@ -64,7 +67,7 @@
         margin-top: -30px;
         border-radius: $border-radius-large;
 
-        @include shadow-big();
+
 
         img {
             width: 100%;
@@ -87,6 +90,8 @@
     }
     .content{
         padding: 15px 30px;
+
+
     }
 
     .card-body {
@@ -113,7 +118,7 @@
     }
 
     .header-raised{
-        @include shadow-big();
+        //@include shadow-big();
         margin: $margin-base;
         border-radius: $border-radius-base;
         padding: $padding-base 0;
@@ -125,7 +130,7 @@
     }
 
     .header-sm-raised{
-        @include shadow-big();
+        //@include shadow-big();
         border-radius: $border-radius-base;
         padding: 10px;
         background-color: $white-color;
@@ -212,8 +217,30 @@
         }
     }
 
+    .chart-title{
+        position: absolute;;
+        top: 25px;
+        width: 100%;
+        text-align: center;
+
+        h3{
+            margin: 0;
+            color: $white-color;
+        }
+
+        h6{
+            margin: 0;
+            color: rgba(255,255,255, .4);
+        }
+
+    }
+
     .footer{
         margin-top: 15px;
+
+        .content{
+            display: block;
+        }
 
         div{
             display: inline-block;
@@ -232,6 +259,11 @@
                 font-size: 18px;
             }
         }
+
+        h6{
+            color: $gray-color;
+        }
+
     }
 
     .carousel &{
@@ -592,4 +624,19 @@
     .card-description{
         text-align: center;
     }
+}
+
+
+
+
+
+.page-header {
+    height: 60vh;
+    background-position: top center;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
 }

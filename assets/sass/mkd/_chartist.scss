@@ -55,6 +55,8 @@
   display: flex;
 }
 
+
+
 @mixin ct-chart-label($ct-text-color: $ct-text-color, $ct-text-size: $ct-text-size, $ct-text-line-height: $ct-text-line-height) {
   fill: $ct-text-color;
   color: $ct-text-color;
@@ -227,4 +229,37 @@
       }
     }
   }
+}
+
+
+.ct-big-chart-white{
+    background-color: $pink-500;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    padding: 22px;
+
+}
+
+
+.ct-blue{
+    stroke: $brand-primary !important;
+}
+.ct-azure{
+    stroke: $brand-info !important;
+}
+.ct-green{
+    stroke: $brand-success !important;
+}
+.ct-orange{
+    stroke: $brand-warning !important;
+}
+.ct-red{
+    stroke: $brand-danger !important;
+}
+.ct-white{
+    stroke: $white-color !important;
+}
+
+.ct-rose{
+    stroke: $brand-rose !important;
 }

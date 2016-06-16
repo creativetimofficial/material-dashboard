@@ -16,6 +16,7 @@
     font-weight: 200;
     background-size: cover;
     background-position: center center;
+    // @include shadow-big();
 
     .sidebar-wrapper{
         position: relative;
@@ -24,6 +25,7 @@
         overflow: hidden;
         width: 260px;
         z-index: 4;
+        //background-color: $white-color;
     }
 
     .sidebar-background{
@@ -83,10 +85,11 @@
 
         li{
             > a{
-                color: #FFFFFF;
+                //color: #FFFFFF;
                 margin: 5px 15px;
                 opacity: .86;
                 border-radius: 4px;
+                color: $black;
             }
 
             &:hover > a{
@@ -95,7 +98,8 @@
             }
 
             &.active > a{
-                color: #FFFFFF;
+                //color: #FFFFFF;
+                color: $black;
                 opacity: 1;
                 background: rgba(255,255,255,0.23);
 
@@ -142,7 +146,7 @@ body > .navbar-collapse{
             padding: $padding-small-vertical $padding-zero;
             display: block;
             font-size: $font-size-large;
-            color: $white-color;
+            color: $black;
             text-align: center;
             font-weight: $font-weight-default;
             line-height: 30px;
@@ -178,11 +182,11 @@ body > .navbar-collapse{
 
     &:before{
         opacity: .33;
-        background: #000000;
+        // background: #000000;
     }
 
     &:after{
-       @include icon-gradient($font-background-light-grey, $background-lighter-grey);
+    //    @include icon-gradient($font-background-light-grey, $background-lighter-grey);
        z-index: 3;
        opacity: 1;
     }
