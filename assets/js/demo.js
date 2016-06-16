@@ -179,11 +179,16 @@ demo = {
 });*/
 
 
-        // Chart legend hide
-        //Chart.defaults.global.legend.display = false;
+
 
         //Default font family for all text
-        //Chart.defaults.global.defaultFontColor = "white";
+        Chart.defaults.global.defaultFontColor = "white";
+
+        Chart.defaults.global.title.backgroundColor="white";
+
+        Chart.defaults.global.tooltips.backgroundColor ="white";
+        Chart.defaults.global.tooltips.bodyFontColor ="#555555";
+        Chart.defaults.global.tooltips.titleFontColor= "#555555";
 
 
 
@@ -194,27 +199,31 @@ demo = {
             labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
             datasets: [{
 
-                data: [12, 17, 3, 5, 2, 3],
-                borderWidth: 1,
+                data: [12, 15, 10, 8, 12, 6, 10],
+                borderWidth: 3,
                 backgroundColor: "#f06292",
                 borderColor: "#fff",
                 pointStyle:'circle',
-                pointHitRadius: 3,
-                radius:0,
+                pointHitRadius: 5,
+                radius:2,
 
             }]
         },
         options: {
             scales: {
                 xAxes: [{
+                        gridLines: {
+                            display:false
+                        }
 
-                            gridLines: {
-                                display:false
-                            }
-                        }],
+                    }],
                 yAxes: [{
                             gridLines: {
                                 display:false
+                            },
+                            ticks:{
+                                suggestedMax: 25,
+                                suggestedMin: 0
                             }
                         }]
             },
@@ -229,28 +238,25 @@ demo = {
             }
         });
 
-
-
-        //Default font family for all text
-        //Chart.defaults.global.defaultFontColor = "white";
-
-
+        Chart.defaults.global.tooltips.backgroundColor ="white";
+        Chart.defaults.global.tooltips.bodyFontColor ="#555555";
 
         var ctx = document.getElementsByClassName("ct-big-chart-orange");
 
         var myChart = new Chart(ctx, {
-        type: 'line',
+        type: 'bar',
         data: {
-            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+            labels: ["Johnny", "Paulo", "Ben", "Jane", "Arthur", "Bernardo"],
             datasets: [{
 
                 data: [12, 17, 3, 5, 2, 3],
                 borderWidth: 1,
-                backgroundColor: "#f06292",
+                label:'% of Votes',
+                backgroundColor: "#f9a825",
                 borderColor: "#fff",
                 pointStyle:'circle',
-                pointHitRadius: 3,
-                radius:0,
+                pointHitRadius: 5,
+                radius: 3
 
 
 
@@ -268,59 +274,69 @@ demo = {
                 yAxes: [{
                             gridLines: {
                                 display:false
+                            },
+                            ticks:{
+                                suggestedMax: 25,
+                                suggestedMin: 0
                             }
                         }]
-            }
-
-
+            },
+            legend: {
+                display: true,
+                labels: {
+                    fontColor: 'rgb(255, 255, 255)'
+                }
+        }
 
             }
         });
 
+        Chart.defaults.global.tooltips.backgroundColor ="white";
+        Chart.defaults.global.tooltips.bodyFontColor ="#555555";
 
 
-        //Default font family for all text
-        //Chart.defaults.global.defaultFontColor = "white";
-
-
-
-        var ctx = document.getElementsByClassName("ct-big-chart-black");
+        var ctx = document.getElementsByClassName("ct-big-chart-purple");
         var myChart = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+            labels: ["Red", "Blue", "Yellow", "Green"],
             datasets: [{
 
-                data: [12, 17, 3, 5, 2, 3],
-                borderWidth: 1,
-                backgroundColor: "#f06292",
+                data: [12, 15, 10, 8, 12, 6, 10],
+                borderWidth: 3,
+                backgroundColor: "rgba(255,255,255, 0.4)",
                 borderColor: "#fff",
                 pointStyle:'circle',
-                pointHitRadius: 3,
-                radius:0,
-
-
-
-
+                pointHitRadius: 5,
+                radius:3,
+                lineTension: 0
 
             }]
         },
         options: {
             scales: {
                 xAxes: [{
+                        gridLines: {
+                            display:false
+                        }
 
-                            gridLines: {
-                                display:false
-                            }
-                        }],
+                    }],
                 yAxes: [{
                             gridLines: {
-                                display:false
+                                color: 'rgba(255,255,255, 0.2)'
+                            },
+                            ticks:{
+                                suggestedMax: 20,
+                                suggestedMin: 0
                             }
                         }]
-            }
-
-
+            },
+            legend: {
+                display: true,
+                labels: {
+                    fontColor: 'rgb(255, 255, 255)'
+                }
+        }
 
 
             }

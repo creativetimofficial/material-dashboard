@@ -236,12 +236,19 @@
     background-color: $pink-500;
     border-top-right-radius: 6px;
     border-top-left-radius: 6px;
-    padding: 22px;
+    padding-bottom: 10px;
 
 }
 
-.ct-big-chart-black{
-    padding: 22px;
+.ct-big-chart-orange{
+    @extend .ct-big-chart-white;
+    background-color: $brand-warning;
+
+}
+
+.ct-big-chart-purple{
+    @extend .ct-big-chart-white;
+    background-color: $brand-info;
 }
 
 
