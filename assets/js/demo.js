@@ -180,12 +180,12 @@ demo = {
 
 
         // Chart legend hide
-        Chart.defaults.global.legend.display = false;
+        //Chart.defaults.global.legend.display = false;
 
         //Default font family for all text
-        Chart.defaults.global.defaultFontColor = "white";
+        //Chart.defaults.global.defaultFontColor = "white";
 
-        
+
 
         var ctx = document.getElementsByClassName("ct-big-chart-white");
         var myChart = new Chart(ctx, {
@@ -201,7 +201,105 @@ demo = {
                 pointStyle:'circle',
                 pointHitRadius: 3,
                 radius:0,
-                defaultFontColor: 'white',
+
+            }]
+        },
+        options: {
+            scales: {
+                xAxes: [{
+
+                            gridLines: {
+                                display:false
+                            }
+                        }],
+                yAxes: [{
+                            gridLines: {
+                                display:false
+                            }
+                        }]
+            },
+            legend: {
+                display: true,
+                labels: {
+                    fontColor: 'rgb(255, 255, 255)'
+                }
+        }
+
+
+            }
+        });
+
+
+
+        //Default font family for all text
+        //Chart.defaults.global.defaultFontColor = "white";
+
+
+
+        var ctx = document.getElementsByClassName("ct-big-chart-orange");
+
+        var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+            datasets: [{
+
+                data: [12, 17, 3, 5, 2, 3],
+                borderWidth: 1,
+                backgroundColor: "#f06292",
+                borderColor: "#fff",
+                pointStyle:'circle',
+                pointHitRadius: 3,
+                radius:0,
+
+
+
+
+            }]
+        },
+        options: {
+            scales: {
+                xAxes: [{
+
+                            gridLines: {
+                                display:false
+                            }
+                        }],
+                yAxes: [{
+                            gridLines: {
+                                display:false
+                            }
+                        }]
+            }
+
+
+
+            }
+        });
+
+
+
+        //Default font family for all text
+        //Chart.defaults.global.defaultFontColor = "white";
+
+
+
+        var ctx = document.getElementsByClassName("ct-big-chart-black");
+        var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+            datasets: [{
+
+                data: [12, 17, 3, 5, 2, 3],
+                borderWidth: 1,
+                backgroundColor: "#f06292",
+                borderColor: "#fff",
+                pointStyle:'circle',
+                pointHitRadius: 3,
+                radius:0,
+
+
 
 
 
