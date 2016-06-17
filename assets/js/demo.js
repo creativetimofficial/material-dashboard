@@ -205,7 +205,9 @@ demo = {
                 borderColor: "#fff",
                 pointStyle:'circle',
                 pointHitRadius: 5,
-                radius:2,
+                pointHoverBorderColor:'#fff',
+                
+
 
             }]
         },
@@ -250,13 +252,13 @@ demo = {
             datasets: [{
 
                 data: [12, 17, 3, 5, 2, 3],
-                borderWidth: 1,
+                borderWidth: 2,
                 label:'% of Votes',
                 backgroundColor: "#f9a825",
                 borderColor: "#fff",
                 pointStyle:'circle',
                 pointHitRadius: 5,
-                radius: 3
+
 
 
 
@@ -307,9 +309,9 @@ demo = {
                 backgroundColor: "rgba(255,255,255, 0.4)",
                 borderColor: "#fff",
                 pointStyle:'circle',
-                pointHitRadius: 5,
-                radius:3,
-                lineTension: 0
+                pointHitRadius: 2,
+                lineTension: 0,
+                pointHoverBorderColor: '#fff'
 
             }]
         },
@@ -320,14 +322,17 @@ demo = {
                             display:false
                         }
 
+
                     }],
                 yAxes: [{
                             gridLines: {
-                                color: 'rgba(255,255,255, 0.2)'
+                                zeroLineColor: 'rgba(255,255,255, 0.2)',
+                                color: 'rgba(255,255,255, 0.2)',
                             },
                             ticks:{
                                 suggestedMax: 20,
                                 suggestedMin: 0
+
                             }
                         }]
             },
