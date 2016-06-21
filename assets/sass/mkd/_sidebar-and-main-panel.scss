@@ -85,11 +85,10 @@
 
         li{
             > a{
-                //color: #FFFFFF;
                 margin: 5px 15px;
                 opacity: .86;
                 border-radius: 4px;
-                color: $black;
+                color: $black-color;
             }
 
             &:hover > a{
@@ -98,8 +97,7 @@
             }
 
             &.active > a{
-                //color: #FFFFFF;
-                color: $black;
+                color: $black-color;
                 opacity: 1;
                 background: rgba(255,255,255,0.23);
 
@@ -146,7 +144,7 @@ body > .navbar-collapse{
             padding: $padding-small-vertical $padding-zero;
             display: block;
             font-size: $font-size-large;
-            color: $black;
+            color: $black-color;
             text-align: center;
             font-weight: $font-weight-default;
             line-height: 30px;

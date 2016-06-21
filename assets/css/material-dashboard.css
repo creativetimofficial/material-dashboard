@@ -650,14 +650,14 @@ h2.title {
   margin: 5px 15px;
   opacity: .86;
   border-radius: 4px;
-  color: #000000;
+  color: #3C4858;
 }
 .sidebar .nav li:hover > a {
   background: rgba(255, 255, 255, 0.13);
   opacity: 1;
 }
 .sidebar .nav li.active > a {
-  color: #000000;
+  color: #3C4858;
   opacity: 1;
   background: rgba(255, 255, 255, 0.23);
 }
@@ -697,7 +697,7 @@ body > .navbar-collapse .logo .simple-text {
   padding: 5px 0px;
   display: block;
   font-size: 18px;
-  color: #000000;
+  color: #3C4858;
   text-align: center;
   font-weight: 400;
   line-height: 30px;
