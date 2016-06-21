@@ -231,23 +231,23 @@
   }
 }
 
-
-.ct-big-chart-white{
-    background-color: $pink-500;
+.ct-big-chart{
     border-top-right-radius: 6px;
     border-top-left-radius: 6px;
     padding-bottom: 10px;
-
 }
 
-.ct-big-chart-orange{
-    @extend .ct-big-chart-white;
+
+.ct-bg-rose{
+    background-color: $pink-500;
+}
+
+.ct-bg-warning{
     background-color: $brand-warning;
 
 }
 
-.ct-big-chart-purple{
-    @extend .ct-big-chart-white;
+.ct-bg-info{
     background-color: $brand-info;
 }
 

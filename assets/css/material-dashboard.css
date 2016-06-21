@@ -5125,18 +5125,21 @@ footer .copyright .material-icons {
   left: 0;
 }
 
-.ct-big-chart-white, .ct-big-chart-orange, .ct-big-chart-purple {
-  background-color: #e91e63;
+.ct-big-chart {
   border-top-right-radius: 6px;
   border-top-left-radius: 6px;
   padding-bottom: 10px;
 }
 
-.ct-big-chart-orange {
+.ct-bg-rose {
+  background-color: #e91e63;
+}
+
+.ct-bg-warning {
   background-color: #ff9800;
 }
 
-.ct-big-chart-purple {
+.ct-bg-info {
   background-color: #00bcd4;
 }
 

@@ -192,7 +192,7 @@ demo = {
 
 
 
-        var ctx = document.getElementsByClassName("ct-big-chart-white");
+        var ctx = document.getElementById("ct-salary");
         var myChart = new Chart(ctx, {
         type: 'line',
         data: {
@@ -206,7 +206,7 @@ demo = {
                 pointStyle:'circle',
                 pointHitRadius: 5,
                 pointHoverBorderColor:'#fff',
-                
+
 
 
             }]
@@ -243,7 +243,7 @@ demo = {
         Chart.defaults.global.tooltips.backgroundColor ="white";
         Chart.defaults.global.tooltips.bodyFontColor ="#555555";
 
-        var ctx = document.getElementsByClassName("ct-big-chart-orange");
+        var ctx = document.getElementById("ct-votes");
 
         var myChart = new Chart(ctx, {
         type: 'bar',
@@ -297,7 +297,7 @@ demo = {
         Chart.defaults.global.tooltips.bodyFontColor ="#555555";
 
 
-        var ctx = document.getElementsByClassName("ct-big-chart-purple");
+        var ctx = document.getElementById("ct-revenue");
         var myChart = new Chart(ctx, {
         type: 'line',
         data: {
