@@ -17,6 +17,8 @@
     background-size: cover;
     background-position: center center;
     // @include shadow-big();
+    border-right: 1px solid #e9e9d3;
+    background: #FFFFFF;
 
     .sidebar-wrapper{
         position: relative;
@@ -38,6 +40,17 @@
         left: 0;
         background-size: cover;
         background-position: center center;
+
+        &:after{
+            position: absolute;
+            z-index: 3;
+            width: 100%;
+            height: 100%;
+            content: "";
+            display: block;
+            background: #FFFFFF;
+            opacity: .93;
+        }
     }
 
     .logo{
@@ -81,27 +94,31 @@
     }
 
     .nav{
-        margin-top: 20px;
+        margin-top: 35px;
 
         li{
             > a{
-                //color: #FFFFFF;
+                color: #FFFFFF;
                 margin: 5px 15px;
-                opacity: .86;
-                border-radius: 4px;
-                color: $black;
+                border-radius: 30px;
+                color: $black-color;
+                @extend .animation-transition-general;
             }
 
             &:hover > a{
-                background: rgba(255,255,255,0.13);
-                opacity: 1;
+                background: rgba(200, 200, 200, 0.2);
             }
 
             &.active > a{
-                //color: #FFFFFF;
-                color: $black;
-                opacity: 1;
-                background: rgba(255,255,255,0.23);
+                color: #FFFFFF;
+                //color: $black;
+                color: #FFFFFF;
+                background: #E91E63;
+                box-shadow: 0 14px 26px -12px rgba(233, 30, 99, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(233, 30, 99, 0.2);
+
+                i{
+                    color: #FFFFFF;
+                }
 
             }
         }
@@ -109,18 +126,19 @@
         p{
             margin: 0;
             line-height: 30px;
-            font-size: 12px;
-            font-weight: 600;
-            text-transform: uppercase;
+            font-size: 14px;
+            // font-weight: 600;
+            // text-transform: uppercase;
         }
 
         i{
-            font-size: 28px;
+            font-size: 24px;
             float: left;
             margin-right: 15px;
             line-height: 30px;
             width: 30px;
             text-align: center;
+            color: #a9afbb;
         }
     }
 }
@@ -218,7 +236,7 @@ body > .navbar-collapse{
 
 
 .main-panel{
-    background: rgba(203,203,210,.15);
+    //background: rgba(203,203,210,.15);
     position: relative;
     z-index: 2;
     float: right;

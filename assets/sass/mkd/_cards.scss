@@ -43,6 +43,9 @@
     width: 100%;
     margin-bottom: 30px;
     @include shadow-big();
+
+    @include shadow-2dp();
+    //box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.36);
     border-radius: $border-radius-large;
     color: $mdb-card-body-text;
     background: $mdb-card-body-background;
@@ -249,7 +252,6 @@
             color: $gray-color;
         }
         .stats{
-            float: right;
             line-height: 30px;
             color: $gray-color;
 

@@ -4,8 +4,9 @@
 //   background-color: $brand-primary;
   border: 0;
   border-radius: $border-radius-base;
-  @include shadow-big-navbar();
+  // @include shadow-big-navbar();
 
+  border-bottom: 1px solid #ededf3;
   @extend .animation-transition-fast;
 
   padding: 10px 0;
@@ -22,6 +23,24 @@
       color: inherit;
       background-color: transparent;
     }
+  }
+
+  .notification{
+    position: absolute;
+    top: 5px;
+    border: 1px solid #FFF;
+    right: 10px;
+    font-size: 9px;
+    background: #f44336;
+    color: #FFFFFF;
+    min-width: 20px;
+    padding: 0px 5px;
+    height: 20px;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 19px;
+    vertical-align: middle;
+    display: block;
   }
 
 
