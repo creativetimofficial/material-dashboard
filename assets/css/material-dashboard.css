@@ -3712,8 +3712,7 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
 .navbar.navbar-transparent {
   background-color: transparent;
   box-shadow: none;
-  color: #fff;
-  padding-top: 25px;
+  border-bottom: 0;
 }
 .navbar.navbar-transparent .logo-container .brand {
   color: #FFFFFF;

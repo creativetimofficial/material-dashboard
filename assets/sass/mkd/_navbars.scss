@@ -274,8 +274,7 @@
   &.navbar-transparent{
       background-color: transparent;
       box-shadow: none;
-      color: #fff;
-      padding-top: 25px;
+      border-bottom: 0;
 
       .logo-container .brand{
           color: $white-color;
