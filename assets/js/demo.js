@@ -30,7 +30,6 @@ demo = {
                 close: 'fa fa-remove'
             }
          });
-
     },
 
     initSliders: function(){
@@ -97,8 +96,8 @@ demo = {
         var data = {
           labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
           series: [
-            [542, 443, 320, 780, 553, 453, 326, 434, 568, 610, 756, 895],
-            [412, 243, 280, 580, 453, 353, 300, 364, 368, 410, 636, 695]
+            [542, 443, 320, 780, 553, 453, 326, 434, 568, 610, 756, 895]
+
           ]
         };
 
@@ -179,166 +178,90 @@ demo = {
 });*/
 
 
+        var testChart = new Chartist.Line('#testChart', {
+            labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
+            series: [
+                [12, 17, 7, 17, 23, 18, 38]
+            ]
+            },{
+                lineSmooth: Chartist.Interpolation.cardinal({
+                    tension: 0
+                }),
+                low: 0,
+                high: 50, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
+                chartPadding: { top: 0, right: 0, bottom: 0, left: 0},
+            }
+        );
 
+        var seq = 0,
+          delays = 80,
+          durations = 500;
 
-        //Default font family for all text
-        Chart.defaults.global.defaultFontColor = "white";
-
-        Chart.defaults.global.title.backgroundColor="white";
-
-        Chart.defaults.global.tooltips.backgroundColor ="white";
-        Chart.defaults.global.tooltips.bodyFontColor ="#555555";
-        Chart.defaults.global.tooltips.titleFontColor= "#555555";
-
-
-
-        var ctx = document.getElementsByClassName("ct-big-chart-white");
-        var myChart = new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-            datasets: [{
-
-                data: [12, 15, 10, 8, 12, 6, 10],
-                borderWidth: 3,
-                backgroundColor: "#f06292",
-                borderColor: "#fff",
-                pointStyle:'circle',
-                pointHitRadius: 5,
-                radius:2,
-
-            }]
-        },
-        options: {
-            scales: {
-                xAxes: [{
-                        gridLines: {
-                            display:false
-                        }
-
-                    }],
-                yAxes: [{
-                            gridLines: {
-                                display:false
-                            },
-                            ticks:{
-                                suggestedMax: 25,
-                                suggestedMin: 0
-                            }
-                        }]
-            },
-            legend: {
-                display: true,
-                labels: {
-                    fontColor: 'rgb(255, 255, 255)'
-                }
-        }
-
-
+        testChart.on('draw', function(data) {
+          if(data.type === 'line' || data.type === 'area') {
+            data.element.animate({
+              d: {
+                begin: 600,
+                dur: 700,
+                from: data.path.clone().scale(1, 0).translate(0, data.chartRect.height()).stringify(),
+                to: data.path.clone().stringify(),
+                easing: Chartist.Svg.Easing.easeOutQuint
+              }
+            });
+          } else if(data.type === 'point') {
+                seq++;
+                data.element.animate({
+                  opacity: {
+                    begin: seq * delays,
+                    dur: durations,
+                    from: 0,
+                    to: 1,
+                    easing: 'ease'
+                  }
+                });
             }
         });
 
-        Chart.defaults.global.tooltips.backgroundColor ="white";
-        Chart.defaults.global.tooltips.bodyFontColor ="#555555";
 
-        var ctx = document.getElementsByClassName("ct-big-chart-orange");
-
-        var myChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: ["Johnny", "Paulo", "Ben", "Jane", "Arthur", "Bernardo"],
-            datasets: [{
-
-                data: [12, 17, 3, 5, 2, 3],
-                borderWidth: 1,
-                label:'% of Votes',
-                backgroundColor: "#f9a825",
-                borderColor: "#fff",
-                pointStyle:'circle',
-                pointHitRadius: 5,
-                radius: 3
-
-
-
-
-            }]
-        },
-        options: {
-            scales: {
-                xAxes: [{
-
-                            gridLines: {
-                                display:false
-                            }
-                        }],
-                yAxes: [{
-                            gridLines: {
-                                display:false
-                            },
-                            ticks:{
-                                suggestedMax: 25,
-                                suggestedMin: 0
-                            }
-                        }]
-            },
-            legend: {
-                display: true,
-                labels: {
-                    fontColor: 'rgb(255, 255, 255)'
-                }
-        }
-
+        var successChart = new Chartist.Line('#successChart', {
+            labels: ['12am', '3pm', '6pm', '9pm', '12pm', '3am', '6am', '9am'],
+            series: [
+                [230, 750, 450, 300, 280, 240, 200, 190]
+            ]
+            },{
+                lineSmooth: Chartist.Interpolation.cardinal({
+                    tension: 0
+                }),
+                low: 0,
+                high: 1000, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
+                chartPadding: { top: 0, right: 0, bottom: 0, left: 0},
             }
-        });
+        );
 
-        Chart.defaults.global.tooltips.backgroundColor ="white";
-        Chart.defaults.global.tooltips.bodyFontColor ="#555555";
+        var seq2 = 0, delays2 = 80, durations2 = 500;
 
-
-        var ctx = document.getElementsByClassName("ct-big-chart-purple");
-        var myChart = new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: ["Red", "Blue", "Yellow", "Green"],
-            datasets: [{
-
-                data: [12, 15, 10, 8, 12, 6, 10],
-                borderWidth: 3,
-                backgroundColor: "rgba(255,255,255, 0.4)",
-                borderColor: "#fff",
-                pointStyle:'circle',
-                pointHitRadius: 5,
-                radius:3,
-                lineTension: 0
-
-            }]
-        },
-        options: {
-            scales: {
-                xAxes: [{
-                        gridLines: {
-                            display:false
-                        }
-
-                    }],
-                yAxes: [{
-                            gridLines: {
-                                color: 'rgba(255,255,255, 0.2)'
-                            },
-                            ticks:{
-                                suggestedMax: 20,
-                                suggestedMin: 0
-                            }
-                        }]
-            },
-            legend: {
-                display: true,
-                labels: {
-                    fontColor: 'rgb(255, 255, 255)'
-                }
-        }
-
-
+        successChart.on('draw', function(data) {
+          if(data.type === 'line' || data.type === 'area') {
+            data.element.animate({
+              d: {
+                begin: 600,
+                dur: 700,
+                from: data.path.clone().scale(1, 0).translate(0, data.chartRect.height()).stringify(),
+                to: data.path.clone().stringify(),
+                easing: Chartist.Svg.Easing.easeOutQuint
+              }
+            });
+          } else if(data.type === 'point') {
+                seq2++;
+                data.element.animate({
+                  opacity: {
+                    begin: seq2 * delays2,
+                    dur: durations2,
+                    from: 0,
+                    to: 1,
+                    easing: 'ease'
+                  }
+                });
             }
         });
 

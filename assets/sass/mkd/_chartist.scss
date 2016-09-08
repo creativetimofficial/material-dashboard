@@ -231,27 +231,6 @@
   }
 }
 
-
-.ct-big-chart-white{
-    background-color: $pink-500;
-    border-top-right-radius: 6px;
-    border-top-left-radius: 6px;
-    padding-bottom: 10px;
-
-}
-
-.ct-big-chart-orange{
-    @extend .ct-big-chart-white;
-    background-color: $brand-warning;
-
-}
-
-.ct-big-chart-purple{
-    @extend .ct-big-chart-white;
-    background-color: $brand-info;
-}
-
-
 .ct-blue{
     stroke: $brand-primary !important;
 }
@@ -270,7 +249,6 @@
 .ct-white{
     stroke: $white-color !important;
 }
-
 .ct-rose{
     stroke: $brand-rose !important;
 }

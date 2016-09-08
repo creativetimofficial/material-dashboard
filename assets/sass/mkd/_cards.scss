@@ -1,65 +1,22 @@
-.white-text{
-    color: $white-color;
-
-    .card-title a,
-    .card-title,
-    .icon i{
-        color: $white-color;
-    }
-
-    .icon i{
-        border-color: rgba(255, 255, 255, 0.25);
-    }
-    .author a,
-    .footer .stats,
-    .category,
-    .card-description{
-        color: $white-transparent;
-    }
-
-    .author a{
-        &:hover,
-        &:focus,
-        &:active{
-            color: $white-color;
-        }
-    }
-
-    border-radius: $border-radius-large;
-
-        h1,
-        h2,
-        h3{
-            small{
-                color: $white-transparent;
-            }
-        }
-
-}
-.card {
-
+.card{
     display: inline-block;
     position: relative;
     width: 100%;
-    margin-bottom: 30px;
-    @include shadow-big();
+    margin-bottom: 40px;
 
-    @include shadow-2dp();
-    //box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.36);
-    border-radius: $border-radius-large;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.14);
+    border-radius: $border-radius-base;
     color: $mdb-card-body-text;
     background: $mdb-card-body-background;
-
-    //@include shadow-2dp();
 
     .card-height-indicator {
         margin-top: 100%;
     }
 
-    .header-sm-raised + .content{
-        padding-top: 50px;
+    .title{
+        margin-top: 0;
+        margin-bottom: 5px;
     }
-
     .card-image {
         height: 60%;
         position: relative;
@@ -69,8 +26,6 @@
         margin-right: 15px;
         margin-top: -30px;
         border-radius: $border-radius-large;
-
-
 
         img {
             width: 100%;
@@ -91,95 +46,114 @@
     .category:not([class*="text-"]){
         color: $gray-color;
     }
-    .content{
-        padding: 15px 30px;
+    .card-content{
+        padding: 15px 20px;
 
-
-    }
-
-    .card-body {
-        height: 30%;
-        padding: 18px;
-    }
-
-    .card-footer {
-        height: 10%;
-        padding: 18px;
-        button, a {
-            margin: 0 !important;
-            position: relative;
-            bottom: 25px;
-            width: auto;
-            &:first-child {
-                left: -15px;
-            }
+        .category{
+            margin-bottom: 0;
         }
     }
 
-    .header{
-        padding: $margin-base-vertical $padding-large-horizontal 0px;
-    }
-
-    .header-raised{
-        //@include shadow-big();
-        margin: $margin-base;
+    .card-header{
+        @include shadow-big();
+        margin: -20px $margin-base 0;
         border-radius: $border-radius-base;
-        padding: $padding-base 0;
-        background-color: $white-color;
+        padding: $padding-base;
+        background-color: $gray-color;
 
         .title{
             color: $white-color;
         }
+        .category{
+            margin-bottom: 0;
+        }
+
+        &.card-chart{
+            padding: 0;
+
+            + .content{
+                h4{
+                    margin-top: 0;
+                }
+            }
+        }
+
+        .ct-label{
+            color: rgba($white-color, .7);
+        }
+        .ct-grid{
+            stroke: rgba(255, 255, 255, 0.2);
+        }
+        .ct-series-a .ct-point,
+        .ct-series-a .ct-line,
+        .ct-series-a .ct-bar,
+        .ct-series-a .ct-slice-donut{
+            stroke: rgba(255,255,255,.8);
+        }
+        .ct-series-a .ct-slice-pie,
+        .ct-series-a .ct-area{
+            fill: rgba(255,255,255,.4);
+        }
+
     }
 
-    .header-sm-raised{
-        //@include shadow-big();
-        border-radius: $border-radius-base;
-        padding: 10px;
-        background-color: $white-color;
-        width: 140px;
+    .chart-title{
+        position: absolute;;
+        top: 25px;
+        width: 100%;
         text-align: center;
-        position: absolute;
-        top: -22px;
-        left: 30px;
+
+        h3{
+            margin: 0;
+            color: $white-color;
+        }
+
+        h6{
+            margin: 0;
+            color: rgba(255,255,255, .4);
+        }
 
     }
 
-    [data-background-color="primary"]{
-        background: linear-gradient(60deg, $purple-400, $purple-700);
+    .card-footer{
+        border-top: 1px solid $gray-lighter;
+        margin: 0 20px 10px;
+        padding-top: 10px;
 
-        @extend .white-text;
-    }
-    [data-background-color="info"]{
-        background: linear-gradient(60deg, $cyan-400, $cyan-700);
+        .content{
+            display: block;
+        }
 
-        @extend .white-text;
-    }
-    [data-background-color="success"]{
-        background: linear-gradient(60deg, $green-400, $green-700);
+        div{
+            display: inline-block;
+        }
+        .author{
+            color: $gray-color;
+        }
+        .stats{
+            line-height: 30px;
+            color: $gray-color;
 
-        @extend .white-text;
-    }
-    [data-background-color="warning"]{
-        background: linear-gradient(60deg, $orange-400, $orange-700);
+            .material-icons{
+                position: relative;
+                top: 4px;
+                font-size: 18px;
+            }
+        }
 
-        @extend .white-text;
-    }
-    [data-background-color="danger"]{
-        background: linear-gradient(60deg, $red-400, $red-700);
+        h6{
+            color: $gray-color;
+        }
 
-        @extend .white-text;
-    }
-
-    [data-background-color="rose"]{
-        background: linear-gradient(60deg, $pink-400, $pink-700);
-
-        @extend .white-text;
     }
 
     img{
         width: 100%;
         height: auto;
+    }
+
+    hr{
+        margin: 10px 0;
     }
 
     .category{
@@ -220,54 +194,6 @@
         }
     }
 
-    .chart-title{
-        position: absolute;;
-        top: 25px;
-        width: 100%;
-        text-align: center;
-
-        h3{
-            margin: 0;
-            color: $white-color;
-        }
-
-        h6{
-            margin: 0;
-            color: rgba(255,255,255, .4);
-        }
-
-    }
-
-    .footer{
-        margin-top: 15px;
-
-        .content{
-            display: block;
-        }
-
-        div{
-            display: inline-block;
-        }
-        .author{
-            color: $gray-color;
-        }
-        .stats{
-            line-height: 30px;
-            color: $gray-color;
-
-            .material-icons{
-                position: relative;
-                top: 4px;
-                font-size: 18px;
-            }
-        }
-
-        h6{
-            color: $gray-color;
-        }
-
-    }
-
     .carousel &{
         max-width: 650px;
         margin: 60px auto;
@@ -277,6 +203,70 @@
     .radio{
         margin-top: 16px;
     }
+
+    .header-primary,
+    .content-primary,
+    [data-background-color="purple"]{
+        background: linear-gradient(60deg, $purple-400, $purple-600);
+        @include shadow-big-color($brand-primary);
+    }
+    .header-info,
+    .content-info,
+    [data-background-color="blue"]{
+        background: linear-gradient(60deg, $light-blue-400, $light-blue-600);
+        @include shadow-big-color($brand-info);
+    }
+    .header-success,
+    .content-success,
+    [data-background-color="green"]{
+        background: linear-gradient(60deg, $green-400, $green-600);
+        @include shadow-big-color($brand-success);
+    }
+    .header-warning,
+    .content-warning{
+        background: linear-gradient(60deg, $orange-400, $orange-700);
+    }
+    .header-danger,
+    .content-danger{
+        background: linear-gradient(60deg, $red-400, $red-700);
+    }
+
+    .header-rose,
+    .content-rose{
+        background: linear-gradient(60deg, $pink-400, $pink-700);
+    }
+
+    [class*="header-"],
+    [class*="content-"]{
+        color: $white-color;
+
+        .card-title a,
+        .card-title,
+        .icon i{
+            color: $white-color;
+        }
+
+        .icon i{
+            border-color: rgba(255, 255, 255, 0.25);
+        }
+        .author a,
+        .footer .stats,
+        .category,
+        .card-description{
+            color: $white-transparent;
+        }
+
+        .author a{
+            &:hover,
+            &:focus,
+            &:active{
+                color: $white-color;
+            }
+        }
+
+    }
+
+
 }
 .card-signup{
     .header{

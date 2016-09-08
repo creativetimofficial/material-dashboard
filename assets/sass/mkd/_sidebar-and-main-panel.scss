@@ -16,8 +16,7 @@
     font-weight: 200;
     background-size: cover;
     background-position: center center;
-    // @include shadow-big();
-    border-right: 1px solid #e9e9d3;
+    @include shadow-big();
     background: #FFFFFF;
 
     .sidebar-wrapper{
@@ -100,7 +99,7 @@
             > a{
                 color: #FFFFFF;
                 margin: 5px 15px;
-                border-radius: 30px;
+                border-radius: $border-radius-base;
                 color: $black-color;
                 @extend .animation-transition-general;
             }
@@ -111,10 +110,9 @@
 
             &.active > a{
                 color: #FFFFFF;
-                //color: $black;
-                color: #FFFFFF;
-                background: #E91E63;
-                box-shadow: 0 14px 26px -12px rgba(233, 30, 99, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(233, 30, 99, 0.2);
+                background: $brand-primary;
+                @include shadow-big-color($brand-primary);
+                
 
                 i{
                     color: #FFFFFF;
