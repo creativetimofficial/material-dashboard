@@ -2,7 +2,7 @@
     display: inline-block;
     position: relative;
     width: 100%;
-    margin-bottom: 40px;
+    margin: 25px 0;
 
     box-shadow: 0 1px 4px 0 rgba(0,0,0,0.14);
     border-radius: $border-radius-base;
@@ -131,13 +131,14 @@
             color: $gray-color;
         }
         .stats{
-            line-height: 30px;
+            line-height: 22px;
             color: $gray-color;
+            font-size: $font-size-small;
 
             .material-icons{
                 position: relative;
                 top: 4px;
-                font-size: 18px;
+                font-size: $font-paragraph;
             }
         }
 
@@ -199,11 +200,6 @@
         margin: 60px auto;
     }
 
-    .checkbox,
-    .radio{
-        margin-top: 16px;
-    }
-
     .header-primary,
     .content-primary,
     [data-background-color="purple"]{
@@ -223,17 +219,25 @@
         @include shadow-big-color($brand-success);
     }
     .header-warning,
-    .content-warning{
-        background: linear-gradient(60deg, $orange-400, $orange-700);
+    .content-warning,
+    [data-background-color="orange"]{
+        background: linear-gradient(60deg, $orange-400, $orange-600);
+        @include shadow-big-color($brand-warning);
     }
     .header-danger,
-    .content-danger{
-        background: linear-gradient(60deg, $red-400, $red-700);
+    .content-danger,
+    [data-background-color="red"]{
+        background: linear-gradient(60deg, $red-400, $red-600);
+        @include shadow-big-color($brand-danger);
     }
 
     .header-rose,
     .content-rose{
-        background: linear-gradient(60deg, $pink-400, $pink-700);
+        background: linear-gradient(60deg, $pink-400, $pink-600);
+    }
+
+    [data-background-color]{
+        color: $white-color;
     }
 
     [class*="header-"],
@@ -326,6 +330,12 @@
     }
     .nav-tabs{
         background: transparent;
+        padding: 0;
+    }
+    .nav-tabs-title{
+        float: left;
+        padding: 10px 10px 10px 0;
+        line-height: 24px;
     }
 }
 

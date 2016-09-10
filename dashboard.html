@@ -182,38 +182,41 @@
 				<div class="row">
 					<div class="col-md-4">
 						<div class="card">
-							<div class="card-header card-chart" data-background-color="purple">
-								<div class="ct-chart" id="testChart"></div>
+							<div class="card-header card-chart" data-background-color="orange">
+								<div class="ct-chart" id="dailySalesChart"></div>
 							</div>
 							<div class="card-content">
-								<h4 class="title">Email Statistics</h4>
-								<p class="category">Last Campaign Performance</p>
+								<h4 class="title">Daily Sales</h4>
+								<p class="category"><span class="text-success"><i class="fa fa-long-arrow-up"></i> 55%  </span> increase in today sales.</p>
 							</div>
 							<div class="card-footer">
 								<div class="stats">
-									<i class="material-icons">access_time</i> campaign sent 2 days ago
+									<i class="material-icons">access_time</i> updated 4 minutes ago
 								</div>
 							</div>
 						</div>
 
-						<div class="card">
-							<div class="card-header card-chart" data-background-color="green">
-								<div class="ct-chart" id="successChart"></div>
-							</div>
-							<div class="card-content">
-								<h4 class="title">Email Statistics</h4>
-								<p class="category">Last Campaign Performance</p>
-							</div>
-							<div class="card-footer">
-								<div class="stats">
-									<i class="material-icons">access_time</i> campaign sent 2 days ago
-								</div>
-							</div>
-
-						</div>
 					</div>
 
-					<div class="col-md-6">
+					<div class="col-md-4">
+						<div class="card">
+							<div class="card-header card-chart" data-background-color="red">
+								<div class="ct-chart" id="completedTasksChart"></div>
+							</div>
+							<div class="card-content">
+								<h4 class="title">Completed Tasks</h4>
+								<p class="category">Last Campaign Performance</p>
+							</div>
+							<div class="card-footer">
+								<div class="stats">
+									<i class="material-icons">access_time</i> campaign sent 2 days ago
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="col-md-4">
 						<div class="card">
 							<div class="card-header card-chart" data-background-color="blue">
 								<div id="chartActivity" class="ct-chart"></div>
@@ -231,27 +234,130 @@
 						</div>
 					</div>
 
-					<div class="col-md-8">
-						<div class="card ">
-							<div class="card-header header-info">
-								<h4 class="title">Users Behavior</h4>
-								<p class="category">24 Hours performance</p>
-							</div>
-							<div class="card-content">
-								<div id="chartHours" class="ct-chart"></div>
-							</div>
-							<div class="card-footer">
-								<div class="legend">
-									<i class="fa fa-circle text-info"></i> Open
-									<i class="fa fa-circle text-danger"></i> Click
-									<i class="fa fa-circle text-warning"></i> Click Second Time
+					<div class="col-md-7">
+						<div class="card card-nav-tabs">
+								<div class="card-header" data-background-color="purple">
+									<div class="nav-tabs-navigation">
+										<div class="nav-tabs-wrapper">
+											<span class="nav-tabs-title">Tasks:</span>
+											<ul class="nav nav-tabs" data-tabs="tabs">
+												<li class="active">
+													<a href="#profile" data-toggle="tab">
+														<i class="material-icons">bug_report</i>
+														Bugs
+													<div class="ripple-container"></div></a>
+												</li>
+												<li class="">
+													<a href="#messages" data-toggle="tab">
+														<i class="material-icons">code</i>
+														Website
+													<div class="ripple-container"></div></a>
+												</li>
+												<li class="">
+													<a href="#settings" data-toggle="tab">
+														<i class="material-icons">cloud</i> 
+														Server
+													<div class="ripple-container"></div></a>
+
+												</li>
+											</ul>
+										</div>
+									</div>
 								</div>
-								<hr>
-								<div class="stats">
-									<i class="fa fa-history"></i> Updated 3 minutes ago
+
+								<div class="card-content">
+									<div class="tab-content">
+										<div class="tab-pane active" id="profile">
+											<div class="table-full-width">
+												<table class="table">
+													<tbody>
+														<tr>
+															<td>
+																<div class="checkbox">
+																	<label>
+																		<input type="checkbox" name="optionsCheckboxes">
+																	</label>
+																</div>
+															</td>
+															<td>Sign contract for "What are conference organizers afraid of?"</td>
+															<td class="td-actions text-right">
+																<button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs">
+																	<i class="material-icons">edit</i>
+																</button>
+																<button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+																	<i class="material-icons">close</i>
+																</button>
+															</td>
+														</tr>
+														<tr>
+															<td>
+																<div class="checkbox">
+																	<label>
+																		<input type="checkbox" name="optionsCheckboxes">
+																	</label>
+																</div>
+															</td>
+															<td>Lines From Great Russian Literature? Or E-mails From My Boss?</td>
+															<td class="td-actions text-right">
+																<button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs">
+																	<i class="material-icons">edit</i>
+																</button>
+																<button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+																	<i class="material-icons">close</i>
+																</button>
+															</td>
+														</tr>
+														<tr>
+															<td>
+																<div class="checkbox">
+																	<label>
+																		<input type="checkbox" name="optionsCheckboxes">
+																	</label>
+																</div>
+															</td>
+															<td>Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit
+															</td>
+															<td class="td-actions text-right">
+																<button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs">
+																	<i class="material-icons">edit</i>
+																</button>
+																<button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+																	<i class="material-icons">close</i>
+																</button>
+															</td>
+														</tr>
+														<tr>
+															<td>
+																<div class="checkbox">
+																	<label>
+																		<input type="checkbox" name="optionsCheckboxes">
+																	</label>
+																</div>
+															</td>
+															<td>Create 4 Invisible User Experiences you Never Knew About</td>
+															<td class="td-actions text-right">
+																<button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs">
+																	<i class="material-icons">edit</i>
+																</button>
+																<button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+																	<i class="material-icons">close</i>
+																</button>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+										<div class="tab-pane" id="messages">
+											<p> I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at.</p>
+										</div>
+										<div class="tab-pane" id="settings">
+											<p>I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. So when you get something that has the name Kanye West on it, it’s supposed to be pushing the furthest possibilities. I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus.</p>
+										</div>
+									</div>
 								</div>
+
 							</div>
-						</div>
 					</div>
 				</div>
 
@@ -299,10 +405,10 @@
 												<td>Sign contract for "What are conference organizers afraid of?"</td>
 												<td class="td-actions text-right">
 													<button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs">
-														<i class="fa fa-edit"></i>
+														<i class="material-icons">edit</i>
 													</button>
 													<button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-														<i class="fa fa-times"></i>
+														<i class="material-icons">close</i>
 													</button>
 												</td>
 											</tr>
@@ -317,10 +423,10 @@
 												<td>Lines From Great Russian Literature? Or E-mails From My Boss?</td>
 												<td class="td-actions text-right">
 													<button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs">
-														<i class="fa fa-edit"></i>
+														<i class="material-icons">edit</i>
 													</button>
 													<button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-														<i class="fa fa-times"></i>
+														<i class="material-icons">close</i>
 													</button>
 												</td>
 											</tr>
@@ -336,10 +442,10 @@
 </td>
 												<td class="td-actions text-right">
 													<button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs">
-														<i class="fa fa-edit"></i>
+														<i class="material-icons">edit</i>
 													</button>
 													<button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-														<i class="fa fa-times"></i>
+														<i class="material-icons">close</i>
 													</button>
 												</td>
 											</tr>
@@ -354,10 +460,10 @@
 												<td>Create 4 Invisible User Experiences you Never Knew About</td>
 												<td class="td-actions text-right">
 													<button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs">
-														<i class="fa fa-edit"></i>
+														<i class="material-icons">edit</i>
 													</button>
 													<button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-														<i class="fa fa-times"></i>
+														<i class="material-icons">close</i>
 													</button>
 												</td>
 											</tr>
@@ -372,10 +478,10 @@
 												<td>Read "Following makes Medium better"</td>
 												<td class="td-actions text-right">
 													<button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs">
-														<i class="fa fa-edit"></i>
+														<i class="material-icons">edit</i>
 													</button>
 													<button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-														<i class="fa fa-times"></i>
+														<i class="material-icons">close</i>
 													</button>
 												</td>
 											</tr>
@@ -390,10 +496,10 @@
 												<td>Unfollow 5 enemies from twitter</td>
 												<td class="td-actions text-right">
 													<button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs">
-														<i class="fa fa-edit"></i>
+														<i class="material-icons">edit</i>
 													</button>
 													<button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-														<i class="fa fa-times"></i>
+														<i class="material-icons">close</i>
 													</button>
 												</td>
 											</tr>
@@ -466,8 +572,6 @@
 	<!--  Charts Plugin -->
 	<script src="assets/js/chartist.min.js"></script>
 
-	<script src="assets/js/Chart.min.js"></script>
-
 	<!--  Notifications Plugin    -->
 	<script src="assets/js/bootstrap-notify.js"></script>
 
@@ -496,17 +600,8 @@
 	<script type="text/javascript">
     	$(document).ready(function(){
 
-        	demo.initChartist();
-
-        	// $.notify({
-			//
-            // 	icon: 'add_alert',
-     	// 		message: "Welcome to <b>Material Dashboard</b> - a beautiful freebie for every web developer."
-			//
-            // },{
-            //     type: 'info',
-            //     timer: 4000
-            // });
+			// Javascript method's body can be found in assets/js/demos.js
+        	demo.initDashboardPageCharts();
 
     	});
 	</script>

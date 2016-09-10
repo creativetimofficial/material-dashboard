@@ -2698,7 +2698,7 @@ select.form-control[multiple], .form-group.is-focused select.form-control[multip
 .table .checkbox {
   margin-top: 0;
   margin-bottom: 0;
-  margin-left: 20px;
+  margin-left: 10px;
   padding: 0;
   width: 15px;
 }
@@ -2729,6 +2729,9 @@ select.form-control[multiple], .form-group.is-focused select.form-control[multip
   font-size: 1.25em;
   padding-top: 20px;
   text-align: right;
+}
+.table .td-actions {
+  display: flex;
 }
 .table .td-actions .btn {
   margin: 0px;
@@ -3761,6 +3764,71 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
   z-index: 1029;
 }
 
+.popover, .tooltip-inner {
+  color: #555555;
+  line-height: 1.5em;
+  background: #FFFFFF;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+}
+
+.popover {
+  padding: 0;
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+.popover.left > .arrow, .popover.right > .arrow, .popover.top > .arrow, .popover.bottom > .arrow {
+  border: none;
+}
+
+.popover-title {
+  background-color: #FFFFFF;
+  border: none;
+  padding: 15px 15px 5px;
+  font-size: 1.3em;
+}
+
+.popover-content {
+  padding: 10px 15px 15px;
+  line-height: 1.4;
+}
+
+.tooltip.in {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0px, 0);
+  -moz-transform: translate3d(0, 0px, 0);
+  -o-transform: translate3d(0, 0px, 0);
+  -ms-transform: translate3d(0, 0px, 0);
+  transform: translate3d(0, 0px, 0);
+}
+
+.tooltip {
+  opacity: 0;
+  transition: opacity, transform .2s ease;
+  -webkit-transform: translate3d(0, 5px, 0);
+  -moz-transform: translate3d(0, 5px, 0);
+  -o-transform: translate3d(0, 5px, 0);
+  -ms-transform: translate3d(0, 5px, 0);
+  transform: translate3d(0, 5px, 0);
+}
+.tooltip.left .tooltip-arrow {
+  border-left-color: #FFFFFF;
+}
+.tooltip.right .tooltip-arrow {
+  border-right-color: #FFFFFF;
+}
+.tooltip.top .tooltip-arrow {
+  border-top-color: #FFFFFF;
+}
+.tooltip.bottom .tooltip-arrow {
+  border-bottom-color: #FFFFFF;
+}
+
+.tooltip-inner {
+  padding: 10px 15px;
+  min-width: 130px;
+}
+
 footer {
   padding: 15px 0;
 }
@@ -3852,7 +3920,7 @@ footer .copyright .material-icons {
   display: inline-block;
   position: relative;
   width: 100%;
-  margin-bottom: 40px;
+  margin: 25px 0;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
   border-radius: 3px;
   color: rgba(0,0,0, 0.87);
@@ -3961,13 +4029,14 @@ footer .copyright .material-icons {
   color: #999999;
 }
 .card .card-footer .stats {
-  line-height: 30px;
+  line-height: 22px;
   color: #999999;
+  font-size: 12px;
 }
 .card .card-footer .stats .material-icons {
   position: relative;
   top: 4px;
-  font-size: 18px;
+  font-size: 16px;
 }
 .card .card-footer h6 {
   color: #999999;
@@ -4009,10 +4078,6 @@ footer .copyright .material-icons {
   max-width: 650px;
   margin: 60px auto;
 }
-.card .checkbox,
-.card .radio {
-  margin-top: 16px;
-}
 .card .header-primary,
 .card .content-primary,
 .card [data-background-color="purple"] {
@@ -4032,16 +4097,23 @@ footer .copyright .material-icons {
   box-shadow: 0 12px 20px -10px rgba(76, 175, 80, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(76, 175, 80, 0.2);
 }
 .card .header-warning,
-.card .content-warning {
-  background: linear-gradient(60deg, #ffa726, #f57c00);
+.card .content-warning,
+.card [data-background-color="orange"] {
+  background: linear-gradient(60deg, #ffa726, #fb8c00);
+  box-shadow: 0 12px 20px -10px rgba(255, 152, 0, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(255, 152, 0, 0.2);
 }
 .card .header-danger,
-.card .content-danger {
-  background: linear-gradient(60deg, #ef5350, #d32f2f);
+.card .content-danger,
+.card [data-background-color="red"] {
+  background: linear-gradient(60deg, #ef5350, #e53935);
+  box-shadow: 0 12px 20px -10px rgba(244, 67, 54, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(244, 67, 54, 0.2);
 }
 .card .header-rose,
 .card .content-rose {
-  background: linear-gradient(60deg, #ec407a, #c2185b);
+  background: linear-gradient(60deg, #ec407a, #d81b60);
+}
+.card [data-background-color] {
+  color: #FFFFFF;
 }
 .card [class*="header-"],
 .card [class*="content-"] {
@@ -4126,6 +4198,12 @@ footer .copyright .material-icons {
 }
 .card-nav-tabs .nav-tabs {
   background: transparent;
+  padding: 0;
+}
+.card-nav-tabs .nav-tabs-title {
+  float: left;
+  padding: 10px 10px 10px 0;
+  line-height: 24px;
 }
 
 .card-plain {
