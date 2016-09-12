@@ -269,9 +269,33 @@
         }
 
     }
+}
 
+.card-stats{
+    .title{
+        margin: 0;
+    }
+    .card-header{
+        float: left;
+        text-align: center;
+
+        i{
+            font-size: 36px;
+            line-height: 56px;
+            width: 56px;
+            height: 56px;
+        }
+    }
+    .card-content{
+        text-align: right;
+        padding-top: 10px;
+    }
+    .card-footer{
+
+    }
 
 }
+
 .card-signup{
     .header{
         @include shadow-big();

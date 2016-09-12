@@ -4148,6 +4148,24 @@ footer .copyright .material-icons {
   color: #FFFFFF;
 }
 
+.card-stats .title {
+  margin: 0;
+}
+.card-stats .card-header {
+  float: left;
+  text-align: center;
+}
+.card-stats .card-header i {
+  font-size: 36px;
+  line-height: 56px;
+  width: 56px;
+  height: 56px;
+}
+.card-stats .card-content {
+  text-align: right;
+  padding-top: 10px;
+}
+
 .card-signup .header {
   box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.42), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
   margin-left: 20px;
