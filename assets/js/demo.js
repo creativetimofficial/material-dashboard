@@ -30,7 +30,6 @@ demo = {
                 close: 'fa fa-remove'
             }
          });
-
     },
 
     initSliders: function(){
@@ -54,74 +53,46 @@ demo = {
         });
     },
 
-    initChartist: function(){
+    initDashboardPageCharts: function(){
 
-        var dataSales = {
-          labels: ['9:00AM', '12:00AM', '3:00PM', '6:00PM', '9:00PM', '12:00PM', '3:00AM', '6:00AM'],
-          series: [
-             [287, 385, 490, 492, 554, 586, 698, 695, 752, 788, 846, 944],
-            [67, 152, 143, 240, 287, 335, 435, 437, 539, 542, 544, 647],
-            [23, 113, 67, 108, 190, 239, 307, 308, 439, 410, 410, 509]
-          ]
-        };
+        // var dataSales = {
+        //   labels: ['9:00AM', '12:00AM', '3:00PM', '6:00PM', '9:00PM', '12:00PM', '3:00AM', '6:00AM'],
+        //   series: [
+        //      [287, 385, 490, 492, 554, 586, 698, 695, 752, 788, 846, 944],
+        //     [67, 152, 143, 240, 287, 335, 435, 437, 539, 542, 544, 647],
+        //     [23, 113, 67, 108, 190, 239, 307, 308, 439, 410, 410, 509]
+        //   ]
+        // };
+        //
+        // var optionsSales = {
+        //   lineSmooth: false,
+        //   low: 0,
+        //   high: 800,
+        //   showArea: true,
+        //   height: "245px",
+        //   axisX: {
+        //     showGrid: false,
+        //   },
+        //   lineSmooth: Chartist.Interpolation.simple({
+        //     divisor: 3
+        //   }),
+        //   showLine: false,
+        //   showPoint: false,
+        // };
+        //
+        // var responsiveSales = [
+        //   ['screen and (max-width: 640px)', {
+        //     axisX: {
+        //       labelInterpolationFnc: function (value) {
+        //         return value[0];
+        //       }
+        //     }
+        //   }]
+        // ];
+        //
+        // Chartist.Line('#chartHours', dataSales, optionsSales, responsiveSales);
+        //
 
-        var optionsSales = {
-          lineSmooth: false,
-          low: 0,
-          high: 800,
-          showArea: true,
-          height: "245px",
-          axisX: {
-            showGrid: false,
-          },
-          lineSmooth: Chartist.Interpolation.simple({
-            divisor: 3
-          }),
-          showLine: false,
-          showPoint: false,
-        };
-
-        var responsiveSales = [
-          ['screen and (max-width: 640px)', {
-            axisX: {
-              labelInterpolationFnc: function (value) {
-                return value[0];
-              }
-            }
-          }]
-        ];
-
-        Chartist.Line('#chartHours', dataSales, optionsSales, responsiveSales);
-
-
-        var data = {
-          labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-          series: [
-            [542, 443, 320, 780, 553, 453, 326, 434, 568, 610, 756, 895],
-            [412, 243, 280, 580, 453, 353, 300, 364, 368, 410, 636, 695]
-          ]
-        };
-
-        var options = {
-            seriesBarDistance: 10,
-            axisX: {
-                showGrid: false
-            },
-            height: "245px"
-        };
-
-        var responsiveOptions = [
-          ['screen and (max-width: 640px)', {
-            seriesBarDistance: 5,
-            axisX: {
-              labelInterpolationFnc: function (value) {
-                return value[0];
-              }
-            }
-          }]
-        ];
-
-        Chartist.Bar('#chartActivity', data, options, responsiveOptions);
 
         var dataPreferences = {
             series: [
@@ -147,205 +118,138 @@ demo = {
           series: [62, 32, 6]
         });
 
-        /*  **************** ChartPrice - single line ******************** */
 
-/*5        var chart = new Chartist.Line('#chartColor', {
-  labels: ['M', 'T', 'W', 'T', 'F'],
-  series: [
-     [0.05, 0.1, 0.2, 0.21, 0.17]
-  ]
-}, {
-  showPoint: true,
-  lineSmooth: true,
-  showArea: true,
-  fullWidth: true,
+        /* ----------==========     Daily Sales Chart initialization    ==========---------- */
 
-  axisX: {
-    showGrid: false,
-    showLabel: true,
-    offset: 30
-  },
-  axisY: {
-    showGrid: false,
-    showLabel: true,
-    offset: 40
-  },
-  chartPadding: 0,
-  low: 0,
-  height:"200px",
-  classNames: {
-              line: 'ct-line ct-white'
-          }
-});*/
+        dataDailySalesChart = {
+            labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
+            series: [
+                [12, 17, 7, 17, 23, 18, 38]
+            ]
+        };
 
-
-
-
-        //Default font family for all text
-        Chart.defaults.global.defaultFontColor = "white";
-
-        Chart.defaults.global.title.backgroundColor="white";
-
-        Chart.defaults.global.tooltips.backgroundColor ="white";
-        Chart.defaults.global.tooltips.bodyFontColor ="#555555";
-        Chart.defaults.global.tooltips.titleFontColor= "#555555";
-
-
-
-        var ctx = document.getElementById("ct-salary");
-        var myChart = new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-            datasets: [{
-
-                data: [12, 15, 10, 8, 12, 6, 10],
-                borderWidth: 3,
-                backgroundColor: "#f06292",
-                borderColor: "#fff",
-                pointStyle:'circle',
-                pointHitRadius: 5,
-                pointHoverBorderColor:'#fff',
-
-
-
-            }]
-        },
-        options: {
-            scales: {
-                xAxes: [{
-                        gridLines: {
-                            display:false
-                        }
-
-                    }],
-                yAxes: [{
-                            gridLines: {
-                                display:false
-                            },
-                            ticks:{
-                                suggestedMax: 25,
-                                suggestedMin: 0
-                            }
-                        }]
-            },
-            legend: {
-                display: true,
-                labels: {
-                    fontColor: 'rgb(255, 255, 255)'
-                }
+        optionsDailySalesChart = {
+            lineSmooth: Chartist.Interpolation.cardinal({
+                tension: 0
+            }),
+            low: 0,
+            high: 50, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
+            chartPadding: { top: 0, right: 0, bottom: 0, left: 0},
         }
 
+        var dailySalesChart = new Chartist.Line('#dailySalesChart', dataDailySalesChart, optionsDailySalesChart);
 
+        // Daily Sales Chart Animation
+        var seq = 0,
+          delays = 80,
+          durations = 500;
+
+        dailySalesChart.on('draw', function(data) {
+          if(data.type === 'line' || data.type === 'area') {
+            data.element.animate({
+              d: {
+                begin: 600,
+                dur: 700,
+                from: data.path.clone().scale(1, 0).translate(0, data.chartRect.height()).stringify(),
+                to: data.path.clone().stringify(),
+                easing: Chartist.Svg.Easing.easeOutQuint
+              }
+            });
+          } else if(data.type === 'point') {
+                seq++;
+                data.element.animate({
+                  opacity: {
+                    begin: seq * delays,
+                    dur: durations,
+                    from: 0,
+                    to: 1,
+                    easing: 'ease'
+                  }
+                });
             }
         });
 
-        Chart.defaults.global.tooltips.backgroundColor ="white";
-        Chart.defaults.global.tooltips.bodyFontColor ="#555555";
-
-        var ctx = document.getElementById("ct-votes");
-
-        var myChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: ["Johnny", "Paulo", "Ben", "Jane", "Arthur", "Bernardo"],
-            datasets: [{
-
-                data: [12, 17, 3, 5, 2, 3],
-                borderWidth: 2,
-                label:'% of Votes',
-                backgroundColor: "#f9a825",
-                borderColor: "#fff",
-                pointStyle:'circle',
-                pointHitRadius: 5,
+        /* ----------==========     Completed Tasks Chart initialization    ==========---------- */
 
 
+        dataCompletedTasksChart = {
+            labels: ['12am', '3pm', '6pm', '9pm', '12pm', '3am', '6am', '9am'],
+            series: [
+                [230, 750, 450, 300, 280, 240, 200, 190]
+            ]
+        };
 
-
-
-            }]
-        },
-        options: {
-            scales: {
-                xAxes: [{
-
-                            gridLines: {
-                                display:false
-                            }
-                        }],
-                yAxes: [{
-                            gridLines: {
-                                display:false
-                            },
-                            ticks:{
-                                suggestedMax: 25,
-                                suggestedMin: 0
-                            }
-                        }]
-            },
-            legend: {
-                display: true,
-                labels: {
-                    fontColor: 'rgb(255, 255, 255)'
-                }
+        optionsCompletedTasksChart = {
+            lineSmooth: Chartist.Interpolation.cardinal({
+                tension: 0
+            }),
+            low: 0,
+            high: 1000, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
+            chartPadding: { top: 0, right: 0, bottom: 0, left: 0}
         }
 
+        var completedTasksChart = new Chartist.Line('#completedTasksChart', dataCompletedTasksChart, optionsCompletedTasksChart);
+
+
+        // Completed Tasks Chart Animation
+
+        var seq2 = 0, delays2 = 80, durations2 = 500;
+
+        completedTasksChart.on('draw', function(data) {
+          if(data.type === 'line' || data.type === 'area') {
+            data.element.animate({
+              d: {
+                begin: 600,
+                dur: 700,
+                from: data.path.clone().scale(1, 0).translate(0, data.chartRect.height()).stringify(),
+                to: data.path.clone().stringify(),
+                easing: Chartist.Svg.Easing.easeOutQuint
+              }
+            });
+          } else if(data.type === 'point') {
+                seq2++;
+                data.element.animate({
+                  opacity: {
+                    begin: seq2 * delays2,
+                    dur: durations2,
+                    from: 0,
+                    to: 1,
+                    easing: 'ease'
+                  }
+                });
             }
         });
 
-        Chart.defaults.global.tooltips.backgroundColor ="white";
-        Chart.defaults.global.tooltips.bodyFontColor ="#555555";
+        var data = {
+          labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+          series: [
+            [542, 443, 320, 780, 553, 453, 326, 434, 568, 610, 756, 895]
 
+          ]
+        };
 
-        var ctx = document.getElementById("ct-revenue");
-        var myChart = new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: ["Red", "Blue", "Yellow", "Green"],
-            datasets: [{
-
-                data: [12, 15, 10, 8, 12, 6, 10],
-                borderWidth: 3,
-                backgroundColor: "rgba(255,255,255, 0.4)",
-                borderColor: "#fff",
-                pointStyle:'circle',
-                pointHitRadius: 2,
-                lineTension: 0,
-                pointHoverBorderColor: '#fff'
-
-            }]
-        },
-        options: {
-            scales: {
-                xAxes: [{
-                        gridLines: {
-                            display:false
-                        }
-
-
-                    }],
-                yAxes: [{
-                            gridLines: {
-                                zeroLineColor: 'rgba(255,255,255, 0.2)',
-                                color: 'rgba(255,255,255, 0.2)',
-                            },
-                            ticks:{
-                                suggestedMax: 20,
-                                suggestedMin: 0
-
-                            }
-                        }]
+        var options = {
+            axisX: {
+                showGrid: false
             },
-            legend: {
-                display: true,
-                labels: {
-                    fontColor: 'rgb(255, 255, 255)'
-                }
-        }
+            low: 0,
+            high: 1000,
+            chartPadding: { top: 0, right: 5, bottom: 0, left: 0}
+            //height: "245px"
+        };
 
-
+        var responsiveOptions = [
+          ['screen and (max-width: 640px)', {
+            seriesBarDistance: 5,
+            axisX: {
+              labelInterpolationFnc: function (value) {
+                return value[0];
+              }
             }
-        });
+          }]
+        ];
+
+        Chartist.Bar('#chartActivity', data, options, responsiveOptions);
 
     },
 

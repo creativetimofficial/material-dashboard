@@ -9,7 +9,7 @@
    .checkbox{
        margin-top: 0;
        margin-bottom: 0;
-       margin-left: 20px;
+       margin-left: 10px;
        padding: 0;
        width: 15px;
 
@@ -43,11 +43,14 @@
         text-align: right;
     }
 
-   .td-actions .btn{
-    margin: 0px;
-    padding: 5px;
+   .td-actions{
+        display: flex;
+        
+        .btn{
+           margin: 0px;
+           padding: 5px;
+        }
     }
-
     > tbody > tr{
         position: relative;
     }
