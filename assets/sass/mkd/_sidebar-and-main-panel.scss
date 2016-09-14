@@ -84,6 +84,9 @@
 
             &.active > a{
                 color: #FFFFFF;
+                background: $brand-primary;
+                
+
 
                 i{
                     color: #FFFFFF;
@@ -183,7 +186,7 @@ body > .navbar-collapse{
     }
 
     &:after{
-    //    @include set-background-color-button($font-background-light-grey, $background-lighter-grey);
+    //    @include icon-gradient($font-background-light-grey, $background-lighter-grey);
        z-index: 3;
        opacity: 1;
     }
@@ -193,20 +196,23 @@ body > .navbar-collapse{
         opacity: .77;
     }
 
-    &[data-color="blue"]{
-        @include set-background-color-button($brand-info);
+    &[data-color="blue"]:after{
+        @include icon-gradient($font-background-light-grey, $brand-info);
     }
-    &[data-color="green"]{
-        @include set-background-color-button($brand-success);
+    &[data-color="azure"]:after{
+        @include icon-gradient($brand-info, $amber);
     }
-    &[data-color="orange"]{
-        @include set-background-color-button($brand-warning);
+    &[data-color="green"]:after{
+        @include icon-gradient($brand-success, $green);
     }
-    &[data-color="red"]{
-        @include set-background-color-button($brand-danger);
+    &[data-color="orange"]:after{
+        @include icon-gradient($brand-warning, $orange);
     }
-    &[data-color="purple"]{
-        @include set-background-color-button($brand-primary);
+    &[data-color="red"]:after{
+        @include icon-gradient($brand-danger, $red);
+    }
+    &[data-color="purple"]:after{
+        @include icon-gradient($brand-primary, $purple);
     }
 }
 

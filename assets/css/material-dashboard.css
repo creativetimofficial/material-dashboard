@@ -646,8 +646,6 @@ h2.title {
 }
 .sidebar .nav li.active > a {
   color: #FFFFFF;
-  background: #9c27b0;
-  box-shadow: 0 12px 20px -10px rgba(156, 39, 176, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(156, 39, 176, 0.2);
 }
 .sidebar .nav li.active > a i {
   color: #FFFFFF;
@@ -743,71 +741,30 @@ body > .navbar-collapse[data-image]:after,
 body > .navbar-collapse.has-image:after {
   opacity: .77;
 }
-.sidebar[data-color="blue"]:after,
-body > .navbar-collapse[data-color="blue"]:after {
-  background: #9C9B99;
-  background: -moz-linear-gradient(top, #9C9B99 0%, #00bcd4 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #9C9B99), color-stop(100%, #00bcd4));
-  background: -webkit-linear-gradient(top, #9C9B99 0%, #00bcd4 100%);
-  background: -o-linear-gradient(top, #9C9B99 0%, #00bcd4 100%);
-  background: -ms-linear-gradient(top, #9C9B99 0%, #00bcd4 100%);
-  background: linear-gradient(to bottom, #9C9B99 0%, #00bcd4 100%);
-  background-size: 150% 150%;
+.sidebar[data-color="blue"] .nav li.active a,
+body > .navbar-collapse[data-color="blue"] .nav li.active a {
+  background-color: #00bcd4;
+  box-shadow: 0 12px 20px -10px rgba(0, 188, 212, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(0, 188, 212, 0.2);
 }
-.sidebar[data-color="azure"]:after,
-body > .navbar-collapse[data-color="azure"]:after {
-  background: #00bcd4;
-  background: -moz-linear-gradient(top, #00bcd4 0%, #ffc107 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #00bcd4), color-stop(100%, #ffc107));
-  background: -webkit-linear-gradient(top, #00bcd4 0%, #ffc107 100%);
-  background: -o-linear-gradient(top, #00bcd4 0%, #ffc107 100%);
-  background: -ms-linear-gradient(top, #00bcd4 0%, #ffc107 100%);
-  background: linear-gradient(to bottom, #00bcd4 0%, #ffc107 100%);
-  background-size: 150% 150%;
+.sidebar[data-color="green"] .nav li.active a,
+body > .navbar-collapse[data-color="green"] .nav li.active a {
+  background-color: #4caf50;
+  box-shadow: 0 12px 20px -10px rgba(76, 175, 80, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(76, 175, 80, 0.2);
 }
-.sidebar[data-color="green"]:after,
-body > .navbar-collapse[data-color="green"]:after {
-  background: #4caf50;
-  background: -moz-linear-gradient(top, #4caf50 0%, #4caf50 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4caf50), color-stop(100%, #4caf50));
-  background: -webkit-linear-gradient(top, #4caf50 0%, #4caf50 100%);
-  background: -o-linear-gradient(top, #4caf50 0%, #4caf50 100%);
-  background: -ms-linear-gradient(top, #4caf50 0%, #4caf50 100%);
-  background: linear-gradient(to bottom, #4caf50 0%, #4caf50 100%);
-  background-size: 150% 150%;
+.sidebar[data-color="orange"] .nav li.active a,
+body > .navbar-collapse[data-color="orange"] .nav li.active a {
+  background-color: #ff9800;
+  box-shadow: 0 12px 20px -10px rgba(255, 152, 0, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(255, 152, 0, 0.2);
 }
-.sidebar[data-color="orange"]:after,
-body > .navbar-collapse[data-color="orange"]:after {
-  background: #ff9800;
-  background: -moz-linear-gradient(top, #ff9800 0%, #ff9800 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ff9800), color-stop(100%, #ff9800));
-  background: -webkit-linear-gradient(top, #ff9800 0%, #ff9800 100%);
-  background: -o-linear-gradient(top, #ff9800 0%, #ff9800 100%);
-  background: -ms-linear-gradient(top, #ff9800 0%, #ff9800 100%);
-  background: linear-gradient(to bottom, #ff9800 0%, #ff9800 100%);
-  background-size: 150% 150%;
+.sidebar[data-color="red"] .nav li.active a,
+body > .navbar-collapse[data-color="red"] .nav li.active a {
+  background-color: #f44336;
+  box-shadow: 0 12px 20px -10px rgba(244, 67, 54, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(244, 67, 54, 0.2);
 }
-.sidebar[data-color="red"]:after,
-body > .navbar-collapse[data-color="red"]:after {
-  background: #f44336;
-  background: -moz-linear-gradient(top, #f44336 0%, #f44336 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f44336), color-stop(100%, #f44336));
-  background: -webkit-linear-gradient(top, #f44336 0%, #f44336 100%);
-  background: -o-linear-gradient(top, #f44336 0%, #f44336 100%);
-  background: -ms-linear-gradient(top, #f44336 0%, #f44336 100%);
-  background: linear-gradient(to bottom, #f44336 0%, #f44336 100%);
-  background-size: 150% 150%;
-}
-.sidebar[data-color="purple"]:after,
-body > .navbar-collapse[data-color="purple"]:after {
-  background: #9c27b0;
-  background: -moz-linear-gradient(top, #9c27b0 0%, #9c27b0 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #9c27b0), color-stop(100%, #9c27b0));
-  background: -webkit-linear-gradient(top, #9c27b0 0%, #9c27b0 100%);
-  background: -o-linear-gradient(top, #9c27b0 0%, #9c27b0 100%);
-  background: -ms-linear-gradient(top, #9c27b0 0%, #9c27b0 100%);
-  background: linear-gradient(to bottom, #9c27b0 0%, #9c27b0 100%);
-  background-size: 150% 150%;
+.sidebar[data-color="purple"] .nav li.active a,
+body > .navbar-collapse[data-color="purple"] .nav li.active a {
+  background-color: #9c27b0;
+  box-shadow: 0 12px 20px -10px rgba(156, 39, 176, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(156, 39, 176, 0.2);
 }
 
 .main-panel {
