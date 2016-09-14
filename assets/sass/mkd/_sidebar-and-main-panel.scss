@@ -52,31 +52,6 @@
         }
     }
 
-    .logo{
-        padding: $navbar-padding-a;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-
-        p{
-            float: left;
-            font-size: 20px;
-            margin: 10px 10px;
-            color: $white-color;
-            line-height: 20px;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        }
-
-        .simple-text{
-            text-transform: uppercase;
-            padding: $padding-small-vertical $padding-zero;
-            display: block;
-            font-size: $font-size-large;
-            color: $white-color;
-            text-align: center;
-            font-weight: $font-weight-default;
-            line-height: 30px;
-        }
-    }
-
     .logo-tim{
         border-radius: 50%;
         border: 1px solid #333;
@@ -97,8 +72,7 @@
 
         li{
             > a{
-                color: #FFFFFF;
-                margin: 5px 15px;
+                margin: 10px 15px;
                 border-radius: $border-radius-base;
                 color: $black-color;
                 @extend .animation-transition-general;
@@ -144,8 +118,19 @@
 .sidebar,
 body > .navbar-collapse{
     .logo{
-        padding: $navbar-padding-a;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        position: relative;
+        padding: $padding-base $padding-base;
+
+        &:after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 10%;
+            height: 1px;
+            width: 80%;
+            background-color: rgba(180,180,180, .1);
+
+        }
 
         p{
             float: left;

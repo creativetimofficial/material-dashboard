@@ -209,7 +209,7 @@
     .header-info,
     .content-info,
     [data-background-color="blue"]{
-        background: linear-gradient(60deg, $light-blue-400, $light-blue-600);
+        background: linear-gradient(60deg, $cyan-400, $cyan-600);
         @include shadow-big-color($brand-info);
     }
     .header-success,
