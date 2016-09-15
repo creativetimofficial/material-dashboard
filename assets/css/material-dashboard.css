@@ -586,7 +586,7 @@ h2.title {
 }
 .sidebar .sidebar-wrapper {
   position: relative;
-  height: calc(100vh - 50px);
+  height: calc(100vh - 75px);
   overflow: auto;
   width: 260px;
   z-index: 4;
@@ -614,6 +614,7 @@ h2.title {
 }
 .sidebar .nav li:hover > a {
   background: rgba(200, 200, 200, 0.2);
+  color: #3C4858;
 }
 .sidebar .nav li.active > a {
   color: #FFFFFF;
@@ -5297,12 +5298,6 @@ footer .copyright .material-icons {
   .sidebar {
     display: none;
     box-shadow: none;
-  }
-  .sidebar .nav {
-    margin-top: 10px;
-  }
-  .sidebar .nav > li:hover > a {
-    color: #3C4858;
   }
   .sidebar .nav-mobile-menu .notification {
     float: left;

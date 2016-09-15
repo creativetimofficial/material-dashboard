@@ -15,7 +15,7 @@
 
     .sidebar-wrapper{
         position: relative;
-        height: calc(100vh - 50px);
+        height: calc(100vh - 75px);
         overflow: auto;
         width: 260px;
         z-index: 4;
@@ -50,6 +50,7 @@
 
             &:hover > a{
                 background: rgba(200, 200, 200, 0.2);
+                color: $black-color;
             }
 
             &.active > a{
