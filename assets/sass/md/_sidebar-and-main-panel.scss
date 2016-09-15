@@ -9,47 +9,17 @@
     top: 0;
     bottom: 0;
     left: 0;
-    width: 260px;
-    display: block;
     z-index: 1;
-    color: #fff;
-    font-weight: 200;
-    background-size: cover;
-    background-position: center center;
     @include shadow-big();
-    background: #FFFFFF;
+
 
     .sidebar-wrapper{
         position: relative;
-        max-height: none;
-        min-height: 100%;
-        overflow: hidden;
+        height: calc(100vh - 50px);
+        overflow: auto;
         width: 260px;
         z-index: 4;
         //background-color: $white-color;
-    }
-
-    .sidebar-background{
-        position: absolute;
-        z-index: 1;
-        height: 100%;
-        width: 100%;
-        display: block;
-        top: 0;
-        left: 0;
-        background-size: cover;
-        background-position: center center;
-
-        &:after{
-            position: absolute;
-            z-index: 3;
-            width: 100%;
-            height: 100%;
-            content: "";
-            display: block;
-            background: #FFFFFF;
-            opacity: .93;
-        }
     }
 
     .logo-tim{
@@ -113,10 +83,35 @@
 
 
 .sidebar,
-body > .navbar-collapse{
+.off-canvas-sidebar{
+
+    .sidebar-background{
+        position: absolute;
+        z-index: 1;
+        height: 100%;
+        width: 100%;
+        display: block;
+        top: 0;
+        left: 0;
+        background-size: cover;
+        background-position: center center;
+
+        &:after{
+            position: absolute;
+            z-index: 3;
+            width: 100%;
+            height: 100%;
+            content: "";
+            display: block;
+            background: #FFFFFF;
+            opacity: .93;
+        }
+    }
+
     .logo{
         position: relative;
         padding: $padding-base $padding-base;
+        z-index: 4;
 
         &:after{
             content: '';
@@ -218,6 +213,8 @@ body > .navbar-collapse{
     float: right;
     width: $sidebar-width;
     min-height: 100%;
+    @include transform-translate-x(0px);
+    @include transition (0.33s, cubic-bezier(0.685, 0.0473, 0.346, 1));
 
     > .content{
         padding: 30px 15px;
