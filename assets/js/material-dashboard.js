@@ -82,11 +82,23 @@ md = {
 
     },
 
+    checkScrollForTransparentNavbar: debounce(function() {
+            if($(document).scrollTop() > 260 ) {
+                if(transparent) {
+                    transparent = false;
+                    $('.navbar-color-on-scroll').removeClass('navbar-transparent');
+                }
+            } else {
+                if( !transparent ) {
+                    transparent = true;
+                    $('.navbar-color-on-scroll').addClass('navbar-transparent');
+                }
+            }
+    }, 17),
+
 
     initRightMenu: debounce(function(){
         $sidebar_wrapper = $('.sidebar-wrapper');
-
-        //console.log('aici se face meniu in dreapta');
 
         if(!mobile_menu_initialized){
             console.log('intra in meniu');
@@ -95,15 +107,10 @@ md = {
             nav_content = '';
             mobile_menu_content = '';
 
-            //add the content from the regular header to the mobile menu
-            //pas = 1;
             $navbar.children('ul').each(function(){
 
                 content_buff = $(this).html();
                 nav_content = nav_content + content_buff;
-                //console.log('pas:' + pas);
-
-                //pas = pas+1;
             });
 
             nav_content = '<ul class="nav nav-mobile-menu">' + nav_content + '</ul>';
@@ -130,18 +137,11 @@ md = {
                 $sidebar_wrapper.find('.navbar-form').remove();
                 $sidebar_wrapper.find('.nav-mobile-menu').remove();
 
-                console.log(md.misc.sidebar_mini_active);
-
-                // if(lbd.misc.sidebar_mini_active == true){
-                //     $('body').addClass('sidebar-mini');
-                // }
-
                 mobile_menu_initialized = false;
             }
         }
 
         if(!toggle_initialized){
-            console.log('intra');
             $toggle = $('.navbar-toggle');
 
             $toggle.click(function (){
