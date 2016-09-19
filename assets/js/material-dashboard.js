@@ -11,20 +11,16 @@ var mobile_menu_visible = 0,
 
 $(document).ready(function(){
 
+    $sidebar = $('.sidebar');
+
     $.material.init();
 
-    $sidebar = $('.sidebar');
     md.initSidebarsCheck();
 
     window_width = $(window).width();
 
     // check if there is an image set for the sidebar's background
     md.checkSidebarImage();
-
-    // Init navigation toggle for small screens
-    // if(window_width <= 991){
-    //     mkd.initRightMenu();
-    // }
 
     //  Activate the tooltips
     $('[rel="tooltip"]').tooltip();
