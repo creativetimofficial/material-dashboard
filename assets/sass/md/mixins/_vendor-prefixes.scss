@@ -53,15 +53,13 @@
         transform-origin: $coordinates;
 }
 
-@mixin icon-gradient ($top-color, $bottom-color){
-    background: $top-color;
-    background: -moz-linear-gradient(top,  $top-color 0%, $bottom-color 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top-color), color-stop(100%,$bottom-color));
-    background: -webkit-linear-gradient(top,  $top-color 0%,$bottom-color 100%);
-    background: -o-linear-gradient(top,  $top-color 0%,$bottom-color 100%);
-    background: -ms-linear-gradient(top,  $top-color 0%,$bottom-color 100%);
-    background: linear-gradient(to bottom,  $top-color 0%,$bottom-color 100%);
-    background-size: 150% 150%;
+@mixin set-background-color-button ($color){
+    .nav{
+        li.active a{
+            background-color: $color;
+            @include shadow-big-color($color);
+        }
+    }
 }
 
 @mixin radial-gradient($extern-color, $center-color){
@@ -127,14 +125,14 @@
       75% { transform: rotate(5deg); }
       100% { top: 0px; transform: rotate(0); }
     }
-    
+
     @-webkit-keyframes topbar-back {
       0% { top: 6px; -webkit-transform: rotate(135deg); }
       45% { -webkit-transform: rotate(-10deg); }
       75% { -webkit-transform: rotate(5deg); }
       100% { top: 0px; -webkit-transform: rotate(0); }
     }
-    
+
     @-moz-keyframes topbar-back {
       0% { top: 6px; -moz-transform: rotate(135deg); }
       45% { -moz-transform: rotate(-10deg); }
@@ -185,5 +183,3 @@
     }
 
 }
-
-

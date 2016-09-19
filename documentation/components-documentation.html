@@ -1,0 +1,1874 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png" />
+	<link rel="icon" type="image/png" href="../assets/img/favicon.png" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>Components Documentation - Material Kit by Creative Tim</title>
+
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+
+	<!--     Fonts and icons     -->
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+
+	<!-- CSS Files -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/material-dashboard.css" rel="stylesheet"/>
+	<link href="../assets/css/demo-documentation.css" rel="stylesheet" />
+
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+	<style>
+		pre.prettyprint{
+		    background-color: #eee;
+		    border: 0px;
+		    margin-bottom: 60px;
+		    margin-top: 30px;
+		    padding: 20px;
+		    text-align: left;
+		}
+		.atv, .str{
+		    color: #05AE0E;
+		}
+		.tag, .pln, .kwd{
+		    color: #3472F7;
+		}
+		.atn{
+		    color: #2C93FF;
+		}
+		.pln{
+		    color: #333;
+		}
+		.com{
+		    color: #999;
+		}
+		.space-top{
+		    margin-top: 50px;
+		}
+		.area-line{
+		    border: 1px solid #999;
+		    border-left: 0;
+		    border-right: 0;
+		    color: #666;
+		    display: block;
+		    margin-top: 20px;
+		    padding: 8px 0;
+		    text-align: center;
+		}
+		.area-line a{
+		    color: #666;
+		}
+		.container-fluid{
+		    padding-right: 15px;
+		    padding-left: 15px;
+		}
+		.table-shopping .td-name{
+			min-width: 130px;
+		}
+		.pick-class-label{
+            border-radius: 8px;
+            border: 1px solid #999;
+            color: #ffffff;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 75%;
+            font-weight: bold;
+            line-height: 1;
+            margin-right: 10px;
+            padding: 23px;
+            text-align: center;
+            vertical-align: baseline;
+            white-space: nowrap;
+        }
+
+	</style>
+</head>
+
+<body class="components-page">
+
+<nav class="navbar navbar-transparent navbar-fixed-top navbar-color-on-scroll" role="navigation">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button id="menu-toggle" type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar bar1"></span>
+        <span class="icon-bar bar2"></span>
+        <span class="icon-bar bar3"></span>
+      </button>
+      <a href="http://www.creative-tim.com">
+           <div class="logo-container">
+                <div class="logo">
+                    <img src="../assets/img/new_logo.png" alt="Creative Tim Logo">
+                </div>
+                <div class="brand">
+                    Creative Tim
+                </div>
+            </div>
+      </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse">
+		<ul  class="nav navbar-nav navbar-right">
+			<li>
+				<a href="../examples/dashboard.html">Back to Material Dashboard</a>
+			</li>
+			<li>
+                <a href="https://github.com/timcreative/material-dashboard/issues">Have an issue?</a>
+            </li>
+    	</ul>
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+	<div class="page-header header-filter header-small" style="background-image: url('https://images.unsplash.com/photo-1423655156442-ccc11daa4e99?crop=entropy&dpr=2&fit=crop&fm=jpg&h=750&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1450');">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+					<h1 class="title text-center">Components Documentation</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <div class="main main-raised">
+        <div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="fixed-section" data-spy="affix" data-offset-top="340">
+                    <ul>
+                        <li><a href="#buttons-row">Buttons</a></li>
+                        <li><a href="#checkbox-row">Checkbox/Radio</a></li>
+                        <li><a href="#dropdown-row">Dropdown</a></li>
+                        <li><a href="#inputs-row">Inputs</a></li>
+                        <li><a href="#textarea-row">Textarea</a></li>
+                        <li><a href="#navbar-row">Navigation</a></li>
+						<li><a href="#icons-row">Material Icons</a></li>
+                        <li><a href="#notification-row">Notifications</a></li>
+                        <li><a href="#cards-row">Cards</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-8 col-md-offset-1">
+                <div class="tim-container">
+
+	    	<!-- buttons row -->
+	        <div class="tim-row" id="buttons-row">
+
+                <h2>Buttons</h2>
+                <legend></legend>
+                <h4>Colors</h4>
+                <p>We worked over the original Bootstrap classes, choosing a different, slightly intenser colour palette. We have also added a pink button, defined by the <code>.btn-rose</code> class.</p>
+                <p>
+                       <button class="btn btn-default">Default</button>
+                       <button class="btn btn-primary">Primary</button>
+                       <button class="btn btn-info">Info</button>
+                       <button class="btn btn-success">Success</button>
+                       <button class="btn btn-warning">Warning</button>
+                       <button class="btn btn-danger">Danger</button>
+                       <button class="btn btn-rose">Rose</button>
+                </p>
+
+    			<pre class="prettyprint">
+
+&lt;button class=&quot;btn btn-default&quot;&gt;Default&lt;/button&gt;
+&lt;button class=&quot;btn btn-primary&quot;&gt;Primary&lt;/button&gt;
+&lt;button class=&quot;btn btn-info&quot;&gt;Info&lt;/button&gt;
+&lt;button class=&quot;btn btn-success&quot;&gt;Success&lt;/button&gt;
+&lt;button class=&quot;btn btn-warning&quot;&gt;Warning&lt;/button&gt;
+&lt;button class=&quot;btn btn-danger&quot;&gt;Danger&lt;/button&gt;
+&lt;button class=&quot;btn btn-rose&quot;&gt;Rose&lt;/button&gt;
+    			</pre>
+
+
+            	<h4>Sizes</h4>
+                <p>Buttons come in all needed sizes:</p>
+                <p>
+                    <button class="btn btn-primary btn-lg">Large</button>
+                    <button class="btn btn-primary">Normal</button>
+                    <button class="btn btn-primary btn-sm">Small</button>
+                    <button class="btn btn-primary btn-xs">Extra Small</button>
+                </p>
+
+				<pre class="prettyprint">
+
+&lt;button class=&quot;btn btn-primary btn-lg&quot;&gt;Large&lt;/button&gt;
+&lt;button class=&quot;btn btn-primary&quot;&gt;Normal&lt;/button&gt;
+&lt;button class=&quot;btn btn-primary btn-sm&quot;&gt;Small&lt;/button&gt;
+&lt;button class=&quot;btn btn-primary btn-xs&quot;&gt;Extra Small&lt;/button&gt;
+    			</pre>
+
+				<h4>Styles</h4>
+                <p>We added extra classes that can help you better customise the look. You can use regular buttons, rounded corners buttons or simple buttons.  If you are using buttons that only have an icon inside of them, you can add <code>.btn-just-icon</code> so the icon properly aligns. Let's see some examples:
+                </p>
+				<p>
+					<button class="btn btn-primary">Default</button>
+					<button class="btn btn-primary btn-round">Round</button>
+					<button class="btn btn-primary btn-round">
+						<i class="material-icons">favorite</i> With Icon
+					</button>
+					<button class="btn btn-primary btn-fab btn-fab-mini btn-round">
+						<i class="material-icons">favorite</i>
+					</button>
+					<button class="btn btn-primary btn-simple">Simple</button>
+
+                </p>
+
+    			<pre class="prettyprint">
+&lt;button class=&quot;btn btn-primary &quot;&gt;Default&lt;/button&gt;
+&lt;button class=&quot;btn btn-primary btn-round&quot;&gt;Round&lt;/button&gt;
+&lt;button class=&quot;btn btn-primary btn-round&quot;&gt;
+	&lt;i class=&quot;material-icons&quot;&gt;favorite&lt;/i&gt; With Icon
+&lt;/button&gt;
+&lt;button class=&quot;btn btn-primary btn-fab btn-fab-mini btn-round&quot;&gt;
+	&lt;i class=&quot;material-icons&quot;&gt;favorite&lt;/i&gt;
+&lt;/button&gt;
+&lt;button class=&quot;btn btn-primary btn-simple&quot;&gt;Default&lt;/button&gt;
+    			</pre>
+
+                <p>
+                    Button groups, toolbars, and disabled state all work like they are supposed to. We used the Font Awesome icons that can be found <a href="http://fortawesome.github.io/Font-Awesome/icons/" target="_blank">here</a> and Material Design Icons that can be found <a href="https://design.google.com/icons/" target="_blank"> here</a>.
+                </p>
+        	</div>
+    		<!--  end row -->
+
+    		<!-- checkbox row -->
+        	<div class="tim-row" id="checkbox-row">
+                <h2> Checkboxes </h2>
+                <legend></legend>
+                <p>
+                    To use the custom checkboxes, you don't need to import any separate Javascript file, everything is inside material.min.js
+                </p>
+                <p>
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" name="optionsCheckboxes">
+							Unchecked
+						</label>
+					</div>
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" name="optionsCheckboxes" checked>
+							Checked
+						</label>
+					</div>
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" name="optionsCheckboxes" disabled>
+							Disabled Unchecked
+						</label>
+					</div>
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" name="optionsCheckboxes" disabled checked>
+							Disabled Checked
+						</label>
+					</div>
+                </p>
+
+    			<pre class="prettyprint">
+&lt;div class=&quot;checkbox&quot;&gt;
+	&lt;label&gt;
+		&lt;input type=&quot;checkbox&quot; name=&quot;optionsCheckboxes&quot;&gt;
+		Unchecked
+	&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;checkbox&quot;&gt;
+	&lt;label&gt;
+		&lt;input type=&quot;checkbox&quot; name=&quot;optionsCheckboxes&quot; checked&gt;
+		Checked
+	&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;checkbox&quot;&gt;
+	&lt;label&gt;
+		&lt;input type=&quot;checkbox&quot; name=&quot;optionsCheckboxes&quot; disabled&gt;
+		Disabled Unchecked
+	&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;checkbox&quot;&gt;
+	&lt;label&gt;
+		&lt;input type=&quot;checkbox&quot; name=&quot;optionsCheckboxes&quot; disabled checked&gt;
+		Disabled Checked
+	&lt;/label&gt;
+&lt;/div&gt;
+
+				</pre>
+        	</div>
+    		<!-- end row -->
+
+    		<!-- radio row -->
+        	<div class="tim-row" id="radio-row">
+            	<h2> Radio Buttons </h2>
+            	<legend></legend>
+                <p>
+                    To use the custom radio buttons, you don't need to import any separate Javascript file, everything is inside material.min.js.
+                </p>
+                <p>
+					<div class="radio">
+						<label>
+							<input type="radio" name="optionsRadios">
+							Radio is off
+						</label>
+					</div>
+					<div class="radio">
+						<label>
+							<input type="radio" name="optionsRadios" checked="true">
+							Radio is on
+						</label>
+					</div>
+					<div class="radio">
+						<label>
+							<input type="radio" name="optionsRadiosDisabled" disabled>
+							Disabled Radio is off
+						</label>
+					</div>
+					<div class="radio">
+						<label>
+							<input type="radio" name="optionsRadiosDisabled" checked="true" disabled>
+							Disabled Radio is on
+						</label>
+					</div>
+                </p>
+
+				<pre class="prettyprint">
+&lt;div class=&quot;radio&quot;&gt;
+	&lt;label&gt;
+		&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot;&gt;
+		Radio is off
+	&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;radio&quot;&gt;
+	&lt;label&gt;
+		&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; checked=&quot;true&quot;&gt;
+		Radio is on
+	&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;radio&quot;&gt;
+	&lt;label&gt;
+		&lt;input type=&quot;radio&quot; name=&quot;optionsRadiosDisabled&quot; disabled&gt;
+		Disabled Radio is off
+	&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;radio&quot;&gt;
+	&lt;label&gt;
+		&lt;input type=&quot;radio&quot; name=&quot;optionsRadiosDisabled&quot; checked=&quot;true&quot; disabled&gt;
+		Disabled Radio is on
+	&lt;/label&gt;
+&lt;/div&gt;
+    			</pre>
+		    </div>
+		    <!-- end row -->
+
+		    <!-- dropdown row -->
+		    <div class="tim-row" id="dropdown-row">
+            	<h2> Dropdown </h2>
+            	<legend></legend>
+            	<p> We are very proud to present the dropdown which has a subtle animation. We also thought of another use-case: dropdown with flags. <b>IMPORTANT!</b> The focus state is <b>Purple</b> by default and, on the dropdowns from the navbars, they will take the colour of the parent navbar.</p>
+
+	            <div class="row">
+	                <div class="col-md-3">
+    	                <div class="dropdown">
+    	                	<a href="#pablo" class="btn dropdown-toggle" data-toggle="dropdown">
+    	                    	Regular
+    	                    	<b class="caret"></b>
+    	                	</a>
+    	                	<ul class="dropdown-menu">
+    	                    	<li><a href="#pablo">Action</a></li>
+    	                    	<li><a href="#pablo">Another action</a></li>
+    	                    	<li><a href="#pablo">Something else here</a></li>
+    	                    	<li class="divider"></li>
+    	                    	<li><a href="#pablo">Separated link</a></li>
+    	                    	<li class="divider"></li>
+    	                    	<li><a href="#pablo">One more separated link</a></li>
+    	                	</ul>
+	                    </div>
+	                </div>
+	            </div>
+
+    			<pre class="prettyprint">
+&lt;div class=&quot;dropdown&quot;&gt;
+	&lt;a href=&quot;#&quot; class=&quot;btn dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+    	Regular
+    	&lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;
+	&lt;/a&gt;
+	&lt;ul class=&quot;dropdown-menu&quot;&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+		&lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+		&lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;One more separated link&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+    			</pre>
+		    </div>
+		    <!-- end row -->
+
+    		<!-- inputs row -->
+        	<div class="tim-row" id="inputs-row">
+                <h2>Inputs </h2>
+                <legend></legend>
+
+                <p>
+                We restyled the Bootstrap inputs to give them a more flat, minimal look. You can use them with regular labels, floating labels and states or input groups.
+                </p>
+                <div class="row">
+					<div class="col-sm-4">
+	                	<div class="form-group">
+	        	        	<input type="text" value="" placeholder="Regular" class="form-control" />
+	                	</div>
+	                </div>
+
+					<div class="col-sm-4">
+						<div class="form-group label-floating">
+							<label class="control-label">With Floating Label</label>
+							<input type="email" class="form-control">
+						</div>
+					</div>
+
+	                <div class="col-sm-4">
+	                	<div class="form-group label-floating has-success">
+							<label class="control-label">Success input</label>
+	                    	<input type="text" value="Success" class="form-control" />
+							<span class="form-control-feedback">
+								<i class="material-icons">done</i>
+							</span>
+	                	</div>
+	                </div>
+
+	                <div class="col-sm-4">
+	                	<div class="form-group label-floating has-error">
+							<label class="control-label">Error input</label>
+	                    	<input type="email" value="Error Input" class="form-control" />
+	                    	<span class="material-icons form-control-feedback">clear</span>
+	                	</div>
+	                </div>
+
+					<div class="col-sm-4">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<i class="material-icons">group</i>
+							</span>
+							<input type="text" class="form-control" placeholder="With Material Icons">
+						</div>
+					</div>
+
+					<div class="col-sm-4">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<i class="fa fa-group"></i>
+							</span>
+							<input type="text" class="form-control" placeholder="With Font Awesome Icons">
+						</div>
+					</div>
+	        	</div>
+
+
+    			<pre class="prettyprint">
+
+&lt;div class=&quot;col-sm-4&quot;&gt;
+	&lt;div class=&quot;form-group&quot;&gt;
+    	&lt;input type=&quot;text&quot; value=&quot;&quot; placeholder=&quot;Regular&quot; class=&quot;form-control&quot; /&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;col-sm-4&quot;&gt;
+	&lt;div class=&quot;form-group label-floating&quot;&gt;
+		&lt;label class=&quot;control-label&quot;&gt;With Floating Label&lt;/label&gt;
+		&lt;input type=&quot;email&quot; class=&quot;form-control&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;col-sm-4&quot;&gt;
+	&lt;div class=&quot;form-group label-floating has-success&quot;&gt;
+		&lt;label class=&quot;control-label&quot;&gt;Success input&lt;/label&gt;
+		&lt;input type=&quot;text&quot; value=&quot;Success&quot; class=&quot;form-control&quot; /&gt;
+		&lt;span class=&quot;form-control-feedback&quot;&gt;
+			&lt;i class=&quot;material-icons&quot;&gt;done&lt;/i&gt;
+		&lt;/span&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;col-sm-4&quot;&gt;
+	&lt;div class=&quot;form-group label-floating has-error&quot;&gt;
+		&lt;label class=&quot;control-label&quot;&gt;Error input&lt;/label&gt;
+		&lt;input type=&quot;email&quot; value=&quot;Error Input&quot; class=&quot;form-control&quot; /&gt;
+		&lt;span class=&quot;material-icons form-control-feedback&quot;&gt;clear&lt;/span&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;col-sm-4&quot;&gt;
+	&lt;div class=&quot;input-group&quot;&gt;
+		&lt;span class=&quot;input-group-addon&quot;&gt;
+			&lt;i class=&quot;material-icons&quot;&gt;group&lt;/i&gt;
+		&lt;/span&gt;
+		&lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;With Material Icons&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;col-sm-4&quot;&gt;
+	&lt;div class=&quot;input-group&quot;&gt;
+		&lt;span class=&quot;input-group-addon&quot;&gt;
+			&lt;i class=&quot;fa fa-group&quot;&gt;&lt;/i&gt;
+		&lt;/span&gt;
+		&lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;With Font Awesome Icons&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+				</pre>
+    		</div>
+    		<!-- end row -->
+
+
+			<!-- textarea row -->
+			<div class="tim-row" id="textarea-row">
+			    <h2>Textarea</h2>
+			    <legend></legend>
+			    <p>The textarea has a new style, so it looks similar to all other inputs.</p>
+
+			    <textarea class="form-control" placeholder="Here can be your nice text" rows="5"></textarea>
+
+				<pre class="prettyprint">
+&lt;textarea class=&quot;form-control&quot; placeholder=&quot;Here can be your nice text&quot; rows=&quot;5&quot;&gt;&lt;/textarea&gt;
+				</pre>
+		    </div>
+		    <!-- end row -->
+
+    		<!-- navbar row -->
+    		<div class="tim-row" id="navbar-row">
+	            <h2>Navbar </h2>
+	            <legend></legend>
+	            <p>The classic Bootstrap Navbar was restyled:</p>
+
+	            <div id="navbar">
+	                <nav class="navbar navbar-default" role="navigation">
+	                	<div class="container-fluid">
+	                    	<div class="navbar-header">
+	                    		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			                        <span class="sr-only">Toggle navigation</span>
+			                        <span class="icon-bar"></span>
+			                        <span class="icon-bar"></span>
+			                        <span class="icon-bar"></span>
+	                    		</button>
+	                    		<a class="navbar-brand" href="#pablo">Brand</a>
+	                    	</div>
+
+	                    	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	                    		<ul class="nav navbar-nav">
+	                				<li class="active"><a href="#pablo">Link</a></li>
+	                        		<li><a href="#pablo">Link</a></li>
+	                        		<li class="dropdown">
+	                        			<a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+	                        			<ul class="dropdown-menu">
+											<li><a href="#pablo">Action</a></li>
+											<li><a href="#pablo">Another action</a></li>
+											<li><a href="#pablo">Something else here</a></li>
+											<li class="divider"></li>
+											<li><a href="#pablo">Separated link</a></li>
+											<li class="divider"></li>
+											<li><a href="#pablo">One more separated link</a></li>
+	                        			</ul>
+	                        		</li>
+	                    		</ul>
+	                    	</div>
+	                	</div>
+	                </nav>
+	            </div><!--  end navbar -->
+
+	    		<pre class="prettyprint">
+&lt;nav class=&quot;navbar navbar-default&quot; role=&quot;navigation&quot;&gt;
+	&lt;div class=&quot;container-fluid&quot;&gt;
+    	&lt;div class=&quot;navbar-header&quot;&gt;
+    		&lt;button type=&quot;button&quot; class=&quot;navbar-toggle&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#bs-example-navbar-collapse-1&quot;&gt;
+                &lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
+                &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+                &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+                &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+    		&lt;/button&gt;
+    		&lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;Brand&lt;/a&gt;
+    	&lt;/div&gt;
+
+    	&lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;bs-example-navbar-collapse-1&quot;&gt;
+    		&lt;ul class=&quot;nav navbar-nav&quot;&gt;
+				&lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
+        		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
+        		&lt;li class=&quot;dropdown&quot;&gt;
+        			&lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;Dropdown &lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;&lt;/a&gt;
+        			&lt;ul class=&quot;dropdown-menu&quot;&gt;
+					  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+					  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+					  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+					  &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+					  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+					  &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+				      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;One more separated link&lt;/a&gt;&lt;/li&gt;
+        			&lt;/ul&gt;
+        		&lt;/li&gt;
+    		&lt;/ul&gt;
+    	&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/nav&gt;
+	    		</pre>
+
+	            <p class="space-top">Besides the default navbar, we added 5 new colors: blue, green, orange, red, pink. If you want to use one of them, you have to replace the <code>.navbar-default</code> or <code>.navbar-primary</code> with the class for the chosen colour <code>.navbar-info</code>, <code>.navbar-success</code>, <code>.navbar-warning</code>, <code>.navbar-danger</code> or <code>.navbar-rose</code>.</p>
+
+		    <!-- navbar default -->
+		    <div id="navbar-default">
+		        <nav class="navbar navbar-default" role="navigation">
+		          <div class="container-fluid">
+		            <!-- Brand and toggle get grouped for better mobile display -->
+		            <div class="navbar-header">
+		              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		                <span class="sr-only">Toggle navigation</span>
+		                <span class="icon-bar"></span>
+		                <span class="icon-bar"></span>
+		                <span class="icon-bar"></span>
+		              </button>
+		              <a class="navbar-brand" href="#pablo">Brand</a>
+		            </div>
+
+		            <!-- Collect the nav links, forms, and other content for toggling -->
+		            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		              <ul class="nav navbar-nav">
+		                <li class="active"><a href="#pablo">Link</a></li>
+		                <li><a href="#pablo">Link</a></li>
+		                <li class="dropdown">
+		                  <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+		                  <ul class="dropdown-menu">
+		                    <li><a href="#pablo">Action</a></li>
+		                    <li><a href="#pablo">Another action</a></li>
+		                    <li><a href="#pablo">Something else here</a></li>
+		                    <li class="divider"></li>
+		                    <li><a href="#pablo">Separated link</a></li>
+		                    <li class="divider"></li>
+		                    <li><a href="#pablo">One more separated link</a></li>
+		                  </ul>
+		                </li>
+		              </ul>
+		            </div>
+		          </div>
+		        </nav>
+
+		    </div><!--  end navbar -->
+
+		    <!-- navbar info -->
+		    <div id="navbar-info">
+	            <nav class="navbar navbar-info" role="navigation">
+	              <div class="container-fluid">
+	                <!-- Brand and toggle get grouped for better mobile display -->
+	                <div class="navbar-header">
+	                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	                    <span class="sr-only">Toggle navigation</span>
+	                    <span class="icon-bar"></span>
+	                    <span class="icon-bar"></span>
+	                    <span class="icon-bar"></span>
+	                  </button>
+	                  <a class="navbar-brand" href="#pablo">Brand</a>
+	                </div>
+
+	                <!-- Collect the nav links, forms, and other content for toggling -->
+	                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	                  <ul class="nav navbar-nav">
+	                    <li class="active"><a href="#pablo">Link</a></li>
+	                    <li><a href="#pablo">Link</a></li>
+	                    <li class="dropdown">
+	                      <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+	                      <ul class="dropdown-menu">
+	                        <li><a href="#pablo">Action</a></li>
+	                        <li><a href="#pablo">Another action</a></li>
+	                        <li><a href="#pablo">Something else here</a></li>
+	                        <li class="divider"></li>
+	                        <li><a href="#pablo">Separated link</a></li>
+	                        <li class="divider"></li>
+	                        <li><a href="#pablo">One more separated link</a></li>
+	                      </ul>
+	                    </li>
+	                  </ul>
+	                </div><!-- /.navbar-collapse -->
+	              </div><!-- /.container-fluid -->
+	            </nav>
+
+	        </div><!--  end navbar -->
+
+		    <!-- navbar success -->
+		    <div id="navbar-success">
+		        <nav class="navbar navbar-success" role="navigation">
+		          <div class="container-fluid">
+		            <!-- Brand and toggle get grouped for better mobile display -->
+		            <div class="navbar-header">
+		              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		                <span class="sr-only">Toggle navigation</span>
+		                <span class="icon-bar"></span>
+		                <span class="icon-bar"></span>
+		                <span class="icon-bar"></span>
+		              </button>
+		              <a class="navbar-brand" href="#pablo">Brand</a>
+		            </div>
+
+		            <!-- Collect the nav links, forms, and other content for toggling -->
+		            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		              <ul class="nav navbar-nav">
+		                <li class="active"><a href="#pablo">Link</a></li>
+		                <li><a href="#pablo">Link</a></li>
+		                <li class="dropdown">
+		                  <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+		                  <ul class="dropdown-menu">
+		                    <li><a href="#pablo">Action</a></li>
+		                    <li><a href="#pablo">Another action</a></li>
+		                    <li><a href="#pablo">Something else here</a></li>
+		                    <li class="divider"></li>
+		                    <li><a href="#pablo">Separated link</a></li>
+		                    <li class="divider"></li>
+		                    <li><a href="#pablo">One more separated link</a></li>
+		                  </ul>
+		                </li>
+		              </ul>
+		            </div><!-- /.navbar-collapse -->
+		          </div><!-- /.container-fluid -->
+		        </nav>
+
+		    </div><!--  end navbar -->
+
+		    <!-- navbar warning -->
+		    <div id="navbar-warning">
+		        <nav class="navbar navbar-warning" role="navigation">
+		          <div class="container-fluid">
+		            <!-- Brand and toggle get grouped for better mobile display -->
+		            <div class="navbar-header">
+		              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		                <span class="sr-only">Toggle navigation</span>
+		                <span class="icon-bar"></span>
+		                <span class="icon-bar"></span>
+		                <span class="icon-bar"></span>
+		              </button>
+		              <a class="navbar-brand" href="#pablo">Brand</a>
+		            </div>
+
+		            <!-- Collect the nav links, forms, and other content for toggling -->
+		            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		              <ul class="nav navbar-nav">
+		                <li class="active"><a href="#pablo">Link</a></li>
+		                <li><a href="#pablo">Link</a></li>
+		                <li class="dropdown">
+		                  <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+		                  <ul class="dropdown-menu">
+		                    <li><a href="#pablo">Action</a></li>
+		                    <li><a href="#pablo">Another action</a></li>
+		                    <li><a href="#pablo">Something else here</a></li>
+		                    <li class="divider"></li>
+		                    <li><a href="#pablo">Separated link</a></li>
+		                    <li class="divider"></li>
+		                    <li><a href="#pablo">One more separated link</a></li>
+		                  </ul>
+		                </li>
+		              </ul>
+		            </div><!-- /.navbar-collapse -->
+		          </div><!-- /.container-fluid -->
+		        </nav>
+
+		    </div><!--  end navbar -->
+
+		    <!-- navbar danger -->
+		    <div id="navbar-danger">
+		        <nav class="navbar navbar-danger" role="navigation">
+		          <div class="container-fluid">
+		            <!-- Brand and toggle get grouped for better mobile display -->
+		            <div class="navbar-header">
+		              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		                <span class="sr-only">Toggle navigation</span>
+		                <span class="icon-bar"></span>
+		                <span class="icon-bar"></span>
+		                <span class="icon-bar"></span>
+		              </button>
+		              <a class="navbar-brand" href="#pablo">Brand</a>
+		            </div>
+
+		            <!-- Collect the nav links, forms, and other content for toggling -->
+		            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		              <ul class="nav navbar-nav">
+		                <li class="active"><a href="#pablo">Link</a></li>
+		                <li><a href="#pablo">Link</a></li>
+		                <li class="dropdown">
+		                  <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+		                  <ul class="dropdown-menu">
+		                    <li><a href="#pablo">Action</a></li>
+		                    <li><a href="#pablo">Another action</a></li>
+		                    <li><a href="#pablo">Something else here</a></li>
+		                    <li class="divider"></li>
+		                    <li><a href="#pablo">Separated link</a></li>
+		                    <li class="divider"></li>
+		                    <li><a href="#pablo">One more separated link</a></li>
+		                  </ul>
+		                </li>
+		              </ul>
+		            </div><!-- /.navbar-collapse -->
+		          </div><!-- /.container-fluid -->
+		        </nav>
+
+		    </div><!--  end navbar -->
+
+            <p class="space-top">
+                Besides all this customisation, we have an extra navbar. <code>.navbar-transparent</code> is a special class that you can to use if you want the navbar to be transparent and then turn to color after scrolling 260px using the class <code>.navbar-color-on-scroll</code>. We recommend that the part of your page that has the transparent navbar contains something non-cluttered, like an image. If you want to see a nice example in details, check <a href="navbar-transparent.html">this page</a> out.
+            </p>
+
+	    </div>
+            <!-- end row -->
+
+    	    <!-- nav pills row -->
+    	    <div class="tim-row" id="navpills-row">
+                <h2> Nav Pills</h2>
+                <legend></legend>
+                <p>
+                    We changed the design for the Bootstrap nav pills into something a bit more fresh. We have also added more colour classes for customisation like <code>.nav-pills-primary</code>, <code>.nav-pills-info</code>, <code>.nav-pills-success</code>, <code>.nav-pills-warning</code>, <code>.nav-pills-danger</code>.
+                </p>
+                <h4>Simple</h4>
+                <p>We added coloured shadows to the pills and created two options: horizontal and vertical.</p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="nav nav-pills nav-pills-rose">
+                          <li class="active"><a href="#pill1" data-toggle="tab">Profile</a></li>
+                          <li><a href="#pill2" data-toggle="tab">Settings</a></li>
+                          <li><a href="#pill3" data-toggle="tab">Options</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <ul class="nav nav-pills nav-pills-rose nav-stacked">
+                          <li class="active"><a href="#tab1" data-toggle="tab">Profile</a></li>
+                          <li><a href="#tab2" data-toggle="tab">Settings</a></li>
+                          <li><a href="#tab3" data-toggle="tab">Options</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <h4>With Icons</h4>
+                <p>If you want to also add icons, you can use this version with the two options: horizontal and vertical. To use them, please add the <code>.nav-pills-icons</code> class.</p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="nav nav-pills nav-pills-icons nav-pills-primary" role="tablist">
+            				<li>
+            					<a href="#dashboard" role="tab" data-toggle="tab">
+            						<i class="material-icons">dashboard</i>
+            						Dashboard
+            					</a>
+            				</li>
+            				<li class="active">
+            					<a href="#schedule" role="tab" data-toggle="tab">
+            						<i class="material-icons">schedule</i>
+            						Schedule
+            					</a>
+            				</li>
+            				<li>
+            					<a href="#tasks" role="tab" data-toggle="tab">
+            						<i class="material-icons">list</i>
+            						Tasks
+            					</a>
+            				</li>
+            			</ul>
+                    </div>
+                    <div class="col-md-2">
+                        <ul class="nav nav-pills nav-pills-icons nav-stacked" role="tablist">
+    						<li class="active">
+    							<a href="#dashboard-2" role="tab" data-toggle="tab">
+    								<i class="material-icons">dashboard</i>
+    								Dashboard
+    							</a>
+    						</li>
+    						<li >
+                                <a href="#schedule-2" role="tab" data-toggle="tab">
+    								<i class="material-icons">schedule</i>
+    								Schedule
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+        		<pre class="prettyprint">
+&lt;!-- simple and horizontal --&gt;
+&lt;ul class=&quot;nav nav-pills nav-pills-rose&quot;&gt;
+  &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#pill1&quot; data-toggle=&quot;tab&quot;&gt;Profile&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#pill2&quot; data-toggle=&quot;tab&quot;&gt;Settings&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#pill3&quot; data-toggle=&quot;tab&quot;&gt;Options&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- simple and vertical --&gt;
+&lt;ul class=&quot;nav nav-pills nav-pills-rose nav-stacked&quot;&gt;
+  &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#tab1&quot; data-toggle=&quot;tab&quot;&gt;Profile&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#tab2&quot; data-toggle=&quot;tab&quot;&gt;Settings&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#tab3&quot; data-toggle=&quot;tab&quot;&gt;Options&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- with icons and horizontal --&gt;
+&lt;ul class=&quot;nav nav-pills nav-pills-icons nav-pills-primary&quot; role=&quot;tablist&quot;&gt;
+	&lt;li&gt;
+		&lt;a href=&quot;#dashboard&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot;&gt;
+			&lt;i class=&quot;material-icons&quot;&gt;dashboard&lt;/i&gt;
+			Dashboard
+		&lt;/a&gt;
+	&lt;/li&gt;
+	&lt;li class=&quot;active&quot;&gt;
+		&lt;a href=&quot;#schedule&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot;&gt;
+			&lt;i class=&quot;material-icons&quot;&gt;schedule&lt;/i&gt;
+			Schedule
+		&lt;/a&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+		&lt;a href=&quot;#tasks&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot;&gt;
+			&lt;i class=&quot;material-icons&quot;&gt;list&lt;/i&gt;
+			Tasks
+		&lt;/a&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- with icons and vertical --&gt;
+&lt;ul class=&quot;nav nav-pills nav-pills-icons nav-stacked&quot; role=&quot;tablist&quot;&gt;
+	&lt;li class=&quot;active&quot;&gt;
+		&lt;a href=&quot;#dashboard-2&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot;&gt;
+			&lt;i class=&quot;material-icons&quot;&gt;dashboard&lt;/i&gt;
+			Dashboard
+		&lt;/a&gt;
+	&lt;/li&gt;
+	&lt;li &gt;
+        &lt;a href=&quot;#schedule-2&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot;&gt;
+			&lt;i class=&quot;material-icons&quot;&gt;schedule&lt;/i&gt;
+			Schedule
+        &lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+        		</pre>
+    		    </div>
+		    <!-- end row -->
+
+		    <!-- tables row -->
+		    <div class="tim-row" id="tables-row">
+		        <h2>Tables</h2>
+		        <legend></legend>
+		        <p>All Boostrap classes for tables are supported and improved.</p>
+		        <h4>Simple Table with Actions</h4>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="card">
+							<div class="card-header" data-background-color="purple">
+								<h4 class="title">Striped Table with Hover</h4>
+								<p class="category">Here is a subtitle for this table</p>
+							</div>
+							<div class="card-content table-responsive table-full-width">
+								<table class="table">
+									<thead class="text-danger">
+										<th>Name</th>
+
+										<th>Country</th>
+										<th>City</th>
+										<th>Salary</th>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Dakota Rice</td>
+
+											<td>Niger</td>
+											<td>Oud-Turnhout</td>
+											<td class="text-primary">$36,738</td>
+										</tr>
+										<tr>
+
+											<td>Minerva Hooper</td>
+
+											<td>Curaçao</td>
+											<td>Sinaai-Waas</td>
+											<td class="text-primary">$23,789</td>
+										</tr>
+										<tr>
+
+											<td>Sage Rodriguez</td>
+
+											<td>Netherlands</td>
+											<td>Baileux</td>
+											<td class="text-primary">$56,142</td>
+										</tr>
+										<tr>
+
+											<td>Philip Chaney</td>
+
+											<td>Korea, South</td>
+											<td>Overland Park</td>
+											<td class="text-primary">$38,735</td>
+										</tr>
+										<tr>
+
+											<td>Doris Greene</td>
+
+											<td>Malawi</td>
+											<td>Feldkirchen in Kärnten</td>
+											<td class="text-primary">$63,542</td>
+										</tr>
+										<tr>
+
+											<td>Mason Porter</td>
+
+											<td>Chile</td>
+											<td>Gloucester</td>
+											<td class="text-primary">$78,615</td>
+										</tr>
+									</tbody>
+								</table>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+					<pre class="prettyprint">
+
+&lt;div class=&quot;card&quot;&gt;
+		&lt;div class=&quot;card-header&quot; data-background-color=&quot;purple&quot;&gt;
+			&lt;h4 class=&quot;title&quot;&gt;Striped Table with Hover&lt;/h4&gt;
+			&lt;p class=&quot;category&quot;&gt;Here is a subtitle for this table&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;card-content table-responsive table-full-width&quot;&gt;
+			&lt;table class=&quot;table&quot;&gt;
+				&lt;thead class=&quot;text-danger&quot;&gt;
+					&lt;th&gt;Name&lt;/th&gt;
+
+					&lt;th&gt;Country&lt;/th&gt;
+					&lt;th&gt;City&lt;/th&gt;
+					&lt;th&gt;Salary&lt;/th&gt;
+				&lt;/thead&gt;
+				&lt;tbody&gt;
+					&lt;tr&gt;
+						&lt;td&gt;Dakota Rice&lt;/td&gt;
+
+						&lt;td&gt;Niger&lt;/td&gt;
+						&lt;td&gt;Oud-Turnhout&lt;/td&gt;
+						&lt;td class=&quot;text-primary&quot;&gt;$36,738&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+
+						&lt;td&gt;Minerva Hooper&lt;/td&gt;
+
+						&lt;td&gt;Cura&#231;ao&lt;/td&gt;
+						&lt;td&gt;Sinaai-Waas&lt;/td&gt;
+						&lt;td class=&quot;text-primary&quot;&gt;$23,789&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+
+						&lt;td&gt;Sage Rodriguez&lt;/td&gt;
+
+						&lt;td&gt;Netherlands&lt;/td&gt;
+						&lt;td&gt;Baileux&lt;/td&gt;
+						&lt;td class=&quot;text-primary&quot;&gt;$56,142&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+
+						&lt;td&gt;Philip Chaney&lt;/td&gt;
+
+						&lt;td&gt;Korea, South&lt;/td&gt;
+						&lt;td&gt;Overland Park&lt;/td&gt;
+						&lt;td class=&quot;text-primary&quot;&gt;$38,735&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+
+						&lt;td&gt;Doris Greene&lt;/td&gt;
+
+						&lt;td&gt;Malawi&lt;/td&gt;
+						&lt;td&gt;Feldkirchen in K&#228;rnten&lt;/td&gt;
+						&lt;td class=&quot;text-primary&quot;&gt;$63,542&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+
+						&lt;td&gt;Mason Porter&lt;/td&gt;
+
+						&lt;td&gt;Chile&lt;/td&gt;
+						&lt;td&gt;Gloucester&lt;/td&gt;
+						&lt;td class=&quot;text-primary&quot;&gt;$78,615&lt;/td&gt;
+					&lt;/tr&gt;
+				&lt;/tbody&gt;
+			&lt;/table&gt;
+
+		&lt;/div&gt;
+	&lt;/div&gt;
+		    </pre>
+
+                <h4>Shopping Cart Table</h4>
+                <p>We have also built a shopping cart example table, especially useful if you are building an e-commerce.</p>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="card card-plain">
+							<div class="card-header" data-background-color="purple">
+								<h4 class="title">Table on Plain Background</h4>
+								<p class="category">Here is a subtitle for this table</p>
+							</div>
+							<div class="card-content table-responsive table-full-width">
+								<table class="table table-hover">
+									<thead>
+										<th>ID</th>
+										<th>Name</th>
+										<th>Salary</th>
+										<th>Country</th>
+										<th>City</th>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>Dakota Rice</td>
+											<td>$36,738</td>
+											<td>Niger</td>
+											<td>Oud-Turnhout</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>Minerva Hooper</td>
+											<td>$23,789</td>
+											<td>Curaçao</td>
+											<td>Sinaai-Waas</td>
+										</tr>
+										<tr>
+											<td>3</td>
+											<td>Sage Rodriguez</td>
+											<td>$56,142</td>
+											<td>Netherlands</td>
+											<td>Baileux</td>
+										</tr>
+										<tr>
+											<td>4</td>
+											<td>Philip Chaney</td>
+											<td>$38,735</td>
+											<td>Korea, South</td>
+											<td>Overland Park</td>
+										</tr>
+										<tr>
+											<td>5</td>
+											<td>Doris Greene</td>
+											<td>$63,542</td>
+											<td>Malawi</td>
+											<td>Feldkirchen in Kärnten</td>
+										</tr>
+										<tr>
+											<td>6</td>
+											<td>Mason Porter</td>
+											<td>$78,615</td>
+											<td>Chile</td>
+											<td>Gloucester</td>
+										</tr>
+									</tbody>
+								</table>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+                <pre class="prettyprint">
+&lt;div class=&quot;col-md-12&quot;&gt;
+	&lt;div class=&quot;card card-plain&quot;&gt;
+		&lt;div class=&quot;card-header&quot; data-background-color=&quot;purple&quot;&gt;
+			&lt;h4 class=&quot;title&quot;&gt;Table on Plain Background&lt;/h4&gt;
+			&lt;p class=&quot;category&quot;&gt;Here is a subtitle for this table&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;card-content table-responsive table-full-width&quot;&gt;
+			&lt;table class=&quot;table table-hover&quot;&gt;
+				&lt;thead&gt;
+					&lt;th&gt;ID&lt;/th&gt;
+					&lt;th&gt;Name&lt;/th&gt;
+					&lt;th&gt;Salary&lt;/th&gt;
+					&lt;th&gt;Country&lt;/th&gt;
+					&lt;th&gt;City&lt;/th&gt;
+				&lt;/thead&gt;
+				&lt;tbody&gt;
+					&lt;tr&gt;
+						&lt;td&gt;1&lt;/td&gt;
+						&lt;td&gt;Dakota Rice&lt;/td&gt;
+						&lt;td&gt;$36,738&lt;/td&gt;
+						&lt;td&gt;Niger&lt;/td&gt;
+						&lt;td&gt;Oud-Turnhout&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td&gt;2&lt;/td&gt;
+						&lt;td&gt;Minerva Hooper&lt;/td&gt;
+						&lt;td&gt;$23,789&lt;/td&gt;
+						&lt;td&gt;Cura&#231;ao&lt;/td&gt;
+						&lt;td&gt;Sinaai-Waas&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td&gt;3&lt;/td&gt;
+						&lt;td&gt;Sage Rodriguez&lt;/td&gt;
+						&lt;td&gt;$56,142&lt;/td&gt;
+						&lt;td&gt;Netherlands&lt;/td&gt;
+						&lt;td&gt;Baileux&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td&gt;4&lt;/td&gt;
+						&lt;td&gt;Philip Chaney&lt;/td&gt;
+						&lt;td&gt;$38,735&lt;/td&gt;
+						&lt;td&gt;Korea, South&lt;/td&gt;
+						&lt;td&gt;Overland Park&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td&gt;5&lt;/td&gt;
+						&lt;td&gt;Doris Greene&lt;/td&gt;
+						&lt;td&gt;$63,542&lt;/td&gt;
+						&lt;td&gt;Malawi&lt;/td&gt;
+						&lt;td&gt;Feldkirchen in K&#228;rnten&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td&gt;6&lt;/td&gt;
+						&lt;td&gt;Mason Porter&lt;/td&gt;
+						&lt;td&gt;$78,615&lt;/td&gt;
+						&lt;td&gt;Chile&lt;/td&gt;
+						&lt;td&gt;Gloucester&lt;/td&gt;
+					&lt;/tr&gt;
+				&lt;/tbody&gt;
+			&lt;/table&gt;
+
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+                </pre>
+				</div>
+		    </div>
+		    <!-- end row -->
+
+			<!-- icons row -->
+		    <div class="tim-row" id="icons-row">
+		        <h2>Material Icons</h2>
+		        <legend></legend>
+		        <p>
+		            Through most of the examples in this kit, we have used the default <a href="https://design.google.com/icons/" target="_blank">Icons for the Material Design</a> provided by Google.
+		        </p>
+		        <i class="material-icons">face</i>
+		    <pre class="prettyprint">
+
+&lt;i class=&quot;material-icons&quot;&gt;face&lt;/i&gt;
+			</pre>
+		    </div>
+		    <!-- end row -->
+
+
+		    <!-- notification row -->
+		    <div class="tim-row" id="notification-row">
+		        <h2> Notifications </h2>
+		        <legend></legend>
+		        <p>The new notifications are looking fresh and clean. They go great with the navbar. For the following notification examples we used the <code>.container-fluid</code> class, so they will be fluid. Please use the class <code>.container</code> when you use them outside of the <code>.wrapper</code> so they will be aligned with the general page container.</p>
+
+				<div class="alert alert-info">
+		            <div class="container-fluid">
+						<div class="alert-icon">
+							<i class="material-icons">info_outline</i>
+						</div>
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+							<span aria-hidden="true"><i class="material-icons">clear</i></span>
+						</button>
+
+		            	<b>Info alert:</b> You've got some friends nearby, stop looking at your phone and find them...
+		            </div>
+		        </div>
+		        <div class="alert alert-success">
+		            <div class="container-fluid">
+						<div class="alert-icon">
+							<i class="material-icons">check</i>
+						</div>
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+							<span aria-hidden="true"><i class="material-icons">clear</i></span>
+						</button>
+		            	<b>Success Alert:</b> Yuhuuu! You've got your $11.99 album from The Weeknd
+		            </div>
+		        </div>
+		        <div class="alert alert-warning">
+		             <div class="container-fluid">
+						 <div class="alert-icon">
+							<i class="material-icons">warning</i>
+						</div>
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+							<span aria-hidden="true"><i class="material-icons">clear</i></span>
+						</button>
+		                 <b>Warning Alert:</b> Hey, it looks like you still have the "copyright &copy;  2015" in your footer. Please update it!
+		            </div>
+		        </div>
+		        <div class="alert alert-danger">
+		             <div class="container-fluid">
+						 <div class="alert-icon">
+							<i class="material-icons">error_outline</i>
+						</div>
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+							<span aria-hidden="true"><i class="material-icons">clear</i></span>
+						</button>
+		                 <b>Error Alert:</b> Damn man! You screwed up the server this time. You should find a good excuse for your Boss...
+		            </div>
+		        </div>
+
+				<pre class="prettyprint">
+&lt;div class=&quot;alert alert-info&quot;&gt;
+&lt;div class=&quot;container-fluid&quot;&gt;
+  &lt;div class=&quot;alert-icon&quot;&gt;
+	&lt;i class=&quot;material-icons&quot;&gt;info_outline&lt;/i&gt;
+  &lt;/div&gt;
+  &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-label=&quot;Close&quot;&gt;
+	&lt;span aria-hidden=&quot;true&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;clear&lt;/i&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;b&gt;Info alert:&lt;/b&gt; You&#39;ve got some friends nearby, stop looking at your phone and find them...
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-success&quot;&gt;
+&lt;div class=&quot;container-fluid&quot;&gt;
+  &lt;div class=&quot;alert-icon&quot;&gt;
+	&lt;i class=&quot;material-icons&quot;&gt;check&lt;/i&gt;
+  &lt;/div&gt;
+  &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-label=&quot;Close&quot;&gt;
+	&lt;span aria-hidden=&quot;true&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;clear&lt;/i&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;b&gt;Success Alert:&lt;/b&gt; Yuhuuu! You&#39;ve got your $11.99 album from The Weeknd
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-warning&quot;&gt;
+&lt;div class=&quot;container-fluid&quot;&gt;
+  &lt;div class=&quot;alert-icon&quot;&gt;
+	&lt;i class=&quot;material-icons&quot;&gt;warning&lt;/i&gt;
+  &lt;/div&gt;
+  &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-label=&quot;Close&quot;&gt;
+	&lt;span aria-hidden=&quot;true&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;clear&lt;/i&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;b&gt;Warning Alert:&lt;/b&gt; Hey, it looks like you still have the &quot;copyright &amp;copy;  2015&quot; in your footer. Please update it!
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-danger&quot;&gt;
+&lt;div class=&quot;container-fluid&quot;&gt;
+  &lt;div class=&quot;alert-icon&quot;&gt;
+    &lt;i class=&quot;material-icons&quot;&gt;error_outline&lt;/i&gt;
+  &lt;/div&gt;
+  &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-label=&quot;Close&quot;&gt;
+	&lt;span aria-hidden=&quot;true&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;clear&lt;/i&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;b&gt;Error Alert:&lt;/b&gt; Damn man! You screwed up the server this time. You should find a good excuse for your Boss...
+&lt;/div&gt;
+&lt;/div&gt;
+				</pre>
+			</div>
+			<!-- end row -->
+
+
+            <!-- cards row -->
+            <div class="tim-row" id="cards-row">
+                <h2>Cards</h2>
+                <legend></legend>
+                <p>We have created a wide variety of cards. We think cards are one of the best ways to organise your information. We went all out with possibilities and we recommended finding the right fit for your product. The general class for a card is called <code>.card</code>. The information inside the card usually goes inside the content (class <code>.content</code>). The content can have three types of elements inside: <code>.card-title</code>, <code>.description</code> and <code>.category</code>. You can optionally add a <code>.card-footer</code>, if you want to place a call-to-action. <br />
+                </p>
+                <h4>Card Chart</h4>
+                <p>If you are building a blog, these cards can be a good fit. Inside the section folder, you will find multiple variations for the blog cards: <a href="sections.html#blogs-1">horizontal cards</a>, <a href="sections.html#blogs-2">vertical cards</a> and <a href="sections.html#blogs-4">big blog listings</a>.</p>
+                <p>Here is a coded example of the vertical blog card.</p>
+                <div class="row">
+					<div class="col-md-5">
+						<div class="card">
+							<div class="card-header card-chart" data-background-color="orange">
+								<div class="ct-chart" id="dailySalesChartDoc"></div>
+							</div>
+							<div class="card-content">
+								<h4 class="title">Daily Sales</h4>
+								<p class="category"><span class="text-success"><i class="fa fa-long-arrow-up"></i> 55%  </span> increase in today sales.</p>
+							</div>
+							<div class="card-footer">
+								<div class="stats">
+									<i class="material-icons">access_time</i> updated 4 minutes ago
+								</div>
+							</div>
+						</div>
+
+					</div>
+                </div>
+                <pre class="prettyprint">
+&lt;div class=&quot;card card-plain card-blog&quot;&gt;
+	&lt;div class=&quot;card-image&quot;&gt;
+		&lt;a href=&quot;#pablo&quot;&gt;
+			&lt;img class=&quot;img img-raised&quot; src=&quot;assets/img/examples/card-blog4.jpg&quot; /&gt;
+		&lt;/a&gt;
+	&lt;/div&gt;
+
+	&lt;div class=&quot;content&quot;&gt;
+		&lt;h6 class=&quot;category text-info&quot;&gt;Enterprise&lt;/h6&gt;
+		&lt;h4 class=&quot;card-title&quot;&gt;
+			&lt;a href=&quot;#pablo&quot;&gt;Autodesk looks to future of 3D printing with Project Escher&lt;/a&gt;
+		&lt;/h4&gt;
+		&lt;p class=&quot;card-description&quot;&gt;
+			Like so many organizations these days, Autodesk is a company in transition. It was until recently a traditional boxed software company selling licenses.&lt;a href=&quot;#pablo&quot;&gt; Read More &lt;/a&gt;
+		&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+                </pre>
+
+
+                <h4>Card Stats</h4>
+                <p>If you want to present your team or you want to build cards for your users, we have created multiple options for cards. You can choose between <a href="sections.html#team-1">round images and descriptions</a>, or <a href="sections.html#team-2">square images and description</a>. You can also go with multiple background options, as you can see in the section page.</p>
+                <p>Here is a coded example of an user card with round image and description:</p>
+                <div class="row">
+					<div class="col-md-4">
+						<div class="card card-stats">
+							<div class="card-header" data-background-color="orange">
+								<i class="material-icons">content_copy</i>
+							</div>
+							<div class="card-content">
+								<p class="category">Used Space</p>
+								<h3 class="title">49/50<small>GB</small></h3>
+							</div>
+							<div class="card-footer">
+								<div class="stats">
+									<i class="material-icons text-danger">warning</i> <a href="#pablo">Get More Space...</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="card card-stats">
+							<div class="card-header" data-background-color="green">
+								<i class="material-icons">store</i>
+							</div>
+							<div class="card-content">
+								<p class="category">Revenue</p>
+								<h3 class="title">$34,245</h3>
+							</div>
+							<div class="card-footer">
+								<div class="stats">
+									<i class="material-icons">date_range</i> Last 24 Hours
+								</div>
+							</div>
+						</div>
+					</div>
+                </div>
+                <pre class="prettyprint">
+&lt;div class=&quot;card card-stats&quot;&gt;
+	&lt;div class=&quot;card-header&quot; data-background-color=&quot;orange&quot;&gt;
+		&lt;i class=&quot;material-icons&quot;&gt;content_copy&lt;/i&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;card-content&quot;&gt;
+		&lt;p class=&quot;category&quot;&gt;Used Space&lt;/p&gt;
+		&lt;h3 class=&quot;title&quot;&gt;49/50&lt;small&gt;GB&lt;/small&gt;&lt;/h3&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;card-footer&quot;&gt;
+		&lt;div class=&quot;stats&quot;&gt;
+			&lt;i class=&quot;material-icons text-danger&quot;&gt;warning&lt;/i&gt; &lt;a href=&quot;#pablo&quot;&gt;Get More Space...&lt;/a&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+                </pre>
+
+
+				<h4>Card Nav-Tabs</h4>
+                <p>If you want to present your team or you want to build cards for your users, we have created multiple options for cards. You can choose between <a href="sections.html#team-1">round images and descriptions</a>, or <a href="sections.html#team-2">square images and description</a>. You can also go with multiple background options, as you can see in the section page.</p>
+                <p>Here is a coded example of an user card with round image and description:</p>
+                <div class="row">
+					<div class="col-md-7">
+						<div class="card card-nav-tabs">
+							<div class="card-header" data-background-color="purple">
+								<div class="nav-tabs-navigation">
+									<div class="nav-tabs-wrapper">
+										<span class="nav-tabs-title">Tasks:</span>
+										<ul class="nav nav-tabs" data-tabs="tabs">
+											<li class="active">
+												<a href="#profile" data-toggle="tab">
+													<i class="material-icons">bug_report</i>
+													Bugs
+												<div class="ripple-container"></div></a>
+											</li>
+											<li class="">
+												<a href="#messages" data-toggle="tab">
+													<i class="material-icons">code</i>
+													Website
+												<div class="ripple-container"></div></a>
+											</li>
+											<li class="">
+												<a href="#settings" data-toggle="tab">
+													<i class="material-icons">cloud</i>
+													Server
+												<div class="ripple-container"></div></a>
+
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<div class="card-content">
+								<div class="tab-content">
+									<div class="tab-pane active" id="profile">
+										<div class="table-full-width">
+											<table class="table">
+												<tbody>
+													<tr>
+														<td>
+															<div class="checkbox">
+																<label>
+																	<input type="checkbox" name="optionsCheckboxes">
+																</label>
+															</div>
+														</td>
+														<td>Sign contract for "What are conference organizers afraid of?"</td>
+														<td class="td-actions text-right">
+															<button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs">
+																<i class="material-icons">edit</i>
+															</button>
+															<button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+																<i class="material-icons">close</i>
+															</button>
+														</td>
+													</tr>
+													<tr>
+														<td>
+															<div class="checkbox">
+																<label>
+																	<input type="checkbox" name="optionsCheckboxes">
+																</label>
+															</div>
+														</td>
+														<td>Lines From Great Russian Literature? Or E-mails From My Boss?</td>
+														<td class="td-actions text-right">
+															<button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs">
+																<i class="material-icons">edit</i>
+															</button>
+															<button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+																<i class="material-icons">close</i>
+															</button>
+														</td>
+													</tr>
+													<tr>
+														<td>
+															<div class="checkbox">
+																<label>
+																	<input type="checkbox" name="optionsCheckboxes">
+																</label>
+															</div>
+														</td>
+														<td>Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit
+														</td>
+														<td class="td-actions text-right">
+															<button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs">
+																<i class="material-icons">edit</i>
+															</button>
+															<button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+																<i class="material-icons">close</i>
+															</button>
+														</td>
+													</tr>
+													<tr>
+														<td>
+															<div class="checkbox">
+																<label>
+																	<input type="checkbox" name="optionsCheckboxes">
+																</label>
+															</div>
+														</td>
+														<td>Create 4 Invisible User Experiences you Never Knew About</td>
+														<td class="td-actions text-right">
+															<button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs">
+																<i class="material-icons">edit</i>
+															</button>
+															<button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+																<i class="material-icons">close</i>
+															</button>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+									<div class="tab-pane" id="messages">
+										<p> I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at.</p>
+									</div>
+									<div class="tab-pane" id="settings">
+										<p>I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. So when you get something that has the name Kanye West on it, it’s supposed to be pushing the furthest possibilities. I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+                </div>
+                <pre class="prettyprint">
+&lt;div class=&quot;card card-nav-tabs&quot;&gt;
+	&lt;div class=&quot;card-header&quot; data-background-color=&quot;purple&quot;&gt;
+		&lt;div class=&quot;nav-tabs-navigation&quot;&gt;
+			&lt;div class=&quot;nav-tabs-wrapper&quot;&gt;
+				&lt;span class=&quot;nav-tabs-title&quot;&gt;Tasks:&lt;/span&gt;
+				&lt;ul class=&quot;nav nav-tabs&quot; data-tabs=&quot;tabs&quot;&gt;
+					&lt;li class=&quot;active&quot;&gt;
+						&lt;a href=&quot;#profile&quot; data-toggle=&quot;tab&quot;&gt;
+							&lt;i class=&quot;material-icons&quot;&gt;bug_report&lt;/i&gt;
+							Bugs
+							&lt;div class=&quot;ripple-container&quot;&gt;&lt;/div&gt;
+                                                &lt;/a&gt;
+					&lt;/li&gt;
+					&lt;li class=&quot;&quot;&gt;
+						&lt;a href=&quot;#messages&quot; data-toggle=&quot;tab&quot;&gt;
+							&lt;i class=&quot;material-icons&quot;&gt;code&lt;/i&gt;
+							Website
+							&lt;div class=&quot;ripple-container&quot;&gt;&lt;/div&gt;
+                                                &lt;/a&gt;
+					&lt;/li&gt;
+					&lt;li class=&quot;&quot;&gt;
+						&lt;a href=&quot;#settings&quot; data-toggle=&quot;tab&quot;&gt;
+							&lt;i class=&quot;material-icons&quot;&gt;cloud&lt;/i&gt;
+							Server
+							&lt;div class=&quot;ripple-container&quot;&gt;&lt;/div&gt;
+                                                &lt;/a&gt;
+					&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+
+	&lt;div class=&quot;card-content&quot;&gt;
+		&lt;div class=&quot;tab-content&quot;&gt;
+			&lt;div class=&quot;tab-pane active&quot; id=&quot;profile&quot;&gt;
+				&lt;div class=&quot;table-full-width&quot;&gt;
+					&lt;table class=&quot;table&quot;&gt;
+						&lt;tbody&gt;
+						       &lt;tr&gt;
+								&lt;td&gt;
+									&lt;div class=&quot;checkbox&quot;&gt;
+										&lt;label&gt;
+											&lt;input type=&quot;checkbox&quot; name=&quot;optionsCheckboxes&quot;&gt;
+										&lt;/label&gt;
+									&lt;/div&gt;
+								&lt;/td&gt;
+								&lt;td&gt;
+                                    	Sign contract for &quot;What are conference organizers afraid of?&quot;
+                                &lt;/td&gt;
+								&lt;td class=&quot;td-actions text-right&quot;&gt;
+									&lt;button type=&quot;button&quot; rel=&quot;tooltip&quot; title=&quot;Edit Task&quot; class=&quot;btn btn-primary btn-simple btn-xs&quot;&gt;
+									     &lt;i class=&quot;material-icons&quot;&gt;edit&lt;/i&gt;
+									&lt;/button&gt;
+									&lt;button type=&quot;button&quot; rel=&quot;tooltip&quot; title=&quot;Remove&quot; class=&quot;btn btn-danger btn-simple btn-xs&quot;&gt;
+									     &lt;i class=&quot;material-icons&quot;&gt;close&lt;/i&gt;
+									&lt;/button&gt;
+								&lt;/td&gt;
+							&lt;/tr&gt;
+							&lt;tr&gt;
+							      &lt;td&gt;
+								      &lt;div class=&quot;checkbox&quot;&gt;
+									   &lt;label&gt;
+										&lt;input type=&quot;checkbox&quot; name=&quot;optionsCheckboxes&quot;&gt;
+									   &lt;/label&gt;
+								      &lt;/div&gt;
+							      &lt;/td&gt;
+							     &lt;td&gt;Lines From Great Russian Literature? Or E-mails From My Boss?  &lt;/td&gt;
+							    &lt;td class=&quot;td-actions text-right&quot;&gt;
+									&lt;button type=&quot;button&quot; rel=&quot;tooltip&quot; title=&quot;Edit Task&quot; class=&quot;btn btn-primary btn-simple btn-xs&quot;&gt;
+										&lt;i class=&quot;material-icons&quot;&gt;edit&lt;/i&gt;
+									&lt;/button&gt;
+									&lt;button type=&quot;button&quot; rel=&quot;tooltip&quot; title=&quot;Remove&quot; class=&quot;btn btn-danger btn-simple btn-xs&quot;&gt;
+										&lt;i class=&quot;material-icons&quot;&gt;close&lt;/i&gt;
+									&lt;/button&gt;
+							    &lt;/td&gt;
+						     &lt;/tr&gt;
+						     &lt;tr&gt;
+							&lt;td&gt;
+							       &lt;div class=&quot;checkbox&quot;&gt;
+									&lt;label&gt;
+										&lt;input type=&quot;checkbox&quot; name=&quot;optionsCheckboxes&quot;&gt;
+									&lt;/label&gt;
+								&lt;/div&gt;
+							&lt;/td&gt;
+							&lt;td&gt;Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit
+							&lt;/td&gt;
+							&lt;td class=&quot;td-actions text-right&quot;&gt;
+								&lt;button type=&quot;button&quot; rel=&quot;tooltip&quot; title=&quot;Edit Task&quot; class=&quot;btn btn-primary btn-simple btn-xs&quot;&gt;
+									&lt;i class=&quot;material-icons&quot;&gt;edit&lt;/i&gt;
+								&lt;/button&gt;
+								&lt;button type=&quot;button&quot; rel=&quot;tooltip&quot; title=&quot;Remove&quot; class=&quot;btn btn-danger btn-simple btn-xs&quot;&gt;
+									&lt;i class=&quot;material-icons&quot;&gt;close&lt;/i&gt;
+								&lt;/button&gt;
+							&lt;/td&gt;
+						&lt;/tr&gt;
+					        &lt;tr&gt;
+						      &lt;td&gt;
+								&lt;div class=&quot;checkbox&quot;&gt;
+								        &lt;label&gt;
+										&lt;input type=&quot;checkbox&quot; name=&quot;optionsCheckboxes&quot;&gt;
+									&lt;/label&gt;
+								&lt;/div&gt;
+						      &lt;/td&gt;
+						    &lt;td&gt;Create 4 Invisible User Experiences you Never Knew About&lt;/td&gt;
+						    &lt;td class=&quot;td-actions text-right&quot;&gt;
+								&lt;button type=&quot;button&quot; rel=&quot;tooltip&quot; title=&quot;Edit Task&quot; class=&quot;btn btn-primary btn-simple btn-xs&quot;&gt;
+									&lt;i class=&quot;material-icons&quot;&gt;edit&lt;/i&gt;
+								&lt;/button&gt;
+								&lt;button type=&quot;button&quot; rel=&quot;tooltip&quot; title=&quot;Remove&quot; class=&quot;btn btn-danger btn-simple btn-xs&quot;&gt;
+									&lt;i class=&quot;material-icons&quot;&gt;close&lt;/i&gt;
+								&lt;/button&gt;
+						     &lt;/td&gt;
+						&lt;/tr&gt;
+				&lt;/tbody&gt;
+			&lt;/table&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;tab-pane&quot; id=&quot;messages&quot;&gt;
+		&lt;p&gt; I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at.&lt;/p&gt;
+	&lt;/div&gt;
+        &lt;div class=&quot;tab-pane&quot; id=&quot;settings&quot;&gt;
+		&lt;p&gt;I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. So when you get something that has the name Kanye West on it, it’s supposed to be pushing the furthest possibilities. I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus.&lt;/p&gt;
+	&lt;/div&gt;
+	&lt;/div&gt;
+      &lt;/div&gt;
+
+&lt;/div&gt;
+                </pre>
+            </div>
+            <!-- end row -->
+
+            <!-- end container -->
+            </div>
+
+        </div>
+        </div>
+    </div>
+    </div>
+    <footer class="footer footer-transparent">
+        <div class="container">
+            <nav class="pull-left">
+                <ul>
+					<li>
+						<a href="http://www.creative-tim.com">
+							Creative Tim
+						</a>
+					</li>
+					<li>
+						<a href="http://presentation.creative-tim.com">
+						   About Us
+						</a>
+					</li>
+					<li>
+						<a href="http://blog.creative-tim.com">
+						   Blog
+						</a>
+					</li>
+					<li>
+						<a href="http://www.creative-tim.com/license">
+							Licenses
+						</a>
+					</li>
+                </ul>
+            </nav>
+            <div class="social-area pull-right">
+                <a class="btn btn-social btn-twitter btn-simple" href="https://twitter.com/CreativeTim">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a class="btn btn-social btn-facebook btn-simple" href="https://www.facebook.com/CreativeTim">
+                    <i class="fa fa-facebook-square"></i>
+                </a>
+                <a class="btn btn-social btn-google btn-simple" href="https://plus.google.com/+CreativetimPage">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+            </div>
+            <div class="copyright">
+                &copy; <script>document.write(new Date().getFullYear())</script> Creative Tim, made with love
+            </div>
+        </div>
+    </footer>
+
+
+<!-- Classic Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					<i class="material-icons">clear</i>
+				</button>
+				<h4 class="modal-title">Modal title</h4>
+			</div>
+			<div class="modal-body">
+				<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
+				</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default btn-simple">Nice Button</button>
+				<button type="button" class="btn btn-danger btn-simple" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--  End Modal -->
+
+<!-- small modal -->
+<div class="modal fade" id="smallAlertModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-small ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="material-icons">clear</i></button>
+      </div>
+      <div class="modal-body text-center">
+        <h5>Are you sure you want to do this? </h5>
+      </div>
+      <div class="modal-footer text-center">
+        <button type="button" class="btn btn-simple" data-dismiss="modal">Never mind</button>
+        <button type="button" class="btn btn-success btn-simple">Yes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--    end small modal -->
+
+</body>
+	<!--   Core JS Files   -->
+	<script src="../assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+	<script src="../assets/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="../assets/js/material.min.js" type="text/javascript"></script>
+
+	<!--  Charts Plugin -->
+	<script src="../assets/js/chartist.min.js"></script>
+
+	<!--  Notifications Plugin    -->
+	<script src="../assets/js/bootstrap-notify.js"></script>
+
+
+
+	<!--  Plugin for Date Time Picker and Full Calendar Plugin-->
+	<script src="../assets/js/moment.min.js"></script>
+
+	<!--	Plugin for the Datepicker, full documentation here: http://www.eyecon.ro/bootstrap-datepicker/ -->
+	<script src="../assets/js/bootstrap-datetimepicker.js" type="text/javascript"></script>
+
+	<!--	Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
+	<script src="../assets/js/jasny-bootstrap.min.js"></script>
+
+	<!--	Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+	<script src="../assets/js/nouislider.min.js" type="text/javascript"></script>
+
+	<!--	Plugin for Select Form control, full documentation here: https://github.com/FezVrasta/dropdown.js -->
+	<script src="../assets/js/jquery.dropdown.js" type="text/javascript"></script>
+
+	<!--  Google Maps Plugin    -->
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
+	<!-- Material Dashboard javascript methods -->
+	<script src="../assets/js/material-dashboard.js"></script>
+
+	<!--   Sharrre Library    -->
+	<script src="../assets/js/jquery.sharrre.js"></script>
+
+	<!-- Material Dashboard DEMO methods, don't include it in your project! -->
+	<script src="../assets/js/demo.js"></script>
+
+    <script>
+        var header_height;
+        var fixed_section;
+        var floating = false;
+
+        $().ready(function(){
+            suggestions_distance = $("#suggestions").offset();
+            pay_height = $('.fixed-section').outerHeight();
+
+			$(window).on('scroll', md.checkScrollForTransparentNavbar);
+
+			demo.initDashboardPageCharts();
+        });
+    </script>
+
+</html>

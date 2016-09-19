@@ -119,7 +119,6 @@ demo = {
         });
 
 
-
         /* ----------==========     Daily Sales Chart initialization    ==========---------- */
 
         dataDailySalesChart = {
@@ -169,8 +168,6 @@ demo = {
                 });
             }
         });
-
-
 
         /* ----------==========     Completed Tasks Chart initialization    ==========---------- */
 

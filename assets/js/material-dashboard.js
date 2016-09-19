@@ -4,21 +4,27 @@ var transparent = true;
 var transparentDemo = true;
 var fixedTop = false;
 
-var navbar_initialized = false;
+var mobile_menu_visible = 0,
+    mobile_menu_initialized = false,
+    toggle_initialized = false,
+    bootstrap_nav_initialized = false;
 
 $(document).ready(function(){
 
     $.material.init();
 
+    $sidebar = $('.sidebar');
+    md.initSidebarsCheck();
+
     window_width = $(window).width();
 
     // check if there is an image set for the sidebar's background
-    mkd.checkSidebarImage();
+    md.checkSidebarImage();
 
     // Init navigation toggle for small screens
-    if(window_width <= 991){
-        mkd.initRightMenu();
-    }
+    // if(window_width <= 991){
+    //     mkd.initRightMenu();
+    // }
 
     //  Activate the tooltips
     $('[rel="tooltip"]').tooltip();
@@ -43,14 +49,15 @@ $(document).ready(function(){
 
 // activate collapse right menu when the windows is resized
 $(window).resize(function(){
-    if($(window).width() <= 991){
-        mkd.initRightMenu();
-    }
+    md.initSidebarsCheck();
+
 });
 
-mkd = {
+md = {
     misc:{
-        navbar_menu_visible: 0
+        navbar_menu_visible: 0,
+        active_collapse: true,
+        disabled_collapse_init: 0,
     },
 
     checkSidebarImage: function(){
@@ -63,85 +70,203 @@ mkd = {
         }
     },
 
-    initRightMenu: function(){
-         if(!navbar_initialized){
+    initSidebarsCheck: function(){
+        if($(window).width() <= 991){
+            if($sidebar.length != 0){
+                md.initRightMenu();
+
+            } else {
+                md.initBootstrapNavbarMenu();
+            }
+        }
+
+    },
+
+    checkScrollForTransparentNavbar: debounce(function() {
+            if($(document).scrollTop() > 260 ) {
+                if(transparent) {
+                    transparent = false;
+                    $('.navbar-color-on-scroll').removeClass('navbar-transparent');
+                }
+            } else {
+                if( !transparent ) {
+                    transparent = true;
+                    $('.navbar-color-on-scroll').addClass('navbar-transparent');
+                }
+            }
+    }, 17),
+
+
+    initRightMenu: debounce(function(){
+        $sidebar_wrapper = $('.sidebar-wrapper');
+
+        if(!mobile_menu_initialized){
+            console.log('intra in meniu');
             $navbar = $('nav').find('.navbar-collapse').first().clone(true);
 
-            $sidebar = $('.sidebar');
-            sidebar_color = $sidebar.data('color');
+            nav_content = '';
+            mobile_menu_content = '';
 
-            $logo = $sidebar.find('.logo').first();
-            logo_content = $logo[0].outerHTML;
-
-            ul_content = '';
-
-            $navbar.attr('data-color',sidebar_color);
-
-            // add the content from the sidebar to the right menu
-            content_buff = $sidebar.find('.nav').html();
-            ul_content = ul_content + content_buff;
-
-            //add the content from the regular header to the right menu
             $navbar.children('ul').each(function(){
+
                 content_buff = $(this).html();
-                ul_content = ul_content + content_buff;
+                nav_content = nav_content + content_buff;
             });
 
-            ul_content = '<ul class="nav navbar-nav">' + ul_content + '</ul>';
+            nav_content = '<ul class="nav nav-mobile-menu">' + nav_content + '</ul>';
 
-            navbar_content = logo_content + ul_content;
+            $navbar_form = $('nav').find('.navbar-form').clone(true);
 
-            $navbar.html(navbar_content);
+            $sidebar_nav = $sidebar_wrapper.find(' > .nav');
 
-            $('body').append($navbar);
+            // insert the navbar form before the sidebar list
+            $nav_content = $(nav_content);
+            $nav_content.insertBefore($sidebar_nav);
+            $navbar_form.insertBefore($nav_content);
 
-            background_image = $sidebar.data('image');
-            if(background_image != undefined){
-                $navbar.css('background',"url('" + background_image + "')")
-                       .removeAttr('data-nav-image')
-                       .addClass('has-image');
+            $(".sidebar-wrapper .dropdown .dropdown-menu > li > a").click(function(event) {
+                event.stopPropagation();
+
+            });
+
+            mobile_menu_initialized = true;
+        } else {
+            console.log('window with:' + $(window).width());
+            if($(window).width() > 991){
+                // reset all the additions that we made for the sidebar wrapper only if the screen is bigger than 991px
+                $sidebar_wrapper.find('.navbar-form').remove();
+                $sidebar_wrapper.find('.nav-mobile-menu').remove();
+
+                mobile_menu_initialized = false;
             }
+        }
 
+        if(!toggle_initialized){
+            $toggle = $('.navbar-toggle');
 
-             $toggle = $('.navbar-toggle');
+            $toggle.click(function (){
 
-             $navbar.find('a').removeClass('btn btn-round btn-default');
-             $navbar.find('button').removeClass('btn-round btn-fill btn-info btn-primary btn-success btn-danger btn-warning btn-neutral');
-             $navbar.find('button').addClass('btn-simple btn-block');
-
-             $toggle.click(function (){
-                if(mkd.misc.navbar_menu_visible == 1) {
+                if(mobile_menu_visible == 1) {
                     $('html').removeClass('nav-open');
-                    mkd.misc.navbar_menu_visible = 0;
-                    $('#bodyClick').remove();
-                     setTimeout(function(){
-                        $toggle.removeClass('toggled');
-                     }, 400);
 
+                    $('.close-layer').remove();
+                    setTimeout(function(){
+                        $toggle.removeClass('toggled');
+                    }, 400);
+
+                    mobile_menu_visible = 0;
                 } else {
                     setTimeout(function(){
                         $toggle.addClass('toggled');
                     }, 430);
 
-                    div = '<div id="bodyClick"></div>';
-                    $(div).appendTo("body").click(function() {
+
+                    main_panel_height = $('.main-panel')[0].scrollHeight;
+                    $layer = $('<div class="close-layer"></div>');
+                    $layer.css('height',main_panel_height + 'px');
+                    $layer.appendTo(".main-panel");
+
+                    setTimeout(function(){
+                        $layer.addClass('visible');
+                    }, 100);
+
+                    $layer.click(function() {
                         $('html').removeClass('nav-open');
-                        mkd.misc.navbar_menu_visible = 0;
-                        $('#bodyClick').remove();
+                        mobile_menu_visible = 0;
+
+                        $layer.removeClass('visible');
+
                          setTimeout(function(){
+                            $layer.remove();
                             $toggle.removeClass('toggled');
+
                          }, 400);
                     });
 
                     $('html').addClass('nav-open');
-                    mkd.misc.navbar_menu_visible = 1;
+                    mobile_menu_visible = 1;
 
                 }
             });
-            navbar_initialized = true;
-        }
 
-    }
+            toggle_initialized = true;
+        }
+    }, 500),
+
+
+    initBootstrapNavbarMenu: debounce(function(){
+
+        if(!bootstrap_nav_initialized){
+            $navbar = $('nav').find('.navbar-collapse').first().clone(true);
+
+            nav_content = '';
+            mobile_menu_content = '';
+
+            //add the content from the regular header to the mobile menu
+            $navbar.children('ul').each(function(){
+                content_buff = $(this).html();
+                nav_content = nav_content + content_buff;
+            });
+
+            nav_content = '<ul class="nav nav-mobile-menu">' + nav_content + '</ul>';
+
+            $navbar.html(nav_content);
+            $navbar.addClass('bootstrap-navbar');
+
+            // append it to the body, so it will come from the right side of the screen
+            $('body').append($navbar);
+
+            $toggle = $('.navbar-toggle');
+
+            $navbar.find('a').removeClass('btn btn-round btn-default');
+            $navbar.find('button').removeClass('btn-round btn-fill btn-info btn-primary btn-success btn-danger btn-warning btn-neutral');
+            $navbar.find('button').addClass('btn-simple btn-block');
+
+            $toggle.click(function (){
+                if(mobile_menu_visible == 1) {
+                    $('html').removeClass('nav-open');
+
+                    $('.close-layer').remove();
+                    setTimeout(function(){
+                        $toggle.removeClass('toggled');
+                    }, 400);
+
+                    mobile_menu_visible = 0;
+                } else {
+                    setTimeout(function(){
+                        $toggle.addClass('toggled');
+                    }, 430);
+
+                    $layer = $('<div class="close-layer"></div>');
+                    $layer.appendTo(".wrapper-full-page");
+
+                    setTimeout(function(){
+                        $layer.addClass('visible');
+                    }, 100);
+
+
+                    $layer.click(function() {
+                        $('html').removeClass('nav-open');
+                        mobile_menu_visible = 0;
+
+                        $layer.removeClass('visible');
+
+                         setTimeout(function(){
+                            $layer.remove();
+                            $toggle.removeClass('toggled');
+
+                         }, 400);
+                    });
+
+                    $('html').addClass('nav-open');
+                    mobile_menu_visible = 1;
+
+                }
+
+            });
+            bootstrap_nav_initialized = true;
+        }
+    }, 500),
 }
 
 
