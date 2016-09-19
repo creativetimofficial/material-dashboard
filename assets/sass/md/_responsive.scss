@@ -97,6 +97,10 @@
         display: none;
         box-shadow: none;
 
+        .sidebar-wrapper{
+            padding-bottom: 60px;
+        }
+
         .nav-mobile-menu{
             .notification{
                 float: left;
@@ -155,7 +159,7 @@
         position: fixed;
         display: block;
         top: 0;
-        height: 100%;
+        height: 100vh;
         width: 260px;
         right: 0;
         left: auto;

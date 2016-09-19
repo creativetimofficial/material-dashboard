@@ -38,8 +38,6 @@
     }
 
     .nav{
-        margin-top: 35px;
-
         li{
             > a{
                 margin: 10px 15px;
@@ -212,6 +210,7 @@
     position: relative;
     z-index: 2;
     float: right;
+    overflow: auto;
     width: $sidebar-width;
     min-height: 100%;
     @include transform-translate-x(0px);
@@ -231,11 +230,12 @@
     }
 }
 
-.sidebar,
 .main-panel{
-    overflow: auto;
     max-height: 100%;
     height: 100%;
+}
+.sidebar,
+.main-panel{
     -webkit-transition-property: top,bottom;
     transition-property: top,bottom;
     -webkit-transition-duration: .2s,.2s;

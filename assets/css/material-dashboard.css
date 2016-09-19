@@ -604,9 +604,6 @@ h2.title {
   width: 60px;
   height: 60px;
 }
-.sidebar .nav {
-  margin-top: 35px;
-}
 .sidebar .nav li > a {
   margin: 10px 15px;
   border-radius: 3px;
@@ -767,6 +764,7 @@ h2.title {
   position: relative;
   z-index: 2;
   float: right;
+  overflow: auto;
   width: calc(100% - 260px);
   min-height: 100%;
   -webkit-transform: translate3d(0px, 0, 0);
@@ -791,11 +789,13 @@ h2.title {
   margin-bottom: 0;
 }
 
-.sidebar,
 .main-panel {
-  overflow: auto;
   max-height: 100%;
   height: 100%;
+}
+
+.sidebar,
+.main-panel {
   -webkit-transition-property: top,bottom;
   transition-property: top,bottom;
   -webkit-transition-duration: .2s,.2s;
@@ -1797,11 +1797,6 @@ body.inverse .card .form-control {
   color: initial;
 }
 
-.wrapper {
-  position: relative;
-  top: 0;
-  height: 100vh;
-}
 .wrapper.wrapper-full-page {
   height: auto;
   min-height: 100vh;
@@ -5299,6 +5294,9 @@ footer .copyright .material-icons {
     display: none;
     box-shadow: none;
   }
+  .sidebar .sidebar-wrapper {
+    padding-bottom: 60px;
+  }
   .sidebar .nav-mobile-menu .notification {
     float: left;
     line-height: 30px;
@@ -5370,7 +5368,7 @@ footer .copyright .material-icons {
     position: fixed;
     display: block;
     top: 0;
-    height: 100%;
+    height: 100vh;
     width: 260px;
     right: 0;
     left: auto;
