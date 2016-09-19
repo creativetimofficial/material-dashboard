@@ -55,45 +55,6 @@ demo = {
 
     initDashboardPageCharts: function(){
 
-        // var dataSales = {
-        //   labels: ['9:00AM', '12:00AM', '3:00PM', '6:00PM', '9:00PM', '12:00PM', '3:00AM', '6:00AM'],
-        //   series: [
-        //      [287, 385, 490, 492, 554, 586, 698, 695, 752, 788, 846, 944],
-        //     [67, 152, 143, 240, 287, 335, 435, 437, 539, 542, 544, 647],
-        //     [23, 113, 67, 108, 190, 239, 307, 308, 439, 410, 410, 509]
-        //   ]
-        // };
-        //
-        // var optionsSales = {
-        //   lineSmooth: false,
-        //   low: 0,
-        //   high: 800,
-        //   showArea: true,
-        //   height: "245px",
-        //   axisX: {
-        //     showGrid: false,
-        //   },
-        //   lineSmooth: Chartist.Interpolation.simple({
-        //     divisor: 3
-        //   }),
-        //   showLine: false,
-        //   showPoint: false,
-        // };
-        //
-        // var responsiveSales = [
-        //   ['screen and (max-width: 640px)', {
-        //     axisX: {
-        //       labelInterpolationFnc: function (value) {
-        //         return value[0];
-        //       }
-        //     }
-        //   }]
-        // ];
-        //
-        // Chartist.Line('#chartHours', dataSales, optionsSales, responsiveSales);
-        //
-
-
         var dataPreferences = {
             series: [
                 [25, 30, 20, 25]
@@ -139,38 +100,10 @@ demo = {
 
         var dailySalesChart = new Chartist.Line('#dailySalesChart', dataDailySalesChart, optionsDailySalesChart);
 
-        // Daily Sales Chart Animation
-        var seq = 0,
-          delays = 80,
-          durations = 500;
+        md.startAnimationForLineChart(dailySalesChart);
 
-        dailySalesChart.on('draw', function(data) {
-          if(data.type === 'line' || data.type === 'area') {
-            data.element.animate({
-              d: {
-                begin: 600,
-                dur: 700,
-                from: data.path.clone().scale(1, 0).translate(0, data.chartRect.height()).stringify(),
-                to: data.path.clone().stringify(),
-                easing: Chartist.Svg.Easing.easeOutQuint
-              }
-            });
-          } else if(data.type === 'point') {
-                seq++;
-                data.element.animate({
-                  opacity: {
-                    begin: seq * delays,
-                    dur: durations,
-                    from: 0,
-                    to: 1,
-                    easing: 'ease'
-                  }
-                });
-            }
-        });
 
         /* ----------==========     Completed Tasks Chart initialization    ==========---------- */
-
 
         dataCompletedTasksChart = {
             labels: ['12am', '3pm', '6pm', '9pm', '12pm', '3am', '6am', '9am'],
@@ -190,37 +123,12 @@ demo = {
 
         var completedTasksChart = new Chartist.Line('#completedTasksChart', dataCompletedTasksChart, optionsCompletedTasksChart);
 
+        // start animation for the Completed Tasks Chart - Line Chart
+        md.startAnimationForLineChart(completedTasksChart);
 
-        // Completed Tasks Chart Animation
 
-        var seq2 = 0, delays2 = 80, durations2 = 500;
 
-        completedTasksChart.on('draw', function(data) {
-          if(data.type === 'line' || data.type === 'area') {
-            data.element.animate({
-              d: {
-                begin: 600,
-                dur: 700,
-                from: data.path.clone().scale(1, 0).translate(0, data.chartRect.height()).stringify(),
-                to: data.path.clone().stringify(),
-                easing: Chartist.Svg.Easing.easeOutQuint
-              }
-            });
-          } else if(data.type === 'point') {
-                seq2++;
-                data.element.animate({
-                  opacity: {
-                    begin: seq2 * delays2,
-                    dur: durations2,
-                    from: 0,
-                    to: 1,
-                    easing: 'ease'
-                  }
-                });
-            }
-        });
-
-        var data = {
+        var dataEmailsSubscriptionChart = {
           labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
           series: [
             [542, 443, 320, 780, 553, 453, 326, 434, 568, 610, 756, 895]
@@ -228,14 +136,13 @@ demo = {
           ]
         };
 
-        var options = {
+        var optionsEmailsSubscriptionChart = {
             axisX: {
                 showGrid: false
             },
             low: 0,
             high: 1000,
             chartPadding: { top: 0, right: 5, bottom: 0, left: 0}
-            //height: "245px"
         };
 
         var responsiveOptions = [
@@ -249,7 +156,27 @@ demo = {
           }]
         ];
 
-        Chartist.Bar('#chartActivity', data, options, responsiveOptions);
+        var emailsSubscriptionChart = Chartist.Bar('#emailsSubscriptionChart', dataEmailsSubscriptionChart, optionsEmailsSubscriptionChart, responsiveOptions);
+
+
+        // Emails Subscriptions Chart Animation
+
+        var seq3 = 0, delays3 = 80, durations3 = 500;
+
+        emailsSubscriptionChart.on('draw', function(data) {
+          if(data.type === 'bar'){
+              seq3++;
+              data.element.animate({
+                opacity: {
+                  begin: seq3 * delays3,
+                  dur: durations3,
+                  from: 0,
+                  to: 1,
+                  easing: 'ease'
+                }
+              });
+          }
+        });
 
     },
 
@@ -289,6 +216,7 @@ demo = {
             }
         });
 	}
+
 
 
 }
