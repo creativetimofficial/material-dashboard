@@ -3960,7 +3960,6 @@ footer .copyright .material-icons {
   color: rgba(255, 255, 255, 0.4);
 }
 .card .card-footer {
-  border-top: 1px solid #eeeeee;
   margin: 0 20px 10px;
   padding-top: 10px;
 }
@@ -5840,10 +5839,6 @@ footer .copyright .material-icons {
     float: none;
   }
 
-  .footer nav.pull-left {
-    float: none !important;
-  }
-
   .footer:not(.footer-big) nav > ul li {
     float: none;
   }
@@ -5921,5 +5916,3 @@ footer .copyright .material-icons {
     -webkit-overflow-scrolling: touch;
   }
 }
-
-/*# sourceMappingURL=material-dashboard.css.map */
