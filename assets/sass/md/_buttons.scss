@@ -39,9 +39,6 @@
     &.btn-danger{
       @include btn-styles($brand-danger);
     }
-    &.btn-rose{
-      @include btn-styles($brand-rose);
-    }
     &.btn-white{
         &,
         &:focus,
