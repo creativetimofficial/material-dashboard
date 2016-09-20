@@ -84,6 +84,7 @@
       &:focus {
         color: $white-color;
         background-color: $variation-color;
+        @include shadow-big-color($variation-color);
       }
     }
 
@@ -94,6 +95,7 @@
       }
       background-color: $variation-color;
       color: $variation-color-text;
+      @include shadow-big-color($variation-color);
     }
   }
 }
@@ -107,8 +109,11 @@
   $variation-color: map-get($args, variation-color);
   $variation-color-text: map-get($args, variation-color-text);
 
-  background-color: lighten($variation-color,3%);
+  background-color: lighten($variation-color,5%);
   color: $variation-color-text;
+  border-radius: $border-radius-base;
+
+  @include shadow-big-color($variation-color);
 
   a, .alert-link {
     color: $variation-color-text;

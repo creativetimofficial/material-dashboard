@@ -7,8 +7,6 @@
     padding: 20px 15px;
     line-height: 20px;
 
-    //@include shadow-z-2();
-
     b{
         font-weight: $font-weight-bold;
         text-transform: uppercase;
@@ -27,8 +25,6 @@
         }
     }
 
-
-
     i[data-notify="icon"] {
         font-size: 30px;
         display: block;
@@ -36,7 +32,6 @@
         position: absolute;
         top: 50%;
         margin-top: -15px;
-
     }
 
     span{

@@ -151,7 +151,6 @@ demo = {
         md.startAnimationForLineChart(completedTasksChart);
 
 
-
         var dataEmailsSubscriptionChart = {
           labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
           series: [
@@ -159,7 +158,6 @@ demo = {
 
           ]
         };
-
         var optionsEmailsSubscriptionChart = {
             axisX: {
                 showGrid: false
@@ -168,7 +166,6 @@ demo = {
             high: 1000,
             chartPadding: { top: 0, right: 5, bottom: 0, left: 0}
         };
-
         var responsiveOptions = [
           ['screen and (max-width: 640px)', {
             seriesBarDistance: 5,
@@ -179,28 +176,10 @@ demo = {
             }
           }]
         ];
-
         var emailsSubscriptionChart = Chartist.Bar('#emailsSubscriptionChart', dataEmailsSubscriptionChart, optionsEmailsSubscriptionChart, responsiveOptions);
 
-
-        // Emails Subscriptions Chart Animation
-
-        var seq3 = 0, delays3 = 80, durations3 = 500;
-
-        emailsSubscriptionChart.on('draw', function(data) {
-          if(data.type === 'bar'){
-              seq3++;
-              data.element.animate({
-                opacity: {
-                  begin: seq3 * delays3,
-                  dur: durations3,
-                  from: 0,
-                  to: 1,
-                  easing: 'ease'
-                }
-              });
-          }
-        });
+        //start animation for the Emails Subscription Chart
+        md.startAnimationForBarChart(emailsSubscriptionChart);
 
     },
 
@@ -228,7 +207,7 @@ demo = {
     	color = Math.floor((Math.random() * 4) + 1);
 
     	$.notify({
-        	icon: "add_alert",
+        	icon: "notifications",
         	message: "Welcome to <b>Material Dashboard</b> - a beautiful freebie for every web developer."
 
         },{

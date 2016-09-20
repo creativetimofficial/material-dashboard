@@ -54,10 +54,12 @@
     .navbar &,
     .navbar.navbar-default &{
         li{
-            > a:hover,
-            > a:focus{
-                color: $black-color;
-                background-color: $gray-lighter;
+            a:hover,
+            a:focus,
+            a:active {
+                background-color: $brand-primary;
+                color: #FFFFFF;
+                @include shadow-big-color($brand-primary);
             }
         }
     }

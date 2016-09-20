@@ -9,6 +9,10 @@ var mobile_menu_visible = 0,
     toggle_initialized = false,
     bootstrap_nav_initialized = false;
 
+var seq = 0, delays = 80, durations = 500;
+var seq2 = 0, delays2 = 80, durations2 = 500;
+
+
 $(document).ready(function(){
 
     $sidebar = $('.sidebar');
@@ -46,6 +50,9 @@ $(document).ready(function(){
 // activate collapse right menu when the windows is resized
 $(window).resize(function(){
     md.initSidebarsCheck();
+
+    // reset the seq for charts drawing animations
+    seq = seq2 = 0;
 
 });
 
@@ -265,8 +272,6 @@ md = {
     }, 500),
 
     startAnimationForLineChart: function(chart){
-        // Completed Tasks Chart Animation
-        var seq2 = 0, delays2 = 80, durations2 = 500;
 
         chart.on('draw', function(data) {
           if(data.type === 'line' || data.type === 'area') {
@@ -280,18 +285,42 @@ md = {
               }
             });
           } else if(data.type === 'point') {
-                seq2++;
+                seq++;
                 data.element.animate({
                   opacity: {
-                    begin: seq2 * delays2,
-                    dur: durations2,
+                    begin: seq * delays,
+                    dur: durations,
                     from: 0,
                     to: 1,
                     easing: 'ease'
                   }
                 });
+                console.log('seq:' + seq);
             }
         });
+
+        seq = 0;
+    },
+    startAnimationForBarChart: function(chart){
+        console.log('chart:', chart);
+
+        chart.on('draw', function(data) {
+          if(data.type === 'bar'){
+              seq2++;
+              data.element.animate({
+                opacity: {
+                  begin: seq2 * delays2,
+                  dur: durations2,
+                  from: 0,
+                  to: 1,
+                  easing: 'ease'
+                }
+              });
+              console.log('seq:' + seq2);
+          }
+        });
+
+        seq2 = 0;
     }
 }
 
