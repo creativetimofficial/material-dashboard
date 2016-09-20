@@ -13,52 +13,17 @@
     }
 }
 
-.all-icons [class*="pe-"]{
-    font-size: 40px;
-}
-.all-icons input{
-    border: 0;
-}
-.all-icons .font-icon-detail{
-    text-align: center;
-    padding: 45px 0px 30px;
-    border: 1px solid #e5e5e5;
-    border-radius: 6px;
-    margin: 15px 0;
-}
-.all-icons .font-icon-detail input{
-    margin: 25px auto 0;
-    width: 100%;
-    text-align: center;
-    display: block;
-    color: #aaa;
-    font-size: 13px;
-}
-
 #map{
     position:relative;
     width:100%;
     height: calc(100% - 60px);
+    margin-top: 70px;
 }
 
 .places-buttons .btn{
     margin-bottom: 30px
 }
-.sidebar .nav > li.active-pro{
-    position: absolute;
-    width: 100%;
-    bottom: 10px;
-}
-.sidebar .nav > li.active-pro a{
-    background: rgba(255, 255, 255, 0.14);
-    opacity: 1;
-    color: #FFFFFF;
-}
 
-.table-upgrade td:nth-child(2),
-.table-upgrade td:nth-child(3){
-    text-align: center;
-}
 .space-70{
     height: 70px;
     display: block;
@@ -66,18 +31,6 @@
 
 .tim-row{
     margin-bottom: 20px;
-}
-
-.tim-white-buttons {
-    background-color: #777777;
-}
-/*.title{
-    margin-top: 30px;
-    margin-bottom: 25px;
-    min-height: 32px;
-}*/
-.title.text-center{
-    margin-bottom: 50px;
 }
 
 .tim-typo{
@@ -102,8 +55,4 @@
 }
 .tim-row h3{
     margin-top: 0;
-}
-
-#images h4{
-    margin-bottom: 30px;
 }

@@ -604,6 +604,9 @@ h2.title {
   width: 60px;
   height: 60px;
 }
+.sidebar .nav {
+  margin-top: 20px;
+}
 .sidebar .nav li > a {
   margin: 10px 15px;
   border-radius: 3px;
@@ -779,6 +782,7 @@ h2.title {
   transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
 }
 .main-panel > .content {
+  margin-top: 70px;
   padding: 30px 15px;
   min-height: calc(100% - 123px);
 }
@@ -1262,72 +1266,6 @@ h2.title {
 .navbar .navbar-nav > li > a.btn.btn-danger.btn-simple:active {
   background-color: transparent;
   color: #f44336;
-}
-.btn.btn-rose,
-.navbar .navbar-nav > li > a.btn.btn-rose {
-  box-shadow: 0 2px 2px 0 rgba(233, 30, 99, 0.14), 0 3px 1px -2px rgba(233, 30, 99, 0.2), 0 1px 5px 0 rgba(233, 30, 99, 0.12);
-}
-.btn.btn-rose, .btn.btn-rose:hover, .btn.btn-rose:focus, .btn.btn-rose:active, .btn.btn-rose.active, .btn.btn-rose:active:focus, .btn.btn-rose:active:hover, .btn.btn-rose.active:focus, .btn.btn-rose.active:hover, .open > .btn.btn-rose.dropdown-toggle, .open > .btn.btn-rose.dropdown-toggle:focus, .open > .btn.btn-rose.dropdown-toggle:hover,
-.navbar .navbar-nav > li > a.btn.btn-rose,
-.navbar .navbar-nav > li > a.btn.btn-rose:hover,
-.navbar .navbar-nav > li > a.btn.btn-rose:focus,
-.navbar .navbar-nav > li > a.btn.btn-rose:active,
-.navbar .navbar-nav > li > a.btn.btn-rose.active,
-.navbar .navbar-nav > li > a.btn.btn-rose:active:focus,
-.navbar .navbar-nav > li > a.btn.btn-rose:active:hover,
-.navbar .navbar-nav > li > a.btn.btn-rose.active:focus,
-.navbar .navbar-nav > li > a.btn.btn-rose.active:hover, .open >
-.navbar .navbar-nav > li > a.btn.btn-rose.dropdown-toggle, .open >
-.navbar .navbar-nav > li > a.btn.btn-rose.dropdown-toggle:focus, .open >
-.navbar .navbar-nav > li > a.btn.btn-rose.dropdown-toggle:hover {
-  background-color: #e91e63;
-  color: #FFFFFF;
-}
-.btn.btn-rose:focus, .btn.btn-rose:active, .btn.btn-rose:hover,
-.navbar .navbar-nav > li > a.btn.btn-rose:focus,
-.navbar .navbar-nav > li > a.btn.btn-rose:active,
-.navbar .navbar-nav > li > a.btn.btn-rose:hover {
-  box-shadow: 0 14px 26px -12px rgba(233, 30, 99, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(233, 30, 99, 0.2);
-}
-.btn.btn-rose.disabled, .btn.btn-rose.disabled:hover, .btn.btn-rose.disabled:focus, .btn.btn-rose.disabled.focus, .btn.btn-rose.disabled:active, .btn.btn-rose.disabled.active, .btn.btn-rose:disabled, .btn.btn-rose:disabled:hover, .btn.btn-rose:disabled:focus, .btn.btn-rose:disabled.focus, .btn.btn-rose:disabled:active, .btn.btn-rose:disabled.active, .btn.btn-rose[disabled], .btn.btn-rose[disabled]:hover, .btn.btn-rose[disabled]:focus, .btn.btn-rose[disabled].focus, .btn.btn-rose[disabled]:active, .btn.btn-rose[disabled].active, fieldset[disabled] .btn.btn-rose, fieldset[disabled] .btn.btn-rose:hover, fieldset[disabled] .btn.btn-rose:focus, fieldset[disabled] .btn.btn-rose.focus, fieldset[disabled] .btn.btn-rose:active, fieldset[disabled] .btn.btn-rose.active,
-.navbar .navbar-nav > li > a.btn.btn-rose.disabled,
-.navbar .navbar-nav > li > a.btn.btn-rose.disabled:hover,
-.navbar .navbar-nav > li > a.btn.btn-rose.disabled:focus,
-.navbar .navbar-nav > li > a.btn.btn-rose.disabled.focus,
-.navbar .navbar-nav > li > a.btn.btn-rose.disabled:active,
-.navbar .navbar-nav > li > a.btn.btn-rose.disabled.active,
-.navbar .navbar-nav > li > a.btn.btn-rose:disabled,
-.navbar .navbar-nav > li > a.btn.btn-rose:disabled:hover,
-.navbar .navbar-nav > li > a.btn.btn-rose:disabled:focus,
-.navbar .navbar-nav > li > a.btn.btn-rose:disabled.focus,
-.navbar .navbar-nav > li > a.btn.btn-rose:disabled:active,
-.navbar .navbar-nav > li > a.btn.btn-rose:disabled.active,
-.navbar .navbar-nav > li > a.btn.btn-rose[disabled],
-.navbar .navbar-nav > li > a.btn.btn-rose[disabled]:hover,
-.navbar .navbar-nav > li > a.btn.btn-rose[disabled]:focus,
-.navbar .navbar-nav > li > a.btn.btn-rose[disabled].focus,
-.navbar .navbar-nav > li > a.btn.btn-rose[disabled]:active,
-.navbar .navbar-nav > li > a.btn.btn-rose[disabled].active, fieldset[disabled]
-.navbar .navbar-nav > li > a.btn.btn-rose, fieldset[disabled]
-.navbar .navbar-nav > li > a.btn.btn-rose:hover, fieldset[disabled]
-.navbar .navbar-nav > li > a.btn.btn-rose:focus, fieldset[disabled]
-.navbar .navbar-nav > li > a.btn.btn-rose.focus, fieldset[disabled]
-.navbar .navbar-nav > li > a.btn.btn-rose:active, fieldset[disabled]
-.navbar .navbar-nav > li > a.btn.btn-rose.active {
-  box-shadow: none;
-}
-.btn.btn-rose.btn-simple,
-.navbar .navbar-nav > li > a.btn.btn-rose.btn-simple {
-  background-color: transparent;
-  color: #e91e63;
-  box-shadow: none;
-}
-.btn.btn-rose.btn-simple:hover, .btn.btn-rose.btn-simple:focus, .btn.btn-rose.btn-simple:active,
-.navbar .navbar-nav > li > a.btn.btn-rose.btn-simple:hover,
-.navbar .navbar-nav > li > a.btn.btn-rose.btn-simple:focus,
-.navbar .navbar-nav > li > a.btn.btn-rose.btn-simple:active {
-  background-color: transparent;
-  color: #e91e63;
 }
 .btn.btn-white, .btn.btn-white:focus, .btn.btn-white:hover,
 .navbar .navbar-nav > li > a.btn.btn-white,
