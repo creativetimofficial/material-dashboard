@@ -229,7 +229,7 @@ demo = {
 
     	$.notify({
         	icon: "add_alert",
-        	message: "Welcome to <b>Light Bootstrap Dashboard</b> - a beautiful freebie for every web developer."
+        	message: "Welcome to <b>Material Dashboard</b> - a beautiful freebie for every web developer."
 
         },{
             type: type[color],
