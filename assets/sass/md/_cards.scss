@@ -119,6 +119,7 @@
     .card-footer{
         margin: 0 20px 10px;
         padding-top: 10px;
+        border-top: 1px solid #eeeeee;
 
         .content{
             display: block;
@@ -153,10 +154,6 @@
         height: auto;
     }
 
-    hr{
-        margin: 10px 0;
-    }
-
     .category{
         .material-icons{
             position: relative;
@@ -174,7 +171,6 @@
             margin-right: 5px;
         }
     }
-
 
     .author{
         .avatar{
@@ -195,79 +191,41 @@
         }
     }
 
-    .carousel &{
-        max-width: 650px;
-        margin: 60px auto;
+    .table{
+        margin-bottom: 0;
+
+        tr:first-child td{
+            border-top: none;
+        }
     }
 
-    .header-primary,
-    .content-primary,
     [data-background-color="purple"]{
         background: linear-gradient(60deg, $purple-400, $purple-600);
         @include shadow-big-color($brand-primary);
     }
-    .header-info,
-    .content-info,
+
     [data-background-color="blue"]{
         background: linear-gradient(60deg, $cyan-400, $cyan-600);
         @include shadow-big-color($brand-info);
     }
-    .header-success,
-    .content-success,
+
     [data-background-color="green"]{
         background: linear-gradient(60deg, $green-400, $green-600);
         @include shadow-big-color($brand-success);
     }
-    .header-warning,
-    .content-warning,
+
     [data-background-color="orange"]{
         background: linear-gradient(60deg, $orange-400, $orange-600);
         @include shadow-big-color($brand-warning);
     }
-    .header-danger,
-    .content-danger,
+
     [data-background-color="red"]{
         background: linear-gradient(60deg, $red-400, $red-600);
         @include shadow-big-color($brand-danger);
     }
 
-    .header-rose,
-    .content-rose{
-        background: linear-gradient(60deg, $pink-400, $pink-600);
-    }
-
     [data-background-color]{
         color: $white-color;
-    }
-
-    [class*="header-"],
-    [class*="content-"]{
-        color: $white-color;
-
-        .card-title a,
-        .card-title,
-        .icon i{
-            color: $white-color;
-        }
-
-        .icon i{
-            border-color: rgba(255, 255, 255, 0.25);
-        }
-        .author a,
-        .footer .stats,
-        .category,
-        .card-description{
-            color: $white-transparent;
-        }
-
-        .author a{
-            &:hover,
-            &:focus,
-            &:active{
-                color: $white-color;
-            }
-        }
-
     }
 }
 
@@ -290,57 +248,10 @@
         text-align: right;
         padding-top: 10px;
     }
-    .card-footer{
-
-    }
 
 }
-
-.card-signup{
-    .header{
-        @include shadow-big();
-        margin-left: 20px;
-        margin-right: 20px;
-        margin-top: -40px;
-        padding: 20px 0;
-    }
-    .text-divider{
-        margin-top: 30px;
-        margin-bottom: 0px;
-        text-align: center;
-    }
-    .content{
-        padding: 0px 30px 0px 10px;
-    }
-
-    .checkbox{
-        margin-top: 20px;
-
-        label{
-            margin-left: 17px;
-        }
-        .checkbox-material{
-            padding-right: 12px;
-        }
-    }
-
-    .social-line{
-        margin-top: $margin-base;
-        text-align: center;
-        padding: 0;
-
-        .btn{
-            color: $white-color;
-            margin-left: 5px;
-            margin-right: 5px;
-        }
-    }
-}
-
 
 .card-nav-tabs{
-    margin-top: 45px;
-
     .header-raised{
         margin-top: -$margin-base * 2;
     }
@@ -353,12 +264,6 @@
         padding: 10px 10px 10px 0;
         line-height: 24px;
     }
-
-    .table{
-        tr:first-child td{
-            border-top: none;
-        }
-    }
 }
 
 .card-plain{
@@ -369,7 +274,6 @@
         margin-left: 0;
         margin-right: 0;
     }
-
     .content{
         padding-left: 5px;
         padding-right: 5px;
@@ -389,27 +293,6 @@
     iframe{
         width: 100%;
         @include shadow-big();
-    }
-}
-
-.card-form-horizontal{
-    .content{
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-    .form-group{
-        padding-bottom: 0px;
-        margin: 3px 0 0 0;
-
-        .form-control{
-            margin-bottom: 0;
-        }
-    }
-    .btn{
-        margin: 0;
-    }
-    .input-group .input-group-addon{
-        padding-left: 0;
     }
 }
 
@@ -442,33 +325,6 @@
             margin-top: 0;
         }
     }
-}
-
-
-.card-blog{
-    margin-top: 30px;
-
-    .row{
-        .category{
-            margin-bottom: 0;
-        }
-    }
-
-    .card-title{
-        margin-top: 5px;
-    }
-
-    .card-image + .category{
-        margin-top: 20px;
-    }
-    .card-raised{
-
-    }
-}
-
-
-.card-raised{
-    @include shadow-big();
 }
 
 .page-header {
