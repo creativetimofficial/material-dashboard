@@ -71,7 +71,8 @@
 
         &.card-chart{
             padding: 0;
-
+            min-height: 160px;
+            
             + .content{
                 h4{
                     margin-top: 0;
