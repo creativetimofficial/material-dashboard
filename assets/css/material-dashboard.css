@@ -4161,12 +4161,15 @@ footer .copyright .material-icons {
   padding: 10px 10px 10px 0;
   line-height: 24px;
 }
+.card-nav-tabs .table tr:first-child td {
+  border-top: none;
+}
 
 .card-plain {
   background: transparent;
   box-shadow: none;
 }
-.card-plain .header {
+.card-plain .card-header {
   margin-left: 0;
   margin-right: 0;
 }

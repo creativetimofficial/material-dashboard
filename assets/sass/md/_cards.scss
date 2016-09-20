@@ -353,13 +353,19 @@
         padding: 10px 10px 10px 0;
         line-height: 24px;
     }
+
+    .table{
+        tr:first-child td{
+            border-top: none;
+        }
+    }
 }
 
 .card-plain{
     background: transparent;
     box-shadow: none;
 
-    .header{
+    .card-header{
         margin-left: 0;
         margin-right: 0;
     }
