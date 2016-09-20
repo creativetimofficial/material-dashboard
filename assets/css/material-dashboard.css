@@ -3901,6 +3901,7 @@ footer .copyright .material-icons {
 .card .card-footer {
   margin: 0 20px 10px;
   padding-top: 10px;
+  border-top: 1px solid #eee;
 }
 .card .card-footer .content {
   display: block;
