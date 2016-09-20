@@ -604,6 +604,9 @@ h2.title {
   width: 60px;
   height: 60px;
 }
+.sidebar .nav {
+  margin-top: 20px;
+}
 .sidebar .nav li > a {
   margin: 10px 15px;
   border-radius: 3px;
