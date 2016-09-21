@@ -68,15 +68,6 @@ $(document).ready(function(){
     $('[rel="tooltip"]').tooltip();
 
 
-    //      Activate the switches with icons
-    if($('.switch').length != 0){
-        $('.switch')['bootstrapSwitch']();
-    }
-    //      Activate regular switches
-    if($("[data-toggle='switch']").length != 0){
-         $("[data-toggle='switch']").wrap('<div class="switch" />').parent().bootstrapSwitch();
-    }
-
     $('.form-control').on("focus", function(){
         $(this).parent('.input-group').addClass("input-group-focus");
     }).on("blur", function(){
