@@ -35,7 +35,7 @@ blockquote{
     }
 }
 
-.life-of-material-kit{
+.life-of-material-dashboard{
     background: #FFFFFF;
 }
 
@@ -47,6 +47,17 @@ body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4 {
 
 .serif-font{
     font-family: $font-family-serif;
+}
+
+.page-header {
+    height: 60vh;
+    background-position: center center;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
 }
 
 a{
