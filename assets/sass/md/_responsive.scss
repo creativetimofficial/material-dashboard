@@ -102,6 +102,8 @@
         }
 
         .nav-mobile-menu{
+            margin-top: 0;
+
             .notification{
                 float: left;
                 line-height: 30px;
@@ -197,6 +199,25 @@
             position: relative;
             z-index: 4;
         }
+
+        .navbar-form{
+            margin: 0 50px 0 0;
+
+            .btn{
+                position: absolute;
+                top: 25px;
+                right: 15px;
+            }
+        }
+
+        .table-responsive {
+            width: 100%;
+            margin-bottom: 15px;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            -ms-overflow-style: -ms-autohiding-scrollbar;
+            -webkit-overflow-scrolling: touch;
+        }
     }
 
     .nav-open .navbar-collapse{
@@ -260,33 +281,6 @@
     .bar3 {
       outline: 1px solid transparent;
     }
-    .bar1 {
-      top: 0px;
-      @include bar-animation($topbar-back);
-    }
-    .bar2 {
-      opacity: 1;
-    }
-    .bar3 {
-      bottom: 0px;
-      @include bar-animation($bottombar-back);
-    }
-    .toggled .bar1 {
-      top: 6px;
-      @include bar-animation($topbar-x);
-    }
-    .toggled .bar2 {
-      opacity: 0;
-    }
-    .toggled .bar3 {
-      bottom: 6px;
-      @include bar-animation($bottombar-x);
-    }
-
-    @include topbar-x-rotation();
-    @include topbar-back-rotation();
-    @include bottombar-x-rotation();
-    @include bottombar-back-rotation();
 
     @-webkit-keyframes fadeIn {
       0% {opacity: 0;}
@@ -445,6 +439,11 @@
 
 //overwrite table responsive for 768px screens
 
+@media (min-width: 768px){
+    .navbar> .container-fluid .navbar-brand{
+        margin-left: 0;
+    }
+}
 @media (min-width: 992px){
     .table-full-width{
         margin-left: -20px;
@@ -452,18 +451,6 @@
     }
     .table-responsive{
         overflow: visible;
-    }
-
-}
-
-@media (max-width: 991px){
-    .table-responsive {
-        width: 100%;
-        margin-bottom: 15px;
-        overflow-x: scroll;
-        overflow-y: hidden;
-        -ms-overflow-style: -ms-autohiding-scrollbar;
-        -webkit-overflow-scrolling: touch;
     }
 
 }
