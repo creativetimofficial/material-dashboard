@@ -67,7 +67,6 @@ $(document).ready(function(){
     //  Activate the tooltips
     $('[rel="tooltip"]').tooltip();
 
-
     //      Activate the switches with icons
     if($('.switch').length != 0){
         $('.switch')['bootstrapSwitch']();
