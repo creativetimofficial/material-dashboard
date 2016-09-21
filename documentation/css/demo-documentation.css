@@ -506,6 +506,15 @@ body{
   color: #FFFFFF;
 }
 
+@media (max-width: 991px) {
+    .fixed-section.affix {
+        position: relative;
+        margin-bottom: 100px;
+    }
+
+}
+
+
 @media (max-width: 1199px) {
 
   .navbar .navbar-brand {
