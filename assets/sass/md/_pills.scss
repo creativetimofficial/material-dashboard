@@ -110,18 +110,7 @@
             }
         }
     }
-    &.nav-pills-rose{
-        > li {
-            &.active > a{
-                &,
-                &:focus,
-                &:hover{
-                    background-color: $brand-rose;
-                    @include shadow-big-color($brand-rose);
-                }
-            }
-        }
-    }
+    
 }
 .tab-space{
     padding: 20px 0 50px 0px;

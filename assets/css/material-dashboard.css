@@ -1150,6 +1150,106 @@ h2.title {
   background: transparent;
   box-shadow: none;
 }
+.btn.btn-facebook,
+.navbar .navbar-nav > li > a.btn.btn-facebook {
+  background-color: #3b5998;
+  color: #fff;
+  box-shadow: 0 2px 2px 0 rgba(59, 89, 152, 0.14), 0 3px 1px -2px rgba(59, 89, 152, 0.2), 0 1px 5px 0 rgba(59, 89, 152, 0.12);
+}
+.btn.btn-facebook:focus, .btn.btn-facebook:active, .btn.btn-facebook:hover,
+.navbar .navbar-nav > li > a.btn.btn-facebook:focus,
+.navbar .navbar-nav > li > a.btn.btn-facebook:active,
+.navbar .navbar-nav > li > a.btn.btn-facebook:hover {
+  background-color: #3b5998;
+  color: #fff;
+  box-shadow: 0 14px 26px -12px rgba(59, 89, 152, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(59, 89, 152, 0.2);
+}
+.btn.btn-facebook.btn-simple,
+.navbar .navbar-nav > li > a.btn.btn-facebook.btn-simple {
+  color: #3b5998;
+  background-color: transparent;
+  box-shadow: none;
+}
+.btn.btn-twitter,
+.navbar .navbar-nav > li > a.btn.btn-twitter {
+  background-color: #55acee;
+  color: #fff;
+  box-shadow: 0 2px 2px 0 rgba(85, 172, 238, 0.14), 0 3px 1px -2px rgba(85, 172, 238, 0.2), 0 1px 5px 0 rgba(85, 172, 238, 0.12);
+}
+.btn.btn-twitter:focus, .btn.btn-twitter:active, .btn.btn-twitter:hover,
+.navbar .navbar-nav > li > a.btn.btn-twitter:focus,
+.navbar .navbar-nav > li > a.btn.btn-twitter:active,
+.navbar .navbar-nav > li > a.btn.btn-twitter:hover {
+  background-color: #55acee;
+  color: #fff;
+  box-shadow: 0 14px 26px -12px rgba(85, 172, 238, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(85, 172, 238, 0.2);
+}
+.btn.btn-twitter.btn-simple,
+.navbar .navbar-nav > li > a.btn.btn-twitter.btn-simple {
+  color: #55acee;
+  background-color: transparent;
+  box-shadow: none;
+}
+.btn.btn-pinterest,
+.navbar .navbar-nav > li > a.btn.btn-pinterest {
+  background-color: #cc2127;
+  color: #fff;
+  box-shadow: 0 2px 2px 0 rgba(204, 33, 39, 0.14), 0 3px 1px -2px rgba(204, 33, 39, 0.2), 0 1px 5px 0 rgba(204, 33, 39, 0.12);
+}
+.btn.btn-pinterest:focus, .btn.btn-pinterest:active, .btn.btn-pinterest:hover,
+.navbar .navbar-nav > li > a.btn.btn-pinterest:focus,
+.navbar .navbar-nav > li > a.btn.btn-pinterest:active,
+.navbar .navbar-nav > li > a.btn.btn-pinterest:hover {
+  background-color: #cc2127;
+  color: #fff;
+  box-shadow: 0 14px 26px -12px rgba(204, 33, 39, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(204, 33, 39, 0.2);
+}
+.btn.btn-pinterest.btn-simple,
+.navbar .navbar-nav > li > a.btn.btn-pinterest.btn-simple {
+  color: #cc2127;
+  background-color: transparent;
+  box-shadow: none;
+}
+.btn.btn-google,
+.navbar .navbar-nav > li > a.btn.btn-google {
+  background-color: #dd4b39;
+  color: #fff;
+  box-shadow: 0 2px 2px 0 rgba(221, 75, 57, 0.14), 0 3px 1px -2px rgba(221, 75, 57, 0.2), 0 1px 5px 0 rgba(221, 75, 57, 0.12);
+}
+.btn.btn-google:focus, .btn.btn-google:active, .btn.btn-google:hover,
+.navbar .navbar-nav > li > a.btn.btn-google:focus,
+.navbar .navbar-nav > li > a.btn.btn-google:active,
+.navbar .navbar-nav > li > a.btn.btn-google:hover {
+  background-color: #dd4b39;
+  color: #fff;
+  box-shadow: 0 14px 26px -12px rgba(221, 75, 57, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(221, 75, 57, 0.2);
+}
+.btn.btn-google.btn-simple,
+.navbar .navbar-nav > li > a.btn.btn-google.btn-simple {
+  color: #dd4b39;
+  background-color: transparent;
+  box-shadow: none;
+}
+.btn.btn-instagram,
+.navbar .navbar-nav > li > a.btn.btn-instagram {
+  background-color: #125688;
+  color: #fff;
+  box-shadow: 0 2px 2px 0 rgba(18, 86, 136, 0.14), 0 3px 1px -2px rgba(18, 86, 136, 0.2), 0 1px 5px 0 rgba(18, 86, 136, 0.12);
+}
+.btn.btn-instagram:focus, .btn.btn-instagram:active, .btn.btn-instagram:hover,
+.navbar .navbar-nav > li > a.btn.btn-instagram:focus,
+.navbar .navbar-nav > li > a.btn.btn-instagram:active,
+.navbar .navbar-nav > li > a.btn.btn-instagram:hover {
+  background-color: #125688;
+  color: #fff;
+  box-shadow: 0 14px 26px -12px rgba(18, 86, 136, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(18, 86, 136, 0.2);
+}
+.btn.btn-instagram.btn-simple,
+.navbar .navbar-nav > li > a.btn.btn-instagram.btn-simple {
+  color: #125688;
+  background-color: transparent;
+  box-shadow: none;
+}
 .btn:focus, .btn:active, .btn:active:focus,
 .navbar .navbar-nav > li > a.btn:focus,
 .navbar .navbar-nav > li > a.btn:active,
@@ -2672,10 +2772,6 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
   background-color: #f44336;
   box-shadow: 0 12px 20px -10px rgba(255, 152, 0, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(255, 152, 0, 0.2);
 }
-.nav-pills.nav-pills-rose > li.active > a, .nav-pills.nav-pills-rose > li.active > a:focus, .nav-pills.nav-pills-rose > li.active > a:hover {
-  background-color: #e91e63;
-  box-shadow: 0 12px 20px -10px rgba(233, 30, 99, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(233, 30, 99, 0.2);
-}
 
 .tab-space {
   padding: 20px 0 50px 0px;
@@ -3351,6 +3447,10 @@ footer .copyright .material-icons {
   font-size: 18px;
   position: relative;
   top: 3px;
+}
+footer .btn {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .dropdown-menu {

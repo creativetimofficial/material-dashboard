@@ -53,6 +53,23 @@
         }
     }
 
+    // social buttons
+    &.btn-facebook {
+    	@include social-buttons-color($social-facebook);
+    }
+    &.btn-twitter {
+    	@include social-buttons-color($social-twitter);
+    }
+    &.btn-pinterest {
+    	@include social-buttons-color($social-pinterest);
+    }
+    &.btn-google {
+    	@include social-buttons-color($social-google);
+    }
+    &.btn-instagram {
+    	@include social-buttons-color($social-instagram);
+    }
+
     &:focus,
     &:active,
     &:active:focus{
