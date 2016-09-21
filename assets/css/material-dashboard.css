@@ -4685,7 +4685,8 @@ footer .copyright .material-icons {
   }
   .sidebar .navbar-form,
   .off-canvas-sidebar .navbar-form {
-    margin: 0 50px 0 0;
+    margin: 10px 15px;
+    float: none !important;
   }
   .sidebar .navbar-form .btn,
   .off-canvas-sidebar .navbar-form .btn {
@@ -4958,5 +4959,3 @@ footer .copyright .material-icons {
     overflow: visible;
   }
 }
-
-/*# sourceMappingURL=material-dashboard.css.map */
