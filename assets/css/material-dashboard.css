@@ -544,7 +544,7 @@ h2.title {
   right: 10%;
   height: 1px;
   width: 80%;
-  background-color: rgba(180, 180, 180, 0.1);
+  background-color: rgba(180, 180, 180, 0.3);
 }
 .sidebar .logo p,
 .off-canvas-sidebar .logo p {
@@ -1148,246 +1148,6 @@ h2.title {
 .navbar .navbar-nav > li > a.btn.btn-white.btn-simple {
   color: #FFFFFF;
   background: transparent;
-  box-shadow: none;
-}
-.btn.btn-facebook,
-.navbar .navbar-nav > li > a.btn.btn-facebook {
-  background-color: #3b5998;
-  color: #fff;
-  box-shadow: 0 2px 2px 0 rgba(59, 89, 152, 0.14), 0 3px 1px -2px rgba(59, 89, 152, 0.2), 0 1px 5px 0 rgba(59, 89, 152, 0.12);
-}
-.btn.btn-facebook:focus, .btn.btn-facebook:active, .btn.btn-facebook:hover,
-.navbar .navbar-nav > li > a.btn.btn-facebook:focus,
-.navbar .navbar-nav > li > a.btn.btn-facebook:active,
-.navbar .navbar-nav > li > a.btn.btn-facebook:hover {
-  background-color: #3b5998;
-  color: #fff;
-  box-shadow: 0 14px 26px -12px rgba(59, 89, 152, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(59, 89, 152, 0.2);
-}
-.btn.btn-facebook.btn-simple,
-.navbar .navbar-nav > li > a.btn.btn-facebook.btn-simple {
-  color: #3b5998;
-  background-color: transparent;
-  box-shadow: none;
-}
-.btn.btn-twitter,
-.navbar .navbar-nav > li > a.btn.btn-twitter {
-  background-color: #55acee;
-  color: #fff;
-  box-shadow: 0 2px 2px 0 rgba(85, 172, 238, 0.14), 0 3px 1px -2px rgba(85, 172, 238, 0.2), 0 1px 5px 0 rgba(85, 172, 238, 0.12);
-}
-.btn.btn-twitter:focus, .btn.btn-twitter:active, .btn.btn-twitter:hover,
-.navbar .navbar-nav > li > a.btn.btn-twitter:focus,
-.navbar .navbar-nav > li > a.btn.btn-twitter:active,
-.navbar .navbar-nav > li > a.btn.btn-twitter:hover {
-  background-color: #55acee;
-  color: #fff;
-  box-shadow: 0 14px 26px -12px rgba(85, 172, 238, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(85, 172, 238, 0.2);
-}
-.btn.btn-twitter.btn-simple,
-.navbar .navbar-nav > li > a.btn.btn-twitter.btn-simple {
-  color: #55acee;
-  background-color: transparent;
-  box-shadow: none;
-}
-.btn.btn-pinterest,
-.navbar .navbar-nav > li > a.btn.btn-pinterest {
-  background-color: #cc2127;
-  color: #fff;
-  box-shadow: 0 2px 2px 0 rgba(204, 33, 39, 0.14), 0 3px 1px -2px rgba(204, 33, 39, 0.2), 0 1px 5px 0 rgba(204, 33, 39, 0.12);
-}
-.btn.btn-pinterest:focus, .btn.btn-pinterest:active, .btn.btn-pinterest:hover,
-.navbar .navbar-nav > li > a.btn.btn-pinterest:focus,
-.navbar .navbar-nav > li > a.btn.btn-pinterest:active,
-.navbar .navbar-nav > li > a.btn.btn-pinterest:hover {
-  background-color: #cc2127;
-  color: #fff;
-  box-shadow: 0 14px 26px -12px rgba(204, 33, 39, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(204, 33, 39, 0.2);
-}
-.btn.btn-pinterest.btn-simple,
-.navbar .navbar-nav > li > a.btn.btn-pinterest.btn-simple {
-  color: #cc2127;
-  background-color: transparent;
-  box-shadow: none;
-}
-.btn.btn-google,
-.navbar .navbar-nav > li > a.btn.btn-google {
-  background-color: #dd4b39;
-  color: #fff;
-  box-shadow: 0 2px 2px 0 rgba(221, 75, 57, 0.14), 0 3px 1px -2px rgba(221, 75, 57, 0.2), 0 1px 5px 0 rgba(221, 75, 57, 0.12);
-}
-.btn.btn-google:focus, .btn.btn-google:active, .btn.btn-google:hover,
-.navbar .navbar-nav > li > a.btn.btn-google:focus,
-.navbar .navbar-nav > li > a.btn.btn-google:active,
-.navbar .navbar-nav > li > a.btn.btn-google:hover {
-  background-color: #dd4b39;
-  color: #fff;
-  box-shadow: 0 14px 26px -12px rgba(221, 75, 57, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(221, 75, 57, 0.2);
-}
-.btn.btn-google.btn-simple,
-.navbar .navbar-nav > li > a.btn.btn-google.btn-simple {
-  color: #dd4b39;
-  background-color: transparent;
-  box-shadow: none;
-}
-.btn.btn-linkedin,
-.navbar .navbar-nav > li > a.btn.btn-linkedin {
-  background-color: #0976b4;
-  color: #fff;
-  box-shadow: 0 2px 2px 0 rgba(9, 118, 180, 0.14), 0 3px 1px -2px rgba(9, 118, 180, 0.2), 0 1px 5px 0 rgba(9, 118, 180, 0.12);
-}
-.btn.btn-linkedin:focus, .btn.btn-linkedin:active, .btn.btn-linkedin:hover,
-.navbar .navbar-nav > li > a.btn.btn-linkedin:focus,
-.navbar .navbar-nav > li > a.btn.btn-linkedin:active,
-.navbar .navbar-nav > li > a.btn.btn-linkedin:hover {
-  background-color: #0976b4;
-  color: #fff;
-  box-shadow: 0 14px 26px -12px rgba(9, 118, 180, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(9, 118, 180, 0.2);
-}
-.btn.btn-linkedin.btn-simple,
-.navbar .navbar-nav > li > a.btn.btn-linkedin.btn-simple {
-  color: #0976b4;
-  background-color: transparent;
-  box-shadow: none;
-}
-.btn.btn-dribbble,
-.navbar .navbar-nav > li > a.btn.btn-dribbble {
-  background-color: #ea4c89;
-  color: #fff;
-  box-shadow: 0 2px 2px 0 rgba(234, 76, 137, 0.14), 0 3px 1px -2px rgba(234, 76, 137, 0.2), 0 1px 5px 0 rgba(234, 76, 137, 0.12);
-}
-.btn.btn-dribbble:focus, .btn.btn-dribbble:active, .btn.btn-dribbble:hover,
-.navbar .navbar-nav > li > a.btn.btn-dribbble:focus,
-.navbar .navbar-nav > li > a.btn.btn-dribbble:active,
-.navbar .navbar-nav > li > a.btn.btn-dribbble:hover {
-  background-color: #ea4c89;
-  color: #fff;
-  box-shadow: 0 14px 26px -12px rgba(234, 76, 137, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(234, 76, 137, 0.2);
-}
-.btn.btn-dribbble.btn-simple,
-.navbar .navbar-nav > li > a.btn.btn-dribbble.btn-simple {
-  color: #ea4c89;
-  background-color: transparent;
-  box-shadow: none;
-}
-.btn.btn-github,
-.navbar .navbar-nav > li > a.btn.btn-github {
-  background-color: #333333;
-  color: #fff;
-  box-shadow: 0 2px 2px 0 rgba(51, 51, 51, 0.14), 0 3px 1px -2px rgba(51, 51, 51, 0.2), 0 1px 5px 0 rgba(51, 51, 51, 0.12);
-}
-.btn.btn-github:focus, .btn.btn-github:active, .btn.btn-github:hover,
-.navbar .navbar-nav > li > a.btn.btn-github:focus,
-.navbar .navbar-nav > li > a.btn.btn-github:active,
-.navbar .navbar-nav > li > a.btn.btn-github:hover {
-  background-color: #333333;
-  color: #fff;
-  box-shadow: 0 14px 26px -12px rgba(51, 51, 51, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(51, 51, 51, 0.2);
-}
-.btn.btn-github.btn-simple,
-.navbar .navbar-nav > li > a.btn.btn-github.btn-simple {
-  color: #333333;
-  background-color: transparent;
-  box-shadow: none;
-}
-.btn.btn-youtube,
-.navbar .navbar-nav > li > a.btn.btn-youtube {
-  background-color: #e52d27;
-  color: #fff;
-  box-shadow: 0 2px 2px 0 rgba(229, 45, 39, 0.14), 0 3px 1px -2px rgba(229, 45, 39, 0.2), 0 1px 5px 0 rgba(229, 45, 39, 0.12);
-}
-.btn.btn-youtube:focus, .btn.btn-youtube:active, .btn.btn-youtube:hover,
-.navbar .navbar-nav > li > a.btn.btn-youtube:focus,
-.navbar .navbar-nav > li > a.btn.btn-youtube:active,
-.navbar .navbar-nav > li > a.btn.btn-youtube:hover {
-  background-color: #e52d27;
-  color: #fff;
-  box-shadow: 0 14px 26px -12px rgba(229, 45, 39, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(229, 45, 39, 0.2);
-}
-.btn.btn-youtube.btn-simple,
-.navbar .navbar-nav > li > a.btn.btn-youtube.btn-simple {
-  color: #e52d27;
-  background-color: transparent;
-  box-shadow: none;
-}
-.btn.btn-instagram,
-.navbar .navbar-nav > li > a.btn.btn-instagram {
-  background-color: #125688;
-  color: #fff;
-  box-shadow: 0 2px 2px 0 rgba(18, 86, 136, 0.14), 0 3px 1px -2px rgba(18, 86, 136, 0.2), 0 1px 5px 0 rgba(18, 86, 136, 0.12);
-}
-.btn.btn-instagram:focus, .btn.btn-instagram:active, .btn.btn-instagram:hover,
-.navbar .navbar-nav > li > a.btn.btn-instagram:focus,
-.navbar .navbar-nav > li > a.btn.btn-instagram:active,
-.navbar .navbar-nav > li > a.btn.btn-instagram:hover {
-  background-color: #125688;
-  color: #fff;
-  box-shadow: 0 14px 26px -12px rgba(18, 86, 136, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(18, 86, 136, 0.2);
-}
-.btn.btn-instagram.btn-simple,
-.navbar .navbar-nav > li > a.btn.btn-instagram.btn-simple {
-  color: #125688;
-  background-color: transparent;
-  box-shadow: none;
-}
-.btn.btn-reddit,
-.navbar .navbar-nav > li > a.btn.btn-reddit {
-  background-color: #ff4500;
-  color: #fff;
-  box-shadow: 0 2px 2px 0 rgba(255, 69, 0, 0.14), 0 3px 1px -2px rgba(255, 69, 0, 0.2), 0 1px 5px 0 rgba(255, 69, 0, 0.12);
-}
-.btn.btn-reddit:focus, .btn.btn-reddit:active, .btn.btn-reddit:hover,
-.navbar .navbar-nav > li > a.btn.btn-reddit:focus,
-.navbar .navbar-nav > li > a.btn.btn-reddit:active,
-.navbar .navbar-nav > li > a.btn.btn-reddit:hover {
-  background-color: #ff4500;
-  color: #fff;
-  box-shadow: 0 14px 26px -12px rgba(255, 69, 0, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(255, 69, 0, 0.2);
-}
-.btn.btn-reddit.btn-simple,
-.navbar .navbar-nav > li > a.btn.btn-reddit.btn-simple {
-  color: #ff4500;
-  background-color: transparent;
-  box-shadow: none;
-}
-.btn.btn-tumblr,
-.navbar .navbar-nav > li > a.btn.btn-tumblr {
-  background-color: #35465c;
-  color: #fff;
-  box-shadow: 0 2px 2px 0 rgba(53, 70, 92, 0.14), 0 3px 1px -2px rgba(53, 70, 92, 0.2), 0 1px 5px 0 rgba(53, 70, 92, 0.12);
-}
-.btn.btn-tumblr:focus, .btn.btn-tumblr:active, .btn.btn-tumblr:hover,
-.navbar .navbar-nav > li > a.btn.btn-tumblr:focus,
-.navbar .navbar-nav > li > a.btn.btn-tumblr:active,
-.navbar .navbar-nav > li > a.btn.btn-tumblr:hover {
-  background-color: #35465c;
-  color: #fff;
-  box-shadow: 0 14px 26px -12px rgba(53, 70, 92, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(53, 70, 92, 0.2);
-}
-.btn.btn-tumblr.btn-simple,
-.navbar .navbar-nav > li > a.btn.btn-tumblr.btn-simple {
-  color: #35465c;
-  background-color: transparent;
-  box-shadow: none;
-}
-.btn.btn-behance,
-.navbar .navbar-nav > li > a.btn.btn-behance {
-  background-color: #1769ff;
-  color: #fff;
-  box-shadow: 0 2px 2px 0 rgba(23, 105, 255, 0.14), 0 3px 1px -2px rgba(23, 105, 255, 0.2), 0 1px 5px 0 rgba(23, 105, 255, 0.12);
-}
-.btn.btn-behance:focus, .btn.btn-behance:active, .btn.btn-behance:hover,
-.navbar .navbar-nav > li > a.btn.btn-behance:focus,
-.navbar .navbar-nav > li > a.btn.btn-behance:active,
-.navbar .navbar-nav > li > a.btn.btn-behance:hover {
-  background-color: #1769ff;
-  color: #fff;
-  box-shadow: 0 14px 26px -12px rgba(23, 105, 255, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(23, 105, 255, 0.2);
-}
-.btn.btn-behance.btn-simple,
-.navbar .navbar-nav > li > a.btn.btn-behance.btn-simple {
-  color: #1769ff;
-  background-color: transparent;
   box-shadow: none;
 }
 .btn:focus, .btn:active, .btn:active:focus,
@@ -4801,6 +4561,9 @@ footer .copyright .material-icons {
   .sidebar .sidebar-wrapper {
     padding-bottom: 60px;
   }
+  .sidebar .nav-mobile-menu {
+    margin-top: 0;
+  }
   .sidebar .nav-mobile-menu .notification {
     float: left;
     line-height: 30px;
@@ -4920,6 +4683,25 @@ footer .copyright .material-icons {
     position: relative;
     z-index: 4;
   }
+  .sidebar .navbar-form,
+  .off-canvas-sidebar .navbar-form {
+    margin: 0 50px 0 0;
+  }
+  .sidebar .navbar-form .btn,
+  .off-canvas-sidebar .navbar-form .btn {
+    position: absolute;
+    top: 25px;
+    right: 15px;
+  }
+  .sidebar .table-responsive,
+  .off-canvas-sidebar .table-responsive {
+    width: 100%;
+    margin-bottom: 15px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    -webkit-overflow-scrolling: touch;
+  }
 
   .nav-open .navbar-collapse {
     -webkit-transform: translate3d(0px, 0, 0);
@@ -4997,246 +4779,6 @@ footer .copyright .material-icons {
     outline: 1px solid transparent;
   }
 
-  .bar1 {
-    top: 0px;
-    -webkit-animation: topbar-back 500ms linear 0s;
-    -moz-animation: topbar-back 500ms linear 0s;
-    animation: topbar-back 500ms 0s;
-    -webkit-animation-fill-mode: forwards;
-    -moz-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-  }
-
-  .bar2 {
-    opacity: 1;
-  }
-
-  .bar3 {
-    bottom: 0px;
-    -webkit-animation: bottombar-back 500ms linear 0s;
-    -moz-animation: bottombar-back 500ms linear 0s;
-    animation: bottombar-back 500ms 0s;
-    -webkit-animation-fill-mode: forwards;
-    -moz-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-  }
-
-  .toggled .bar1 {
-    top: 6px;
-    -webkit-animation: topbar-x 500ms linear 0s;
-    -moz-animation: topbar-x 500ms linear 0s;
-    animation: topbar-x 500ms 0s;
-    -webkit-animation-fill-mode: forwards;
-    -moz-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-  }
-
-  .toggled .bar2 {
-    opacity: 0;
-  }
-
-  .toggled .bar3 {
-    bottom: 6px;
-    -webkit-animation: bottombar-x 500ms linear 0s;
-    -moz-animation: bottombar-x 500ms linear 0s;
-    animation: bottombar-x 500ms 0s;
-    -webkit-animation-fill-mode: forwards;
-    -moz-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-  }
-
-  @keyframes topbar-x {
-    0% {
-      top: 0px;
-      transform: rotate(0deg);
-    }
-    45% {
-      top: 6px;
-      transform: rotate(145deg);
-    }
-    75% {
-      transform: rotate(130deg);
-    }
-    100% {
-      transform: rotate(135deg);
-    }
-  }
-  @-webkit-keyframes topbar-x {
-    0% {
-      top: 0px;
-      -webkit-transform: rotate(0deg);
-    }
-    45% {
-      top: 6px;
-      -webkit-transform: rotate(145deg);
-    }
-    75% {
-      -webkit-transform: rotate(130deg);
-    }
-    100% {
-      -webkit-transform: rotate(135deg);
-    }
-  }
-  @-moz-keyframes topbar-x {
-    0% {
-      top: 0px;
-      -moz-transform: rotate(0deg);
-    }
-    45% {
-      top: 6px;
-      -moz-transform: rotate(145deg);
-    }
-    75% {
-      -moz-transform: rotate(130deg);
-    }
-    100% {
-      -moz-transform: rotate(135deg);
-    }
-  }
-  @keyframes topbar-back {
-    0% {
-      top: 6px;
-      transform: rotate(135deg);
-    }
-    45% {
-      transform: rotate(-10deg);
-    }
-    75% {
-      transform: rotate(5deg);
-    }
-    100% {
-      top: 0px;
-      transform: rotate(0);
-    }
-  }
-  @-webkit-keyframes topbar-back {
-    0% {
-      top: 6px;
-      -webkit-transform: rotate(135deg);
-    }
-    45% {
-      -webkit-transform: rotate(-10deg);
-    }
-    75% {
-      -webkit-transform: rotate(5deg);
-    }
-    100% {
-      top: 0px;
-      -webkit-transform: rotate(0);
-    }
-  }
-  @-moz-keyframes topbar-back {
-    0% {
-      top: 6px;
-      -moz-transform: rotate(135deg);
-    }
-    45% {
-      -moz-transform: rotate(-10deg);
-    }
-    75% {
-      -moz-transform: rotate(5deg);
-    }
-    100% {
-      top: 0px;
-      -moz-transform: rotate(0);
-    }
-  }
-  @keyframes bottombar-x {
-    0% {
-      bottom: 0px;
-      transform: rotate(0deg);
-    }
-    45% {
-      bottom: 6px;
-      transform: rotate(-145deg);
-    }
-    75% {
-      transform: rotate(-130deg);
-    }
-    100% {
-      transform: rotate(-135deg);
-    }
-  }
-  @-webkit-keyframes bottombar-x {
-    0% {
-      bottom: 0px;
-      -webkit-transform: rotate(0deg);
-    }
-    45% {
-      bottom: 6px;
-      -webkit-transform: rotate(-145deg);
-    }
-    75% {
-      -webkit-transform: rotate(-130deg);
-    }
-    100% {
-      -webkit-transform: rotate(-135deg);
-    }
-  }
-  @-moz-keyframes bottombar-x {
-    0% {
-      bottom: 0px;
-      -moz-transform: rotate(0deg);
-    }
-    45% {
-      bottom: 6px;
-      -moz-transform: rotate(-145deg);
-    }
-    75% {
-      -moz-transform: rotate(-130deg);
-    }
-    100% {
-      -moz-transform: rotate(-135deg);
-    }
-  }
-  @keyframes bottombar-back {
-    0% {
-      bottom: 6px;
-      transform: rotate(-135deg);
-    }
-    45% {
-      transform: rotate(10deg);
-    }
-    75% {
-      transform: rotate(-5deg);
-    }
-    100% {
-      bottom: 0px;
-      transform: rotate(0);
-    }
-  }
-  @-webkit-keyframes bottombar-back {
-    0% {
-      bottom: 6px;
-      -webkit-transform: rotate(-135deg);
-    }
-    45% {
-      -webkit-transform: rotate(10deg);
-    }
-    75% {
-      -webkit-transform: rotate(-5deg);
-    }
-    100% {
-      bottom: 0px;
-      -webkit-transform: rotate(0);
-    }
-  }
-  @-moz-keyframes bottombar-back {
-    0% {
-      bottom: 6px;
-      -moz-transform: rotate(-135deg);
-    }
-    45% {
-      -moz-transform: rotate(10deg);
-    }
-    75% {
-      -moz-transform: rotate(-5deg);
-    }
-    100% {
-      bottom: 0px;
-      -moz-transform: rotate(0);
-    }
-  }
   @-webkit-keyframes fadeIn {
     0% {
       opacity: 0;
@@ -5401,6 +4943,11 @@ footer .copyright .material-icons {
     margin-right: 10px;
   }
 }
+@media (min-width: 768px) {
+  .navbar > .container-fluid .navbar-brand {
+    margin-left: 0;
+  }
+}
 @media (min-width: 992px) {
   .table-full-width {
     margin-left: -20px;
@@ -5411,13 +4958,5 @@ footer .copyright .material-icons {
     overflow: visible;
   }
 }
-@media (max-width: 991px) {
-  .table-responsive {
-    width: 100%;
-    margin-bottom: 15px;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
-    -webkit-overflow-scrolling: touch;
-  }
-}
+
+/*# sourceMappingURL=material-dashboard.css.map */
