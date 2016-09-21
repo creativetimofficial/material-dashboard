@@ -241,7 +241,7 @@ md = {
             nav_content = '<ul class="nav nav-mobile-menu">' + nav_content + '</ul>';
 
             $navbar.html(nav_content);
-            $navbar.addClass('bootstrap-navbar');
+            $navbar.addClass('off-canvas-sidebar');
 
             // append it to the body, so it will come from the right side of the screen
             $('body').append($navbar);

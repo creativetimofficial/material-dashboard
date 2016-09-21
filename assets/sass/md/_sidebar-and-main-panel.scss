@@ -4,7 +4,8 @@
     height: 100vh;
 }
 
-.sidebar{
+.sidebar,
+.off-canvas-sidebar{
     position: absolute;
     top: 0;
     bottom: 0;
@@ -80,11 +81,6 @@
             color: #a9afbb;
         }
     }
-}
-
-
-.sidebar,
-.off-canvas-sidebar{
 
     .sidebar-background{
         position: absolute;
@@ -203,6 +199,19 @@
     }
     &[data-color="purple"]{
         @include set-background-color-button($brand-primary);
+    }
+}
+
+.off-canvas-sidebar{
+    .nav {
+        > li > a,
+        > li > a:hover{
+            color: $white-color;
+        }
+
+        > li > a:focus{
+            background: rgba(200, 200, 200, 0.2);
+        }
     }
 }
 

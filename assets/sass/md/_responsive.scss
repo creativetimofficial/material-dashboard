@@ -237,7 +237,7 @@
     }
 
     .nav-open{
-        .bootstrap-navbar,
+        .off-canvas-sidebar,
         .sidebar{
             @include transform-translate-x(0);
         }
