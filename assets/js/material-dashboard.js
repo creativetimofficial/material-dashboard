@@ -133,7 +133,6 @@ md = {
         $sidebar_wrapper = $('.sidebar-wrapper');
 
         if(!mobile_menu_initialized){
-            console.log('intra in meniu');
             $navbar = $('nav').find('.navbar-collapse').first().clone(true);
 
             nav_content = '';
@@ -163,7 +162,6 @@ md = {
 
             mobile_menu_initialized = true;
         } else {
-            console.log('window with:' + $(window).width());
             if($(window).width() > 991){
                 // reset all the additions that we made for the sidebar wrapper only if the screen is bigger than 991px
                 $sidebar_wrapper.find('.navbar-form').remove();
@@ -324,14 +322,12 @@ md = {
                     easing: 'ease'
                   }
                 });
-                console.log('seq:' + seq);
             }
         });
 
         seq = 0;
     },
     startAnimationForBarChart: function(chart){
-        console.log('chart:', chart);
 
         chart.on('draw', function(data) {
           if(data.type === 'bar'){
@@ -345,7 +341,6 @@ md = {
                   easing: 'ease'
                 }
               });
-              console.log('seq:' + seq2);
           }
         });
 
