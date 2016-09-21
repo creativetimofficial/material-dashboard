@@ -58,31 +58,6 @@ demo = {
 
     initDashboardPageCharts: function(){
 
-        var dataPreferences = {
-            series: [
-                [25, 30, 20, 25]
-            ]
-        };
-
-        var optionsPreferences = {
-            donut: true,
-            donutWidth: 40,
-            startAngle: 0,
-            total: 100,
-            showLabel: false,
-            axisX: {
-                showGrid: false
-            }
-        };
-
-        Chartist.Pie('#chartPreferences', dataPreferences, optionsPreferences);
-
-        Chartist.Pie('#chartPreferences', {
-          labels: ['62%','32%','6%'],
-          series: [62, 32, 6]
-        });
-
-
         /* ----------==========     Daily Sales Chart initialization    ==========---------- */
 
         dataDailySalesChart = {
@@ -104,6 +79,7 @@ demo = {
         var dailySalesChart = new Chartist.Line('#dailySalesChart', dataDailySalesChart, optionsDailySalesChart);
 
         md.startAnimationForLineChart(dailySalesChart);
+
 
 
         /* ----------==========     Completed Tasks Chart initialization    ==========---------- */
@@ -129,6 +105,9 @@ demo = {
         // start animation for the Completed Tasks Chart - Line Chart
         md.startAnimationForLineChart(completedTasksChart);
 
+
+
+        /* ----------==========     Emails Subscription Chart initialization    ==========---------- */
 
         var dataEmailsSubscriptionChart = {
           labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
