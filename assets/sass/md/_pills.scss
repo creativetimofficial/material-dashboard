@@ -1,0 +1,117 @@
+.nav-pills{
+
+    .section-dark &,
+    .section-image &{
+        > li > a{
+            color: $gray-color;
+        }
+        > li{
+            > a:hover,
+            > a:focus{
+                background-color: #EEEEEE;
+            }
+        }
+    }
+
+    > li {
+        > a{
+            line-height: $mdb-btn-font-size-base * 2;
+            text-transform: uppercase;
+            font-size: $mdb-btn-font-size-base;
+            font-weight: $font-weight-bold;
+            min-width: 100px;
+            text-align: center;
+            color: $gray;
+            transition: all .3s;
+
+            &:hover{
+                background-color: rgba(200, 200, 200, 0.2);
+            }
+        }
+
+        i{
+            display: block;
+            font-size: 30px;
+            padding: 15px 0;
+        }
+
+        &.active > a{
+            &,
+            &:focus,
+            &:hover{
+                background-color: $brand-primary;
+                color: $white-color;
+                @include shadow-big-color($brand-primary);
+            }
+        }
+
+    }
+
+    &:not(.nav-pills-icons){
+        > li > a{
+            border-radius: $border-radius-extreme;
+        }
+    }
+
+    &.nav-stacked{
+        > li + li{
+            margin-top: 5px;
+        }
+    }
+
+    &.nav-pills-info{
+        > li {
+            &.active > a{
+                &,
+                &:focus,
+                &:hover{
+                    background-color: $brand-info;
+                    @include shadow-big-color($brand-info);
+                }
+            }
+        }
+    }
+
+    &.nav-pills-success{
+        > li {
+            &.active > a{
+                &,
+                &:focus,
+                &:hover{
+                    background-color: $brand-success;
+                    @include shadow-big-color($brand-success);
+                }
+            }
+        }
+    }
+
+    &.nav-pills-warning{
+        > li {
+            &.active > a{
+                &,
+                &:focus,
+                &:hover{
+                    background-color: $brand-warning;
+                    @include shadow-big-color($brand-warning);
+                }
+            }
+        }
+    }
+
+    &.nav-pills-danger{
+        > li {
+            &.active > a{
+                &,
+                &:focus,
+                &:hover{
+                    background-color: $brand-danger;
+                    @include shadow-big-color($brand-warning);
+                }
+            }
+        }
+    }
+    
+}
+.tab-space{
+    padding: 20px 0 50px 0px;
+}

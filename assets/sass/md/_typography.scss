@@ -1,0 +1,75 @@
+h1, .h1 {
+    font-size: $font-size-h1;
+    line-height: 1.15em;
+}
+h2, .h2{
+    font-size: $font-size-h2;
+}
+h3, .h3{
+    font-size: $font-size-h3;
+    line-height: 1.4em;
+    margin: 20px 0 10px;
+}
+h4, .h4{
+    font-size: $font-size-h4;
+    line-height: 1.4em;
+}
+h5, .h5 {
+    font-size: $font-size-h5;
+    line-height: 1.4em;
+    margin-bottom: 15px;
+}
+h6, .h6{
+    font-size: $font-size-h6;
+    text-transform: uppercase;
+    font-weight: $font-weight-bold;
+}
+
+/*.title,
+.card-title,
+.info-title,
+.footer-brand,
+.footer-big h5,
+.footer-big h4,
+.media .media-heading{
+    font-weight: $font-weight-extra-bold;
+    font-family: $font-family-serif;
+
+    &,
+    a{
+        color: $black-color;
+        text-decoration: none;
+    }
+}*/
+
+h2.title{
+    margin-bottom: $margin-base * 2;
+}
+
+.description,
+.card-description,
+.footer-big p{
+    color: $gray-light;
+}
+
+.text-warning {
+  color: $brand-warning;
+}
+.text-primary {
+  color: $brand-primary;
+}
+.text-danger {
+  color: $brand-danger;
+}
+.text-success {
+  color: $brand-success;
+}
+.text-info {
+  color: $brand-info;
+}
+.text-rose{
+    color: $brand-rose;
+}
+.text-gray{
+    color: $gray-color;
+}
