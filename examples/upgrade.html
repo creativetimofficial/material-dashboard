@@ -24,12 +24,14 @@
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
+
 </head>
 
 <body>
 
 	<div class="wrapper">
 	    <div class="sidebar" data-color="purple" data-image="../assets/img/sidebar-1.jpg">
+
 			<!--
 		        Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
 
@@ -74,7 +76,7 @@
 	                        <p>Icons</p>
 	                    </a>
 	                </li>
-	                <li class="active">
+	                <li>
 	                    <a href="maps.html">
 	                        <i class="material-icons">location_on</i>
 	                        <p>Maps</p>
@@ -86,7 +88,7 @@
 	                        <p>Notifications</p>
 	                    </a>
 	                </li>
-					<li class="active-pro">
+                    <li class="active active-pro">
                         <a href="upgrade.html">
 	                        <i class="material-icons">stars</i>
 	                        <p>Upgrade to PRO</p>
@@ -94,7 +96,7 @@
                     </li>
 	            </ul>
 	    	</div>
-		</div>
+	    </div>
 
 	    <div class="main-panel">
 			<nav class="navbar navbar-transparent navbar-absolute">
@@ -106,7 +108,7 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="#">Google Maps</a>
+						<a class="navbar-brand" href="#">Upgrade</a>
 					</div>
 					<div class="collapse navbar-collapse">
 						<ul class="nav navbar-nav navbar-right">
@@ -151,8 +153,115 @@
 				</div>
 			</nav>
 
-			<div id="map"></div>
+	        <div class="content">
+	            <div class="container-fluid">
+                    <div class="row">
+    					<div class="col-md-8 col-md-offset-2">
+                            <div class="card">
+                                <div class="card-header text-center" data-background-color="purple">
+                                    <h4 class="title">Material Dashboard</h3>
+                                    <p class="category">Are you looking for more components? Please check our Premium Version of Material Dashboard Pro.</p>
+    								<br>
+                                </div>
+                                <div class="card-content">
+                                    <div class="table-responsive table-upgrade">
+                                        <table class="table">
+                                            <thead>
+                                                <th></th>
+                                            	<th class="text-center">Free</th>
+                                            	<th class="text-center">PRO</th>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                	<td>Components</td>
+                                                	<td class="text-center">16</td>
+                                                	<td class="text-center">160</td>
+                                                </tr>
+                                                <tr>
+                                                	<td>Plugins</td>
+                                                	<td class="text-center">4</td>
+                                                	<td class="text-center">15</td>
+                                                </tr>
+                                                <tr>
+                                                	<td>Example Pages</td>
+                                                	<td class="text-center">4</td>
+                                                	<td class="text-center">25</td>
+                                                </tr>
+                                                <tr>
+                                                	<td>Documentation</td>
+                                                	<td class="text-center"><i class="fa fa-times text-danger"></i></td>
+                                                	<td class="text-center"><i class="fa fa-check text-success"></td>
+                                                </tr>
+                                                <tr>
+                                                	<td>SASS Files</td>
+        											<td class="text-center"><i class="fa fa-check text-success"></i></td>
+                                                	<td class="text-center"><i class="fa fa-check text-success"></td>
+                                                </tr>
+                                                <tr>
+                                                	<td>Login/Register/Lock Pages</td>
+        											<td class="text-center"><i class="fa fa-times text-danger"></i></td>
+                                                	<td class="text-center"><i class="fa fa-check text-success"></td>
+                                                </tr>
+        										<tr>
+                                                	<td>Premium Support</td>
+        											<td class="text-center"><i class="fa fa-times text-danger"></i></td>
+                                                	<td class="text-center"><i class="fa fa-check text-success"></td>
+                                                </tr>
+        										<tr>
+                                                	<td></td>
+        											<td class="text-center">Free</td>
+                                                	<td class="text-center">Just $49</td>
+                                                </tr>
+        										<tr>
+        											<td class="text-center"></td>
+        											<td class="text-center">
+        												<a href="#" class="btn btn-round btn-fill btn-default disabled">Current Version</a>
+        											</td>
+        											<td class="text-center">
+        												<a target="_blank" href="http://www.creative-tim.com/product/material-dashboard-pro/?ref=md-free-upgrade-live" class="btn btn-round btn-fill btn-info">Upgrade to PRO</a>
+        											</td>
+        										</tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+	            </div>
+	        </div>
 
+	        <footer class="footer">
+	            <div class="container-fluid">
+	                <nav class="pull-left">
+	                    <ul>
+	                        <li>
+	                            <a href="#">
+	                                Home
+	                            </a>
+	                        </li>
+	                        <li>
+	                            <a href="#">
+	                                Company
+	                            </a>
+	                        </li>
+	                        <li>
+	                            <a href="#">
+	                                Portfolio
+	                            </a>
+	                        </li>
+	                        <li>
+	                            <a href="#">
+	                               Blog
+	                            </a>
+	                        </li>
+	                    </ul>
+	                </nav>
+	                <p class="copyright pull-right">
+	                    &copy; <script>document.write(new Date().getFullYear())</script> <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
+	                </p>
+	            </div>
+	        </footer>
 	    </div>
 	</div>
 
@@ -177,11 +286,5 @@
 
 	<!-- Material Dashboard DEMO methods, don't include it in your project! -->
 	<script src="../assets/js/demo.js"></script>
-
-    <script>
-        $().ready(function(){
-            demo.initGoogleMaps();
-        });
-    </script>
 
 </html>
