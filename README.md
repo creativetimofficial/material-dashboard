@@ -22,8 +22,8 @@ You can find the Github Repo here.
 ## Links:
 
 + [Live Preview](http://demos.creative-tim.com/material-dashboard/examples/dashboard.html)
-+ [Material Kit - For Front End Development](http://www.creative-tim.com/product/material-kit)
-+ Material Dashboard PRO - coming soon
++ [Material Kit - For Front End Development](http://www.creative-tim.com/product/material-kit?ref=github-md-free)
++ [Material Dashboard PRO](http://www.creative-tim.com/product/material-dashboard-pro?ref=github-md-free) (from $49)
 
 ## Quick start
 
@@ -66,7 +66,12 @@ material-dashboard/
 
 ### Version logs
 
-V1.0 - 22 September 2016 initial release
+V1.0.0 21 Sept, 2016 - Initial Release
+
+V1.1.0 10 Nov, 2016 - New Page Added
+- fix link in documentation
+- for those who want to upsell inside their dashboard we added a new page "Upgrade to PRO" with a pricing and options table
+
 
 ## Useful Links
 

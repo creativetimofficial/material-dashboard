@@ -1,6 +1,6 @@
 /*! =========================================================
  *
- Material Dashboard - V1.0.0
+ Material Dashboard - V1.1.0
 *
 * =========================================================
 *
@@ -5077,9 +5077,5 @@ footer .btn {
   .table-full-width {
     margin-left: -20px;
     margin-right: -20px;
-  }
-
-  .table-responsive {
-    overflow: visible;
   }
 }

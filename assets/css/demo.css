@@ -29,6 +29,12 @@
     display: block;
 }
 
+.sidebar .nav > li.active-pro{
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+}
+
 .tim-row{
     margin-bottom: 20px;
 }
