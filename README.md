@@ -60,7 +60,6 @@ material-dashboard/
 |
 ├── documentation/
 ├── examples/
-└── License.pdf
 
 ```
 
@@ -72,6 +71,13 @@ V1.1.0 10 Nov, 2016 - New Page Added
 - fix link in documentation
 - for those who want to upsell inside their dashboard we added a new page "Upgrade to PRO" with a pricing and options table
 
+V1.1.1 8 Feb 2017
+- switched to MIT License
+
+### License
+
+- Copyright 2017 Creative Tim (http://www.creative-tim.com)
+- Licensed under MIT (https://github.com/creativetimofficial/material-dashboard/blob/master/LICENSE.md)
 
 ## Useful Links
 

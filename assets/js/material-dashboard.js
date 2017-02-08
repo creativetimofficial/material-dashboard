@@ -1,36 +1,18 @@
-/*! =========================================================
- *
- * Material Dashboard - V1.1.0
- *
- * =========================================================
- *
- * Copyright 2016 Creative Tim (http://www.creative-tim.com/product/material-dashboard)
- *
- *
- *                       _oo0oo_
- *                      o8888888o
- *                      88" . "88
- *                      (| -_- |)
- *                      0\  =  /0
- *                    ___/`---'\___
- *                  .' \|     |// '.
- *                 / \|||  :  |||// \
- *                / _||||| -:- |||||- \
- *               |   | \\  -  /// |   |
- *               | \_|  ''\---/''  |_/ |
- *               \  .-\__  '-'  ___/-. /
- *             ___'. .'  /--.--\  `. .'___
- *          ."" '<  `.___\_<|>_/___.' >' "".
- *         | | :  `- \`.;`\ _ /`;.`/ - ` : | |
- *         \  \ `_.   \_ __\ /__ _/   .-` /  /
- *     =====`-.____`.___ \_____/___.-`___.-'=====
- *                       `=---='
- *
- *     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- *
- *               Buddha Bless:  "No Bugs"
- *
- * ========================================================= */
+/*!
+    
+ =========================================================
+ * Material Dashboard - v1.1.1
+ =========================================================
+ 
+ * Product Page: http://www.creative-tim.com/product/material-dashboard
+ * Copyright 2017 Creative Tim (http://www.creative-tim.com)
+ * Licensed under MIT (https://github.com/creativetimofficial/material-dashboard/blob/master/LICENSE.md)
+ 
+ =========================================================
+ 
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ 
+ */
 
 // Material Dashboard Wizard Functions
 
