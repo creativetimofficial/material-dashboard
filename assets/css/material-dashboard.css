@@ -1,7 +1,7 @@
 /*!
     
  =========================================================
- * Material Dashboard - v1.1.1.0
+ * Material Dashboard - v1.1.1
  =========================================================
  
  * Product Page: http://www.creative-tim.com/product/material-dashboard
