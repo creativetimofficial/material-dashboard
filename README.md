@@ -74,6 +74,9 @@ V1.1.0 10 Nov, 2016 - New Page Added
 V1.1.1 8 Feb 2017
 - switched to MIT License
 
+V1.1.2 22 Sep 2017
+- Add Panels Style
+
 ### License
 
 - Copyright 2017 Creative Tim (http://www.creative-tim.com)
