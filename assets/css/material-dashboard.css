@@ -5084,6 +5084,10 @@ form.form-mt-bordered input, form.form-mt-bordered textarea, form.form-mt-border
     
 }
 
+form.form-mt-inline  .form-group{
+    margin: 5px 0px 0px 0px;
+}
+
 
 /* Sidebar Submenu */
 
