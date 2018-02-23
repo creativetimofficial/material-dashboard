@@ -43,7 +43,7 @@
                 </div>
 
                 <div class="sidebar-wrapper">
-                    <ul class="nav">
+                    <ul class="nav navwithsidesub">
                         <li>
                             <a href="dashboard.html">
                                 <i class="material-icons">dashboard</i>
@@ -55,6 +55,16 @@
                                 <i class="material-icons">input</i>
                                 <p>Forms</p>
                             </a>
+                        </li>
+                        <li class="sidesub">
+                            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="material-icons">view_list</i>
+                                <p>Dropdown Menu</p>
+                            </a>
+                            <ul class="sidesub-ul dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <li><a class="dropdown-item" href="table.html">List All</a></li>
+                                <li><a class="dropdown-item" href="form.html">Create New</a></li>
+                            </ul>  
                         </li>
                         <li>
                             <a href="user.html">
@@ -136,10 +146,21 @@
                                         <li><a href="#">Another One</a></li>
                                     </ul>
                                 </li>
-                                <li>
+                                <li class="dropdown">
                                     <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
                                         <i class="material-icons">person</i>
                                         <p class="hidden-lg hidden-md">Profile</p>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="fa fa-cogs"></i>&nbsp;&nbsp;Settings</a></li>
+                                        <li><a href="#"><i class="fa fa-lock"></i>&nbsp;&nbsp;Screen Lock</a></li>
+                                        <li><a href="#"><i class="fa fa-power-off"></i>&nbsp;&nbsp;Logout</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
+                                        <i class="material-icons" style="font-weight: bolder">power_settings_new</i>
+                                        <p class="hidden-lg hidden-md">Dashboard</p>
                                     </a>
                                 </li>
                             </ul>
@@ -172,7 +193,7 @@
                                                 <div class="col-md-5">
                                                     <div class="form-group label-floating">
                                                         <label class="control-label">Company (disabled)</label>
-                                                        <input type="text" class="form-control" disabled>
+                                                        <input  autofocus="" type="text" class="form-control" disabled>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-3">
@@ -271,7 +292,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="row">
                             <div class=" col-lg-12">
                                 <div class="card">
@@ -286,7 +307,7 @@
                                                     <label class="">Category Name</label>
                                                 </div>
                                                 <div class="col-sm-9">
-                                                    <input autofocus="" name="category_name" type="text" class="form-control ">
+                                                    <input name="category_name" type="text" class="form-control ">
                                                 </div>
                                                 <span class="material-input"></span></div>
                                             <div class="row form-group is-empty">
@@ -322,7 +343,7 @@
                                 </div>
                             </div>                            
                         </div>
-                        
+
                         <div class="row">
                             <div class=" col-lg-8">
                                 <div class="card">
@@ -417,11 +438,11 @@
 
                             </div>
                         </div>
-                        
-                        
-                         
-                        
-                        
+
+
+
+
+
                     </div>
                 </div>
 
@@ -471,6 +492,9 @@
 
     <!--  Notifications Plugin    -->
     <script src="../assets/js/bootstrap-notify.js"></script>
+    
+    <!--  Dialog Plugin   -->
+    <script src="../assets/js/bootbox.min.js"></script>
 
     <!--  Google Maps Plugin    -->
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>

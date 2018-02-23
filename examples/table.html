@@ -44,7 +44,7 @@
 
 
                 <div class="sidebar-wrapper">
-                    <ul class="nav">
+                    <ul class="nav navwithsidesub">
                         <li>
                             <a href="dashboard.html">
                                 <i class="material-icons">dashboard</i>
@@ -56,6 +56,16 @@
                                 <i class="material-icons">input</i>
                                 <p>Forms</p>
                             </a>
+                        </li>
+                        <li class="sidesub">
+                            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="material-icons">view_list</i>
+                                <p>Dropdown Menu</p>
+                            </a>
+                            <ul class="sidesub-ul dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <li><a class="dropdown-item" href="table.html">List All</a></li>
+                                <li><a class="dropdown-item" href="form.html">Create New</a></li>
+                            </ul>  
                         </li>
                         <li>
                             <a href="user.html">
@@ -137,10 +147,21 @@
                                         <li><a href="#">Another One</a></li>
                                     </ul>
                                 </li>
-                                <li>
+                                <li class="dropdown">
                                     <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
                                         <i class="material-icons">person</i>
                                         <p class="hidden-lg hidden-md">Profile</p>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="fa fa-cogs"></i>&nbsp;&nbsp;Settings</a></li>
+                                        <li><a href="#"><i class="fa fa-lock"></i>&nbsp;&nbsp;Screen Lock</a></li>
+                                        <li><a href="#"><i class="fa fa-power-off"></i>&nbsp;&nbsp;Logout</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
+                                        <i class="material-icons" style="font-weight: bolder">power_settings_new</i>
+                                        <p class="hidden-lg hidden-md">Dashboard</p>
                                     </a>
                                 </li>
                             </ul>
@@ -218,6 +239,218 @@
                                     </div>
                                 </div>
                             </div>
+
+                        </div>
+                        <div class="row">
+
+                            <div class="col-md-12">
+                                <div class="card">
+                                    <div class="card-header" data-background-color="purple">
+                                        <h4 class="title">Data Grid</h4>
+                                        <p class="category">Here is a subtitle for this table</p>
+                                    </div>
+                                    <div class="card-content table-responsive">
+                                        <table class="table">
+                                            <thead class="text-primary">
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>Country</th>
+                                                    <th>City</th>
+                                                    <th>Salary</th>
+                                                    <th style="width: 165px"></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Dakota Rice</td>
+                                                    <td>Niger</td>
+                                                    <td>Oud-Turnhout</td>
+                                                    <td class="text-primary">$36,738</td>
+                                                    <td class="td-actions text-right">
+
+                                                        <a href="#edit-article" type="button" rel="tooltip" title="" class="btn btn-primary btn-sm" data-original-title="Edit">
+                                                            <i class="fa fa-pencil"></i>
+                                                            <div class="ripple-container"></div></a>
+
+                                                        <!--Show favourite button if currently not marked,--> 
+                                                        <a href="#changestatus-article" type="button" rel="tooltip" title="" class="btn btn-success btn-sm" data-original-title="Mar as Favourite">
+                                                            <i class="fa fa-star"></i>
+                                                        </a>
+
+                                                        <!--Show thumbs up button if unpublished,--> 
+                                                        <a href="#changestatus-article" type="button" rel="tooltip" title="" class="btn btn-warning btn-sm" data-original-title="Unpublish">
+                                                            <i class="fa fa-thumbs-down"></i>
+                                                        </a>
+
+                                                        <a href="#delete-article" type="button" rel="tooltip" title="" class="btn btn-danger btn-sm confirmDelete" data-original-title="Delete">
+                                                            <i class="fa fa-times"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Minerva Hooper</td>
+                                                    <td>Curaçao</td>
+                                                    <td>Sinaai-Waas</td>
+                                                    <td class="text-primary">$23,789</td>
+                                                    <td class="td-actions text-right">
+
+                                                        <a href="#edit-article" type="button" rel="tooltip" title="" class="btn btn-primary btn-sm" data-original-title="Edit">
+                                                            <i class="fa fa-pencil"></i>
+                                                            <div class="ripple-container"></div></a>
+
+                                                        <!--Show favourite button if currently not marked,--> 
+                                                        <a href="#changestatus-article" type="button" rel="tooltip" title="" class="btn btn-success btn-sm" data-original-title="Mar as Favourite">
+                                                            <i class="fa fa-star"></i>
+                                                        </a>
+
+                                                        <!--Show thumbs up button if unpublished,--> 
+                                                        <a href="#changestatus-article" type="button" rel="tooltip" title="" class="btn btn-warning btn-sm" data-original-title="Unpublish">
+                                                            <i class="fa fa-thumbs-down"></i>
+                                                        </a>
+
+                                                        <a href="#delete-article" type="button" rel="tooltip" title="" class="btn btn-danger btn-sm confirmDelete" data-original-title="Delete">
+                                                            <i class="fa fa-times"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Sage Rodriguez</td>
+                                                    <td>Netherlands</td>
+                                                    <td>Baileux</td>
+                                                    <td class="text-primary">$56,142</td>
+                                                    <td class="td-actions text-right">
+
+                                                        <a href="#edit-article" type="button" rel="tooltip" title="" class="btn btn-primary btn-sm" data-original-title="Edit">
+                                                            <i class="fa fa-pencil"></i>
+                                                            <div class="ripple-container"></div></a>
+
+                                                        <!--Show favourite button if currently not marked,--> 
+                                                        <a href="#changestatus-article" type="button" rel="tooltip" title="" class="btn btn-success btn-sm" data-original-title="Mar as Favourite">
+                                                            <i class="fa fa-star"></i>
+                                                        </a>
+
+                                                        <!--Show thumbs up button if unpublished,--> 
+                                                        <a href="#changestatus-article" type="button" rel="tooltip" title="" class="btn btn-warning btn-sm" data-original-title="Unpublish">
+                                                            <i class="fa fa-thumbs-down"></i>
+                                                        </a>
+
+                                                        <a href="#delete-article" type="button" rel="tooltip" title="" class="btn btn-danger btn-sm confirmDelete" data-original-title="Delete">
+                                                            <i class="fa fa-times"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Philip Chaney</td>
+                                                    <td>Korea, South</td>
+                                                    <td>Overland Park</td>
+                                                    <td class="text-primary">$38,735</td>
+                                                    <td class="td-actions text-right">
+
+                                                        <a href="#edit-article" type="button" rel="tooltip" title="" class="btn btn-primary btn-sm" data-original-title="Edit">
+                                                            <i class="fa fa-pencil"></i>
+                                                            <div class="ripple-container"></div></a>
+
+                                                        <!--Show favourite button if currently not marked,--> 
+                                                        <a href="#changestatus-article" type="button" rel="tooltip" title="" class="btn btn-success btn-sm" data-original-title="Mar as Favourite">
+                                                            <i class="fa fa-star"></i>
+                                                        </a>
+
+                                                        <!--Show thumbs up button if unpublished,--> 
+                                                        <a href="#changestatus-article" type="button" rel="tooltip" title="" class="btn btn-warning btn-sm" data-original-title="Unpublish">
+                                                            <i class="fa fa-thumbs-down"></i>
+                                                        </a>
+
+                                                        <a href="#delete-article" type="button" rel="tooltip" title="" class="btn btn-danger btn-sm confirmDelete" data-original-title="Delete">
+                                                            <i class="fa fa-times"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Doris Greene</td>
+                                                    <td>Malawi</td>
+                                                    <td>Feldkirchen in Kärnten</td>
+                                                    <td class="text-primary">$63,542</td>
+                                                    <td class="td-actions text-right">
+
+                                                        <a href="#edit-article" type="button" rel="tooltip" title="" class="btn btn-primary btn-sm" data-original-title="Edit">
+                                                            <i class="fa fa-pencil"></i>
+                                                            <div class="ripple-container"></div></a>
+
+                                                        <!--Show favourite button if currently not marked,--> 
+                                                        <a href="#changestatus-article" type="button" rel="tooltip" title="" class="btn btn-success btn-sm" data-original-title="Mar as Favourite">
+                                                            <i class="fa fa-star"></i>
+                                                        </a>
+
+                                                        <!--Show thumbs up button if unpublished,--> 
+                                                        <a href="#changestatus-article" type="button" rel="tooltip" title="" class="btn btn-warning btn-sm" data-original-title="Unpublish">
+                                                            <i class="fa fa-thumbs-down"></i>
+                                                        </a>
+
+                                                        <a href="#delete-article" type="button" rel="tooltip" title="" class="btn btn-danger btn-sm confirmDelete" data-original-title="Delete">
+                                                            <i class="fa fa-times"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Mason Porter</td>
+                                                    <td>Chile</td>
+                                                    <td>Gloucester</td>
+                                                    <td class="text-primary">$78,615</td>
+                                                    <td class="td-actions text-right">
+
+                                                        <a href="#edit-article" type="button" rel="tooltip" title="" class="btn btn-primary btn-sm" data-original-title="Edit">
+                                                            <i class="fa fa-pencil"></i>
+                                                            <div class="ripple-container"></div></a>
+
+                                                        <!--Show favourite button if currently not marked,--> 
+                                                        <a href="#changestatus-article" type="button" rel="tooltip" title="" class="btn btn-success btn-sm" data-original-title="Mar as Favourite">
+                                                            <i class="fa fa-star"></i>
+                                                        </a>
+
+                                                        <!--Show thumbs up button if unpublished,--> 
+                                                        <a href="#changestatus-article" type="button" rel="tooltip" title="" class="btn btn-warning btn-sm" data-original-title="Unpublish">
+                                                            <i class="fa fa-thumbs-down"></i>
+                                                        </a>
+
+                                                        <a href="#delete-article" type="button" rel="tooltip" title="" class="btn btn-danger btn-sm confirmDelete" data-original-title="Delete">
+                                                            <i class="fa fa-times"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                    <div class="card-footer text-center">
+                                        <ul class="pagination pagination-primary">
+                                            <li class="page-item">
+                                                <a href="javascript:void(0);" class="page-link"><i class="fa fa-chevron-left"></i></a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a href="javascript:void(0);" class="page-link">5</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a href="javascript:void(0);" class="page-link">6</a>
+                                            </li>
+                                            <li class="page-item active">
+                                                <a href="javascript:void(0);" class="page-link">7</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a href="javascript:void(0);" class="page-link">8</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a href="javascript:void(0);" class="page-link">9</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a href="javascript:void(0);" class="page-link"><i class="fa fa-chevron-right"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
 
                             <div class="col-md-12">
                                 <div class="card card-plain">
@@ -332,6 +565,9 @@
 
     <!--  Notifications Plugin    -->
     <script src="../assets/js/bootstrap-notify.js"></script>
+
+    <!--  Dialog Plugin   -->
+    <script src="../assets/js/bootbox.min.js"></script>
 
     <!--  Google Maps Plugin    -->
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
