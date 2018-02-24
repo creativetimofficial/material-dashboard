@@ -102,6 +102,12 @@
                                 <p>Notifications</p>
                             </a>
                         </li>
+                        <li>
+                            <a href="iframe.html">
+                                <i class="material-icons">web_asset</i>
+                                <p>IFrame</p>
+                            </a>
+                        </li>
                         <li class="sidesub">
                             <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="material-icons">content_copy</i>
@@ -183,6 +189,7 @@
                 </nav>
 
                 <div id="map"></div>
+                
 
             </div>
         </div>
@@ -214,6 +221,7 @@
         <script>
             $().ready(function () {
                 demo.initGoogleMaps();
+                showNotificationMessage("Need Google Map API key", "Obtain a google map api key and put it on the script query, e.g: <strong>https://maps.googleapis.com/maps/api/js?key=xxx...xxx</strong>", messageType = 'danger', nFrom = 'top', nAlign = 'right')
             });
         </script>
 
