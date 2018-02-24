@@ -5247,25 +5247,11 @@ ul.sidesub-ul li a:hover{
 
 
 /* Other pages*/
-
-.lockscreen-avatar{
-    background-size: contain;
-    height: 150px;
-    width: 150px;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    position: relative;
-    margin-left: 50%;
-    left: -75px;
-    border-radius: 75px;
-    box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.42), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+.lock-form label{
+    position: relative !important;
 }
 
-.lockscreen-avatar-container{
-    padding: 0px !important;
+.lock-form input[type=password]{
     text-align: center !important;
-    background-color: transparent !important;
-    box-shadow: none !important; 
-    margin: -75px 15px 0 !important;
+    font-size: 3rem !important;
 }
