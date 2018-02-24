@@ -159,16 +159,16 @@ demo = {
 
         // To add the marker to the map, call setMap();
         marker.setMap(map);
-    },
+    },	
 
-	showNotification: function(from, align){
-    	color = Math.floor((Math.random() * 4) + 1);
+    showNotification: function (from, align) {
+        color = Math.floor((Math.random() * 4) + 1);
 
-    	$.notify({
-        	icon: "notifications",
-        	message: "Welcome to <b>Material Dashboard</b> - a beautiful freebie for every web developer."
+        $.notify({
+            icon: "notifications",
+            message: "Welcome to <b>Material Dashboard</b> - a beautiful freebie for every web developer."
 
-        },{
+        }, {
             type: type[color],
             timer: 4000,
             placement: {
@@ -176,8 +176,6 @@ demo = {
                 align: align
             }
         });
-	}
-
-
+    }
 
 }

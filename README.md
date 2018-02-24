@@ -74,6 +74,14 @@ V1.1.0 10 Nov, 2016 - New Page Added
 V1.1.1 8 Feb 2017
 - switched to MIT License
 
+V1.1.2 24 Feb 2018
+- added data grid and pagination items
+- added js notification function
+- added bootbox
+- added new pages for forms, iframe, login and lock
+- added new examples of form types
+
+
 ### License
 
 - Copyright 2017 Creative Tim (http://www.creative-tim.com)
