@@ -6,7 +6,7 @@
 
 .sidebar,
 .off-canvas-sidebar{
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
@@ -20,7 +20,28 @@
         overflow: auto;
         width: 260px;
         z-index: 4;
-        //background-color: $white-color;
+
+        .dropdown .dropdown-backdrop{
+            display: none !important;
+        }
+
+        .navbar-form{
+            border: none;
+        }
+
+        .nav{
+
+            [data-toggle="collapse"] ~ div > ul > li > a{
+                padding-left: 60px;
+            }
+
+            .caret{
+                margin-top: 13px;
+                position: absolute;
+                right: 18px;
+            }
+        }
+
     }
 
     .logo-tim{
@@ -45,10 +66,14 @@
 
         li{
             > a{
-                margin: 10px 15px;
+                margin: 10px 15px 0;
                 border-radius: $border-radius-base;
                 color: $black-color;
                 @extend .animation-transition-general;
+            }
+
+            &:first-child > a{
+                margin: 0 15px;
             }
 
             &:hover > a{
@@ -217,17 +242,30 @@
     }
 }
 
+// windows os settings for perfect scrollbar off
+.sidebar .sidebar-wrapper,
+.main-panel{
+    .perfect-scrollbar-on &,
+    &{
+        overflow: hidden;
+    }
+}
+
+// regular settings for perfect scrollbar off
+.perfect-scrollbar-off{
+    .sidebar .sidebar-wrapper,
+    .main-panel{
+        overflow: auto;
+    }
+}
+
 
 .main-panel{
-    //background: rgba(203,203,210,.15);
     position: relative;
-    z-index: 2;
     float: right;
-    overflow: auto;
     width: $sidebar-width;
-    min-height: 100%;
-    @include transform-translate-x(0px);
     @include transition (0.33s, cubic-bezier(0.685, 0.0473, 0.346, 1));
+    max-height: 100%;
 
     > .content{
         margin-top: 70px;
@@ -243,18 +281,13 @@
         margin-bottom: 0;
     }
 }
-
-.main-panel{
-    max-height: 100%;
-    height: 100%;
-}
-.sidebar,
-.main-panel{
-    -webkit-transition-property: top,bottom;
-    transition-property: top,bottom;
-    -webkit-transition-duration: .2s,.2s;
-    transition-duration: .2s,.2s;
-    -webkit-transition-timing-function: linear,linear;
-    transition-timing-function: linear,linear;
-    -webkit-overflow-scrolling: touch;
-}
+// .sidebar,
+// .main-panel{
+//     -webkit-transition-property: top,bottom;
+//     transition-property: top,bottom;
+//     -webkit-transition-duration: .2s,.2s;
+//     transition-duration: .2s,.2s;
+//     -webkit-transition-timing-function: linear,linear;
+//     transition-timing-function: linear,linear;
+//     -webkit-overflow-scrolling: touch;
+// }

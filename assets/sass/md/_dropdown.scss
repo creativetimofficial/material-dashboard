@@ -65,3 +65,22 @@
     }
 
 }
+
+
+.navbar-nav > li > .dropdown-menu,
+.dropdown .dropdown-menu,
+.dropdown-menu.bootstrap-datetimepicker-widget{
+    @include transition($fast-transition-time, $transition-linear);
+    margin-top: -20px;
+    visibility: hidden;
+    display: block;
+    @include opacity(0);
+}
+.navbar-nav > li.open > .dropdown-menu,
+.dropdown.open .dropdown-menu,
+.dropdown-menu.bootstrap-datetimepicker-widget.open{
+    @include opacity(1);
+    visibility: visible;
+    margin-top: 0px;
+
+}

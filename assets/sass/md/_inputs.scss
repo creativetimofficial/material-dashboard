@@ -27,10 +27,7 @@
       color: $mdb-input-placeholder-color;
       font-weight: 400;
 
-}
-    // margin-bottom must be specified to give help-block vertical space.
-    //    $see also form-group padding-bottom (and size variants) re: collapsible margins.  These work together.
-    margin-bottom: $vertical-padding;
+    }
   }
 
   // generic labels used anywhere in the form (not control-label)
@@ -97,7 +94,7 @@
       // form-group padding-bottom
       //  upon collapsing margins, the largest margin is honored which collapses the form-control margin-bottom,
       //  so the form-control margin-bottom must also be expressed as form-group padding
-      padding-bottom: $vertical-padding;
+      padding-bottom: $padding-large-vertical;
 
       // form-group margin-top must be large enough for the label and the label's top padding since label is absolutely positioned
       margin: ($label-top-margin + $static-font-size) 0 0 0;
@@ -244,11 +241,6 @@
     &.form-danger{
         .form-control{
              background-image: linear-gradient($brand-danger, $brand-danger), linear-gradient($mdb-input-underline-color, $mdb-input-underline-color);
-         }
-    }
-    &.form-rose{
-        .form-control{
-             background-image: linear-gradient($brand-rose, $brand-rose), linear-gradient($mdb-input-underline-color, $mdb-input-underline-color);
          }
     }
     &.form-white{

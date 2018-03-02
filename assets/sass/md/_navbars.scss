@@ -25,6 +25,11 @@
     }
   }
 
+  .navbar-minimize{
+      float: left;
+      padding: 3px 0 0 15px;
+  }
+
   .notification{
     position: absolute;
     top: 5px;
@@ -263,6 +268,7 @@
     }
   }
 
+
   // SASS conversion note: please mirror any content change in _mixins-shared.scss navbar-variations-content
   @include navbar-variations(unquote(".navbar"), unquote(""), $brand-primary);
 
@@ -314,6 +320,13 @@
 
 }
 
+.navbar-fixed{
+    position: fixed;
+    z-index: 1032;
+    right: 0;
+    width: 100%;
+}
+
 .nav-align-center{
     text-align: center;
 
@@ -326,4 +339,10 @@
     width: 100%;
     padding-top: 10px;
     z-index: 1029;
+}
+
+@media (min-width: 991px){
+    .navbar-fixed{
+        width:calc(100% - 260px);
+    }
 }

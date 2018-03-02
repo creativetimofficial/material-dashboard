@@ -5,44 +5,7 @@
         padding-left: 5px;
         padding-right: 5px;
     }
-    .navbar-nav > li > .dropdown-menu,
-    .dropdown .dropdown-menu,
-    .dropdown-menu.bootstrap-datetimepicker-widget{
-        @include transition($fast-transition-time, $transition-linear);
-        margin-top: -20px;
-        visibility: hidden;
-        display: block;
-        @include opacity(0);
-    }
-    .navbar-nav > li.open > .dropdown-menu,
-    .dropdown.open .dropdown-menu,
-    .dropdown-menu.bootstrap-datetimepicker-widget.open{
-        @include opacity(1);
-        visibility: visible;
-        margin-top: 0px;
 
-    }
-
-    /*.navbar-nav > li > .dropdown-menu:before{
-        border-bottom: 11px solid rgba(0, 0, 0, 0.2);
-        border-left: 11px solid rgba(0, 0, 0, 0);
-        border-right: 11px solid rgba(0, 0, 0, 0);
-        content: "";
-        display: inline-block;
-        position: absolute;
-        left: 12px;
-        top: -11px;
-    }
-    .navbar-nav > li > .dropdown-menu:after {
-        border-bottom: 11px solid #FFFFFF;
-        border-left: 11px solid rgba(0, 0, 0, 0);
-        border-right: 11px solid rgba(0, 0, 0, 0);
-        content: "";
-        display: inline-block;
-        position: absolute;
-        left: 12px;
-        top: -10px;
-    }*/
 
     .navbar-nav.navbar-right > li > .dropdown-menu:before{
         left: auto;
@@ -123,6 +86,37 @@
         }
     }
 
+    html,
+    body{
+        overflow-x: hidden;
+    }
+
+    .menu-on-left{
+        .nav-open &{
+            .main-panel,
+            .wrapper-full-page,
+            .navbar-fixed > div{
+                @include transform-translate-x(260px);
+            }
+        }
+
+        .main-panel{
+            position: initial;
+        }
+
+        .sidebar,
+        .off-canvas-sidebar{
+            left: 0;
+            right: auto;
+            @include transform-translate-x(-260px);
+        }
+
+        #bodyClick{
+            left: 260px;
+            right: auto;
+        }
+    }
+
     .main-panel{
         width: 100%;
     }
@@ -130,13 +124,10 @@
         padding-top: 15px;
         background-color: rgba(0, 0, 0, 0.45);
     }
-    body {
-         position: relative;
-    }
-    .main-panel{
-       @include transform-translate-x(0px);
-       @include transition (0.33s, cubic-bezier(0.685, 0.0473, 0.346, 1));
-       left: 0;
+    body,
+    html{
+        position: relative;
+        overflow-x: hidden;
     }
     .navbar .container{
          left: 0;
@@ -203,12 +194,8 @@
         .navbar-form{
             margin: 10px 15px;
             float: none !important;
-
-            .btn{
-                position: absolute;
-                top: 25px;
-                right: 15px;
-            }
+            padding-top: 1px;
+            padding-bottom: 1px;
         }
 
         .table-responsive {
@@ -218,6 +205,21 @@
             overflow-y: hidden;
             -ms-overflow-style: -ms-autohiding-scrollbar;
             -webkit-overflow-scrolling: touch;
+        }
+    }
+
+    .form-group{
+        .form-control{
+            font-size: 16px;
+            height: 37px
+        }
+    }
+
+    .navbar-form{
+        .btn{
+            position: absolute;
+            top: 27px;
+            right: 15px;
         }
     }
 
@@ -372,7 +374,7 @@
         opacity: 0;
         top: 0;
         left: auto;
-        right: 250px;
+        right: 260px;
         content: "";
         z-index: 9999;
         overflow-x: hidden;
@@ -445,9 +447,28 @@
         margin-left: 0;
     }
 }
+
+@media (max-width: 480px), (max-width: 767px){
+    .form-group{
+        .form-control{
+            width: 83%;
+        }
+    }
+
+    .navbar-form{
+        .form-group{
+            margin-bottom: 0;
+        }
+    }
+}
+
 @media (min-width: 992px){
     .table-full-width{
         margin-left: -20px;
         margin-right: -20px;
     }
+    .table-responsive{
+        overflow: visible;
+    }
+
 }

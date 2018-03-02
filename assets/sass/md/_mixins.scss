@@ -245,6 +245,14 @@
         transform: scale($value);
 }
 
+@mixin transform-scale3d($value){
+     -webkit-transform: scale3d($value);
+        -moz-transform: scale3d($value);
+        -o-transform: scale3d($value);
+        -ms-transform: scale3d($value);
+        transform: scale3d($value);
+}
+
 @mixin transform-translate-x($value){
      -webkit-transform:  translate3d($value, 0, 0);
         -moz-transform: translate3d($value, 0, 0);
@@ -278,6 +286,14 @@
     z-index: 0;
     left: 0;
     top: 0;
+}
+
+@mixin animation($value){
+      -webkit-animation: $value;
+        -moz-animation: $value;
+        -o-animation: $value;
+        -ms-animation: $value;
+        animation: $value;
 }
 
 @mixin radial-gradient($extern-color, $center-color){
@@ -329,6 +345,14 @@
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
+}
+
+@mixin rotate() {
+    -webkit-transform: rotate( 45deg );
+    -moz-transform: rotate( 45deg );
+    -o-transform: rotate( 45deg );
+    -ms-transform: rotate(45deg);
+    transform: rotate( 45deg );
 }
 
 @mixin linear-gradient($color1, $color2){

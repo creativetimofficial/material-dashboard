@@ -39,6 +39,9 @@
     &.btn-danger{
       @include btn-styles($brand-danger);
     }
+    &.btn-rose{
+      @include btn-styles($brand-rose);
+    }
     &.btn-white{
         &,
         &:focus,
@@ -66,8 +69,29 @@
     &.btn-google {
     	@include social-buttons-color($social-google);
     }
+    &.btn-linkedin {
+    	@include social-buttons-color($social-linkedin);
+    }
+    &.btn-dribbble {
+    	@include social-buttons-color($social-dribbble);
+    }
+    &.btn-github {
+    	@include social-buttons-color($social-github);
+    }
+    &.btn-youtube {
+    	@include social-buttons-color($social-youtube);
+    }
     &.btn-instagram {
     	@include social-buttons-color($social-instagram);
+    }
+    &.btn-reddit {
+    	@include social-buttons-color($social-reddit);
+    }
+    &.btn-tumblr {
+    	@include social-buttons-color($social-tumblr);
+    }
+    &.btn-behance {
+    	@include social-buttons-color($social-behance);
     }
 
     &:focus,

@@ -79,6 +79,15 @@ a{
   }
 }
 
+a[data-toggle="collapse"][aria-expanded="true"] .caret{
+    @include rotate-180();
+}
+
+.sidebar .nav a,
+.caret{
+    @include transition($fast-transition-time, $transition-ease-in);
+}
+
 /*           Animations              */
 .animation-transition-general{
     @include transition($general-transition-time, $transition-linear);
