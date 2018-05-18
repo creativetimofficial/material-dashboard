@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+
+
+
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="../../../assets/img/kit/free/apple-icon.png">
+<link rel="icon" href="../../../assets/img/kit/free/favicon.png">
+
+<title>
+  
+    Browsers and devices &#45; Material Dashboard by Creative Tim
+  
+</title>
+
+
+<!-- Extra details for Live View on GitHub Pages -->
+  <!-- Canonical SEO -->
+<link rel="canonical" href="https://www.creative-tim.com/product/material-dashboard" />
+
+<!--  Social tags      -->
+<meta name="keywords" content="material dashboard, bootstrap material admin, bootstrap material dashboard, material design admin, material design, creative tim, html dashboard, html css dashboard, web dashboard, freebie, free bootstrap dashboard, css3 dashboard, bootstrap admin, bootstrap dashboard, frontend, responsive bootstrap dashboard">
+
+<meta name="description" content="Material Dashboard is a Free Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
+
+<!-- Schema.org markup for Google+ -->
+<meta itemprop="name" content="Material Dashboard by Creative Tim">
+<meta itemprop="description" content="Material Dashboard is a Free Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
+
+<meta itemprop="image" content="https://s3.amazonaws.com/creativetim_bucket/products/50/opt_md_thumbnail.jpg">
+<!-- Twitter Card data -->
+
+<meta name="twitter:card" content="product">
+<meta name="twitter:site" content="@creativetim">
+<meta name="twitter:title" content="Material Dashboard by Creative Tim">
+
+<meta name="twitter:description" content="Material Dashboard is a Free Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
+<meta name="twitter:creator" content="@creativetim">
+<meta name="twitter:image" content="https://s3.amazonaws.com/creativetim_bucket/products/50/opt_md_thumbnail.jpg">
+<meta name="twitter:data1" content="Material Dashboard by Creative Tim">
+<meta name="twitter:label1" content="Product Type">
+<meta name="twitter:data2" content="Free">
+<meta name="twitter:label2" content="Price">
+
+<!-- Open Graph data -->
+<meta property="fb:app_id" content="655968634437471">
+<meta property="og:title" content="Material Dashboard by Creative Tim" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://demos.creative-tim.com/material-dashboard/examples/dashboard.html" />
+<meta property="og:image" content="https://s3.amazonaws.com/creativetim_bucket/products/50/opt_md_thumbnail.jpg"/>
+<meta property="og:description" content="Material Dashboard is a Free Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design." />
+<meta property="og:site_name" content="Creative Tim" />
+
+
+
+<!--     Fonts and icons     -->
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+
+
+<link rel="stylesheet" href="../../../assets/css/material-dashboard.min.css?v=2.0.0">
+
+
+
+
+<!-- Documentation extras -->
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
+
+<link rel="stylesheet" href="../../../assets/assets-for-demo/docs.min.css">
+
+<style>
+   .navbar-absolute-logo{
+       padding-left: 45px;
+   }
+   .navbar-absolute-logo img{
+       position: absolute;
+       left: 15px;
+       margin-top: -6px;
+   }
+   body{
+     background: white;
+   }
+</style>
+
+
+<!-- CSS Just for demo purpose, don't include it in your project -->
+<link href="../../../assets/assets-for-demo/demo.css" rel="stylesheet"/>
+
+<!-- iframe removal -->
+
+
+
+  <script type="text/javascript">
+    if (document.readyState === 'complete') {
+        if (window.location != window.parent.location) {
+          const elements = document.getElementsByClassName("iframe-extern");
+          while (elemnts.lenght > 0) elements[0].remove();
+            // $(".iframe-extern").remove();
+        }
+    };
+  </script>
+
+
+
+  </head>
+  <body class="bd-docs" data-spy="scroll" data-target=".bd-sidenav-active">
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+      <div class="container">
+        <span class="skiplink-text">Skip to main content</span>
+      </div>
+    </a>
+
+    <header class="navbar navbar-expand navbar-dark bg-primary flex-column flex-md-row bd-navbar">
+  <a class="navbar-brand mr-0 mr-md-2 navbar-absolute-logo" href="https://www.creative-tim.com/product/material-dashboard/">
+    Material Dashboard
+  </a>
+
+  <ul class="navbar-nav flex-row d-none d-md-flex">
+
+    <li class="nav-item dropdown">
+        <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    v2.0.0
+    </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+            <a class="dropdown-item active" href="/material-dashboard/docs/2.0/">BS4 - 2.0.0</a>
+            <a class="dropdown-item" href="http://demos.creative-tim.com/bs3/material-dashboard/documentation/tutorial-components.html">BS3 - 1.2.0</a>
+        </div>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link p-2" href="https://github.com/creativetimofficial/material-dashboard" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 499.36" focusable="false"><title>GitHub</title><path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"/></svg>
+
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link p-2" href="https://twitter.com/CreativeTim" target="_blank" rel="noopener" aria-label="Twitter">
+        <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 416.32" focusable="false"><title>Twitter</title><path d="M160.83 416.32c193.2 0 298.92-160.22 298.92-298.92 0-4.51 0-9-.2-13.52A214 214 0 0 0 512 49.38a212.93 212.93 0 0 1-60.44 16.6 105.7 105.7 0 0 0 46.3-58.19 209 209 0 0 1-66.79 25.37 105.09 105.09 0 0 0-181.73 71.91 116.12 116.12 0 0 0 2.66 24c-87.28-4.3-164.73-46.3-216.56-109.82A105.48 105.48 0 0 0 68 159.6a106.27 106.27 0 0 1-47.53-13.11v1.43a105.28 105.28 0 0 0 84.21 103.06 105.67 105.67 0 0 1-47.33 1.84 105.06 105.06 0 0 0 98.14 72.94A210.72 210.72 0 0 1 25 370.84a202.17 202.17 0 0 1-25-1.43 298.85 298.85 0 0 0 160.83 46.92" fill="currentColor"/></svg>
+
+      </a>
+    </li>
+  </ul>
+
+  <div class="navbar-nav-scroll ml-md-auto ">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+        <li class="nav-item">
+          <a class="nav-link active" href="/material-dashboard/docs/2.0/getting-started/introduction.html"><i class="material-icons">content_paste</i> Documentation</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://demos.creative-tim.com/material-dashboard/examples/dashboard.html"><i class="material-icons">view_carousel</i> Live Preview</a>
+        </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="https://github.com/creativetimofficial/material-dashboard/issues" target="_blank" rel="noopener"><i class="material-icons">bug_report</i> Report Issue</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- <a class="btn btn-white d-none d-lg-inline-block" href="https://github.com/creativetimofficial/material-dashboard">Download</a> -->
+</header>
+
+
+    <div class="container-fluid">
+      <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+          <nav class="collapse bd-links" id="bd-docs-nav">
+  
+  
+  
+  
+  
+  
+
+  
+
+  <div class="bd-toc-item active">
+      <a class="bd-toc-link" href="/material-dashboard/docs/2.0/getting-started/introduction.html">
+        Getting started
+      </a>
+
+      <ul class="nav bd-sidenav">
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/getting-started/introduction.html">
+                  Introduction
+                </a>
+            
+
+            
+          </li>
+            
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/getting-started/license.html " target="_blank">
+                    License
+                </a>
+            
+
+            
+          </li>
+            
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/getting-started/file-structure.html">
+                  File Structure
+                </a>
+            
+
+            
+          </li>
+            
+        
+      </ul>
+    </div>
+  
+  
+  
+  
+  
+
+  
+
+  <div class="bd-toc-item active">
+      <a class="bd-toc-link" href="/material-dashboard/docs/2.0/components/alerts.html">
+        Components
+      </a>
+
+      <ul class="nav bd-sidenav">
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/components/alerts.html">
+                  Alerts
+                </a>
+            
+
+            
+          </li>
+            
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/components/buttons.html">
+                  Buttons
+                </a>
+            
+
+            
+          </li>
+            
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/components/card.html">
+                  Card
+                </a>
+            
+
+            
+          </li>
+            
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/components/colors.html">
+                  Colors
+                </a>
+            
+
+            
+          </li>
+            
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/components/dropdowns.html">
+                  Dropdowns
+                </a>
+            
+
+            
+          </li>
+            
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/components/forms.html">
+                  Forms
+                </a>
+            
+
+            
+          </li>
+            
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/components/google-maps.html">
+                  Google Maps
+                </a>
+            
+
+            
+          </li>
+            
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/components/material-icons.html">
+                  Material Icons
+                </a>
+            
+
+            
+          </li>
+            
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/components/modal.html">
+                  Modal
+                </a>
+            
+
+            
+          </li>
+            
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/components/navs.html">
+                  Navs
+                </a>
+            
+
+            
+          </li>
+            
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/components/navbar.html">
+                  Navbar
+                </a>
+            
+
+            
+          </li>
+            
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/components/tables.html">
+                  Tables
+                </a>
+            
+
+            
+          </li>
+            
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/components/typography.html">
+                  Typography
+                </a>
+            
+
+            
+          </li>
+            
+        
+      </ul>
+    </div>
+  
+  
+  
+  
+  
+
+  
+
+  <div class="bd-toc-item active">
+      <a class="bd-toc-link" href="/material-dashboard/docs/2.0/plugins/bootstrap-notify.html">
+        Plugins
+      </a>
+
+      <ul class="nav bd-sidenav">
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/plugins/bootstrap-notify.html">
+                  Bootstrap Notify
+                </a>
+            
+
+            
+          </li>
+            
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/plugins/perfect-scrollbar.html">
+                  Perfect Scrollbar
+                </a>
+            
+
+            
+          </li>
+            
+        
+      </ul>
+    </div>
+  
+</nav>
+
+        </div>
+
+        
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#supported-browsers">Supported browsers</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#mobile-devices">Mobile devices</a></li>
+<li class="toc-entry toc-h3"><a href="#desktop-browsers">Desktop browsers</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#internet-explorer">Internet Explorer</a></li>
+<li class="toc-entry toc-h2"><a href="#modals-and-dropdowns-on-mobile">Modals and dropdowns on mobile</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#overflow-and-scrolling">Overflow and scrolling</a></li>
+<li class="toc-entry toc-h3"><a href="#ios-text-fields-and-scrolling">iOS text fields and scrolling</a></li>
+<li class="toc-entry toc-h3"><a href="#navbar-dropdowns">Navbar Dropdowns</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#browser-zooming">Browser zooming</a></li>
+<li class="toc-entry toc-h2"><a href="#sticky-hoverfocus-on-mobile">Sticky :hover/:focus on mobile</a></li>
+<li class="toc-entry toc-h2"><a href="#printing">Printing</a></li>
+<li class="toc-entry toc-h2"><a href="#android-stock-browser">Android stock browser</a>
+<ul>
+<ul>
+<li class="toc-entry toc-h4"><a href="#select-menu">Select menu</a></li>
+</ul>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#validators">Validators</a></li>
+</ul>
+          </div>
+        
+
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+          <h1 class="bd-title" id="content">Browsers and devices </h1>
+          <p class="bd-lead">  </p>
+          <h2 id="supported-browsers">Supported browsers</h2>
+
+<p>Bootstrap supports the <strong>latest, stable releases</strong> of all major browsers and platforms. On Windows, <strong>we support Internet Explorer 10-11 / Microsoft Edge</strong>.</p>
+
+<p>Alternative browsers which use the latest version of WebKit, Blink, or Gecko, whether directly or via the platform’s web view API, are not explicitly supported. However, Bootstrap should (in most cases) display and function correctly in these browsers as well. More specific support information is provided below.</p>
+
+<h3 id="mobile-devices">Mobile devices</h3>
+
+<p>Generally speaking, Bootstrap supports the latest versions of each major platform’s default browsers. Note that proxy browsers (such as Opera Mini, Opera Mobile’s Turbo mode, UC Browser Mini, Amazon Silk) are not supported.</p>
+
+<table class="table table-bordered table-striped table-responsive">
+  <thead>
+    <tr>
+      <td></td>
+      <th>Chrome</th>
+      <th>Firefox</th>
+      <th>Safari</th>
+      <th>Android Browser &amp; WebView</th>
+      <th>Microsoft Edge</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Android</th>
+      <td class="text-success">Supported</td>
+      <td class="text-success">Supported</td>
+      <td class="text-muted">N/A</td>
+      <td class="text-success">Android v5.0+ supported</td>
+      <td class="text-muted">N/A</td>
+    </tr>
+    <tr>
+      <th scope="row">iOS</th>
+      <td class="text-success">Supported</td>
+      <td class="text-success">Supported</td>
+      <td class="text-success">Supported</td>
+      <td class="text-muted">N/A</td>
+      <td class="text-muted">N/A</td>
+    </tr>
+    <tr>
+      <th scope="row">Windows 10 Mobile</th>
+      <td class="text-muted">N/A</td>
+      <td class="text-muted">N/A</td>
+      <td class="text-muted">N/A</td>
+      <td class="text-muted">N/A</td>
+      <td class="text-success">Supported</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="desktop-browsers">Desktop browsers</h3>
+
+<p>Similarly, the latest versions of most desktop browsers are supported.</p>
+
+<table class="table table-bordered table-striped table-responsive">
+  <thead>
+    <tr>
+      <td></td>
+      <th>Chrome</th>
+      <th>Firefox</th>
+      <th>Internet Explorer</th>
+      <th>Microsoft Edge</th>
+      <th>Opera</th>
+      <th>Safari</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Mac</th>
+      <td class="text-success">Supported</td>
+      <td class="text-success">Supported</td>
+      <td class="text-muted">N/A</td>
+      <td class="text-muted">N/A</td>
+      <td class="text-success">Supported</td>
+      <td class="text-success">Supported</td>
+    </tr>
+    <tr>
+      <th scope="row">Windows</th>
+      <td class="text-success">Supported</td>
+      <td class="text-success">Supported</td>
+      <td class="text-success">Supported, IE10+</td>
+      <td class="text-success">Supported</td>
+      <td class="text-success">Supported</td>
+      <td class="text-danger">Not supported</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>For Firefox, in addition to the latest normal stable release, we also support the latest <a href="https://www.mozilla.org/en-US/firefox/organizations/faq/">Extended Support Release (ESR)</a> version of Firefox.</p>
+
+<p>Unofficially, Bootstrap should look and behave well enough in Chromium and Chrome for Linux, Firefox for Linux, and Internet Explorer 9, though they are not officially supported.</p>
+
+<p>For a list of some of the browser bugs that Bootstrap has to grapple with, see our <a href="/material-dashboard/docs/2.0/browser-bugs/">Wall of browser bugs</a>.</p>
+
+<h2 id="internet-explorer">Internet Explorer</h2>
+
+<p>Internet Explorer 10+ is supported; IE9 and down is not. Please be aware that some CSS3 properties and HTML5 elements are not fully supported in IE10, or require prefixed properties for full functionality. Visit <a href="https://caniuse.com/">Can I use…</a> for details on browser support of CSS3 and HTML5 features.</p>
+
+<p><strong>If you require IE8-9 support, use Bootstrap 3.</strong> It’s the most stable version of our code and is still supported by our team for critical bugfixes and documentation changes. However, no new features will be added to it.</p>
+
+<h2 id="modals-and-dropdowns-on-mobile">Modals and dropdowns on mobile</h2>
+
+<h3 id="overflow-and-scrolling">Overflow and scrolling</h3>
+
+<p>Support for <code class="highlighter-rouge">overflow: hidden;</code> on the <code class="highlighter-rouge">&lt;body&gt;</code> element is quite limited in iOS and Android. To that end, when you scroll past the top or bottom of a modal in either of those devices’ browsers, the <code class="highlighter-rouge">&lt;body&gt;</code> content will begin to scroll. See <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=175502">Chrome bug #175502</a> (fixed in Chrome v40) and <a href="https://bugs.webkit.org/show_bug.cgi?id=153852">WebKit bug #153852</a>.</p>
+
+<h3 id="ios-text-fields-and-scrolling">iOS text fields and scrolling</h3>
+
+<p>As of iOS 9.2, while a modal is open, if the initial touch of a scroll gesture is within the boundary of a textual <code class="highlighter-rouge">&lt;input&gt;</code> or a <code class="highlighter-rouge">&lt;textarea&gt;</code>, the <code class="highlighter-rouge">&lt;body&gt;</code> content underneath the modal will be scrolled instead of the modal itself. See <a href="https://bugs.webkit.org/show_bug.cgi?id=153856">WebKit bug #153856</a>.</p>
+
+<h3 id="navbar-dropdowns">Navbar Dropdowns</h3>
+
+<p>The <code class="highlighter-rouge">.dropdown-backdrop</code> element isn’t used on iOS in the nav because of the complexity of z-indexing. Thus, to close dropdowns in navbars, you must directly click the dropdown element (or <a href="https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile">any other element which will fire a click event in iOS</a>).</p>
+
+<h2 id="browser-zooming">Browser zooming</h2>
+
+<p>Page zooming inevitably presents rendering artifacts in some components, both in Bootstrap and the rest of the web. Depending on the issue, we may be able to fix it (search first and then open an issue if need be). However, we tend to ignore these as they often have no direct solution other than hacky workarounds.</p>
+
+<h2 id="sticky-hoverfocus-on-mobile">Sticky <code class="highlighter-rouge">:hover</code>/<code class="highlighter-rouge">:focus</code> on mobile</h2>
+
+<p>Even though real hovering isn’t possible on most touchscreens, most mobile browsers emulate hovering support and make <code class="highlighter-rouge">:hover</code> “sticky”. In other words, <code class="highlighter-rouge">:hover</code> styles start applying after tapping an element and only stop applying after the user taps some other element. On mobile-first sites, this behavior is normally undesirable.</p>
+
+<p>Bootstrap includes a workaround for this, although it is disabled by default. By setting <code class="highlighter-rouge">$enable-hover-media-query</code> to <code class="highlighter-rouge">true</code> when compiling from Sass, Bootstrap will use <a href="https://github.com/twbs/mq4-hover-shim">mq4-hover-shim</a> to disable <code class="highlighter-rouge">:hover</code> styles in browsers that emulate hovering, thus preventing sticky <code class="highlighter-rouge">:hover</code> styles. There are some caveats to this workaround; see the shim’s documentation for details.</p>
+
+<h2 id="printing">Printing</h2>
+
+<p>Even in some modern browsers, printing can be quirky.</p>
+
+<p>As of Safari v8.0, use of the fixed-width <code class="highlighter-rouge">.container</code> class can cause Safari to use an unusually small font size when printing. See <a href="https://github.com/creativetimofficial/material-dashboard/issues/14868">issue #14868</a> and <a href="https://bugs.webkit.org/show_bug.cgi?id=138192">WebKit bug #138192</a> for more details. One potential workaround is the following CSS:</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="k">@media</span> <span class="n">print</span> <span class="p">{</span>
+  <span class="nc">.container</span> <span class="p">{</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<h2 id="android-stock-browser">Android stock browser</h2>
+
+<p>Out of the box, Android 4.1 (and even some newer releases apparently) ship with the Browser app as the default web browser of choice (as opposed to Chrome). Unfortunately, the Browser app has lots of bugs and inconsistencies with CSS in general.</p>
+
+<h4 id="select-menu">Select menu</h4>
+
+<p>On <code class="highlighter-rouge">&lt;select&gt;</code> elements, the Android stock browser will not display the side controls if there is a <code class="highlighter-rouge">border-radius</code> and/or <code class="highlighter-rouge">border</code> applied. (See <a href="https://stackoverflow.com/questions/14744437/html-select-box-not-showing-drop-down-arrow-on-android-version-4-0-when-set-with">this StackOverflow question</a> for details.) Use the snippet of code below to remove the offending CSS and render the <code class="highlighter-rouge">&lt;select&gt;</code> as an unstyled element on the Android stock browser. The user agent sniffing avoids interference with Chrome, Safari, and Mozilla browsers.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script&gt;</span>
+<span class="nx">$</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">nua</span> <span class="o">=</span> <span class="nx">navigator</span><span class="p">.</span><span class="nx">userAgent</span>
+  <span class="kd">var</span> <span class="nx">isAndroid</span> <span class="o">=</span> <span class="p">(</span><span class="nx">nua</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">'Mozilla/5.0'</span><span class="p">)</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="nx">nua</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">'Android '</span><span class="p">)</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="nx">nua</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">'AppleWebKit'</span><span class="p">)</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="nx">nua</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">'Chrome'</span><span class="p">)</span> <span class="o">===</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">isAndroid</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">'select.form-control'</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">(</span><span class="s1">'form-control'</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s1">'width'</span><span class="p">,</span> <span class="s1">'100%'</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+<span class="nt">&lt;/script&gt;</span></code></pre></figure>
+
+<p>Want to see an example? <a href="http://jsbin.com/OyaqoDO/2">Check out this JS Bin demo.</a></p>
+
+<h2 id="validators">Validators</h2>
+
+<p>In order to provide the best possible experience to old and buggy browsers, Bootstrap uses <a href="http://browserhacks.com/">CSS browser hacks</a> in several places to target special CSS to certain browser versions in order to work around bugs in the browsers themselves. These hacks understandably cause CSS validators to complain that they are invalid. In a couple places, we also use bleeding-edge CSS features that aren’t yet fully standardized, but these are used purely for progressive enhancement.</p>
+
+<p>These validation warnings don’t matter in practice since the non-hacky portion of our CSS does fully validate and the hacky portions don’t interfere with the proper functioning of the non-hacky portion, hence why we deliberately ignore these particular warnings.</p>
+
+<p>Our HTML docs likewise have some trivial and inconsequential HTML validation warnings due to our inclusion of a workaround for <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=654072">a certain Firefox bug</a>.</p>
+
+        </main>
+      </div>
+    </div>
+
+    <!--   Core JS Files   -->
+<script src="../../../assets/js/core/jquery.min.js"></script>
+<script src="../../../assets/js/core/popper.min.js"></script>
+
+
+<script src="../../../assets/js/bootstrap-material-design.min.js"></script>
+
+
+<script src="../../../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+
+
+
+<!--  Google Maps Plugin  -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2Yno10-YTnLjjn_Vtk0V8cdcY5lC4plU"></script>
+
+
+
+
+<!--  Charts Plugin, full documentation here: https://gionkunz.github.io/chartist-js/ -->
+<script src="../../../assets/js/plugins/chartist.min.js"></script>
+
+<!-- Library for adding dinamically elements -->
+<script src="../../../assets/js/plugins/arrive.min.js" type="text/javascript"></script>
+
+<!--  Notifications Plugin, full documentation here: http://bootstrap-notify.remabledesigns.com/    -->
+<script src="../../../assets/js/plugins/bootstrap-notify.js"></script>
+
+<!-- Material Dashboard Core initialisations of plugins and Bootstrap Material Design Library -->
+
+
+
+
+<script src="../../../assets/js/material-dashboard.js?v=2.0.0"></script>
+
+<!-- demo init -->
+<script src="../../../assets/js/plugins/demo.js"></script>
+
+
+
+
+  <script src="../../../assets/assets-for-demo/js/docs.min.js"></script>
+<script src="../../../assets/assets-for-demo/js/vendor/anchor.min.js"></script>
+<script src="../../../assets/assets-for-demo/js/vendor/clipboard.min.js"></script>
+<script src="../../../assets/assets-for-demo/js/vendor/holder.min.js"></script>
+<script src="../../../assets/assets-for-demo/js/src/application.js"></script>
+<script src="../../../assets/js/plugins/demo.js"></script>
+
+<script>
+  $(document).ready(function(){
+Holder.addTheme('gray', {
+  bg: '#777',
+  fg: 'rgba(255,255,255,.75)',
+  font: 'Helvetica',
+  fontweight: 'normal'
+})
+
+// Javascript method's body can be found in assets/js/demos.js
+  demo.initDashboardPageCharts();
+
+// <!-- Bootstrap Notify -->
+// demo.showNotification(from, align);
+//
+// <!-- javascript for validation -->
+// function setFormValidation(id){
+// 	$(id).validate({
+// 		errorPlacement: function(error, element) {
+//             $(element).parent('div').addClass('has-error');
+//          }
+// 	});
+// }
+//
+// setFormValidation('#RegisterValidationDoc');
+
+});
+</script>
+
+
+
+<!-- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ -->
+
+
+
+    
+    
+<!-- Sharrre libray -->
+<script src="../../../assets/assets-for-demo/js/jquery.sharrre.js">
+
+</script>
+<script>
+
+$(document).ready(function(){
+    $('#twitter').sharrre({
+      share: {
+        twitter: true
+      },
+      enableHover: false,
+      enableTracking: false,
+      enableCounter: false,
+      buttons: { twitter: {via: 'CreativeTim'}},
+      click: function(api, options){
+        api.simulateClick();
+        api.openPopup('twitter');
+      },
+      template: '<i class="fa fa-twitter"></i> Twitter',
+      url: 'http://demos.creative-tim.com/material-dashboard/examples/dashboard.html'
+    });
+
+    $('#facebook').sharrre({
+      share: {
+        facebook: true
+      },
+      enableHover: false,
+      enableTracking: false,
+      enableCounter: false,
+      click: function(api, options){
+        api.simulateClick();
+        api.openPopup('facebook');
+      },
+      template: '<i class="fa fa-facebook-square"></i> Facebook',
+      url: 'http://demos.creative-tim.com/material-dashboard/examples/dashboard.html'
+    });
+
+    $('#google').sharrre({
+      share: {
+        googlePlus: true
+      },
+      enableCounter: false,
+      enableHover: false,
+      enableTracking: true,
+      click: function(api, options){
+        api.simulateClick();
+        api.openPopup('googlePlus');
+      },
+      template: '<i class="fa fa-google-plus"></i> Google',
+      url: 'http://demos.creative-tim.com/material-dashboard/examples/dashboard.html'
+    });
+});
+
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-46172202-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+    var ga = document.createElement('script');
+    ga.type = 'text/javascript';
+    ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ga, s);
+})();
+
+// Facebook Pixel Code Don't Delete
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+try{
+	fbq('init', '111649226022273');
+	fbq('track', "PageView");
+
+}catch(err) {
+	console.log('Facebook Track Error:', err);
+}
+
+</script>
+
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=111649226022273&ev=PageView&noscript=1"
+/></noscript>
+
+    
+  </body>
+</html>

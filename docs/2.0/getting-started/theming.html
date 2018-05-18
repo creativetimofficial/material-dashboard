@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+
+
+
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="../../../assets/img/kit/free/apple-icon.png">
+<link rel="icon" href="../../../assets/img/kit/free/favicon.png">
+
+<title>
+  
+    Theming Bootstrap &#45; Material Dashboard by Creative Tim
+  
+</title>
+
+
+<!-- Extra details for Live View on GitHub Pages -->
+  <!-- Canonical SEO -->
+<link rel="canonical" href="https://www.creative-tim.com/product/material-dashboard" />
+
+<!--  Social tags      -->
+<meta name="keywords" content="material dashboard, bootstrap material admin, bootstrap material dashboard, material design admin, material design, creative tim, html dashboard, html css dashboard, web dashboard, freebie, free bootstrap dashboard, css3 dashboard, bootstrap admin, bootstrap dashboard, frontend, responsive bootstrap dashboard">
+
+<meta name="description" content="Material Dashboard is a Free Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
+
+<!-- Schema.org markup for Google+ -->
+<meta itemprop="name" content="Material Dashboard by Creative Tim">
+<meta itemprop="description" content="Material Dashboard is a Free Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
+
+<meta itemprop="image" content="https://s3.amazonaws.com/creativetim_bucket/products/50/opt_md_thumbnail.jpg">
+<!-- Twitter Card data -->
+
+<meta name="twitter:card" content="product">
+<meta name="twitter:site" content="@creativetim">
+<meta name="twitter:title" content="Material Dashboard by Creative Tim">
+
+<meta name="twitter:description" content="Material Dashboard is a Free Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
+<meta name="twitter:creator" content="@creativetim">
+<meta name="twitter:image" content="https://s3.amazonaws.com/creativetim_bucket/products/50/opt_md_thumbnail.jpg">
+<meta name="twitter:data1" content="Material Dashboard by Creative Tim">
+<meta name="twitter:label1" content="Product Type">
+<meta name="twitter:data2" content="Free">
+<meta name="twitter:label2" content="Price">
+
+<!-- Open Graph data -->
+<meta property="fb:app_id" content="655968634437471">
+<meta property="og:title" content="Material Dashboard by Creative Tim" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://demos.creative-tim.com/material-dashboard/examples/dashboard.html" />
+<meta property="og:image" content="https://s3.amazonaws.com/creativetim_bucket/products/50/opt_md_thumbnail.jpg"/>
+<meta property="og:description" content="Material Dashboard is a Free Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design." />
+<meta property="og:site_name" content="Creative Tim" />
+
+
+
+<!--     Fonts and icons     -->
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+
+
+<link rel="stylesheet" href="../../../assets/css/material-dashboard.min.css?v=2.0.0">
+
+
+
+
+<!-- Documentation extras -->
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
+
+<link rel="stylesheet" href="../../../assets/assets-for-demo/docs.min.css">
+
+<style>
+   .navbar-absolute-logo{
+       padding-left: 45px;
+   }
+   .navbar-absolute-logo img{
+       position: absolute;
+       left: 15px;
+       margin-top: -6px;
+   }
+   body{
+     background: white;
+   }
+</style>
+
+
+<!-- CSS Just for demo purpose, don't include it in your project -->
+<link href="../../../assets/assets-for-demo/demo.css" rel="stylesheet"/>
+
+<!-- iframe removal -->
+
+
+
+  <script type="text/javascript">
+    if (document.readyState === 'complete') {
+        if (window.location != window.parent.location) {
+          const elements = document.getElementsByClassName("iframe-extern");
+          while (elemnts.lenght > 0) elements[0].remove();
+            // $(".iframe-extern").remove();
+        }
+    };
+  </script>
+
+
+
+  </head>
+  <body class="bd-docs" data-spy="scroll" data-target=".bd-sidenav-active">
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+      <div class="container">
+        <span class="skiplink-text">Skip to main content</span>
+      </div>
+    </a>
+
+    <header class="navbar navbar-expand navbar-dark bg-primary flex-column flex-md-row bd-navbar">
+  <a class="navbar-brand mr-0 mr-md-2 navbar-absolute-logo" href="https://www.creative-tim.com/product/material-dashboard/">
+    Material Dashboard
+  </a>
+
+  <ul class="navbar-nav flex-row d-none d-md-flex">
+
+    <li class="nav-item dropdown">
+        <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    v2.0.0
+    </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+            <a class="dropdown-item active" href="/material-dashboard/docs/2.0/">BS4 - 2.0.0</a>
+            <a class="dropdown-item" href="http://demos.creative-tim.com/bs3/material-dashboard/documentation/tutorial-components.html">BS3 - 1.2.0</a>
+        </div>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link p-2" href="https://github.com/creativetimofficial/material-dashboard" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 499.36" focusable="false"><title>GitHub</title><path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"/></svg>
+
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link p-2" href="https://twitter.com/CreativeTim" target="_blank" rel="noopener" aria-label="Twitter">
+        <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 416.32" focusable="false"><title>Twitter</title><path d="M160.83 416.32c193.2 0 298.92-160.22 298.92-298.92 0-4.51 0-9-.2-13.52A214 214 0 0 0 512 49.38a212.93 212.93 0 0 1-60.44 16.6 105.7 105.7 0 0 0 46.3-58.19 209 209 0 0 1-66.79 25.37 105.09 105.09 0 0 0-181.73 71.91 116.12 116.12 0 0 0 2.66 24c-87.28-4.3-164.73-46.3-216.56-109.82A105.48 105.48 0 0 0 68 159.6a106.27 106.27 0 0 1-47.53-13.11v1.43a105.28 105.28 0 0 0 84.21 103.06 105.67 105.67 0 0 1-47.33 1.84 105.06 105.06 0 0 0 98.14 72.94A210.72 210.72 0 0 1 25 370.84a202.17 202.17 0 0 1-25-1.43 298.85 298.85 0 0 0 160.83 46.92" fill="currentColor"/></svg>
+
+      </a>
+    </li>
+  </ul>
+
+  <div class="navbar-nav-scroll ml-md-auto ">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+        <li class="nav-item">
+          <a class="nav-link active" href="/material-dashboard/docs/2.0/getting-started/introduction.html"><i class="material-icons">content_paste</i> Documentation</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://demos.creative-tim.com/material-dashboard/examples/dashboard.html"><i class="material-icons">view_carousel</i> Live Preview</a>
+        </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="https://github.com/creativetimofficial/material-dashboard/issues" target="_blank" rel="noopener"><i class="material-icons">bug_report</i> Report Issue</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- <a class="btn btn-white d-none d-lg-inline-block" href="https://github.com/creativetimofficial/material-dashboard">Download</a> -->
+</header>
+
+
+    <div class="container-fluid">
+      <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+          <nav class="collapse bd-links" id="bd-docs-nav">
+  
+  
+  
+  
+  
+  
+
+  
+
+  <div class="bd-toc-item active">
+      <a class="bd-toc-link" href="/material-dashboard/docs/2.0/getting-started/introduction.html">
+        Getting started
+      </a>
+
+      <ul class="nav bd-sidenav">
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/getting-started/introduction.html">
+                  Introduction
+                </a>
+            
+
+            
+          </li>
+            
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/getting-started/license.html " target="_blank">
+                    License
+                </a>
+            
+
+            
+          </li>
+            
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/getting-started/file-structure.html">
+                  File Structure
+                </a>
+            
+
+            
+          </li>
+            
+        
+      </ul>
+    </div>
+  
+  
+  
+  
+  
+
+  
+
+  <div class="bd-toc-item active">
+      <a class="bd-toc-link" href="/material-dashboard/docs/2.0/components/alerts.html">
+        Components
+      </a>
+
+      <ul class="nav bd-sidenav">
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/components/alerts.html">
+                  Alerts
+                </a>
+            
+
+            
+          </li>
+            
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/components/buttons.html">
+                  Buttons
+                </a>
+            
+
+            
+          </li>
+            
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/components/card.html">
+                  Card
+                </a>
+            
+
+            
+          </li>
+            
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/components/colors.html">
+                  Colors
+                </a>
+            
+
+            
+          </li>
+            
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/components/dropdowns.html">
+                  Dropdowns
+                </a>
+            
+
+            
+          </li>
+            
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/components/forms.html">
+                  Forms
+                </a>
+            
+
+            
+          </li>
+            
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/components/google-maps.html">
+                  Google Maps
+                </a>
+            
+
+            
+          </li>
+            
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/components/material-icons.html">
+                  Material Icons
+                </a>
+            
+
+            
+          </li>
+            
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/components/modal.html">
+                  Modal
+                </a>
+            
+
+            
+          </li>
+            
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/components/navs.html">
+                  Navs
+                </a>
+            
+
+            
+          </li>
+            
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/components/navbar.html">
+                  Navbar
+                </a>
+            
+
+            
+          </li>
+            
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/components/tables.html">
+                  Tables
+                </a>
+            
+
+            
+          </li>
+            
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/components/typography.html">
+                  Typography
+                </a>
+            
+
+            
+          </li>
+            
+        
+      </ul>
+    </div>
+  
+  
+  
+  
+  
+
+  
+
+  <div class="bd-toc-item active">
+      <a class="bd-toc-link" href="/material-dashboard/docs/2.0/plugins/bootstrap-notify.html">
+        Plugins
+      </a>
+
+      <ul class="nav bd-sidenav">
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/plugins/bootstrap-notify.html">
+                  Bootstrap Notify
+                </a>
+            
+
+            
+          </li>
+            
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/plugins/perfect-scrollbar.html">
+                  Perfect Scrollbar
+                </a>
+            
+
+            
+          </li>
+            
+        
+      </ul>
+    </div>
+  
+</nav>
+
+        </div>
+
+        
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#introduction">Introduction</a></li>
+<li class="toc-entry toc-h2"><a href="#sass">Sass</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#file-structure">File structure</a></li>
+<li class="toc-entry toc-h3"><a href="#variable-defaults">Variable defaults</a></li>
+<li class="toc-entry toc-h3"><a href="#maps-and-loops">Maps and loops</a></li>
+<li class="toc-entry toc-h3"><a href="#functions">Functions</a></li>
+<li class="toc-entry toc-h3"><a href="#color-contrast">Color contrast</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#sass-options">Sass options</a></li>
+<li class="toc-entry toc-h2"><a href="#color">Color</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#all-colors">All colors</a></li>
+<li class="toc-entry toc-h3"><a href="#theme-colors">Theme colors</a></li>
+<li class="toc-entry toc-h3"><a href="#grays">Grays</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#components">Components</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#modifiers">Modifiers</a></li>
+<li class="toc-entry toc-h3"><a href="#responsive">Responsive</a></li>
+</ul>
+</li>
+</ul>
+          </div>
+        
+
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+          <h1 class="bd-title" id="content">Theming Bootstrap </h1>
+          <p class="bd-lead">  </p>
+          <h2 id="introduction">Introduction</h2>
+
+<p>In Bootstrap 3, theming was largely driven by variable overrides in LESS, custom CSS, and a separate theme stylesheet that we included in our <code class="highlighter-rouge">dist</code> files. With some effort, one could completely redesign the look of Bootstrap 3 without touching the core files. Bootstrap 4 provides a familiar, but slightly different approach.</p>
+
+<p>Now, theming is accomplished by Sass variables, Sass maps, and custom CSS. There’s no more dedicated theme stylesheet; instead, you can enable the built-in theme to add gradients, shadows, and more.</p>
+
+<h2 id="sass">Sass</h2>
+
+<p>Utilize our source Sass files to take advantage of variables, maps, mixins, and more.</p>
+
+<h3 id="file-structure">File structure</h3>
+
+<p>Whenever possible, avoid modifying Bootstrap’s core files. For Sass, that means creating your own stylesheet that imports Bootstrap so you can modify and extend it. Assuming you’ve downloaded our source files or are using a package manager, you’ll have a file structure that looks like this:</p>
+
+<figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">your-project/
+├── scss
+│   └── custom.scss
+└── node_modules/
+    └── bootstrap
+        ├── js
+        └── scss</code></pre></figure>
+
+<p>In your <code class="highlighter-rouge">custom.scss</code>, you’ll import Bootstrap’s source Sass files. You have two options: include all of Bootstrap, or pick the parts you need. We encourage the latter, though be aware there are some requirements and dependencies across our components. You also will need to include some JavaScript for our plugins.</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Custom.scss
+// Option A: Include all of Bootstrap
+</span>
+<span class="k">@import</span> <span class="s2">"node_modules/bootstrap/scss/bootstrap"</span><span class="p">;</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Custom.scss
+// Option B: Include parts of Bootstrap
+</span>
+<span class="c1">// Required
+</span><span class="k">@import</span> <span class="s2">"node_modules/bootstrap/scss/functions"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"node_modules/bootstrap/scss/variables"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"node_modules/bootstrap/scss/mixins"</span><span class="p">;</span>
+
+<span class="c1">// Optional
+</span><span class="k">@import</span> <span class="s2">"node_modules/bootstrap/scss/reboot"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"node_modules/bootstrap/scss/type"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"node_modules/bootstrap/scss/images"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"node_modules/bootstrap/scss/code"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"node_modules/bootstrap/scss/grid"</span><span class="p">;</span></code></pre></figure>
+
+<p>With that setup in place, you can begin to modify any of the Sass variables and maps in your <code class="highlighter-rouge">custom.scss</code>. You can also start to add parts of Bootstrap under the <code class="highlighter-rouge">// Optional</code> section as needed.</p>
+
+<h3 id="variable-defaults">Variable defaults</h3>
+
+<p>Every Sass variable in Bootstrap 4 includes the <code class="highlighter-rouge">!default</code> flag allowing you to override the variable’s default value in your own Sass without modifying Bootstrap’s source code. Copy and paste variables as needed, modify their values, and remove the <code class="highlighter-rouge">!default</code> flag. If a variable has already been assigned, then it won’t be re-assigned by the default values in Bootstrap.</p>
+
+<p>Variable overrides within the same Sass file can come before or after the default variables. However, when overriding across Sass files, your overrides must come before you import Bootstrap’s Sass files.</p>
+
+<p>Here’s an example that changes the <code class="highlighter-rouge">background-color</code> and <code class="highlighter-rouge">color</code> for the <code class="highlighter-rouge">&lt;body&gt;</code> when importing and compiling Bootstrap via npm:</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Your variable overrides
+</span><span class="nv">$body-bg</span><span class="p">:</span> <span class="mh">#000</span><span class="p">;</span>
+<span class="nv">$body-color</span><span class="p">:</span> <span class="mh">#111</span><span class="p">;</span>
+
+<span class="c1">// Bootstrap and its default variables
+</span><span class="k">@import</span> <span class="s2">"node_modules/bootstrap/scss/bootstrap"</span><span class="p">;</span></code></pre></figure>
+
+<p>Repeat as necessary for any variable in Bootstrap, including the global options below.</p>
+
+<h3 id="maps-and-loops">Maps and loops</h3>
+
+<p>Bootstrap 4 includes a handful of Sass maps, key value pairs that make it easier to generate families of related CSS. We use Sass maps for our colors, grid breakpoints, and more. Just like Sass variables, all Sass maps include the <code class="highlighter-rouge">!default</code> flag and can be overridden and extended.</p>
+
+<p>For example, to modify an existing color in our <code class="highlighter-rouge">$theme-colors</code> map, add the following to your custom Sass file:</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$theme-colors</span><span class="p">:</span> <span class="p">(</span>
+  <span class="s2">"primary"</span><span class="o">:</span> <span class="mh">#0074d9</span><span class="o">,</span>
+  <span class="s2">"danger"</span><span class="o">:</span> <span class="mh">#ff4136</span>
+<span class="p">);</span></code></pre></figure>
+
+<p>To add a new color to <code class="highlighter-rouge">$theme-colors</code>, add the new key and value:</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$theme-colors</span><span class="p">:</span> <span class="p">(</span>
+  <span class="s2">"custom-color"</span><span class="o">:</span> <span class="mh">#900</span>
+<span class="p">);</span></code></pre></figure>
+
+<h3 id="functions">Functions</h3>
+
+<p>Bootstrap utilizes several Sass functions, but only a subset are applicable to general theming. We’ve included three functions for getting values from the color maps:</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@function</span> <span class="nf">color</span><span class="p">(</span><span class="nv">$key</span><span class="o">:</span> <span class="s2">"blue"</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">@return</span> <span class="nf">map-get</span><span class="p">(</span><span class="nv">$colors</span><span class="o">,</span> <span class="nv">$key</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">@function</span> <span class="nf">theme-color</span><span class="p">(</span><span class="nv">$key</span><span class="o">:</span> <span class="s2">"primary"</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">@return</span> <span class="nf">map-get</span><span class="p">(</span><span class="nv">$theme-colors</span><span class="o">,</span> <span class="nv">$key</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">@function</span> <span class="nf">gray</span><span class="p">(</span><span class="nv">$key</span><span class="o">:</span> <span class="s2">"100"</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">@return</span> <span class="nf">map-get</span><span class="p">(</span><span class="nv">$grays</span><span class="o">,</span> <span class="nv">$key</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>These allow you to pick one color from a Sass map much like how you’d use a color variable from v3.</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.custom-element</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="nf">gray</span><span class="p">(</span><span class="s2">"100"</span><span class="p">);</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="nf">theme-color</span><span class="p">(</span><span class="s2">"dark"</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>We also have another function for getting a particular <em>level</em> of color from the <code class="highlighter-rouge">$theme-colors</code> map. Negative level values will lighten the color, while higher levels will darken.</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@function</span> <span class="nf">theme-color-level</span><span class="p">(</span><span class="nv">$color-name</span><span class="o">:</span> <span class="s2">"primary"</span><span class="o">,</span> <span class="nv">$level</span><span class="o">:</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nv">$color</span><span class="p">:</span> <span class="nf">theme-color</span><span class="p">(</span><span class="nv">$color-name</span><span class="p">);</span>
+  <span class="nv">$color-base</span><span class="p">:</span> <span class="nf">if</span><span class="p">(</span><span class="nv">$level</span> <span class="o">&gt;</span> <span class="m">0</span><span class="o">,</span> <span class="mh">#000</span><span class="o">,</span> <span class="mh">#fff</span><span class="p">);</span>
+  <span class="nv">$level</span><span class="p">:</span> <span class="nf">abs</span><span class="p">(</span><span class="nv">$level</span><span class="p">);</span>
+
+  <span class="k">@return</span> <span class="nf">mix</span><span class="p">(</span><span class="nv">$color-base</span><span class="o">,</span> <span class="nv">$color</span><span class="o">,</span> <span class="nv">$level</span> <span class="o">*</span> <span class="nv">$theme-color-interval</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>In practice, you’d call the function and pass in two parameters: the name of the color from <code class="highlighter-rouge">$theme-colors</code> (e.g., primary or danger) and a numeric level.</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.custom-element</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="nf">theme-color-level</span><span class="p">(</span><span class="n">primary</span><span class="o">,</span> <span class="m">-10</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Additional functions could be added in the future or your own custom Sass to create level functions for additional Sass maps, or even a generic one if you wanted to be more verbose.</p>
+
+<h3 id="color-contrast">Color contrast</h3>
+
+<p>One additional function we include in Bootstrap is the color contrast function, <code class="highlighter-rouge">color-yiq</code>. It utilizes the <a href="https://en.wikipedia.org/wiki/YIQ">YIQ color space</a> to automatically return a light (<code class="highlighter-rouge">#fff</code>) or dark (<code class="highlighter-rouge">#111</code>) contrast color based on the specified base color. This function is especially useful for mixins or loops where you’re generating multiple classes.</p>
+
+<p>For example, to generate color swatches from our <code class="highlighter-rouge">$theme-colors</code> map:</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@each</span> <span class="nv">$color</span><span class="o">,</span> <span class="nv">$value</span> <span class="n">in</span> <span class="nv">$theme-colors</span> <span class="p">{</span>
+  <span class="nc">.swatch-</span><span class="si">#{</span><span class="nv">$color</span><span class="si">}</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="nf">color-yiq</span><span class="p">(</span><span class="nv">$value</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>It can also be used for one-off contrast needs:</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.custom-element</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="nf">color-yiq</span><span class="p">(</span><span class="mh">#000</span><span class="p">);</span> <span class="c1">// returns `color: #fff`
+</span><span class="p">}</span></code></pre></figure>
+
+<p>You can also specify a base color with our color map functions:</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.custom-element</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="nf">color-yiq</span><span class="p">(</span><span class="nf">theme-color</span><span class="p">(</span><span class="s2">"dark"</span><span class="p">));</span> <span class="c1">// returns `color: #fff`
+</span><span class="p">}</span></code></pre></figure>
+
+<h2 id="sass-options">Sass options</h2>
+
+<p>Customize Bootstrap 4 with our built-in custom variables file and easily toggle global CSS preferences with new <code class="highlighter-rouge">$enable-*</code> Sass variables. Override a variable’s value and recompile with <code class="highlighter-rouge">npm run test</code> as needed.</p>
+
+<p>You can find and customize these variables for key global options in our <code class="highlighter-rouge">_variables.scss</code> file.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Variable</th>
+      <th>Values</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">$spacer</code></td>
+      <td><code class="highlighter-rouge">1rem</code> (default), or any value &gt; 0</td>
+      <td>Specifies the default spacer value to programmatically generate our <a href="/material-dashboard/docs/2.0/utilities/spacing/">spacer utilities</a>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">$enable-rounded</code></td>
+      <td><code class="highlighter-rouge">true</code> (default) or <code class="highlighter-rouge">false</code></td>
+      <td>Enables predefined <code class="highlighter-rouge">border-radius</code> styles on various components.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">$enable-shadows</code></td>
+      <td><code class="highlighter-rouge">true</code> or <code class="highlighter-rouge">false</code> (default)</td>
+      <td>Enables predefined <code class="highlighter-rouge">box-shadow</code> styles on various components.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">$enable-gradients</code></td>
+      <td><code class="highlighter-rouge">true</code> or <code class="highlighter-rouge">false</code> (default)</td>
+      <td>Enables predefined gradients via <code class="highlighter-rouge">background-image</code> styles on various components.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">$enable-transitions</code></td>
+      <td><code class="highlighter-rouge">true</code> (default) or <code class="highlighter-rouge">false</code></td>
+      <td>Enables predefined <code class="highlighter-rouge">transition</code>s on various components.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">$enable-hover-media-query</code></td>
+      <td><code class="highlighter-rouge">true</code> or <code class="highlighter-rouge">false</code> (default)</td>
+      <td>…</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">$enable-grid-classes</code></td>
+      <td><code class="highlighter-rouge">true</code> (default) or <code class="highlighter-rouge">false</code></td>
+      <td>Enables the generation of CSS classes for the grid system (e.g., <code class="highlighter-rouge">.container</code>, <code class="highlighter-rouge">.row</code>, <code class="highlighter-rouge">.col-md-1</code>, etc.).</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">$enable-caret</code></td>
+      <td><code class="highlighter-rouge">true</code> (default) or <code class="highlighter-rouge">false</code></td>
+      <td>Enables pseudo element caret on <code class="highlighter-rouge">.dropdown-toggle</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">$enable-print-styles</code></td>
+      <td><code class="highlighter-rouge">true</code> (default) or <code class="highlighter-rouge">false</code></td>
+      <td>Enables styles for optimizing printing.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="color">Color</h2>
+
+<p>Many of Bootstrap’s various components and utilities are built through a series of colors defined in a Sass map. This map can be looped over in Sass to quickly generate a series of rulesets.</p>
+
+<h3 id="all-colors">All colors</h3>
+
+<p>All colors available in Bootstrap 4, are available as Sass variables and a Sass map in our <code class="highlighter-rouge">scss/_variables.scss</code> file. This will be expanded upon in subsequent minor releases to add additional shades, much like the <a href="#grays">grayscale palette</a> we already include.</p>
+
+<div class="row">
+  
+    
+    <div class="col-md-4">
+        <div class="p-3 mb-3 swatch-blue">Blue</div>
+    </div>
+    
+  
+    
+    <div class="col-md-4">
+        <div class="p-3 mb-3 swatch-indigo">Indigo</div>
+    </div>
+    
+  
+    
+    <div class="col-md-4">
+        <div class="p-3 mb-3 swatch-purple">Purple</div>
+    </div>
+    
+  
+    
+    <div class="col-md-4">
+        <div class="p-3 mb-3 swatch-pink">Pink</div>
+    </div>
+    
+  
+    
+    <div class="col-md-4">
+        <div class="p-3 mb-3 swatch-red">Red</div>
+    </div>
+    
+  
+    
+    <div class="col-md-4">
+        <div class="p-3 mb-3 swatch-orange">Orange</div>
+    </div>
+    
+  
+    
+    <div class="col-md-4">
+        <div class="p-3 mb-3 swatch-yellow">Yellow</div>
+    </div>
+    
+  
+    
+    <div class="col-md-4">
+        <div class="p-3 mb-3 swatch-green">Green</div>
+    </div>
+    
+  
+    
+    <div class="col-md-4">
+        <div class="p-3 mb-3 swatch-teal">Teal</div>
+    </div>
+    
+  
+    
+    <div class="col-md-4">
+        <div class="p-3 mb-3 swatch-cyan">Cyan</div>
+    </div>
+    
+  
+    
+  
+    
+  
+    
+  
+</div>
+
+<p>Here’s how you can use these in your Sass:</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// With variable
+</span><span class="nc">.alpha</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="nv">$purple</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="c1">// From the Sass map with our `color()` function
+</span><span class="nc">.beta</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="nf">color</span><span class="p">(</span><span class="s2">"purple"</span><span class="p">);</span> <span class="p">}</span></code></pre></figure>
+
+<p><a href="/material-dashboard/docs/2.0/utilities/colors/">Color utility classes</a> are also available for setting <code class="highlighter-rouge">color</code> and <code class="highlighter-rouge">background-color</code>.</p>
+
+<div class="bd-callout bd-callout-info">
+<p>In the future, we’ll aim to provide Sass maps and variables for shades of each color as we’ve done with the grayscale colors below.</p>
+</div>
+
+<h3 id="theme-colors">Theme colors</h3>
+
+<p>We use a subset of all colors to create a smaller color palette for generating color schemes, also available as Sass variables and a Sass map in our <code class="highlighter-rouge">scss/_variables.scss</code> file.</p>
+
+<div class="row">
+  
+    <div class="col-md-4">
+      <div class="p-3 mb-3 swatch-default">Default</div>
+    </div>
+  
+    <div class="col-md-4">
+      <div class="p-3 mb-3 swatch-primary">Primary</div>
+    </div>
+  
+    <div class="col-md-4">
+      <div class="p-3 mb-3 swatch-info">Info</div>
+    </div>
+  
+    <div class="col-md-4">
+      <div class="p-3 mb-3 swatch-success">Success</div>
+    </div>
+  
+    <div class="col-md-4">
+      <div class="p-3 mb-3 swatch-warning">Warning</div>
+    </div>
+  
+    <div class="col-md-4">
+      <div class="p-3 mb-3 swatch-danger">Danger</div>
+    </div>
+  
+</div>
+
+<h3 id="grays">Grays</h3>
+
+<p>An expansive set of gray variables and a Sass map in <code class="highlighter-rouge">scss/_variables.scss</code> for consistent shades of gray across your project.</p>
+
+<div class="row mb-3">
+  <div class="col-md-4">
+    
+      <div class="p-3 swatch-100">100</div>
+    
+      <div class="p-3 swatch-200">200</div>
+    
+      <div class="p-3 swatch-300">300</div>
+    
+      <div class="p-3 swatch-400">400</div>
+    
+      <div class="p-3 swatch-500">500</div>
+    
+      <div class="p-3 swatch-600">600</div>
+    
+      <div class="p-3 swatch-700">700</div>
+    
+      <div class="p-3 swatch-800">800</div>
+    
+      <div class="p-3 swatch-900">900</div>
+    
+  </div>
+</div>
+
+<p>Within <code class="highlighter-rouge">_variables.scss</code>, you’ll find our color variables and Sass map. Here’s an example of the <code class="highlighter-rouge">$colors</code> Sass map:</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$colors</span><span class="p">:</span> <span class="p">(</span>
+  <span class="s2">"blue"</span><span class="o">:</span> <span class="nv">$blue</span><span class="o">,</span>
+  <span class="s2">"indigo"</span><span class="o">:</span> <span class="nv">$indigo</span><span class="o">,</span>
+  <span class="s2">"purple"</span><span class="o">:</span> <span class="nv">$purple</span><span class="o">,</span>
+  <span class="s2">"pink"</span><span class="o">:</span> <span class="nv">$pink</span><span class="o">,</span>
+  <span class="s2">"red"</span><span class="o">:</span> <span class="nv">$red</span><span class="o">,</span>
+  <span class="s2">"orange"</span><span class="o">:</span> <span class="nv">$orange</span><span class="o">,</span>
+  <span class="s2">"yellow"</span><span class="o">:</span> <span class="nv">$yellow</span><span class="o">,</span>
+  <span class="s2">"green"</span><span class="o">:</span> <span class="nv">$green</span><span class="o">,</span>
+  <span class="s2">"teal"</span><span class="o">:</span> <span class="nv">$teal</span><span class="o">,</span>
+  <span class="s2">"cyan"</span><span class="o">:</span> <span class="nv">$cyan</span><span class="o">,</span>
+  <span class="s2">"white"</span><span class="o">:</span> <span class="nv">$white</span><span class="o">,</span>
+  <span class="s2">"gray"</span><span class="o">:</span> <span class="nv">$gray-600</span><span class="o">,</span>
+  <span class="s2">"gray-dark"</span><span class="o">:</span> <span class="nv">$gray-800</span>
+<span class="p">)</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span></code></pre></figure>
+
+<p>Add, remove, or modify values within the map to update how they’re used in many other components. Unfortunately at this time, not <em>every</em> component utilizes this Sass map. Future updates will strive to improve upon this. Until then, plan on making use of the <code class="highlighter-rouge">${color}</code> variables and this Sass map.</p>
+
+<h2 id="components">Components</h2>
+
+<p>Many of Bootstrap’s components and utilities are built with <code class="highlighter-rouge">@each</code> loops that iterate over a Sass map. This is especially helpful for generating variants of a component by our <code class="highlighter-rouge">$theme-colors</code> and creating responsive variants for each breakpoint. As you customize these Sass maps and recompile, you’ll automatically see your changes reflected in these loops.</p>
+
+<h3 id="modifiers">Modifiers</h3>
+
+<p>Many of Bootstrap’s components are built with a base-modifier class approach. This means the bulk of the styling is contained to a base class (e.g., <code class="highlighter-rouge">.btn</code>) while style variations are confined to modifier classes (e.g., <code class="highlighter-rouge">.btn-danger</code>). These modifier classes are built from the <code class="highlighter-rouge">$theme-colors</code> map to make customizing the number and name of our modifier classes.</p>
+
+<p>Here are two examples of how we loop over the <code class="highlighter-rouge">$theme-colors</code> map to generate modifiers to the <code class="highlighter-rouge">.alert</code> component and all our <code class="highlighter-rouge">.bg-*</code> background utilities.</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Generate alert modifier classes
+</span><span class="k">@each</span> <span class="nv">$color</span><span class="o">,</span> <span class="nv">$value</span> <span class="n">in</span> <span class="nv">$theme-colors</span> <span class="p">{</span>
+  <span class="nc">.alert-</span><span class="si">#{</span><span class="nv">$color</span><span class="si">}</span> <span class="p">{</span>
+    <span class="k">@include</span> <span class="nd">alert-variant</span><span class="p">(</span><span class="nf">theme-color-level</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="m">-10</span><span class="p">)</span><span class="o">,</span> <span class="nf">theme-color-level</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="m">-9</span><span class="p">)</span><span class="o">,</span> <span class="nf">theme-color-level</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="m">6</span><span class="p">));</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Generate `.bg-*` color utilities
+</span><span class="k">@each</span> <span class="nv">$color</span><span class="o">,</span> <span class="nv">$value</span> <span class="n">in</span> <span class="nv">$theme-colors</span> <span class="p">{</span>
+  <span class="k">@include</span> <span class="nd">bg-variant</span><span class="p">(</span><span class="s1">'.bg-</span><span class="si">#{</span><span class="nv">$color</span><span class="si">}</span><span class="s1">'</span><span class="o">,</span> <span class="nv">$value</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<h3 id="responsive">Responsive</h3>
+
+<p>These Sass loops aren’t limited to color maps, either. You can also generate responsive variations of your components or utilities. Take for example our responsive text alignment utilities where we mix an <code class="highlighter-rouge">@each</code> loop for the <code class="highlighter-rouge">$grid-breakpoints</code> Sass map with a media query include.</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@each</span> <span class="nv">$breakpoint</span> <span class="n">in</span> <span class="nf">map-keys</span><span class="p">(</span><span class="nv">$grid-breakpoints</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">@include</span> <span class="nd">media-breakpoint-up</span><span class="p">(</span><span class="nv">$breakpoint</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$infix</span><span class="p">:</span> <span class="nf">breakpoint-infix</span><span class="p">(</span><span class="nv">$breakpoint</span><span class="o">,</span> <span class="nv">$grid-breakpoints</span><span class="p">);</span>
+
+    <span class="nc">.text</span><span class="si">#{</span><span class="nv">$infix</span><span class="si">}</span><span class="nc">-left</span>   <span class="p">{</span> <span class="nl">text-align</span><span class="p">:</span> <span class="nb">left</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+    <span class="nc">.text</span><span class="si">#{</span><span class="nv">$infix</span><span class="si">}</span><span class="nc">-right</span>  <span class="p">{</span> <span class="nl">text-align</span><span class="p">:</span> <span class="nb">right</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+    <span class="nc">.text</span><span class="si">#{</span><span class="nv">$infix</span><span class="si">}</span><span class="nc">-center</span> <span class="p">{</span> <span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span> <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Should you need to modify your <code class="highlighter-rouge">$grid-breakpoints</code>, your changes will apply to all the loops iterating over that map.</p>
+
+        </main>
+      </div>
+    </div>
+
+    <!--   Core JS Files   -->
+<script src="../../../assets/js/core/jquery.min.js"></script>
+<script src="../../../assets/js/core/popper.min.js"></script>
+
+
+<script src="../../../assets/js/bootstrap-material-design.min.js"></script>
+
+
+<script src="../../../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+
+
+
+<!--  Google Maps Plugin  -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2Yno10-YTnLjjn_Vtk0V8cdcY5lC4plU"></script>
+
+
+
+
+<!--  Charts Plugin, full documentation here: https://gionkunz.github.io/chartist-js/ -->
+<script src="../../../assets/js/plugins/chartist.min.js"></script>
+
+<!-- Library for adding dinamically elements -->
+<script src="../../../assets/js/plugins/arrive.min.js" type="text/javascript"></script>
+
+<!--  Notifications Plugin, full documentation here: http://bootstrap-notify.remabledesigns.com/    -->
+<script src="../../../assets/js/plugins/bootstrap-notify.js"></script>
+
+<!-- Material Dashboard Core initialisations of plugins and Bootstrap Material Design Library -->
+
+
+
+
+<script src="../../../assets/js/material-dashboard.js?v=2.0.0"></script>
+
+<!-- demo init -->
+<script src="../../../assets/js/plugins/demo.js"></script>
+
+
+
+
+  <script src="../../../assets/assets-for-demo/js/docs.min.js"></script>
+<script src="../../../assets/assets-for-demo/js/vendor/anchor.min.js"></script>
+<script src="../../../assets/assets-for-demo/js/vendor/clipboard.min.js"></script>
+<script src="../../../assets/assets-for-demo/js/vendor/holder.min.js"></script>
+<script src="../../../assets/assets-for-demo/js/src/application.js"></script>
+<script src="../../../assets/js/plugins/demo.js"></script>
+
+<script>
+  $(document).ready(function(){
+Holder.addTheme('gray', {
+  bg: '#777',
+  fg: 'rgba(255,255,255,.75)',
+  font: 'Helvetica',
+  fontweight: 'normal'
+})
+
+// Javascript method's body can be found in assets/js/demos.js
+  demo.initDashboardPageCharts();
+
+// <!-- Bootstrap Notify -->
+// demo.showNotification(from, align);
+//
+// <!-- javascript for validation -->
+// function setFormValidation(id){
+// 	$(id).validate({
+// 		errorPlacement: function(error, element) {
+//             $(element).parent('div').addClass('has-error');
+//          }
+// 	});
+// }
+//
+// setFormValidation('#RegisterValidationDoc');
+
+});
+</script>
+
+
+
+<!-- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ -->
+
+
+
+    
+    
+<!-- Sharrre libray -->
+<script src="../../../assets/assets-for-demo/js/jquery.sharrre.js">
+
+</script>
+<script>
+
+$(document).ready(function(){
+    $('#twitter').sharrre({
+      share: {
+        twitter: true
+      },
+      enableHover: false,
+      enableTracking: false,
+      enableCounter: false,
+      buttons: { twitter: {via: 'CreativeTim'}},
+      click: function(api, options){
+        api.simulateClick();
+        api.openPopup('twitter');
+      },
+      template: '<i class="fa fa-twitter"></i> Twitter',
+      url: 'http://demos.creative-tim.com/material-dashboard/examples/dashboard.html'
+    });
+
+    $('#facebook').sharrre({
+      share: {
+        facebook: true
+      },
+      enableHover: false,
+      enableTracking: false,
+      enableCounter: false,
+      click: function(api, options){
+        api.simulateClick();
+        api.openPopup('facebook');
+      },
+      template: '<i class="fa fa-facebook-square"></i> Facebook',
+      url: 'http://demos.creative-tim.com/material-dashboard/examples/dashboard.html'
+    });
+
+    $('#google').sharrre({
+      share: {
+        googlePlus: true
+      },
+      enableCounter: false,
+      enableHover: false,
+      enableTracking: true,
+      click: function(api, options){
+        api.simulateClick();
+        api.openPopup('googlePlus');
+      },
+      template: '<i class="fa fa-google-plus"></i> Google',
+      url: 'http://demos.creative-tim.com/material-dashboard/examples/dashboard.html'
+    });
+});
+
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-46172202-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+    var ga = document.createElement('script');
+    ga.type = 'text/javascript';
+    ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ga, s);
+})();
+
+// Facebook Pixel Code Don't Delete
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+try{
+	fbq('init', '111649226022273');
+	fbq('track', "PageView");
+
+}catch(err) {
+	console.log('Facebook Track Error:', err);
+}
+
+</script>
+
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=111649226022273&ev=PageView&noscript=1"
+/></noscript>
+
+    
+  </body>
+</html>

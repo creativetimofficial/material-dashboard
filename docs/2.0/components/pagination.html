@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+
+
+
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="../../../assets/img/kit/free/apple-icon.png">
+<link rel="icon" href="../../../assets/img/kit/free/favicon.png">
+
+<title>
+  
+    Pagination &#45; Material Dashboard by Creative Tim
+  
+</title>
+
+
+<!-- Extra details for Live View on GitHub Pages -->
+  <!-- Canonical SEO -->
+<link rel="canonical" href="https://www.creative-tim.com/product/material-dashboard" />
+
+<!--  Social tags      -->
+<meta name="keywords" content="material dashboard, bootstrap material admin, bootstrap material dashboard, material design admin, material design, creative tim, html dashboard, html css dashboard, web dashboard, freebie, free bootstrap dashboard, css3 dashboard, bootstrap admin, bootstrap dashboard, frontend, responsive bootstrap dashboard">
+
+<meta name="description" content="Material Dashboard is a Free Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
+
+<!-- Schema.org markup for Google+ -->
+<meta itemprop="name" content="Material Dashboard by Creative Tim">
+<meta itemprop="description" content="Material Dashboard is a Free Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
+
+<meta itemprop="image" content="https://s3.amazonaws.com/creativetim_bucket/products/50/opt_md_thumbnail.jpg">
+<!-- Twitter Card data -->
+
+<meta name="twitter:card" content="product">
+<meta name="twitter:site" content="@creativetim">
+<meta name="twitter:title" content="Material Dashboard by Creative Tim">
+
+<meta name="twitter:description" content="Material Dashboard is a Free Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
+<meta name="twitter:creator" content="@creativetim">
+<meta name="twitter:image" content="https://s3.amazonaws.com/creativetim_bucket/products/50/opt_md_thumbnail.jpg">
+<meta name="twitter:data1" content="Material Dashboard by Creative Tim">
+<meta name="twitter:label1" content="Product Type">
+<meta name="twitter:data2" content="Free">
+<meta name="twitter:label2" content="Price">
+
+<!-- Open Graph data -->
+<meta property="fb:app_id" content="655968634437471">
+<meta property="og:title" content="Material Dashboard by Creative Tim" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://demos.creative-tim.com/material-dashboard/examples/dashboard.html" />
+<meta property="og:image" content="https://s3.amazonaws.com/creativetim_bucket/products/50/opt_md_thumbnail.jpg"/>
+<meta property="og:description" content="Material Dashboard is a Free Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design." />
+<meta property="og:site_name" content="Creative Tim" />
+
+
+
+<!--     Fonts and icons     -->
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+
+
+<link rel="stylesheet" href="../../../assets/css/material-dashboard.min.css?v=2.0.0">
+
+
+
+
+<!-- Documentation extras -->
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
+
+<link rel="stylesheet" href="../../../assets/assets-for-demo/docs.min.css">
+
+<style>
+   .navbar-absolute-logo{
+       padding-left: 45px;
+   }
+   .navbar-absolute-logo img{
+       position: absolute;
+       left: 15px;
+       margin-top: -6px;
+   }
+   body{
+     background: white;
+   }
+</style>
+
+
+<!-- CSS Just for demo purpose, don't include it in your project -->
+<link href="../../../assets/assets-for-demo/demo.css" rel="stylesheet"/>
+
+<!-- iframe removal -->
+
+
+
+  <script type="text/javascript">
+    if (document.readyState === 'complete') {
+        if (window.location != window.parent.location) {
+          const elements = document.getElementsByClassName("iframe-extern");
+          while (elemnts.lenght > 0) elements[0].remove();
+            // $(".iframe-extern").remove();
+        }
+    };
+  </script>
+
+
+
+  </head>
+  <body class="bd-docs" data-spy="scroll" data-target=".bd-sidenav-active">
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+      <div class="container">
+        <span class="skiplink-text">Skip to main content</span>
+      </div>
+    </a>
+
+    <header class="navbar navbar-expand navbar-dark bg-primary flex-column flex-md-row bd-navbar">
+  <a class="navbar-brand mr-0 mr-md-2 navbar-absolute-logo" href="https://www.creative-tim.com/product/material-dashboard/">
+    Material Dashboard
+  </a>
+
+  <ul class="navbar-nav flex-row d-none d-md-flex">
+
+    <li class="nav-item dropdown">
+        <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    v2.0.0
+    </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+            <a class="dropdown-item active" href="/material-dashboard/docs/2.0/">BS4 - 2.0.0</a>
+            <a class="dropdown-item" href="http://demos.creative-tim.com/bs3/material-dashboard/documentation/tutorial-components.html">BS3 - 1.2.0</a>
+        </div>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link p-2" href="https://github.com/creativetimofficial/material-dashboard" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 499.36" focusable="false"><title>GitHub</title><path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"/></svg>
+
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link p-2" href="https://twitter.com/CreativeTim" target="_blank" rel="noopener" aria-label="Twitter">
+        <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 416.32" focusable="false"><title>Twitter</title><path d="M160.83 416.32c193.2 0 298.92-160.22 298.92-298.92 0-4.51 0-9-.2-13.52A214 214 0 0 0 512 49.38a212.93 212.93 0 0 1-60.44 16.6 105.7 105.7 0 0 0 46.3-58.19 209 209 0 0 1-66.79 25.37 105.09 105.09 0 0 0-181.73 71.91 116.12 116.12 0 0 0 2.66 24c-87.28-4.3-164.73-46.3-216.56-109.82A105.48 105.48 0 0 0 68 159.6a106.27 106.27 0 0 1-47.53-13.11v1.43a105.28 105.28 0 0 0 84.21 103.06 105.67 105.67 0 0 1-47.33 1.84 105.06 105.06 0 0 0 98.14 72.94A210.72 210.72 0 0 1 25 370.84a202.17 202.17 0 0 1-25-1.43 298.85 298.85 0 0 0 160.83 46.92" fill="currentColor"/></svg>
+
+      </a>
+    </li>
+  </ul>
+
+  <div class="navbar-nav-scroll ml-md-auto ">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+        <li class="nav-item">
+          <a class="nav-link active" href="/material-dashboard/docs/2.0/getting-started/introduction.html"><i class="material-icons">content_paste</i> Documentation</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://demos.creative-tim.com/material-dashboard/examples/dashboard.html"><i class="material-icons">view_carousel</i> Live Preview</a>
+        </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="https://github.com/creativetimofficial/material-dashboard/issues" target="_blank" rel="noopener"><i class="material-icons">bug_report</i> Report Issue</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- <a class="btn btn-white d-none d-lg-inline-block" href="https://github.com/creativetimofficial/material-dashboard">Download</a> -->
+</header>
+
+
+    <div class="container-fluid">
+      <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+          <nav class="collapse bd-links" id="bd-docs-nav">
+  
+  
+  
+  
+  
+  
+
+  
+
+  <div class="bd-toc-item active">
+      <a class="bd-toc-link" href="/material-dashboard/docs/2.0/getting-started/introduction.html">
+        Getting started
+      </a>
+
+      <ul class="nav bd-sidenav">
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/getting-started/introduction.html">
+                  Introduction
+                </a>
+            
+
+            
+          </li>
+            
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/getting-started/license.html " target="_blank">
+                    License
+                </a>
+            
+
+            
+          </li>
+            
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/getting-started/file-structure.html">
+                  File Structure
+                </a>
+            
+
+            
+          </li>
+            
+        
+      </ul>
+    </div>
+  
+  
+  
+  
+  
+
+  
+
+  <div class="bd-toc-item active">
+      <a class="bd-toc-link" href="/material-dashboard/docs/2.0/components/alerts.html">
+        Components
+      </a>
+
+      <ul class="nav bd-sidenav">
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/components/alerts.html">
+                  Alerts
+                </a>
+            
+
+            
+          </li>
+            
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/components/buttons.html">
+                  Buttons
+                </a>
+            
+
+            
+          </li>
+            
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/components/card.html">
+                  Card
+                </a>
+            
+
+            
+          </li>
+            
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/components/colors.html">
+                  Colors
+                </a>
+            
+
+            
+          </li>
+            
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/components/dropdowns.html">
+                  Dropdowns
+                </a>
+            
+
+            
+          </li>
+            
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/components/forms.html">
+                  Forms
+                </a>
+            
+
+            
+          </li>
+            
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/components/google-maps.html">
+                  Google Maps
+                </a>
+            
+
+            
+          </li>
+            
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/components/material-icons.html">
+                  Material Icons
+                </a>
+            
+
+            
+          </li>
+            
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/components/modal.html">
+                  Modal
+                </a>
+            
+
+            
+          </li>
+            
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/components/navs.html">
+                  Navs
+                </a>
+            
+
+            
+          </li>
+            
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/components/navbar.html">
+                  Navbar
+                </a>
+            
+
+            
+          </li>
+            
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/components/tables.html">
+                  Tables
+                </a>
+            
+
+            
+          </li>
+            
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/components/typography.html">
+                  Typography
+                </a>
+            
+
+            
+          </li>
+            
+        
+      </ul>
+    </div>
+  
+  
+  
+  
+  
+
+  
+
+  <div class="bd-toc-item active">
+      <a class="bd-toc-link" href="/material-dashboard/docs/2.0/plugins/bootstrap-notify.html">
+        Plugins
+      </a>
+
+      <ul class="nav bd-sidenav">
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/plugins/bootstrap-notify.html">
+                  Bootstrap Notify
+                </a>
+            
+
+            
+          </li>
+            
+        
+          
+          
+
+          
+
+          
+          <li class="">
+
+            
+                <a href="/material-dashboard/docs/2.0/plugins/perfect-scrollbar.html">
+                  Perfect Scrollbar
+                </a>
+            
+
+            
+          </li>
+            
+        
+      </ul>
+    </div>
+  
+</nav>
+
+        </div>
+
+        
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#overview">Overview</a></li>
+<li class="toc-entry toc-h2"><a href="#disabled-and-active-states">Disabled and active states</a></li>
+<li class="toc-entry toc-h2"><a href="#alignment">Alignment</a></li>
+</ul>
+          </div>
+        
+
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+          <h1 class="bd-title" id="content">Pagination </h1>
+          <p class="bd-lead">  </p>
+          <h2 id="overview">Overview</h2>
+
+<div class="bd-example" data-example-id="">
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+  </ul>
+</nav>
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">aria-label=</span><span class="s">"Page navigation example"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"pagination"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"page-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"page-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Previous<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"page-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"page-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"page-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"page-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"page-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"page-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"page-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"page-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Next<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/nav&gt;</span></code></pre></div>
+
+<h2 id="disabled-and-active-states">Disabled and active states</h2>
+
+<p>Pagination links are customizable for different circumstances. Use <code class="highlighter-rouge">.disabled</code> for links that appear un-clickable and <code class="highlighter-rouge">.active</code> to indicate the current page.</p>
+
+<p>While the <code class="highlighter-rouge">.disabled</code> class uses <code class="highlighter-rouge">pointer-events: none</code> to <em>try</em> to disable the link functionality of <code class="highlighter-rouge">&lt;a&gt;</code>s, that CSS property is not yet standardized and doesn’t account for keyboard navigation. As such, you should always add <code class="highlighter-rouge">tabindex="-1"</code> on disabled links and use custom JavaScript to fully disable their functionality.</p>
+
+<div class="bd-example" data-example-id="">
+<nav aria-label="...">
+  <ul class="pagination">
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1">Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item active">
+      <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav>
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">aria-label=</span><span class="s">"..."</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"pagination"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"page-item disabled"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"page-link"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">tabindex=</span><span class="s">"-1"</span><span class="nt">&gt;</span>Previous<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"page-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"page-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"page-item active"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"page-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>2 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>(current)<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"page-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"page-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"page-item"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"page-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Next<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/nav&gt;</span></code></pre></div>
+
+<p>You can optionally swap out active or disabled anchors for <code class="highlighter-rouge">&lt;span&gt;</code>, or omit the anchor in the case of the prev/next arrows, to remove click functionality and prevent keyboard focus while retaining intended styles.</p>
+
+<div class="bd-example" data-example-id="">
+<nav aria-label="...">
+  <ul class="pagination">
+    <li class="page-item disabled">
+      <span class="page-link">Previous</span>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item active">
+      <span class="page-link">
+        2
+        <span class="sr-only">(current)</span>
+      </span>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav>
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">aria-label=</span><span class="s">"..."</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"pagination"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"page-item disabled"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"page-link"</span><span class="nt">&gt;</span>Previous<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"page-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"page-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"page-item active"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"page-link"</span><span class="nt">&gt;</span>
+        2
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>(current)<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"page-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"page-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"page-item"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"page-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Next<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/nav&gt;</span></code></pre></div>
+
+<h2 id="alignment">Alignment</h2>
+
+<p>Change the alignment of pagination components with <a href="/material-dashboard/docs/2.0/utilities/flex/">flexbox utilities</a>.</p>
+
+<div class="bd-example" data-example-id="">
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1">Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav>
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">aria-label=</span><span class="s">"Page navigation example"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"pagination justify-content-center"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"page-item disabled"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"page-link"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">tabindex=</span><span class="s">"-1"</span><span class="nt">&gt;</span>Previous<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"page-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"page-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"page-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"page-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"page-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"page-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"page-item"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"page-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Next<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/nav&gt;</span></code></pre></div>
+
+<div class="bd-example" data-example-id="">
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-end">
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1">Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav>
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">aria-label=</span><span class="s">"Page navigation example"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"pagination justify-content-end"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"page-item disabled"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"page-link"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">tabindex=</span><span class="s">"-1"</span><span class="nt">&gt;</span>Previous<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"page-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"page-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"page-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"page-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"page-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"page-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"page-item"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"page-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Next<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/nav&gt;</span></code></pre></div>
+
+
+        </main>
+      </div>
+    </div>
+
+    <!--   Core JS Files   -->
+<script src="../../../assets/js/core/jquery.min.js"></script>
+<script src="../../../assets/js/core/popper.min.js"></script>
+
+
+<script src="../../../assets/js/bootstrap-material-design.min.js"></script>
+
+
+<script src="../../../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+
+
+
+<!--  Google Maps Plugin  -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2Yno10-YTnLjjn_Vtk0V8cdcY5lC4plU"></script>
+
+
+
+
+<!--  Charts Plugin, full documentation here: https://gionkunz.github.io/chartist-js/ -->
+<script src="../../../assets/js/plugins/chartist.min.js"></script>
+
+<!-- Library for adding dinamically elements -->
+<script src="../../../assets/js/plugins/arrive.min.js" type="text/javascript"></script>
+
+<!--  Notifications Plugin, full documentation here: http://bootstrap-notify.remabledesigns.com/    -->
+<script src="../../../assets/js/plugins/bootstrap-notify.js"></script>
+
+<!-- Material Dashboard Core initialisations of plugins and Bootstrap Material Design Library -->
+
+
+
+
+<script src="../../../assets/js/material-dashboard.js?v=2.0.0"></script>
+
+<!-- demo init -->
+<script src="../../../assets/js/plugins/demo.js"></script>
+
+
+
+
+  <script src="../../../assets/assets-for-demo/js/docs.min.js"></script>
+<script src="../../../assets/assets-for-demo/js/vendor/anchor.min.js"></script>
+<script src="../../../assets/assets-for-demo/js/vendor/clipboard.min.js"></script>
+<script src="../../../assets/assets-for-demo/js/vendor/holder.min.js"></script>
+<script src="../../../assets/assets-for-demo/js/src/application.js"></script>
+<script src="../../../assets/js/plugins/demo.js"></script>
+
+<script>
+  $(document).ready(function(){
+Holder.addTheme('gray', {
+  bg: '#777',
+  fg: 'rgba(255,255,255,.75)',
+  font: 'Helvetica',
+  fontweight: 'normal'
+})
+
+// Javascript method's body can be found in assets/js/demos.js
+  demo.initDashboardPageCharts();
+
+// <!-- Bootstrap Notify -->
+// demo.showNotification(from, align);
+//
+// <!-- javascript for validation -->
+// function setFormValidation(id){
+// 	$(id).validate({
+// 		errorPlacement: function(error, element) {
+//             $(element).parent('div').addClass('has-error');
+//          }
+// 	});
+// }
+//
+// setFormValidation('#RegisterValidationDoc');
+
+});
+</script>
+
+
+
+<!-- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ -->
+
+
+
+    
+    
+<!-- Sharrre libray -->
+<script src="../../../assets/assets-for-demo/js/jquery.sharrre.js">
+
+</script>
+<script>
+
+$(document).ready(function(){
+    $('#twitter').sharrre({
+      share: {
+        twitter: true
+      },
+      enableHover: false,
+      enableTracking: false,
+      enableCounter: false,
+      buttons: { twitter: {via: 'CreativeTim'}},
+      click: function(api, options){
+        api.simulateClick();
+        api.openPopup('twitter');
+      },
+      template: '<i class="fa fa-twitter"></i> Twitter',
+      url: 'http://demos.creative-tim.com/material-dashboard/examples/dashboard.html'
+    });
+
+    $('#facebook').sharrre({
+      share: {
+        facebook: true
+      },
+      enableHover: false,
+      enableTracking: false,
+      enableCounter: false,
+      click: function(api, options){
+        api.simulateClick();
+        api.openPopup('facebook');
+      },
+      template: '<i class="fa fa-facebook-square"></i> Facebook',
+      url: 'http://demos.creative-tim.com/material-dashboard/examples/dashboard.html'
+    });
+
+    $('#google').sharrre({
+      share: {
+        googlePlus: true
+      },
+      enableCounter: false,
+      enableHover: false,
+      enableTracking: true,
+      click: function(api, options){
+        api.simulateClick();
+        api.openPopup('googlePlus');
+      },
+      template: '<i class="fa fa-google-plus"></i> Google',
+      url: 'http://demos.creative-tim.com/material-dashboard/examples/dashboard.html'
+    });
+});
+
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-46172202-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+    var ga = document.createElement('script');
+    ga.type = 'text/javascript';
+    ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ga, s);
+})();
+
+// Facebook Pixel Code Don't Delete
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+try{
+	fbq('init', '111649226022273');
+	fbq('track', "PageView");
+
+}catch(err) {
+	console.log('Facebook Track Error:', err);
+}
+
+</script>
+
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=111649226022273&ev=PageView&noscript=1"
+/></noscript>
+
+    
+  </body>
+</html>
