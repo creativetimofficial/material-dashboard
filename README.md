@@ -89,11 +89,7 @@ material-dashboard/
 
 At present, we officially aim to support the last two versions of the following browsers:
 
-<img src="assets/github/chrome.png" width="64" height="64">
-<img src="assets/github/firefox.png" width="64" height="64">
-<img src="assets/github/edge.png" width="64" height="64">
-<img src="assets/github/safari.png" width="64" height="64">
-<img src="assets/github/opera.png" width="64" height="64">
+<img src="assets/github/chrome.png" width="64" height="64"> <img src="assets/github/firefox.png" width="64" height="64"> <img src="assets/github/edge.png" width="64" height="64"> <img src="assets/github/safari.png" width="64" height="64"> <img src="assets/github/opera.png" width="64" height="64">
 
 
 ## Resources
