@@ -1,4 +1,4 @@
-# [Material Dashboard - Free Bootstrap Material Design Admin](http://demos.creative-tim.com/material-dashboard/examples/dashboard.html)
+# [Material Dashboard](http://demos.creative-tim.com/material-dashboard/examples/dashboard.html) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?text=Material%20Dashboard%20by%20Creative%20Tim&url=https%3A%2F%2Fdemos.creative-tim.com%2Fmaterial-dashboard%2Fexamples%2Fdashboard.html&via=CreativeTim)
 
 ![alt text](http://s3.amazonaws.com/creativetim_bucket/products/50/original/opt_md_thumbnail.jpg "Material Dashboard Free")
 
@@ -19,11 +19,33 @@ We are very excited to share this dashboard with you and we look forward to hear
 
 You can find the Github Repo here.
 
-## Links:
+## Table of Contents
 
-+ [Live Preview](http://demos.creative-tim.com/material-dashboard/examples/dashboard.html)
-+ [Material Kit - For Front End Development](http://www.creative-tim.com/product/material-kit?ref=github-md-free)
-+ [Material Dashboard PRO](http://www.creative-tim.com/product/material-dashboard-pro?ref=github-md-free) (from $49)
+* [Versions](#versions)
+* [Demo](#demo)
+* [Documentation](#documentation)
+* [quick-start](#quick-start)
+* [File Structure](#file-structure)
+* [Browser Support](#browser-support)
+* [Resources](#resources)
+* [Reporting Issues](#reporting-issues)
+* [Technical Support or Questions](#technical-support-or-questions)
+* [Licensing](#licensing)
+* [Useful Links](#useful-links)
+
+
+## Versions
+
+[<img src="assets/github/html.png" width="60" height="60" />](https://www.creative-tim.com/product/material-dashboard)
+[<img src="assets/github/react.svg" width="60" height="60" />](https://www.creative-tim.com/product/material-dashboard-react)
+[<img src="assets/github/vuejs.png" width="60" height="60" />](https://www.creative-tim.com/product/vue-material-dashboard)
+[<img src="assets/github/angular.png" width="60" height="60" />](https://www.creative-tim.com/product/material-dashboard-angular)
+
+## Demo
+[Live Preview](https://demos.creative-tim.com/material-dashboard/examples/dashboard.html).
+
+## Documentation
+The documentation for the Material Dashboard is hosted at our [website](https://demos.creative-tim.com/material-dashboard/docs/2.0/getting-started/introduction.html).
 
 ## Quick start
 
@@ -34,7 +56,7 @@ Quick start options:
 - Clone the repo: `git clone https://github.com/creativetimofficial/material-dashboard.git`.
 
 
-### What's included
+## File Structure
 
 Within the download you'll find the following directories and files:
 
@@ -63,18 +85,39 @@ material-dashboard/
 
 ```
 
-### Version logs
+## Browser Support
 
-V1.0.0 21 Sept, 2016 - Initial Release
+At present, we officially aim to support the last two versions of the following browsers:
 
-V1.1.0 10 Nov, 2016 - New Page Added
-- fix link in documentation
-- for those who want to upsell inside their dashboard we added a new page "Upgrade to PRO" with a pricing and options table
+<img src="assets/github/chrome.png" width="64" height="64">
+<img src="assets/github/firefox.png" width="64" height="64">
+<img src="assets/github/edge.png" width="64" height="64">
+<img src="assets/github/safari.png" width="64" height="64">
+<img src="assets/github/opera.png" width="64" height="64">
 
-V1.1.1 8 Feb 2017
-- switched to MIT License
 
-### License
+## Resources
+- Demo: https://demos.creative-tim.com/material-dashboard/examples/dashboard.html
+- Download Page: https://www.creative-tim.com/product/material-dashboard
+- Documentation: https://demos.creative-tim.com/material-dashboard/docs/2.0/getting-started/introduction.html
+- License Agreement: https://www.creative-tim.com/license
+- Support: https://www.creative-tim.com/contact-us
+- Issues: [Github Issues Page](https://github.com/creativetimofficial/material-dashboard/issues)
+- [Material Kit - For Front End Development](http://www.creative-tim.com/product/material-kit?ref=github-md-free)
+- [Material Dashboard PRO](http://www.creative-tim.com/product/material-dashboard-pro?ref=github-md-free) (from $49)
+
+## Reporting Issues
+We use GitHub Issues as the official bug tracker for the Material Dashboard. Here are some advices for our users that want to report an issue:
+
+1. Make sure that you are using the latest version of the Material Dashboard. Check the CHANGELOG from your dashboard on our [website](https://www.creative-tim.com/).
+2. Providing us reproducible steps for the issue will shorten the time it takes for it to be fixed.
+3. Some issues may be browser specific, so specifying in what browser you encountered the issue might help.
+
+## Technical Support or Questions
+
+If you have questions or need help integrating the product please [contact us](https://www.creative-tim.com/contact-us) instead of opening an issue.
+
+## Licensing
 
 - Copyright 2017 Creative Tim (http://www.creative-tim.com)
 - Licensed under MIT (https://github.com/creativetimofficial/material-dashboard/blob/master/LICENSE.md)
