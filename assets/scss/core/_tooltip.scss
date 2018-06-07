@@ -1,0 +1,49 @@
+// specs https://material.google.com/components/tooltips.html#tooltips-tooltips-desktop-
+
+.tooltip-arrow {
+  display: none;
+}
+
+.tooltip.show{
+    opacity: 1;
+    @include transform-translate-y(0px);
+
+
+}
+.tooltip{
+    opacity: 0;
+    transition: opacity, transform .2s ease;
+    @include transform-translate-y(5px);
+    font-size: $tooltip-font-size;
+
+    &.bs-tooltip-top,
+    &.bs-tooltip-auto[x-placement^="top"]{
+        & .arrow::before{
+            border-top-color: $white-color;
+        }
+    }
+
+    &.bs-tooltip-right,
+    &.bs-tooltip-auto[x-placement^="right"]{
+        & .arrow::before{
+            border-right-color: $white-color;
+        }
+    }
+    &.bs-tooltip-left,
+    &.bs-tooltip-auto[x-placement^="left"]{
+        & .arrow::before{
+            border-left-color: $white-color;
+        }
+    }
+    &.bs-tooltip-bottom,
+    &.bs-tooltip-auto[x-placement^="bottom"]{
+        & .arrow::before{
+            border-bottom-color: $white-color;
+        }
+    }
+}
+
+.tooltip-inner{
+    padding: 10px 15px;
+    min-width: 130px;
+}

@@ -1,0 +1,28 @@
+.card-form-horizontal{
+    .card-body{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .form-group,
+    .input-group{
+        .form-control{
+            margin-bottom: 0;
+        }
+    }
+
+    form{
+        margin: 0;
+    }
+
+    .btn{
+        margin: 0;
+    }
+    .input-group .input-group-addon{
+        padding-left: 0;
+    }
+
+    .bmd-form-group{
+        padding-bottom: 0px;
+        padding-top: 0;
+    }
+}

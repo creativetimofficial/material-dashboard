@@ -1,0 +1,17 @@
+@mixin bmd-hover-focus-active {
+  // add the .active to the whole mix of hover-focus-active
+  &.active {
+    @content;
+  }
+  @include hover-focus-active() {
+    @content;
+  }
+}
+
+@mixin transform-translate-y($value){
+     -webkit-transform:  translate3d(0,$value, 0);
+        -moz-transform: translate3d(0, $value, 0);
+        -o-transform: translate3d(0, $value, 0);
+        -ms-transform: translate3d(0, $value, 0);
+        transform: translate3d(0, $value, 0);
+}

@@ -1,0 +1,148 @@
+.table{
+  > thead > tr > th{
+    border-bottom-width: 1px;
+    font-size: $font-size-h5;
+    font-weight: $font-weight-light;
+  }
+
+  tr:first-child {
+    th {
+      border-top: none;
+    }
+  }
+
+  .tab-pane &{
+    tbody > tr > td:first-child{
+        width: 36px;
+    }
+  }
+
+  .radio,
+  .checkbox{
+    margin-top: -1px;
+    margin-bottom: 0;
+    padding: 0;
+    width: 15px;
+
+    .icons{
+      position: relative;
+    }
+  }
+  > thead > tr > th,
+  > tbody > tr > th,
+  > tfoot > tr > th,
+  > thead > tr > td,
+  > tbody > tr > td,
+  > tfoot > tr > td{
+    padding: 12px 8px;
+    vertical-align: middle;
+  }
+
+  .th-description{
+     max-width: 150px;
+  }
+  .td-price{
+     font-size: 26px;
+     font-weight: $font-weight-light;
+     margin-top: 5px;
+     text-align: right;
+  }
+  .td-total{
+      font-weight: $font-weight-bold;
+      font-size: $font-size-h5;
+      padding-top: 14px;
+      text-align: right;
+  }
+
+    .td-actions .btn{
+    margin: 0px;
+    padding: 5px;
+    }
+
+    > tbody > tr{
+        position: relative;
+    }
+
+    .flag{
+        img{
+            max-width: 18px;
+            margin-top: -2px;
+        }
+    }
+}
+.table-sales{
+    margin-top: 40px;
+}
+.table-shopping{
+    > thead > tr > th{
+        font-size: 0.9em;
+        text-transform: uppercase;
+    }
+    > tbody > tr > td{
+        font-size: $font-paragraph;
+
+        b{
+            display: block;
+            margin-bottom: 5px;
+        }
+    }
+    .td-name{
+        font-weight: $font-weight-default;
+        font-size: 1.5em;
+        small{
+            color: $gray-light;
+            font-size: 0.75em;
+            font-weight: $font-weight-light;
+        }
+    }
+    .td-number{
+       font-weight: $font-weight-light;
+       font-size: $font-size-h4;
+   }
+    .td-name{
+        min-width: 200px;
+
+        a{
+            color: $black-color;
+
+            &:hover,
+            &:focus{
+                color: $brand-primary;
+            }
+        }
+    }
+    .td-number{
+        text-align: right;
+        min-width: 145px;
+
+        small{
+            margin-right: 3px;
+        }
+    }
+
+    .img-container{
+        width: 120px;
+        max-height: 160px;
+        overflow: hidden;
+        display: block;
+
+        img{
+            width: 100%;
+        }
+    }
+}
+
+
+.tab-content .tab-pane{
+  .td-actions {
+    display: flex;
+  }
+}
+
+.table.table-hover {
+  tbody {
+    tr:hover {
+      background-color: $grey-100;
+    }
+  }
+}

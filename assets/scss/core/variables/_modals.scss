@@ -1,0 +1,34 @@
+// Modals
+$modal-content-xs-box-shadow: $bmd-shadow-24dp !default;
+
+// Padding applied to the modal body
+//$modal-inner-padding:         15px !default;
+//
+//$modal-title-padding:         15px !default;
+//$modal-title-line-height:     $line-height-base !default;
+//
+//$modal-content-bg:                             #fff !default;
+//$modal-content-border-color:                   rgba(0,0,0,.2) !default;
+//
+//$modal-backdrop-bg:           #000 !default;
+$modal-backdrop-opacity: .26 !default; // .5
+//$modal-header-border-color:   #e5e5e5 !default;
+//$modal-footer-border-color:   $modal-header-border-color !default;
+//
+//$modal-lg:                    900px !default;
+//$modal-md:                    600px !default;
+//$modal-sm:                    300px !default;
+
+$transition-ease-in:              ease-in !default;
+$transition-ease-out:             ease-out !default;
+$ultra-fast-transition-time:      60ms  !default;
+$navbar-padding-a:               10px 15px;
+$padding-zero:                   0px !default;
+$sidebar-width:               calc(100% - 260px) !default;
+$sidebar-mini-width:         calc(100% - 80px) !default;
+$topbar-back:          topbar-back !default;
+$bottombar-back:       bottombar-back !default;
+$topbar-x:             topbar-x !default;
+$bottombar-x:          bottombar-x !default;
+$margin-bottom:                0 0 10px 0 !default;
+$margin-base-vertical:         15px !default;

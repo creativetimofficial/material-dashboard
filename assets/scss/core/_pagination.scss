@@ -1,0 +1,147 @@
+.pagination{
+    > .page-item > .page-link,
+    > .page-item > span{
+        border: 0;
+        border-radius: 30px !important;
+        transition: all .3s;
+        padding: 0px 11px;
+        margin: 0 3px;
+        min-width: 30px;
+        height: 30px;
+        line-height: 30px;
+        color: $gray-color;
+        font-weight: $font-weight-default;
+        font-size: $mdb-btn-font-size-base;
+        text-transform: uppercase;
+        background: transparent;
+        text-align: center;
+
+        &:hover,
+        &:focus{
+            color: $gray-color;
+        }
+    }
+
+    > .page-item.active > a,
+    > .page-item.active > span{
+        color: $gray-color;
+
+        &,
+        &:focus,
+        &:hover{
+            background-color: $brand-primary;
+            border-color: $brand-primary;
+            color: $white-color;
+            @include shadow-4dp-color($brand-primary);
+        }
+
+    }
+
+    // Colors
+    &.pagination-info{
+        > .page-item.active > a,
+        > .page-item.active > span{
+            &,
+            &:focus,
+            &:hover{
+                background-color: $brand-info;
+                border-color: $brand-info;
+                @include shadow-4dp-color($brand-info);
+            }
+        }
+    }
+
+    &.pagination-success{
+        > .page-item.active > a,
+        > .page-item.active > span{
+            &,
+            &:focus,
+            &:hover{
+                background-color: $brand-success;
+                border-color: $brand-success;
+                @include shadow-4dp-color($brand-success);
+            }
+        }
+    }
+
+    &.pagination-warning{
+        > .page-item.active > a,
+        > .page-item.active > span{
+            &,
+            &:focus,
+            &:hover{
+                background-color: $brand-warning;
+                border-color: $brand-warning;
+                @include shadow-4dp-color($brand-warning);
+            }
+        }
+    }
+
+    &.pagination-danger{
+        > .page-item.active > a,
+        > .page-item.active > span{
+            &,
+            &:focus,
+            &:hover{
+                background-color: $brand-danger;
+                border-color: $brand-danger;
+                @include shadow-4dp-color($brand-danger);
+            }
+        }
+    }
+}
+
+
+
+
+// .page-item {
+//   &:first-child .page-link {
+//     @include border-left-radius(4em);
+//   }
+//   &:last-child .page-link {
+//     @include border-right-radius(4em);
+//     margin-right: 0;
+//   }
+//
+//   &:first-child,
+//   &:last-child {
+//     .page-link {
+//       display: flex;
+//       justify-content: center;
+//       padding-right: 0;
+//       padding-left: 0;
+//       > .material-icons {
+//         font-size: 1.5em;
+//       }
+//     }
+//   }
+// }
+//
+// .page-link {
+//   min-width: 2.6em;
+//   margin-right: 0.5em;
+//   text-align: center;
+//   border-radius: 4em;
+//
+//   @include hover-focus {
+//     text-decoration: none;
+//   }
+// }
+//
+// //
+// // Sizing
+// //
+//
+// .pagination-lg {
+//   .page-link {
+//     min-width: 2.8em;
+//   }
+//   @include pagination-size($pagination-padding-y-lg, $pagination-padding-x-lg, $font-size-lg, $line-height-lg, 4em);
+// }
+//
+// .pagination-sm {
+//   .page-link {
+//     min-width: 2.2em;
+//   }
+//   @include pagination-size($pagination-padding-y-sm, $pagination-padding-x-sm, $font-size-sm, $line-height-sm, 4em);
+// }

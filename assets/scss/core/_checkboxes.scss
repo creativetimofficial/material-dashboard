@@ -1,0 +1,210 @@
+.form-check {
+  margin-bottom: .5rem;
+  padding-left: 0;
+
+    .form-check-label {
+        cursor: pointer;
+        padding-left: 0; // Reset for Bootstrap rule
+        // color: $mdb-checkbox-label-color;
+        @include mdb-label-color-toggle-focus();
+    }
+
+  // Hide native checkbox
+    .form-check-input {
+        opacity: 0;
+        position: absolute;
+        margin: 0;
+        z-index: -1;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        left: 0;
+        pointer-events: none;
+    }
+
+    .form-check-sign {
+        vertical-align: middle;
+        position: relative;
+        top: -2px;
+        float: left;
+        padding-right: 10px;
+        display: inline-block;
+
+        &:before {
+            display: block;
+            position: absolute;
+            left: 0;
+            content: "";
+            background-color: rgba(0,0,0,.84);
+            height: $mdb-checkbox-size;
+            width: $mdb-checkbox-size;
+            border-radius: 100%;
+            z-index: 1;
+            opacity: 0;
+            margin: 0;
+            top: 0;
+            @include transform-scale3d(unquote('2.3,2.3,1'));
+        }
+
+        .check {
+            position: relative;
+            display: inline-block;
+            width: $mdb-checkbox-size;
+            height: $mdb-checkbox-size;
+            border: 1px solid $mdb-checkbox-border-color;
+            overflow: hidden;
+            z-index: 1;
+            border-radius: $border-radius-base;
+
+            &:before {
+                position: absolute;
+                content: "";
+                transform: rotate(45deg);
+                display: block;
+                margin-top: -3px;
+                margin-left: 7px;
+                width: 0;
+                color: $white-color;
+                height: 0;
+                box-shadow:
+                0 0 0 0,
+                0 0 0 0,
+                0 0 0 0,
+                0 0 0 0,
+                0 0 0 0,
+                0 0 0 0,
+                0 0 0 0 inset;
+                @include animation(checkbox-off $mdb-checkbox-animation-check forwards);
+            }
+        }
+
+    }
+
+    .form-check-input{
+
+        &:focus + .form-check-sign .check:after {
+            opacity: 0.2;
+        }
+
+        &:checked {
+            & + .form-check-sign .check {
+                background: $mdb-checkbox-checked-color;
+            }
+
+            & + .form-check-sign .check:before {
+                color: #FFFFFF;
+                box-shadow: 0 0 0 10px,
+                            10px -10px 0 10px,
+                            32px 0 0 20px,
+                            0px 32px 0 20px,
+                            -5px 5px 0 10px,
+                            20px -12px 0 11px;
+                @include animation(checkbox-on $mdb-checkbox-animation-check forwards);
+            }
+
+            & + .form-check-sign:before {
+            @include animation(rippleOn $mdb-checkbox-animation-ripple);
+            }
+
+            & + .form-check-sign .check:after {
+            //background-color: $brand-success; // FIXME: seems like tho wrong color, test and make sure it can be removed
+            @include animation(rippleOn $mdb-checkbox-animation-ripple forwards);
+            }
+        }
+
+        &:not(:checked) {
+          & + .form-check-sign:before {
+            @include animation(rippleOff $mdb-checkbox-animation-ripple);
+          }
+
+          & + .form-check-sign .check:after {
+            @include animation(rippleOff $mdb-checkbox-animation-ripple); // Ripple effect on uncheck
+
+          }
+        }
+  }
+.rtl {
+  .form-check {
+    .form-check-sign {
+      .check::before{
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+  // Style for disabled inputs
+  fieldset[disabled] &,
+  fieldset[disabled] & .form-check-input,
+  .form-check-input[disabled] ~ .form-check-sign .check,
+  .form-check-input[disabled] + .circle {
+    opacity: 0.5;
+  }
+
+  .form-check-input[disabled] ~ .form-check-sign .check{
+      border-color: #000000;
+      opacity: .26;
+  }
+
+  .form-check-input[disabled] + .form-check-sign .check:after {
+    background-color: $mdb-text-color-primary;
+    transform: rotate(-45deg);
+  }
+
+  .form-check-input[disabled][checked] + .form-check-sign .check{
+      background-color: $black;
+  }
+}
+
+@keyframes checkbox-on {
+  0% {
+    box-shadow:
+      0 0 0 10px,
+      10px -10px 0 10px,
+      32px 0 0 20px,
+      0px 32px 0 20px,
+      -5px 5px 0 10px,
+      15px 2px 0 11px;
+  }
+  50% {
+    box-shadow:
+      0 0 0 10px,
+      10px -10px 0 10px,
+      32px 0 0 20px,
+      0px 32px 0 20px,
+      -5px 5px 0 10px,
+      20px 2px 0 11px;
+  }
+  100% {
+    box-shadow:
+      0 0 0 10px,
+      10px -10px 0 10px,
+      32px 0 0 20px,
+      0px 32px 0 20px,
+      -5px 5px 0 10px,
+      20px -12px 0 11px;
+  }
+}
+
+@keyframes rippleOn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes rippleOff {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+  }
+}

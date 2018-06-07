@@ -1,0 +1,98 @@
+
+@mixin radio-color($color, $opacity){
+  & ~ .check,
+  & ~ .circle  {
+    opacity: $opacity;
+  }
+
+  & ~ .check {
+    background-color: $color;
+  }
+
+  & ~ .circle  {
+    border-color: $color;
+  }
+}
+
+.form-check{
+    .form-check-label {
+        cursor: pointer;
+        padding-left: 25px;
+        position: relative;
+        @include mdb-label-color-toggle-focus();
+
+    span {
+        display: block;
+        position: absolute;
+        left: -1px;
+        top: -1px;
+        transition-duration: 0.2s;
+    }
+    .circle {
+        border: 1px solid $mdb-radio-color-off;
+        height: 15px;
+        width: 15px;
+        border-radius: 100%;
+        top: 1px;
+
+        .check {
+            height: 15px;
+            width: 15px;
+            border-radius: 100%;
+            background-color: $mdb-radio-color-on;
+            @include transform-scale3d(unquote('0,0,0'));
+
+
+        }
+    }
+
+
+    .form-check-input:not(:checked) ~ .check:after {
+        @include animation(rippleOff 500ms);
+    }
+
+    .form-check-input:checked ~ .check:after {
+        @include animation(rippleOff 500ms);
+    }
+
+  }
+
+    .form-check-input {
+        opacity: 0;
+        height: 0;
+        width: 0;
+        overflow: hidden;
+
+        &:checked {
+            @include radio-color($mdb-radio-color-on, 1);
+        }
+        &:checked ~ .circle .check {
+            @include transform-scale3d(unquote('0.65, 0.65, 1'));
+        }
+    }
+
+    .form-check-input[disabled] {
+
+        // light theme spec: Disabled: #000000, Opacity  26%
+        @include radio-color($black, 0.26);
+
+        & + .circle .check{
+            background-color: $black;
+        }
+    }
+
+
+    .form-check-sign{
+        vertical-align: middle;
+        position: relative;
+        top: -2px;
+        float: left;
+        padding-right: 10px;
+        display: inline-block;
+
+    }
+}
+
+.form-check + .form-check {
+  margin-top: 0;
+}

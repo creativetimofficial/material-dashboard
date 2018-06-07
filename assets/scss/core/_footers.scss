@@ -1,0 +1,107 @@
+.footer{
+    padding: $padding-general-x 0;
+    text-align: center;
+    display: -webkit-flex; /* Safari */ /* Safari 6.1+ */
+    display: flex;
+
+    ul{
+        margin-bottom: 0;
+        padding: 0;
+        list-style: none;
+
+        li{
+            display: inline-block;
+
+            a{
+                color: inherit;
+                padding: $padding-general-x;
+                font-weight: $font-weight-bold;
+                font-size: $mdb-btn-font-size-base;
+                text-transform: uppercase;
+                border-radius: $border-radius-base;
+                text-decoration: none;
+                position: relative;
+                display: block;
+
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+
+            .btn{
+                margin: 0;
+            }
+        }
+
+        &.links-horizontal{
+            &:first-child a{
+                padding-left: 0;
+            }
+
+            &:last-child a{
+                padding-right: 0;
+            }
+        }
+
+        &.links-vertical{
+            li{
+                display: block;
+                margin-left: -5px;
+                margin-right: -5px;
+
+                a{
+                    padding: 5px;
+                }
+            }
+        }
+    }
+
+    .social-buttons{
+        a,
+        .btn{
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    }
+
+    .footer-brand{
+        float: left;
+        height: 50px;
+        padding: 15px 15px;
+        font-size: 18px;
+        line-height: 20px;
+        margin-left: -15px;
+
+        &:hover,
+        &:focus{
+            color: $black-color;
+        }
+    }
+    .copyright{
+        padding: 15px 0;
+        .material-icons{
+            font-size: 18px;
+            position: relative;
+            top: 3px;
+        }
+
+    }
+
+    .pull-center{
+        display: inline-block;
+        float: none;
+    }
+
+    a:hover,
+    a:focus {
+      color: #89229b;
+    }
+}
+
+.off-canvas-sidebar {
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+}

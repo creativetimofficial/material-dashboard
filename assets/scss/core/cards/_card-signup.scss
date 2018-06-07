@@ -1,0 +1,43 @@
+.card-signup{
+    .card-header{
+        // @include shadow-big();
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: -40px;
+        padding: 20px 0;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .text-divider{
+        margin-top: 30px;
+        margin-bottom: 0px;
+        text-align: center;
+    }
+    .card-body{
+        padding: 0px 30px 0px 10px;
+    }
+
+    .form-check{
+        padding-top: 27px;
+
+        label{
+            margin-left: 18px;
+        }
+        .form-check-sign{
+            padding-right: 27px;
+        }
+
+    }
+
+    .social-line{
+        margin-top: $bmd-label-top-margin-base;
+        text-align: center;
+        padding: 0;
+
+        .btn{
+            color: $white-color;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+    }
+}

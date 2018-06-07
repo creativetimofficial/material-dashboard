@@ -1,23 +1,41 @@
-/*!
-
- =========================================================
- * Material Dashboard - v1.2.0
- =========================================================
-
- * Product Page: http://www.creative-tim.com/product/material-dashboard
- * Copyright 2017 Creative Tim (http://www.creative-tim.com)
- * Licensed under MIT (https://github.com/creativetimofficial/material-dashboard/blob/master/LICENSE.md)
-
- =========================================================
-
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
- */
+/*! =========================================================
+ *
+ * Material Dashboard - V2.0.0
+ *
+ * =========================================================
+ *
+ * Copyright 2018 Creative Tim (http://www.creative-tim.com/product/material-dashboard)
+ *
+ *
+ *                       _oo0oo_
+ *                      o8888888o
+ *                      88" . "88
+ *                      (| -_- |)
+ *                      0\  =  /0
+ *                    ___/`---'\___
+ *                  .' \|     |// '.
+ *                 / \|||  :  |||// \
+ *                / _||||| -:- |||||- \
+ *               |   | \\  -  /// |   |
+ *               | \_|  ''\---/''  |_/ |
+ *               \  .-\__  '-'  ___/-. /
+ *             ___'. .'  /--.--\  `. .'___
+ *          ."" '<  `.___\_<|>_/___.' >' "".
+ *         | | :  `- \`.;`\ _ /`;.`/ - ` : | |
+ *         \  \ `_.   \_ __\ /__ _/   .-` /  /
+ *     =====`-.____`.___ \_____/___.-`___.-'=====
+ *                       `=---='
+ *
+ *     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ *
+ *               Buddha Bless:  "No Bugs"
+ *
+ * ========================================================= */
 
 (function() {
     isWindows = navigator.platform.indexOf('Win') > -1 ? true : false;
 
-    if (isWindows) {
+    if (isWindows && !$('body').hasClass('sidebar-mini')) {
         // if we are on windows OS we activate the perfectScrollbar function
         $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar();
 
@@ -27,6 +45,7 @@
     }
 })();
 
+var breakCards = true;
 
 var searchVisible = 0;
 var transparent = true;
@@ -49,19 +68,46 @@ var seq2 = 0,
 
 $(document).ready(function() {
 
+   $('body').bootstrapMaterialDesign();
+
     $sidebar = $('.sidebar');
 
-    $.material.init();
+    md.initSidebarsCheck();
+
+    // if ($('body').hasClass('sidebar-mini')) {
+    //     md.misc.sidebar_mini_active = true;
+    // }
 
     window_width = $(window).width();
-
-    md.initSidebarsCheck();
 
     // check if there is an image set for the sidebar's background
     md.checkSidebarImage();
 
+    md.initMinimizeSidebar();
+
+    //    Activate bootstrap-select
+    if ($(".selectpicker").length != 0) {
+        $(".selectpicker").selectpicker();
+    }
+
     //  Activate the tooltips
     $('[rel="tooltip"]').tooltip();
+
+    //Activate tags
+    // we style the badges with our colors
+    var tagClass = $('.tagsinput').data('color');
+
+   if($(".tagsinput").length != 0){
+     $('.tagsinput').tagsinput();
+   }
+
+   $('.bootstrap-tagsinput').addClass(''+ tagClass +'-badge');
+
+    //    Activate bootstrap-select
+    $(".select").dropdown({
+        "dropdownClass": "dropdown-menu",
+        "optionClass": ""
+    });
 
     $('.form-control').on("focus", function() {
         $(this).parent('.input-group').addClass("input-group-focus");
@@ -69,9 +115,48 @@ $(document).ready(function() {
         $(this).parent(".input-group").removeClass("input-group-focus");
     });
 
+
+    if (breakCards == true) {
+        // We break the cards headers if there is too much stress on them :-)
+        $('[data-header-animation="true"]').each(function() {
+            var $fix_button = $(this)
+            var $card = $(this).parent('.card');
+
+            $card.find('.fix-broken-card').click(function() {
+                console.log(this);
+                var $header = $(this).parent().parent().siblings('.card-header, .card-header-image');
+
+                $header.removeClass('hinge').addClass('fadeInDown');
+
+                $card.attr('data-count', 0);
+
+                setTimeout(function() {
+                    $header.removeClass('fadeInDown animate');
+                }, 480);
+            });
+
+            $card.mouseenter(function() {
+                var $this = $(this);
+                hover_count = parseInt($this.attr('data-count'), 10) + 1 || 0;
+                $this.attr("data-count", hover_count);
+
+                if (hover_count >= 20) {
+                    $(this).children('.card-header, .card-header-image').addClass('hinge animated');
+                }
+            });
+        });
+    }
+
+    // remove class has-error for checkbox validation
+    $('input[type="checkbox"][required="true"], input[type="radio"][required="true"]').on('click', function() {
+        if ($(this).hasClass('error')) {
+            $(this).closest('div').removeClass('has-error');
+        }
+    });
+
 });
 
-$(document).on('click', '.navbar-toggle', function() {
+$(document).on('click', '.navbar-toggler', function() {
     $toggle = $(this);
 
     if (mobile_menu_visible == 1) {
@@ -88,27 +173,49 @@ $(document).on('click', '.navbar-toggle', function() {
             $toggle.addClass('toggled');
         }, 430);
 
-        div = '<div id="bodyClick"></div>';
-        $(div).appendTo('body').click(function() {
+        var $layer = $('<div class="close-layer"></div>');
+
+        if ($('body').find('.main-panel').length != 0) {
+            $layer.appendTo(".main-panel");
+
+        } else if (($('body').hasClass('off-canvas-sidebar'))) {
+            $layer.appendTo(".wrapper-full-page");
+        }
+
+        setTimeout(function() {
+            $layer.addClass('visible');
+        }, 100);
+
+        $layer.click(function() {
             $('html').removeClass('nav-open');
             mobile_menu_visible = 0;
+
+            $layer.removeClass('visible');
+
             setTimeout(function() {
+                $layer.remove();
                 $toggle.removeClass('toggled');
-                $('#bodyClick').remove();
-            }, 550);
+
+            }, 400);
         });
 
         $('html').addClass('nav-open');
         mobile_menu_visible = 1;
 
     }
+
 });
 
 // activate collapse right menu when the windows is resized
 $(window).resize(function() {
     md.initSidebarsCheck();
+
     // reset the seq for charts drawing animations
     seq = seq2 = 0;
+
+    setTimeout(function() {
+        demo.initDashboardPageCharts();
+    }, 500);
 });
 
 md = {
@@ -123,9 +230,116 @@ md = {
         image_src = $sidebar.data('image');
 
         if (image_src !== undefined) {
-            sidebar_container = '<div class="sidebar-background" style="background-image: url(' + image_src + ') "/>'
+            sidebar_container = '<div class="sidebar-background" style="background-image: url(' + image_src + ') "/>';
             $sidebar.append(sidebar_container);
         }
+    },
+
+    initFormExtendedDatetimepickers: function(){
+        $('.datetimepicker').datetimepicker({
+            icons: {
+                time: "fa fa-clock-o",
+                date: "fa fa-calendar",
+                up: "fa fa-chevron-up",
+                down: "fa fa-chevron-down",
+                previous: 'fa fa-chevron-left',
+                next: 'fa fa-chevron-right',
+                today: 'fa fa-screenshot',
+                clear: 'fa fa-trash',
+                close: 'fa fa-remove'
+            }
+         });
+
+         $('.datepicker').datetimepicker({
+            format: 'MM/DD/YYYY',
+            icons: {
+                time: "fa fa-clock-o",
+                date: "fa fa-calendar",
+                up: "fa fa-chevron-up",
+                down: "fa fa-chevron-down",
+                previous: 'fa fa-chevron-left',
+                next: 'fa fa-chevron-right',
+                today: 'fa fa-screenshot',
+                clear: 'fa fa-trash',
+                close: 'fa fa-remove'
+            }
+         });
+
+         $('.timepicker').datetimepicker({
+//          format: 'H:mm',    // use this format if you want the 24hours timepicker
+            format: 'h:mm A',    //use this format if you want the 12hours timpiecker with AM/PM toggle
+            icons: {
+                time: "fa fa-clock-o",
+                date: "fa fa-calendar",
+                up: "fa fa-chevron-up",
+                down: "fa fa-chevron-down",
+                previous: 'fa fa-chevron-left',
+                next: 'fa fa-chevron-right',
+                today: 'fa fa-screenshot',
+                clear: 'fa fa-trash',
+                close: 'fa fa-remove'
+
+            }
+         });
+    },
+
+
+    initSliders: function(){
+        // Sliders for demo purpose
+        var slider = document.getElementById('sliderRegular');
+
+        noUiSlider.create(slider, {
+            start: 40,
+            connect: [true,false],
+            range: {
+                min: 0,
+                max: 100
+            }
+        });
+
+        var slider2 = document.getElementById('sliderDouble');
+
+        noUiSlider.create(slider2, {
+            start: [ 20, 60 ],
+            connect: true,
+            range: {
+                min:  0,
+                max:  100
+            }
+        });
+    },
+
+    initSidebarsCheck: function() {
+        if ($(window).width() <= 991) {
+            if ($sidebar.length != 0) {
+                md.initRightMenu();
+            }
+        }
+    },
+
+    initMinimizeSidebar: function() {
+
+        $('#minimizeSidebar').click(function() {
+            var $btn = $(this);
+
+            if (md.misc.sidebar_mini_active == true) {
+                $('body').removeClass('sidebar-mini');
+                md.misc.sidebar_mini_active = false;
+            } else {
+                $('body').addClass('sidebar-mini');
+                md.misc.sidebar_mini_active = true;
+            }
+
+            // we simulate the window Resize so the charts will get updated in realtime.
+            var simulateWindowResize = setInterval(function() {
+                window.dispatchEvent(new Event('resize'));
+            }, 180);
+
+            // we stop the simulation of Window Resize after the animations are completed
+            setTimeout(function() {
+                clearInterval(simulateWindowResize);
+            }, 1000);
+        });
     },
 
     checkScrollForTransparentNavbar: debounce(function() {
@@ -142,25 +356,18 @@ md = {
         }
     }, 17),
 
-    initSidebarsCheck: function() {
-        if ($(window).width() <= 991) {
-            if ($sidebar.length != 0) {
-                md.initRightMenu();
-            }
-        }
-    },
 
     initRightMenu: debounce(function() {
         $sidebar_wrapper = $('.sidebar-wrapper');
 
         if (!mobile_menu_initialized) {
-            $navbar = $('nav').find('.navbar-collapse').children('.navbar-nav.navbar-right');
+            $navbar = $('nav').find('.navbar-collapse').children('.navbar-nav');
 
             mobile_menu_content = '';
 
             nav_content = $navbar.html();
 
-            nav_content = '<ul class="nav nav-mobile-menu">' + nav_content + '</ul>';
+            nav_content = '<ul class="nav navbar-nav nav-mobile-menu">' + nav_content + '</ul>';
 
             navbar_form = $('nav').find('.navbar-form').get(0).outerHTML;
 
@@ -192,6 +399,38 @@ md = {
         }
     }, 200),
 
+
+    // initBootstrapNavbarMenu: debounce(function(){
+    //
+    //     if(!bootstrap_nav_initialized){
+    //         $navbar = $('nav').find('.navbar-collapse').first().clone(true);
+    //
+    //         nav_content = '';
+    //         mobile_menu_content = '';
+    //
+    //         //add the content from the regular header to the mobile menu
+    //         $navbar.children('ul').each(function(){
+    //             content_buff = $(this).html();
+    //             nav_content = nav_content + content_buff;
+    //         });
+    //
+    //         nav_content = '<ul class="nav nav-mobile-menu">' + nav_content + '</ul>';
+    //
+    //         $navbar.html(nav_content);
+    //         $navbar.addClass('off-canvas-sidebar');
+    //
+    //         // append it to the body, so it will come from the right side of the screen
+    //         $('body').append($navbar);
+    //
+    //         $toggle = $('.navbar-toggle');
+    //
+    //         $navbar.find('a').removeClass('btn btn-round btn-default');
+    //         $navbar.find('button').removeClass('btn-round btn-fill btn-info btn-primary btn-success btn-danger btn-warning btn-neutral');
+    //         $navbar.find('button').addClass('btn-simple btn-block');
+    //
+    //         bootstrap_nav_initialized = true;
+    //     }
+    // }, 500),
 
     startAnimationForLineChart: function(chart) {
 

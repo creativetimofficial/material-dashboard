@@ -1,0 +1,8 @@
+.btn {
+  &.btn-facebook {
+    @include bmd-raised-button-variant($white, $social-facebook, $social-facebook);
+  }
+  &.btn-twitter {
+      @include bmd-raised-button-variant($white, $social-twitter, $social-twitter);
+  }
+}

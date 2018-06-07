@@ -1,0 +1,235 @@
+$bmd-label-color-focus: $brand-primary !default;
+$bmd-invalid-underline: $brand-danger !default;
+$bmd-readonly-underline: $input-border-color !default;
+
+//---
+// verified in use with refactoring to v4
+
+//---
+//-- unverified below here
+$bmd-brand-inverse: $indigo !default;
+// Typography elements FIXME: review to see if we actually need these
+$icon-color: rgba($black, 0.5) !default;
+
+// --------------------
+// inputs
+$mdb-input-placeholder-color: #AAAAAA !default;
+$mdb-input-underline-color: #D2D2D2 !default;
+
+$mdb-input-font-size-base: 14px !default;
+$mdb-input-font-size-large: ceil(($font-size-base * 1.25)) !default; // ~20px
+$mdb-input-font-size-small: ceil(($font-size-base * 0.75)) !default; // ~12px
+
+$bmd-bmd-label-static-size-ratio: 75 / 100 !default;
+$bmd-help-size-ratio: 75 / 100 !default;
+
+$bmd-form-control-bg-repeat-y: no-repeat !default;
+$bmd-form-control-bg-position: center bottom, center calc(100% - 1px) !default;
+$bmd-form-control-bg-size: 0 100%, 100% 100% !default;
+$bmd-form-control-bg-size-active: 100% 100%, 100% 100% !default;
+
+// expandable
+$input-text-button-size: 32px !default;
+
+// sizing
+$bmd-form-line-height: 1 !default; // set as 1x font-size so that padding is easier calculated to match the spec.
+$bmd-label-top-margin-base: 1rem !default;
+
+$bmd-form-line-height-lg: 1 !default; // set as 1x font-size so that padding is easier calculated to match the spec.
+$bmd-label-top-margin-lg: 1rem !default; // 16px
+
+$bmd-form-line-height-sm: 1 !default; // set as 1x font-size so that padding is easier calculated to match the spec.
+$bmd-label-top-margin-sm: .75rem !default; // 12px
+
+$text-disabled: #a8a8a8 !default;
+$background-disabled: #eaeaea !default;
+
+$margin-base:               1.071rem !default;
+
+
+// Checkboxes
+$bmd-checkbox-size: 1.25rem !default;
+$bmd-checkbox-animation-ripple: 500ms !default;
+$bmd-checkbox-animation-check: 0.3s !default;
+$bmd-checkbox-checked-color: $white !default;
+$bmd-checkbox-label-padding: .3125rem !default; // 5px
+$checkboxes-text-color: $mdb-input-placeholder-color !default;
+
+$bmd-checkbox-border-size: .0625rem !default;
+$bmd-checkbox-border-color: $bmd-label-color-inner-focus !default;
+$bmd-checkbox-border-color-disabled: $gray-lighter !default; //#bdbdbd !default;
+
+// Toggle
+$mdb-toggle-label-color: $mdb-label-color !default;
+
+// Variables for datetimepicker //
+$padding-default-vertical:     10px !default;
+$medium-pale-bg:             #F1EAE0 !default;
+$pale-bg:                    #F9F7F3 !default;
+
+
+$font-color:                 #66615b !default;
+
+// $brand-default:     #cecece !default;
+// $brand-primary:     $purple !default;
+// $brand-success:     $green !default;
+// $brand-danger:      $red !default;
+// $brand-warning:     $orange !default;
+// $brand-info:        $cyan !default;
+// $brand-rose:        $pink !default;
+
+$black-color:           #3C4858 !default;
+
+// Dropdowns
+
+$dropdown-item-padding-y: .625rem;
+$dropdown-item-padding-x: 1.25rem;
+$dropdown-header-padding-y: 0.1875rem;
+$bmd-dropdown-margin-y: .3125rem !default;
+$bmd-dropdown-header-color: #777 !default;
+$bmd-dropdown-link-color: #333 !default;
+
+// Switches
+$bmd-switch-label-padding: .3125rem !default; // 5px
+$bmd-switch-width: 2.125rem !default; // 34px
+$bmd-switch-height: .875rem !default; // 14px
+$bmd-switch-handle-size: 1.25rem !default; // 20px (was 18px)
+
+$bmd-switch-handle-checked-bg: $brand-primary !default;
+$bmd-switch-handle-unchecked-bg: #f1f1f1 !default;
+$bmd-switch-handle-disabled-bg: #bdbdbd !default;
+$bmd-switch-unchecked-bg: $gray-lighter !default;
+$bmd-switch-checked-bg: desaturate(
+  lighten($bmd-switch-handle-checked-bg, 28%),
+  32%
+); // kind of magic recipe
+$bmd-switch-disabled-bg: $gray-lighter !default;
+
+// Popovers and Popups
+$bmd-popover-background: rgba(101, 101, 101, 0.9) !default;
+$bmd-popover-color: #ececec !default;
+
+// Radio:
+$bmd-radio-border: .0625rem !default; // 1px
+$bmd-radio-size: 1rem !default;
+$bmd-radio-ripple-offset: 1em !default;
+$bmd-radio-label-padding: .3125rem !default; // 5px
+
+$bmd-radio-color-off: $bmd-label-color-inner-focus !default;
+$bmd-radio-color-on: $brand-primary !default;
+$bmd-radio-color-disabled: $gray-lighter; //
+$bmd-radio-color-disabled-inverse: rgba(
+  $white,
+  0.30
+); // dark theme spec: Disabled: #FFFFFF, Opacity  30%
+
+$white-color: #fff !default;
+$navbar-color: #555 !default;
+$pills-color: $navbar-color !default;
+$black-color: #3C4858 !default;
+$link-color: $brand-primary;
+$white-transparent: rgba($white-color, .8);
+$transparent: transparent;
+
+//Popovers
+$popover-color: $navbar-color !default;
+
+//Tooltips
+$tooltip-font-size: 0.75rem !default;
+
+// Background colors
+$bg-primary: $brand-primary;
+$bg-danger: $brand-danger;
+$bg-warning: $brand-warning;
+$bg-info: $brand-info;
+$bg-rose: $brand-rose;
+$bg-success: $brand-success;
+$bg-dark: $grey-900;
+
+//Paddings
+$padding-general-y: 0.625rem !default;
+$padding-general-x: 0.9375rem !default;
+$padding-card-body-y: 0.9375rem !default;
+$padding-card-body-x: 1.875rem !default;
+
+// Buttons:
+$mdb-btn-font-size-base: 12px !default;
+$mdb-btn-font-size-lg: 14px !default;
+$mdb-btn-font-size-sm: 11px !default;
+$mdb-btn-font-size-xs: 10px !default;
+
+$mdb-btn-fab-size: 41px !default;
+$mdb-btn-fab-size-lg: 56px !default;
+$mdb-btn-fab-size-mini: 29px !default;
+$mdb-btn-fab-font-size: 24px !default;
+$mdb-btn-just-icon-font-size: 20px !default;
+
+$mdb-btn-icon-size: 32px !default;
+$mdb-btn-icon-size-mini: 17px !default;
+
+$bmd-line-height: 1.42857143 !default;
+$btn-lg-line-height: 1.3333333 !default;
+
+//Font-weight
+$font-weight-light: 300 !default;
+$font-weight-default: 400 !default;
+$font-weight-bold:    500 !default;
+$font-weight-extra-bold: 700 !default;
+$font-weight-ultra-bold: 900 !default;
+
+//Border-radius
+$border-radius-base: 3px !default;
+$border-radius-small: 2px !default;
+$border-radius-large: 6px !default;
+$border-radius-huge: 10px !default;
+$border-radius-label: 12px !default;
+$border-radius-extreme: 30px !default;
+
+// Animations
+$bmd-animation-curve-fast-out-slow-in: cubic-bezier(0.4, 0, 0.2, 1) !default;
+$bmd-animation-curve-linear-out-slow-in: cubic-bezier(0, 0, 0.2, 1) !default;
+$bmd-animation-curve-fast-out-linear-in: cubic-bezier(0.4, 0, 1, 1) !default;
+$bmd-animation-curve-default: $bmd-animation-curve-fast-out-slow-in !default;
+$bmd-animation-dropdown-caret: 150ms !default;
+$general-transition-time:  300ms !default;
+
+$slow-transition-time:           370ms !default;
+$fast-transition-time:           150ms !default;
+
+$transition-linear:                                   linear !default;
+$transition-bezier:         cubic-bezier(0.34, 1.61, 0.7, 1) !default;
+$transition-bezier-rotating-card:         cubic-bezier(0.34, 1.45, 0.7, 1) !default;
+$transition-ease:           ease 0s;
+
+//variables for social
+$social-facebook: 			#3b5998;
+$social-twitter: 			#55acee;
+$social-pinterest: 			#cc2127;
+$social-google: 			#dd4b39;
+$social-linkedin: 			#0976b4;
+$social-dribbble: 			#ea4c89;
+$social-github: 			#333333;
+$social-youtube: 			#e52d27;
+$social-instagram: 		    #125688;
+$social-reddit: 			#ff4500;
+$social-tumblr: 			#35465c;
+$social-behance: 			#1769ff;
+
+
+// Variables for checkboxes
+
+$mdb-label-color: unquote("rgba(#{$rgb-black}, 0.26)") !default;
+$mdb-label-color-toggle-focus: unquote("rgba(#{$rgb-black}, .54)") !default;
+
+$mdb-checkbox-size: 20px !default;
+$mdb-checkbox-animation-ripple: 500ms !default;
+$mdb-checkbox-animation-check: 0.3s !default;
+$mdb-checkbox-checked-color: $brand-primary !default;
+
+$mdb-checkbox-label-color: $mdb-label-color !default;
+$mdb-checkbox-border-color: $mdb-label-color-toggle-focus !default;
+
+// Radio:
+$mdb-radio-label-color: $mdb-label-color !default;
+$mdb-radio-color-off: $mdb-label-color-toggle-focus !default;
+$mdb-radio-color-on: $brand-primary !default;

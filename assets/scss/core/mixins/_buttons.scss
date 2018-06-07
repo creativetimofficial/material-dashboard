@@ -1,0 +1,385 @@
+// from bs mixins/buttons button-variant
+@mixin bmd-button-variant($color, $background, $focus-background, $active-background, $border, $focus-border, $active-border) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+
+  @include hover {
+    color: $color;
+    background-color: $focus-background;
+    border-color: $focus-border;
+  }
+
+  &:focus,
+  &.focus,
+  &:hover{
+    color: $color;
+    background-color: $focus-background;
+    border-color: $focus-border;
+  }
+
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle,
+  .show > &.dropdown-toggle {
+    color: $color;
+    background-color: $focus-background;
+    border-color: $focus-border;
+    @include shadow-2dp-color($background);
+
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $color;
+      background-color: $active-background;
+      border-color: $active-border;
+    }
+  }
+
+  // when it is an icon, kill the active bg on open dropdown, but stabilize on hover
+  .open > &.dropdown-toggle.bmd-btn-icon {
+    color: inherit;
+    background-color: $background;
+
+    // leave hover on with the lighter focus color
+    &:hover {
+      background-color: $focus-background;
+    }
+  }
+
+  &.disabled,
+  &:disabled {
+    &:focus,
+    &.focus {
+      background-color: $background;
+      border-color: $border;
+    }
+    @include hover {
+      background-color: $background;
+      border-color: $border;
+    }
+  }
+}
+
+@mixin bmd-flat-button-variant(
+  $color,
+  $border: $bmd-btn-border,
+  $focus-border: $bmd-btn-focus-bg,
+  $active-border: $bmd-btn-active-bg
+) {
+  $background: $bmd-btn-bg;
+  $focus-background: $bmd-btn-focus-bg;
+  $active-background: $bmd-btn-active-bg;
+
+  @include bmd-button-variant($color,
+    $background,
+    $focus-background,
+    $active-background,
+    $border,
+    $focus-border,
+    $active-border);
+
+  // inverse color scheme
+  .bg-inverse & {
+    $focus-background: $bmd-inverse-btn-focus-bg;
+    $focus-border: $bmd-inverse-btn-focus-bg;
+
+    $active-background: $bmd-inverse-btn-active-bg;
+    $active-border: $bmd-inverse-btn-active-bg;
+
+    @include bmd-button-variant($color,
+      $background,
+      $focus-background,
+      $active-background,
+      $border,
+      $focus-border,
+      $active-border);
+  }
+
+  // reverse the above for links
+  &.btn-link {
+    background-color: transparent;
+  }
+}
+
+@mixin bmd-flat-button-color() {
+  @include bmd-flat-button-variant($bmd-btn-color);
+
+  // flat bg with text color variations
+  &.btn-primary {
+    @include bmd-flat-button-variant($btn-primary-bg);
+  }
+  &.btn-secondary {
+    @include bmd-flat-button-variant($btn-secondary-color);
+  }
+  &.btn-info {
+    @include bmd-flat-button-variant($btn-info-bg);
+  }
+  &.btn-success {
+    @include bmd-flat-button-variant($btn-success-bg);
+  }
+  &.btn-warning {
+    @include bmd-flat-button-variant($btn-warning-bg);
+  }
+  &.btn-danger {
+    @include bmd-flat-button-variant($btn-danger-bg);
+  }
+}
+
+@mixin bmd-outline-button-color() {
+  &.btn-outline,
+  &.btn-outline-primary,
+  &.btn-outline-secondary,
+  &.btn-outline-info,
+  &.btn-outline-success,
+  &.btn-outline-warning,
+  &.btn-outline-danger {
+    border-color: currentColor;
+    border-style: solid;
+    border-width: 1px;
+  }
+
+  // flat bg with text and border color variations
+  &.btn-outline {
+    @include bmd-flat-button-variant($bmd-btn-color, $bmd-btn-color, $bmd-btn-color, $bmd-btn-color);
+  }
+  &.btn-outline-primary {
+    @include bmd-flat-button-variant($btn-primary-bg, $btn-primary-bg, $btn-primary-bg, $btn-primary-bg);
+  }
+  &.btn-outline-secondary {
+    @include bmd-flat-button-variant($btn-secondary-color, $btn-secondary-color, $btn-secondary-color, $btn-secondary-color);
+  }
+  &.btn-outline-info {
+    @include bmd-flat-button-variant($btn-info-bg, $btn-info-bg, $btn-info-bg, $btn-info-bg);
+  }
+  &.btn-outline-success {
+    @include bmd-flat-button-variant($btn-success-bg, $btn-success-bg, $btn-success-bg, $btn-success-bg);
+  }
+  &.btn-outline-warning {
+    @include bmd-flat-button-variant($btn-warning-bg, $btn-warning-bg, $btn-warning-bg, $btn-warning-bg);
+  }
+  &.btn-outline-danger {
+    @include bmd-flat-button-variant($btn-danger-bg, $btn-danger-bg, $btn-danger-bg, $btn-danger-bg);
+  }
+}
+
+@mixin bmd-raised-button-variant($color, $background, $border) {
+  // FIXME: SPEC - this should be the 600 color, how can we get that programmatically if at all? Or are we limited to the color palette only?
+  $focus-background: contrast-color(
+    $background,
+    darken($background, 3%),
+    lighten($background, 3%)
+  );
+  //$focus-background: darken($background, 10%);  // default bootstrap
+  $focus-border: darken($border, 12%);
+
+  $active-background: $focus-background;
+  //$active-background: darken($background, 17%);
+  $active-border: darken($border, 25%);
+
+  @include bmd-button-variant($color,
+    $background,
+    $focus-background,
+    $active-background,
+    $border,
+    $focus-border,
+    $active-border);
+
+    @include shadow-2dp-color($background);
+
+    &:focus,
+    &:active,
+    &:hover{
+      // remove this line if you want black shadows
+      @include button-shadow-color($background);
+    }
+
+    &.btn-link{
+        background-color: transparent;
+        color: $background;
+        box-shadow: none;
+
+        &:hover,
+        &:focus,
+        &:active{
+            background-color: transparent;
+            color: $background;
+        }
+    }
+
+}
+
+@mixin bmd-raised-button-color() {
+  &.btn-primary {
+    @include bmd-raised-button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border-color);
+  }
+  &.btn-secondary {
+    @include bmd-raised-button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border-color);
+  }
+  &.btn-info {
+    @include bmd-raised-button-variant($btn-info-color, $btn-info-bg, $btn-info-border-color);
+  }
+  &.btn-success {
+    @include bmd-raised-button-variant($btn-success-color, $btn-success-bg, $btn-success-border-color);
+  }
+  &.btn-warning {
+    @include bmd-raised-button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border-color);
+  }
+  &.btn-danger {
+    @include bmd-raised-button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border-color);
+  }
+  &.btn-rose {
+    @include bmd-raised-button-variant($btn-rose-color, $btn-rose-bg, $btn-rose-border-color);
+  }
+  &,
+  &.btn-default{
+    @include bmd-raised-button-variant($btn-default-color, $btn-default-bg, $btn-default-border-color);
+  }
+}
+
+@mixin bmd-social-buttons(){
+    &.btn-facebook {
+      @include bmd-raised-button-variant($white, $social-facebook, $social-facebook);
+    }
+    &.btn-twitter {
+        @include bmd-raised-button-variant($white, $social-twitter, $social-twitter);
+    }
+    &.btn-pinterest {
+        @include bmd-raised-button-variant($white, $social-pinterest, $social-pinterest);
+    }
+    &.btn-google {
+        @include bmd-raised-button-variant($white, $social-google, $social-google);
+    }
+    &.btn-linkedin {
+        @include bmd-raised-button-variant($white, $social-linkedin, $social-linkedin);
+    }
+    &.btn-dribbble {
+        @include bmd-raised-button-variant($white, $social-dribbble, $social-dribbble);
+    }
+    &.btn-github {
+        @include bmd-raised-button-variant($white, $social-github, $social-github);
+    }
+    &.btn-youtube {
+        @include bmd-raised-button-variant($white, $social-youtube, $social-youtube);
+    }
+    &.btn-instagram {
+        @include bmd-raised-button-variant($white, $social-instagram, $social-instagram);
+    }
+    &.btn-reddit {
+        @include bmd-raised-button-variant($white, $social-reddit, $social-reddit);
+    }
+    &.btn-tumblr {
+        @include bmd-raised-button-variant($white, $social-tumblr, $social-tumblr);
+    }
+    &.btn-behance {
+        @include bmd-raised-button-variant($white, $social-behance, $social-behance);
+    }
+}
+
+@mixin undo-bs-tab-focus() {
+  // clear out the tab-focus() from BS
+  &,
+  &:active,
+  &.active {
+    &:focus,
+    &.focus {
+      //@include tab-focus();
+      outline: 0;
+    }
+  }
+}
+
+$opacity-gray-3:             rgba(222,222,222, .3) !default;
+$opacity-gray-5:             rgba(222,222,222, .5) !default;
+$opacity-gray-8:             rgba(222,222,222, .8) !default;
+
+
+$opacity-5:                  rgba(255,255,255, .5) !default;
+$opacity-8:                  rgba(255,255,255, .8) !default;
+
+$datepicker-color-days:             rgba(255,255,255, .8)  !default;
+$datepicker-color-old-new-days:     rgba(255,255,255, .4)  !default;
+
+
+$opacity-1:                  rgba(255,255,255, .1) !default;
+$opacity-2:                  rgba(255,255,255, .2) !default;
+
+@mixin shadow-big-dash(){
+    box-shadow: 0 10px 30px -12px rgba(0, 0, 0, $bmd-shadow-penumbra-opacity * 3),
+    0  4px 25px 0px rgba(0, 0, 0, $bmd-shadow-ambient-opacity),
+    0  8px 10px -5px rgba(0, 0, 0, $bmd-shadow-umbra-opacity);
+}
+
+@mixin shadow-big-navbar(){
+    box-shadow: 0 10px 20px -12px rgba(0, 0, 0, $mdb-shadow-key-penumbra-opacity * 3),
+    0  3px 20px 0px rgba(0, 0, 0, $mdb-shadow-ambient-shadow-opacity),
+    0  8px 10px -5px rgba(0, 0, 0, $mdb-shadow-key-umbra-opacity);
+}
+
+@mixin shadow-big-color($color){
+    // new box shadow optimized for Tablets and Phones
+    box-shadow: 0 4px 20px 0px rgba(0, 0, 0, .14),
+                0 7px 10px -5px rgba($color, 0.4)
+}
+
+@mixin shadow-alert-color($color){
+  box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14),
+              0 7px 10px -5px rgba($color, 0.4)
+}
+
+@mixin btn-styles($btn-color) {
+
+    // remove this line if you want black shadows
+    @include shadow-2dp-color($btn-color);
+
+    &,
+    &:hover,
+    &:focus,
+    &:active,
+    &.active,
+    &:active:focus,
+    &:active:hover,
+    &.active:focus,
+    &.active:hover,
+    .open > &.dropdown-toggle,
+    .open > &.dropdown-toggle:focus,
+    .open > &.dropdown-toggle:hover {
+      background-color: $btn-color;
+      color: $white-color;
+    }
+
+    &:focus,
+    &:active,
+    &:hover{
+      // remove this line if you want black shadows
+      @include button-shadow-color($btn-color);
+    }
+
+  &.disabled,
+  &:disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+        box-shadow: none;
+    }
+  }
+
+  &.btn-simple{
+      background-color: transparent;
+      color: $btn-color;
+      box-shadow: none;
+
+      &:hover,
+      &:focus,
+      &:active{
+          background-color: transparent;
+          color: $btn-color;
+      }
+  }
+
+}

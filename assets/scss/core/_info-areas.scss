@@ -1,0 +1,60 @@
+.info{
+    max-width: 360px;
+    margin: 0 auto;
+    padding: 70px 0 30px;
+
+    .icon{
+        color: $gray-color;
+
+        > i{
+            font-size: 3.85rem;
+        }
+    }
+    .info-title{
+        color: $black-color;
+        margin: 0.875rem * 2 0 0.875rem;
+    }
+    p{
+        color: $gray-color;
+    }
+}
+
+.info-horizontal{
+    .icon{
+        float: left;
+        margin-top: 24px;
+        margin-right: 10px;
+
+        >i{
+            font-size: $font-size-h2;
+        }
+    }
+    .description{
+        overflow: hidden;
+    }
+
+}
+
+.card-icon {
+  &.icon-primary {
+    color: $brand-primary;
+    }
+  &.icon-info {
+    color: $brand-info;
+  }
+  &.icon-success {
+    color: $brand-success;
+  }
+  &.icon-warning {
+    color: $brand-warning;
+  }
+  &.icon-danger {
+    color: $brand-danger;
+  }
+  &.icon-rose {
+    color: $brand-rose;
+  }
+  &.icon-white {
+    color: $white-color;
+  }
+}

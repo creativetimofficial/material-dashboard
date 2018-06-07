@@ -1,0 +1,209 @@
+
+/* Functional styling;
+ * These styles are required for noUiSlider to function.
+ * You don't need to change these rules to apply your design.
+ */
+.noUi-target,
+.noUi-target * {
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-ms-touch-action: none;
+	touch-action: none;
+-ms-user-select: none;
+-moz-user-select: none;
+	user-select: none;
+-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.noUi-target {
+	position: relative;
+	direction: ltr;
+}
+.noUi-base {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	z-index: 1; /* Fix 401 */
+}
+.noUi-connect {
+	position: absolute;
+	right: 0;
+	top: 0;
+	left: 0;
+	bottom: 0;
+}
+.noUi-origin {
+	position: absolute;
+	height: 0;
+	width: 0;
+
+    margin: 0;
+    border-radius: 0;
+    height: 2px;
+    background: #c8c8c8;
+    &[style^="left: 0"] .noUi-handle {
+        background-color: #fff;
+        border: 2px solid #c8c8c8;
+        &.noUi-active {
+            border-width: 1px;
+        }
+    }
+}
+.noUi-handle {
+	position: relative;
+	z-index: 1;
+}
+.noUi-state-tap .noUi-connect,
+.noUi-state-tap .noUi-origin {
+-webkit-transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
+	transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
+}
+.noUi-state-drag * {
+	cursor: inherit !important;
+}
+
+/* Painting and performance;
+ * Browsers can paint handles in their own layer.
+ */
+.noUi-base,
+.noUi-handle {
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+/* Slider size and handle placement;
+ */
+.noUi-horizontal {
+	height: 2px;
+    margin: 15px 0;
+}
+.noUi-vertical {
+	width: 18px;
+}
+.noUi-vertical .noUi-handle {
+	width: 28px;
+	height: 34px;
+	left: -6px;
+	top: -17px;
+}
+
+/* Styling;
+ */
+.noUi-target {
+	background: #c8c8c8;
+	border-radius: 4px;
+}
+.noUi-connect {
+	background: #3FB8AF;
+-webkit-transition: background 450ms;
+	transition: background 450ms;
+}
+
+/* Handles and cursors;
+ */
+.noUi-draggable {
+	cursor: w-resize;
+}
+.noUi-vertical .noUi-draggable {
+	cursor: n-resize;
+}
+.noUi-handle {
+    box-sizing: border-box;
+    width: 14px;
+    height: 14px;
+    left: -10px;
+    top: -6px;
+    cursor: pointer;
+    border-radius: 100%;
+    transition: all 0.2s ease-out;
+    border: 1px solid;
+    background: $white-color;
+
+    @include shadow-2dp();
+
+    &.noUi-active {
+        transform: scale3d(1.5, 1.5, 1);
+    }
+}
+.noUi-vertical .noUi-handle:before,
+.noUi-vertical .noUi-handle:after {
+	width: 14px;
+	height: 1px;
+	left: 6px;
+	top: 14px;
+}
+.noUi-vertical .noUi-handle:after {
+	top: 17px;
+}
+
+/* Disabled state;
+ */
+
+[disabled] .noUi-connect {
+	background: #B8B8B8;
+}
+[disabled].noUi-target,
+[disabled].noUi-handle,
+[disabled] .noUi-handle {
+	cursor: not-allowed;
+}
+
+.slider {
+    background: #c8c8c8;
+
+    & .noUi-connect{
+        background-color: $brand-primary;
+        border-radius: 4px;
+    }
+
+    .noUi-handle{
+        border-color: $brand-primary;
+    }
+
+    &.slider-info{
+        & .noUi-connect{
+            background-color: $brand-info;
+        }
+
+        .noUi-handle{
+            border-color: $brand-info;
+        }
+    }
+    &.slider-success{
+        & .noUi-connect{
+            background-color: $brand-success;
+        }
+
+        .noUi-handle{
+            border-color: $brand-success;
+        }
+    }
+    &.slider-warning{
+        & .noUi-connect{
+            background-color: $brand-warning;
+        }
+
+        .noUi-handle{
+            border-color: $brand-warning;
+        }
+    }
+    &.slider-danger{
+        & .noUi-connect{
+             background-color: $brand-danger;
+         }
+
+         .noUi-handle{
+             border-color: $brand-danger;
+         }
+    }
+
+    &.slider-rose{
+        & .noUi-connect{
+             background-color: $brand-rose;
+         }
+
+         .noUi-handle{
+             border-color: $brand-rose;
+         }
+    }
+}
