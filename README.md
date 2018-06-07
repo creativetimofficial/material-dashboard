@@ -23,8 +23,8 @@ You can find the Github Repo here.
 
 * [Versions](#versions)
 * [Demo](#demo)
-* [Documentation](#documentation)
 * [Quick Start](#quick-start)
+* [Documentation](#documentation)
 * [File Structure](#file-structure)
 * [Browser Support](#browser-support)
 * [Resources](#resources)
@@ -54,16 +54,19 @@ You can find the Github Repo here.
 
 [View More](https://demos.creative-tim.com/material-dashboard/examples/dashboard.html).
 
-## Documentation
-The documentation for the Material Dashboard is hosted at our [website](https://demos.creative-tim.com/material-dashboard/docs/2.0/getting-started/introduction.html).
 
 ## Quick start
 
 Quick start options:
 
+- `npm i material-dashboard`
+- Clone the repo: `git clone https://github.com/creativetimofficial/material-dashboard.git`.
 - [Download from Github](https://github.com/creativetimofficial/material-dashboard/archive/master.zip).
 - [Download from Creative Tim](http://www.creative-tim.com/product/material-dashboard).
-- Clone the repo: `git clone https://github.com/creativetimofficial/material-dashboard.git`.
+
+
+## Documentation
+The documentation for the Material Dashboard is hosted at our [website](https://demos.creative-tim.com/material-dashboard/docs/2.0/getting-started/introduction.html).
 
 
 ## File Structure
