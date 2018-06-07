@@ -24,7 +24,7 @@ You can find the Github Repo here.
 * [Versions](#versions)
 * [Demo](#demo)
 * [Documentation](#documentation)
-* [quick-start](#quick-start)
+* [Quick Start](#quick-start)
 * [File Structure](#file-structure)
 * [Browser Support](#browser-support)
 * [Resources](#resources)
