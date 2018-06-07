@@ -1,6 +1,8 @@
 # [Material Dashboard](http://demos.creative-tim.com/material-dashboard/examples/dashboard.html) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?text=Material%20Dashboard%20by%20Creative%20Tim&url=https%3A%2F%2Fdemos.creative-tim.com%2Fmaterial-dashboard%2Fexamples%2Fdashboard.html&via=CreativeTim)
 <center>
+  
 ![Product Gif](assets/github/product.gif)
+
 </center>
 
 Material Dashboard is a free Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design. We are very excited to introduce our take on the material concepts through an easy to use and beautiful set of components. Material Dashboard was built over the popular Bootstrap framework and it comes with a couple of third-party plugins redesigned to fit in with the rest of the elements.
@@ -42,11 +44,13 @@ You can find the Github Repo here.
 [<img src="assets/github/vuejs.png" width="60" height="60" />](https://www.creative-tim.com/product/vue-material-dashboard)
 [<img src="assets/github/angular.png" width="60" height="60" />](https://www.creative-tim.com/product/material-dashboard-angular2)
 
+
 | HTML | React | Vue | Angular |
-| --- | --- | --- | --- | --- |
+| --- | --- | --- | --- |
 | [![Material Dashboard HTML](assets/github/opt_md_thumbnail.jpg)](https://www.creative-tim.com/product/material-dashboard) | [![Material Dashboard React](assets/github/opt_mdr_thumbnail.jpg)](https://www.creative-tim.com/product/material-dashboard-react) | [![Vue Material Dashboard ](assets/github/opt_md_vue_thumbnail.jpg)](https://www.creative-tim.com/product/vue-material-dashboard) | [![Material Dashboard Angular](assets/github/opt_md_angular_thumbnail.jpg)](https://www.creative-tim.com/product/material-dashboard-angular2)
 
 ## Demo
+
 | Dashboard | User Profile | Tables | Maps | Notification |
 | --- | --- | --- | --- | --- |
 | [![Start page](assets/github/dashboard.png)](https://demos.creative-tim.com/material-dashboard/examples/dashboard.html) | [![User profile page](assets/github/user_profile.png)](https://demos.creative-tim.com/material-dashboard/examples/user.html) | [![Tables page ](assets/github/tables.png)](https://demos.creative-tim.com/material-dashboard/examples/table.html) | [![Maps Page](assets/github/maps.png)](https://demos.creative-tim.com/material-dashboard/examples/maps.html) | [![Notification page](assets/github/notification.png)](https://demos.creative-tim.com/material-dashboard/examples/notifications.html)
