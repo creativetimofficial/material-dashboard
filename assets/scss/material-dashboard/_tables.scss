@@ -1,0 +1,185 @@
+.table{
+   > thead > tr > th{
+       border-bottom-width: 1px;
+       font-size: $font-size-h5;
+       font-weight: $font-weight-light;
+   }
+
+   .form-check{
+       margin-top: 0;
+
+       .form-check-sign{
+           top: -13px;
+           left: 0;
+           padding-right: 0;
+       }
+    }
+
+   .radio,
+   .checkbox{
+       margin-top: 0;
+       margin-bottom: 0;
+       padding: 0;
+       width: 15px;
+
+       .icons{
+           position: relative;
+       }
+   }
+   > thead > tr > th,
+   > tbody > tr > th,
+   > tfoot > tr > th,
+   > thead > tr > td,
+   > tbody > tr > td,
+   > tfoot > tr > td{
+       padding: 12px 8px;
+       vertical-align: middle;
+   }
+
+   thead{
+       tr{
+           th{
+               font-size: 1.063rem;
+           }
+       }
+   }
+
+   .th-description{
+       max-width: 150px;
+   }
+   .td-price{
+       font-size: 26px;
+       font-weight: $font-weight-light;
+       margin-top: 5px;
+       text-align: right;
+   }
+   .td-total{
+        font-weight: $font-weight-bold;
+        font-size: $font-size-h5;
+        padding-top: 20px;
+        text-align: right;
+    }
+
+   .td-actions .btn{
+    margin: 0px;
+    padding: 5px;
+    }
+
+    > tbody > tr{
+        position: relative;
+    }
+}
+
+.table-shopping{
+    > thead > tr > th{
+        font-size: $font-size-h6;
+        text-transform: uppercase;
+    }
+    > tbody > tr > td{
+        font-size: $font-paragraph;
+
+        b{
+            display: block;
+            margin-bottom: 5px;
+        }
+    }
+    .td-name{
+        font-weight: $font-weight-default;
+        font-size: 1.5em;
+        line-height: 1.42857143;
+
+        small{
+            color: $gray-light;
+            font-size: 0.75em;
+            font-weight: $font-weight-light;
+        }
+    }
+    .td-number{
+       font-weight: $font-weight-light;
+       font-size: $font-size-h4;
+   }
+    .td-name{
+        min-width: 200px;
+    }
+    .td-number{
+        text-align: right;
+        min-width: 150px;
+
+        small{
+            margin-right: 3px;
+        }
+    }
+
+    .img-container{
+        width: 120px;
+        max-height: 160px;
+        overflow: hidden;
+        display: block;
+
+        img{
+            width: 100%;
+        }
+    }
+}
+
+
+
+
+// BS4 has not yet converted the following to variables - keep an eye on it and move to variables when possible.
+.thead-inverse {
+  th {
+    //color: $bmd-inverse; // #fff;
+    //background-color: $gray-dark;
+  }
+}
+.thead-default {
+  th {
+    //color: $gray;
+    //background-color: $bmd-inverse-lighter; //$gray-lighter;
+  }
+}
+
+.table-inverse {
+  color: $bmd-inverse-light; //$gray-lighter;
+  //background-color: $gray-dark;
+
+  //th,
+  //td,
+  //thead th {
+  //  border-color: $gray;
+  //}
+}
+
+.table {
+  thead th {
+    font-size: $bmd-table-header-font-size;
+    font-weight: 500;
+
+    border-top-width: 0;
+    border-bottom-width: $table-border-width;
+  }
+}
+
+thead.thead-inverse,
+// needs specificity
+.table-inverse thead {
+  th {
+    color: $bmd-inverse-lighter;
+  }
+}
+
+.table-inverse {
+  th,
+  td,
+  thead th {
+    border-color: $bmd-table-border-color-inverse;
+  }
+}
+
+.table-striped>tbody>tr:nth-of-type(odd){
+    background-color: #f9f9f9;
+}
+
+.table.table-hover tbody tr:hover{
+  background-color: #f5f5f5;
+}
