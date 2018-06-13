@@ -16,8 +16,6 @@
   'use strict';
 
   $(function() {
-    $('body').bootstrapMaterialDesign();
-
     // Indeterminate checkbox example
     $('.bd-example-indeterminate [type="checkbox"]').prop(
       'indeterminate',

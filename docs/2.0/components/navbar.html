@@ -1,628 +1,349 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    
 
-
-
-
-
-
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
-
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-
-<!-- Favicons -->
-<link rel="apple-touch-icon" href="../../../assets/img/kit/free/apple-icon.png">
-<link rel="icon" href="../../../assets/img/kit/free/favicon.png">
-
-<title>
-  
-    Navbar &#45; Material Dashboard by Creative Tim
-  
-</title>
-
-
-<!-- Extra details for Live View on GitHub Pages -->
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="../../../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../../../assets/img/favicon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    Material Dashboard by Creative Tim
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <!-- Extra details for Live View on GitHub Pages -->
   <!-- Canonical SEO -->
-<link rel="canonical" href="https://www.creative-tim.com/product/material-dashboard" />
+  <link rel="canonical" href="https://www.creative-tim.com/product/material-dashboard" />
+  <!--  Social tags      -->
+  <meta name="keywords" content="creative tim, html dashboard, html css dashboard, web dashboard, bootstrap 4 dashboard, bootstrap 4, css3 dashboard, bootstrap 4 admin, material dashboard bootstrap 4 dashboard, frontend, responsive bootstrap 4 dashboard, free dashboard, free admin dashboard, free bootstrap 4 admin dashboard">
+  <meta name="description" content="Material Dashboard is a Free Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
+  <!-- Schema.org markup for Google+ -->
+  <meta itemprop="name" content="Material Dashboard by Creative Tim">
+  <meta itemprop="description" content="Material Dashboard is a Free Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
+  <meta itemprop="image" content="https://s3.amazonaws.com/creativetim_bucket/products/50/opt_md_thumbnail.jpg">
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="product">
+  <meta name="twitter:site" content="@creativetim">
+  <meta name="twitter:title" content="Material Dashboard by Creative Tim">
+  <meta name="twitter:description" content="Material Dashboard is a Free Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
+  <meta name="twitter:creator" content="@creativetim">
+  <meta name="twitter:image" content="https://s3.amazonaws.com/creativetim_bucket/products/50/opt_md_thumbnail.jpg">
+  <!-- Open Graph data -->
+  <meta property="fb:app_id" content="655968634437471">
+  <meta property="og:title" content="Material Dashboard by Creative Tim" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://demos.creative-tim.com/material-dashboard/examples/dashboard.html" />
+  <meta property="og:image" content="https://s3.amazonaws.com/creativetim_bucket/products/50/opt_md_thumbnail.jpg" />
+  <meta property="og:description" content="Material Dashboard is a Free Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design." />
+  <meta property="og:site_name" content="Creative Tim" />
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <!-- CSS Files -->
+  <link href="../../../assets/css/material-dashboard.min.css?v=2.1.0" rel="stylesheet" />
+  <!-- Documentation extras -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
+  <link rel="stylesheet" href="../../../assets/demo/docs.min.css">
+  <style>
+    .navbar-absolute-logo {
+      padding-left: 45px;
+    }
 
-<!--  Social tags      -->
-<meta name="keywords" content="material dashboard, bootstrap material admin, bootstrap material dashboard, material design admin, material design, creative tim, html dashboard, html css dashboard, web dashboard, freebie, free bootstrap dashboard, css3 dashboard, bootstrap admin, bootstrap dashboard, frontend, responsive bootstrap dashboard">
+    .navbar-absolute-logo img {
+      position: absolute;
+      left: 15px;
+      margin-top: -6px;
+    }
 
-<meta name="description" content="Material Dashboard is a Free Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
-
-<!-- Schema.org markup for Google+ -->
-<meta itemprop="name" content="Material Dashboard by Creative Tim">
-<meta itemprop="description" content="Material Dashboard is a Free Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
-
-<meta itemprop="image" content="https://s3.amazonaws.com/creativetim_bucket/products/50/opt_md_thumbnail.jpg">
-<!-- Twitter Card data -->
-
-<meta name="twitter:card" content="product">
-<meta name="twitter:site" content="@creativetim">
-<meta name="twitter:title" content="Material Dashboard by Creative Tim">
-
-<meta name="twitter:description" content="Material Dashboard is a Free Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
-<meta name="twitter:creator" content="@creativetim">
-<meta name="twitter:image" content="https://s3.amazonaws.com/creativetim_bucket/products/50/opt_md_thumbnail.jpg">
-<meta name="twitter:data1" content="Material Dashboard by Creative Tim">
-<meta name="twitter:label1" content="Product Type">
-<meta name="twitter:data2" content="Free">
-<meta name="twitter:label2" content="Price">
-
-<!-- Open Graph data -->
-<meta property="fb:app_id" content="655968634437471">
-<meta property="og:title" content="Material Dashboard by Creative Tim" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://demos.creative-tim.com/material-dashboard/examples/dashboard.html" />
-<meta property="og:image" content="https://s3.amazonaws.com/creativetim_bucket/products/50/opt_md_thumbnail.jpg"/>
-<meta property="og:description" content="Material Dashboard is a Free Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design." />
-<meta property="og:site_name" content="Creative Tim" />
-
-
-
-<!--     Fonts and icons     -->
-<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
-
-
-<link rel="stylesheet" href="../../../assets/css/material-dashboard.min.css?v=2.0.0">
-
-
-
-
-<!-- Documentation extras -->
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
-
-<link rel="stylesheet" href="../../../assets/assets-for-demo/docs.min.css">
-
-<style>
-   .navbar-absolute-logo{
-       padding-left: 45px;
-   }
-   .navbar-absolute-logo img{
-       position: absolute;
-       left: 15px;
-       margin-top: -6px;
-   }
-   body{
-     background: white;
-   }
-</style>
-
-
-<!-- CSS Just for demo purpose, don't include it in your project -->
-<link href="../../../assets/assets-for-demo/demo.css" rel="stylesheet"/>
-
-<!-- iframe removal -->
-
-
-
-  <script type="text/javascript">
-    if (document.readyState === 'complete') {
-        if (window.location != window.parent.location) {
-          const elements = document.getElementsByClassName("iframe-extern");
-          while (elemnts.lenght > 0) elements[0].remove();
-            // $(".iframe-extern").remove();
-        }
-    };
+    body {
+      background: white;
+    }
+  </style>
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="../../../assets/demo/demo.css" rel="stylesheet" />
+  <!-- Extra details for Live View on GitHub Pages -->
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NKDMSK6');
   </script>
+  <!-- End Google Tag Manager -->
+</head>
 
-
-
-  </head>
-  <body class="bd-docs" data-spy="scroll" data-target=".bd-sidenav-active">
-    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
-      <div class="container">
-        <span class="skiplink-text">Skip to main content</span>
-      </div>
-    </a>
-
-    <header class="navbar navbar-expand navbar-dark bg-primary flex-column flex-md-row bd-navbar">
-  <a class="navbar-brand mr-0 mr-md-2 navbar-absolute-logo" href="https://www.creative-tim.com/product/material-dashboard/">
-    Material Dashboard
+<body class="bd-docs" data-spy="scroll" data-target=".bd-sidenav-active">
+  <!-- Extra details for Live View on GitHub Pages -->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKDMSK6" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+    <div class="container">
+      <span class="skiplink-text">Skip to main content</span>
+    </div>
   </a>
-
-  <ul class="navbar-nav flex-row d-none d-md-flex">
-
-    <li class="nav-item dropdown">
-        <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    v2.0.0
+  <header class="navbar navbar-expand navbar-dark bg-primary flex-column flex-md-row bd-navbar">
+    <a class="navbar-brand mr-0 mr-md-2 navbar-absolute-logo" href="https://www.creative-tim.com/product/material-dashboard" target="_blank">
+      Material Dashboard
     </a>
+    <ul class="navbar-nav flex-row d-none d-md-flex">
+      <!-- <li class="nav-item">
+      <a class="nav-link p-2" href="#version">
+        2.1.0
+      </a>
+    </li> -->
+      <li class="nav-item dropdown">
+        <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          v2.1.0
+        </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
-            <a class="dropdown-item active" href="/material-dashboard/docs/2.0/">BS4 - 2.0.0</a>
-            <a class="dropdown-item" href="http://demos.creative-tim.com/bs3/material-dashboard/documentation/tutorial-components.html">BS3 - 1.2.0</a>
+          <a class="dropdown-item active" href="../../../docs/2.0/getting-started/introduction.html">BS4 - 2.1.0</a>
+          <a class="dropdown-item" href="" target="_blank">BS3 - </a>
         </div>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link p-2" href="https://github.com/creativetimofficial/material-dashboard" target="_blank" rel="noopener" aria-label="GitHub">
-        <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 499.36" focusable="false"><title>GitHub</title><path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"/></svg>
-
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link p-2" href="https://twitter.com/CreativeTim" target="_blank" rel="noopener" aria-label="Twitter">
-        <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 416.32" focusable="false"><title>Twitter</title><path d="M160.83 416.32c193.2 0 298.92-160.22 298.92-298.92 0-4.51 0-9-.2-13.52A214 214 0 0 0 512 49.38a212.93 212.93 0 0 1-60.44 16.6 105.7 105.7 0 0 0 46.3-58.19 209 209 0 0 1-66.79 25.37 105.09 105.09 0 0 0-181.73 71.91 116.12 116.12 0 0 0 2.66 24c-87.28-4.3-164.73-46.3-216.56-109.82A105.48 105.48 0 0 0 68 159.6a106.27 106.27 0 0 1-47.53-13.11v1.43a105.28 105.28 0 0 0 84.21 103.06 105.67 105.67 0 0 1-47.33 1.84 105.06 105.06 0 0 0 98.14 72.94A210.72 210.72 0 0 1 25 370.84a202.17 202.17 0 0 1-25-1.43 298.85 298.85 0 0 0 160.83 46.92" fill="currentColor"/></svg>
-
-      </a>
-    </li>
-  </ul>
-
-  <div class="navbar-nav-scroll ml-md-auto ">
-    <ul class="navbar-nav bd-navbar-nav flex-row">
+      </li>
+      <li class="nav-item">
+        <a class="nav-link p-2" href="https://github.com/creativetimofficial/material-dashboard" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 499.36" focusable="false">
+            <title>GitHub</title>
+            <path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd" />
+          </svg>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link p-2" href="https://twitter.com/CreativeTim" target="_blank" rel="noopener" aria-label="Twitter">
+          <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 416.32" focusable="false">
+            <title>Twitter</title>
+            <path d="M160.83 416.32c193.2 0 298.92-160.22 298.92-298.92 0-4.51 0-9-.2-13.52A214 214 0 0 0 512 49.38a212.93 212.93 0 0 1-60.44 16.6 105.7 105.7 0 0 0 46.3-58.19 209 209 0 0 1-66.79 25.37 105.09 105.09 0 0 0-181.73 71.91 116.12 116.12 0 0 0 2.66 24c-87.28-4.3-164.73-46.3-216.56-109.82A105.48 105.48 0 0 0 68 159.6a106.27 106.27 0 0 1-47.53-13.11v1.43a105.28 105.28 0 0 0 84.21 103.06 105.67 105.67 0 0 1-47.33 1.84 105.06 105.06 0 0 0 98.14 72.94A210.72 210.72 0 0 1 25 370.84a202.17 202.17 0 0 1-25-1.43 298.85 298.85 0 0 0 160.83 46.92" fill="currentColor" />
+          </svg>
+        </a>
+      </li>
+    </ul>
+    <div class="navbar-nav-scroll ml-md-auto ">
+      <ul class="navbar-nav bd-navbar-nav flex-row">
         <li class="nav-item">
-          <a class="nav-link active" href="/material-dashboard/docs/2.0/getting-started/introduction.html"><i class="material-icons">content_paste</i> Documentation</a>
+          <a class="nav-link active" href=" }}/docs/2.0/getting-started/introduction.html"><i class="material-icons">content_paste</i> Documentation</a>
         </li>
-
         <li class="nav-item">
           <a class="nav-link" href="https://demos.creative-tim.com/material-dashboard/examples/dashboard.html"><i class="material-icons">view_carousel</i> Live Preview</a>
         </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="https://github.com/creativetimofficial/material-dashboard/issues" target="_blank" rel="noopener"><i class="material-icons">bug_report</i> Report Issue</a>
-      </li>
-    </ul>
-  </div>
-
-  <!-- <a class="btn btn-white d-none d-lg-inline-block" href="https://github.com/creativetimofficial/material-dashboard">Download</a> -->
-</header>
-
-
-    <div class="container-fluid">
-      <div class="row flex-xl-nowrap">
-        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
-          <nav class="collapse bd-links" id="bd-docs-nav">
-  
-  
-  
-  
-  
-  
-
-  
-
-  <div class="bd-toc-item active">
-      <a class="bd-toc-link" href="/material-dashboard/docs/2.0/getting-started/introduction.html">
-        Getting started
-      </a>
-
-      <ul class="nav bd-sidenav">
-        
-          
-          
-
-          
-
-          
-          <li class="">
-
-            
-                <a href="/material-dashboard/docs/2.0/getting-started/introduction.html">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/creativetimofficial/material-dashboard/issues" target="_blank" rel="noopener"><i class="material-icons">bug_report</i> Report Issue</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+      <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+        <nav class="collapse bd-links" id="bd-docs-nav">
+          <div class="bd-toc-item active">
+            <a class="bd-toc-link" href="#docs">
+              Getting started
+            </a>
+            <ul class="nav bd-sidenav">
+              <li class="">
+                <a href="../../../docs/2.0/getting-started/introduction.html">
                   Introduction
                 </a>
-            
-
-            
-          </li>
-            
-        
-          
-          
-
-          
-
-          
-          <li class="">
-
-            
-                <a href="/material-dashboard/docs/2.0/getting-started/license.html " target="_blank">
-                    License
+              </li>
+              <li class="">
+                <a href="../../../docs/2.0/getting-started/license.html">
+                  License
                 </a>
-            
-
-            
-          </li>
-            
-        
-          
-          
-
-          
-
-          
-          <li class="">
-
-            
-                <a href="/material-dashboard/docs/2.0/getting-started/file-structure.html">
+              </li>
+              <li class="">
+                <a href="../../../docs/2.0/getting-started/file-structure.html">
                   File Structure
                 </a>
-            
-
-            
-          </li>
-            
-        
-      </ul>
-    </div>
-  
-  
-  
-  
-  
-
-  
-
-  <div class="bd-toc-item active">
-      <a class="bd-toc-link" href="/material-dashboard/docs/2.0/components/alerts.html">
-        Components
-      </a>
-
-      <ul class="nav bd-sidenav">
-        
-          
-          
-
-          
-
-          
-          <li class="">
-
-            
-                <a href="/material-dashboard/docs/2.0/components/alerts.html">
+              </li>
+              <li class="">
+                <a href="../../../docs/2.0/getting-started/build-tools.html">
+                  Build Tools
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="bd-toc-item active">
+            <a class="bd-toc-link" href="#docs">
+              Components
+            </a>
+            <ul class="nav bd-sidenav">
+              <li class="">
+                <a href="../../../docs/2.0/components/alerts.html">
                   Alerts
                 </a>
-            
-
-            
-          </li>
-            
-        
-          
-          
-
-          
-
-          
-          <li class="">
-
-            
-                <a href="/material-dashboard/docs/2.0/components/buttons.html">
+              </li>
+              <li class="">
+                <a href="../../../docs/2.0/components/buttons.html">
                   Buttons
                 </a>
-            
-
-            
-          </li>
-            
-        
-          
-          
-
-          
-
-          
-          <li class="">
-
-            
-                <a href="/material-dashboard/docs/2.0/components/card.html">
+              </li>
+              <li class="">
+                <a href="../../../docs/2.0/components/card.html">
                   Card
                 </a>
-            
-
-            
-          </li>
-            
-        
-          
-          
-
-          
-
-          
-          <li class="">
-
-            
-                <a href="/material-dashboard/docs/2.0/components/colors.html">
-                  Colors
-                </a>
-            
-
-            
-          </li>
-            
-        
-          
-          
-
-          
-
-          
-          <li class="">
-
-            
-                <a href="/material-dashboard/docs/2.0/components/dropdowns.html">
+              </li>
+              <li class="">
+                <a href="../../../docs/2.0/components/dropdowns.html">
                   Dropdowns
                 </a>
-            
-
-            
-          </li>
-            
-        
-          
-          
-
-          
-
-          
-          <li class="">
-
-            
-                <a href="/material-dashboard/docs/2.0/components/forms.html">
+              </li>
+              <li class="">
+                <a href="../../../docs/2.0/components/forms.html">
                   Forms
                 </a>
-            
-
-            
-          </li>
-            
-        
-          
-          
-
-          
-
-          
-          <li class="">
-
-            
-                <a href="/material-dashboard/docs/2.0/components/google-maps.html">
+              </li>
+              <li class="">
+                <a href="../../../docs/2.0/components/google-maps.html">
                   Google Maps
                 </a>
-            
-
-            
-          </li>
-            
-        
-          
-          
-
-          
-
-          
-          <li class="">
-
-            
-                <a href="/material-dashboard/docs/2.0/components/material-icons.html">
+              </li>
+              <li class="">
+                <a href="../../../docs/2.0/components/material-icons.html">
                   Material Icons
                 </a>
-            
-
-            
-          </li>
-            
-        
-          
-          
-
-          
-
-          
-          <li class="">
-
-            
-                <a href="/material-dashboard/docs/2.0/components/modal.html">
+              </li>
+              <li class="">
+                <a href="../../../docs/2.0/components/modal.html">
                   Modal
                 </a>
-            
-
-            
-          </li>
-            
-        
-          
-          
-
-          
-
-          
-          <li class="">
-
-            
-                <a href="/material-dashboard/docs/2.0/components/navs.html">
+              </li>
+              <li class="">
+                <a href="../../../docs/2.0/components/navs.html">
                   Navs
                 </a>
-            
-
-            
-          </li>
-            
-        
-          
-          
-
-          
-
-          
-          <li class="active bd-sidenav-active">
-
-            
-                <a href="/material-dashboard/docs/2.0/components/navbar.html">
+              </li>
+              <li class="active bd-sidenav-active">
+                <a href="../../../docs/2.0/components/navbar.html">
                   Navbar
                 </a>
-            
-
-            
-          </li>
-            
-        
-          
-          
-
-          
-
-          
-          <li class="">
-
-            
-                <a href="/material-dashboard/docs/2.0/components/tables.html">
+              </li>
+              <li class="">
+                <a href="../../../docs/2.0/components/tables.html">
                   Tables
                 </a>
-            
-
-            
-          </li>
-            
-        
-          
-          
-
-          
-
-          
-          <li class="">
-
-            
-                <a href="/material-dashboard/docs/2.0/components/typography.html">
+              </li>
+              <li class="">
+                <a href="../../../docs/2.0/components/typography.html">
                   Typography
                 </a>
-            
-
-            
-          </li>
-            
-        
-      </ul>
-    </div>
-  
-  
-  
-  
-  
-
-  
-
-  <div class="bd-toc-item active">
-      <a class="bd-toc-link" href="/material-dashboard/docs/2.0/plugins/bootstrap-notify.html">
-        Plugins
-      </a>
-
-      <ul class="nav bd-sidenav">
-        
-          
-          
-
-          
-
-          
-          <li class="">
-
-            
-                <a href="/material-dashboard/docs/2.0/plugins/bootstrap-notify.html">
+              </li>
+            </ul>
+          </div>
+          <div class="bd-toc-item active">
+            <a class="bd-toc-link" href="#docs">
+              Plugins
+            </a>
+            <ul class="nav bd-sidenav">
+              <li class="">
+                <a href="../../../docs/2.0/plugins/bootstrap-notify.html">
                   Bootstrap Notify
                 </a>
-            
-
-            
-          </li>
-            
-        
-          
-          
-
-          
-
-          
-          <li class="">
-
-            
-                <a href="/material-dashboard/docs/2.0/plugins/perfect-scrollbar.html">
+              </li>
+              <li class="">
+                <a href="../../../docs/2.0/plugins/perfect-scrollbar.html">
                   Perfect Scrollbar
                 </a>
-            
-
-            
-          </li>
-            
-        
-      </ul>
-    </div>
-  
-</nav>
-
-        </div>
-
-        
-          <div class="d-none d-xl-block col-xl-2 bd-toc">
-            <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#how-it-works">How it works</a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#nav">Nav</a></li>
-<li class="toc-entry toc-h3"><a href="#forms">Forms</a></li>
-<li class="toc-entry toc-h3"><a href="#text">Text</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h2"><a href="#color-schemes">Color schemes</a></li>
-</ul>
+              </li>
+            </ul>
           </div>
-        
-
-        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
-          <h1 class="bd-title" id="content">Navbar </h1>
-          <p class="bd-lead">  </p>
-          <h2 id="how-it-works">How it works</h2>
-
-<p>Here’s what you need to know before getting started with the navbar:</p>
-
-<ul>
-  <li>Navbars require a wrapping <code class="highlighter-rouge">.navbar</code> with <code class="highlighter-rouge">.navbar-expand{-sm|-md|-lg|-xl}</code> for responsive collapsing and <a href="#color-schemes">color scheme</a> classes.</li>
-  <li>Navbars and their contents are fluid by default. Use <a href="#containers">optional containers</a> to limit their horizontal width.</li>
-  <li>Use our <a href="/material-dashboard/docs/2.0/utilities/spacing/">spacing</a> and <a href="/material-dashboard/docs/2.0/utilities/flex/">flex</a> utility classes for controlling spacing and alignment within navbars.</li>
-  <li>Navbars are responsive by default, but you can easily modify them to change that. Responsive behavior depends on our Collapse JavaScript plugin.</li>
-  <li>Navbars are hidden by default when printing. Force them to be printed by adding <code class="highlighter-rouge">.d-print</code> to the <code class="highlighter-rouge">.navbar</code>. See the <a href="/material-dashboard/docs/2.0/utilities/display/">display</a> utility class.</li>
-  <li>Ensure accessibility by using a <code class="highlighter-rouge">&lt;nav&gt;</code> element or, if using a more generic element such as a <code class="highlighter-rouge">&lt;div&gt;</code>, add a <code class="highlighter-rouge">role="navigation"</code> to every navbar to explicitly identify it as a landmark region for users of assistive technologies.</li>
-</ul>
-
-<p>Read on for an example and list of supported sub-components.</p>
-
-<h3 id="nav">Nav</h3>
-
-<p>Navbar navigation links build on our <code class="highlighter-rouge">.nav</code> options with their own modifier class and require the use of <a href="#toggler">toggler classes</a> for proper responsive styling. <strong>Navigation in navbars will also grow to occupy as much horizontal space as possible</strong> to keep your navbar contents securely aligned.</p>
-
-<p>Active states—with <code class="highlighter-rouge">.active</code>—to indicate the current page can be applied directly to <code class="highlighter-rouge">.nav-link</code>s or their immediate parent <code class="highlighter-rouge">.nav-item</code>s.</p>
-
-<div class="bd-example" data-example-id="">
-<nav class="navbar navbar-expand-lg navbar-light bg-primary">
-  <div class="container">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-</div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-expand-lg navbar-light bg-primary"</span><span class="nt">&gt;</span>
+        </nav>
+      </div>
+      <div class="d-none d-xl-block col-xl-2 bd-toc">
+        <ul class="section-nav">
+          <li class="toc-entry toc-h2">
+            <a href="#how-it-works">How it works</a>
+            <ul>
+              <li class="toc-entry toc-h3">
+                <a href="#nav">Nav</a>
+              </li>
+              <li class="toc-entry toc-h3">
+                <a href="#forms">Forms</a>
+              </li>
+              <li class="toc-entry toc-h3">
+                <a href="#text">Text</a>
+              </li>
+            </ul>
+          </li>
+          <li class="toc-entry toc-h2">
+            <a href="#color-schemes">Color schemes</a>
+          </li>
+        </ul>
+      </div>
+      <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+        <h1 class="bd-title" id="content">Navbar</h1>
+        <p class="bd-lead">Documentation and examples for Bootstrap's powerful, responsive navigation header, the navbar. Includes support for branding, navigation, and more, including support for our collapse plugin.</p>
+        <h2 id="how-it-works">How it works</h2>
+        <p>Here’s what you need to know before getting started with the navbar:</p>
+        <ul>
+          <li>Navbars require a wrapping
+            <code class="highlighter-rouge">.navbar</code> with
+            <code class="highlighter-rouge">.navbar-expand{-sm|-md|-lg|-xl}</code> for responsive collapsing and
+            <a href="#color-schemes">color scheme</a> classes.</li>
+          <li>Navbars and their contents are fluid by default. Use
+            <a href="#containers">optional containers</a> to limit their horizontal width.</li>
+          <li>Use our
+            <a href="/docs/2.0/utilities/spacing/">spacing</a> and
+            <a href="/docs/2.0/utilities/flex/">flex</a> utility classes for controlling spacing and alignment within navbars.</li>
+          <li>Navbars are responsive by default, but you can easily modify them to change that. Responsive behavior depends on our Collapse JavaScript plugin.</li>
+          <li>Navbars are hidden by default when printing. Force them to be printed by adding
+            <code class="highlighter-rouge">.d-print</code> to the
+            <code class="highlighter-rouge">.navbar</code>. See the
+            <a href="/docs/2.0/utilities/display/">display</a> utility class.</li>
+          <li>Ensure accessibility by using a
+            <code class="highlighter-rouge">&lt;nav&gt;</code> element or, if using a more generic element such as a
+            <code class="highlighter-rouge">&lt;div&gt;</code>, add a
+            <code class="highlighter-rouge">role="navigation"</code> to every navbar to explicitly identify it as a landmark region for users of assistive technologies.</li>
+        </ul>
+        <p>Read on for an example and list of supported sub-components.</p>
+        <h3 id="nav">Nav</h3>
+        <p>Navbar navigation links build on our
+          <code class="highlighter-rouge">.nav</code> options with their own modifier class and require the use of
+          <a href="#toggler">toggler classes</a> for proper responsive styling. <strong>Navigation in navbars will also grow to occupy as much horizontal space as possible</strong> to keep your navbar contents securely aligned.</p>
+        <p>Active states—with
+          <code class="highlighter-rouge">.active</code>—to indicate the current page can be applied directly to
+          <code class="highlighter-rouge">.nav-link</code>s or their immediate parent
+          <code class="highlighter-rouge">.nav-item</code>s.</p>
+        <div class="bd-example" data-example-id="">
+          <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+            <div class="container">
+              <a class="navbar-brand" href="#">Navbar</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Home
+                      <span class="sr-only">(current)</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-expand-lg navbar-light bg-primary"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"navbar-brand"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Navbar<span class="nt">&lt;/a&gt;</span>
     <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"navbar-toggler"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#navbarNav"</span> <span class="na">aria-controls=</span><span class="s">"navbarNav"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-label=</span><span class="s">"Toggle navigation"</span><span class="nt">&gt;</span>
@@ -646,43 +367,45 @@
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/nav&gt;</span></code></pre></div>
-
-<p>You may also utilize dropdowns in your navbar nav. Dropdown menus require a wrapping element for positioning, so be sure to use separate and nested elements for <code class="highlighter-rouge">.nav-item</code> and <code class="highlighter-rouge">.nav-link</code> as shown below.</p>
-
-<div class="bd-example" data-example-id="">
-<nav class="navbar navbar-expand-lg navbar-light bg-primary">
-  <div class="container">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown link
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-</div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-expand-lg navbar-light bg-primary"</span><span class="nt">&gt;</span>
+        <p>You may also utilize dropdowns in your navbar nav. Dropdown menus require a wrapping element for positioning, so be sure to use separate and nested elements for
+          <code class="highlighter-rouge">.nav-item</code> and
+          <code class="highlighter-rouge">.nav-link</code> as shown below.</p>
+        <div class="bd-example" data-example-id="">
+          <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+            <div class="container">
+              <a class="navbar-brand" href="#">Navbar</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Home
+                      <span class="sr-only">(current)</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Dropdown link
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-expand-lg navbar-light bg-primary"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"navbar-brand"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Navbar<span class="nt">&lt;/a&gt;</span>
     <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"navbar-toggler"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#navbarNavDropdown"</span> <span class="na">aria-controls=</span><span class="s">"navbarNavDropdown"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-label=</span><span class="s">"Toggle navigation"</span><span class="nt">&gt;</span>
@@ -713,46 +436,42 @@
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/nav&gt;</span></code></pre></div>
-
-<h3 id="forms">Forms</h3>
-
-<p>Place various form controls and components within a navbar with <code class="highlighter-rouge">.form-inline</code>.</p>
-
-<div class="bd-example" data-example-id="">
-<nav class="navbar navbar-expand-lg bg-rose">
-    <div class="container">
-        <div class="navbar-translate">
-            <a class="navbar-brand" href="/presentation.html">Brand</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                <span class="navbar-toggler-icon"></span>
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
-
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a href="#pablo" class="nav-link">link</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#pablo" class="nav-link">link</a>
-                </li>
-            </ul>
-
-            <form class="form-inline ml-auto">
-                <div class="form-group has-white">
-                  <input type="text" class="form-control" placeholder="Search" />
-                </div>
-                <button type="submit" class="btn btn-white btn-raised btn-fab btn-fab-mini btn-round">
-                    <i class="material-icons">search</i>
+        <h3 id="forms">Forms</h3>
+        <p>Place various form controls and components within a navbar with
+          <code class="highlighter-rouge">.form-inline</code>.</p>
+        <div class="bd-example" data-example-id="">
+          <nav class="navbar navbar-expand-lg bg-rose">
+            <div class="container">
+              <div class="navbar-translate">
+                <a class="navbar-brand" href="/presentation.html">Brand</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                  <span class="navbar-toggler-icon"></span>
+                  <span class="navbar-toggler-icon"></span>
                 </button>
-            </form>
+              </div>
+              <div class="collapse navbar-collapse">
+                <ul class="navbar-nav">
+                  <li class="nav-item active">
+                    <a href="#pablo" class="nav-link">link</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#pablo" class="nav-link">link</a>
+                  </li>
+                </ul>
+                <form class="form-inline ml-auto">
+                  <div class="form-group has-white">
+                    <input type="text" class="form-control" placeholder="Search" />
+                  </div>
+                  <button type="submit" class="btn btn-white btn-raised btn-fab btn-fab-mini btn-round">
+                    <i class="material-icons">search</i>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </nav>
         </div>
-    </div>
-</nav>
-</div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-expand-lg bg-rose"</span><span class="nt">&gt;</span>
+        <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-expand-lg bg-rose"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"navbar-translate"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"navbar-brand"</span> <span class="na">href=</span><span class="s">"/presentation.html"</span><span class="nt">&gt;</span>Brand<span class="nt">&lt;/a&gt;</span>
@@ -784,57 +503,55 @@
         <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/nav&gt;</span></code></pre></div>
-
-<h3 id="text">Text</h3>
-
-<p>Navbars may contain bits of text with the help of <code class="highlighter-rouge">.navbar-text</code>. This class adjusts vertical alignment and horizontal spacing for strings of text.</p>
-
-<div class="bd-example" data-example-id="">
-<nav class="navbar navbar-dark bg-primary">
-  <div class="container">
-    <span class="navbar-text">
-      Navbar text with an inline element
-    </span>
-  </div>
-</nav>
-</div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-dark bg-primary"</span><span class="nt">&gt;</span>
+        <h3 id="text">Text</h3>
+        <p>Navbars may contain bits of text with the help of
+          <code class="highlighter-rouge">.navbar-text</code>. This class adjusts vertical alignment and horizontal spacing for strings of text.</p>
+        <div class="bd-example" data-example-id="">
+          <nav class="navbar navbar-dark bg-primary">
+            <div class="container">
+              <span class="navbar-text">
+                Navbar text with an inline element
+              </span>
+            </div>
+          </nav>
+        </div>
+        <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-dark bg-primary"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"navbar-text"</span><span class="nt">&gt;</span>
       Navbar text with an inline element
     <span class="nt">&lt;/span&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/nav&gt;</span></code></pre></div>
-
-<p>Mix and match with other components and utilities as needed.</p>
-
-<div class="bd-example" data-example-id="">
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <div class="container">
-    <a class="navbar-brand" href="#">Navbar w/ text</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarText">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-      </ul>
-      <span class="navbar-text">
-        Navbar text with an inline element
-      </span>
-    </div>
-  </div>
-</nav>
-</div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-expand-lg navbar-dark bg-primary"</span><span class="nt">&gt;</span>
+        <p>Mix and match with other components and utilities as needed.</p>
+        <div class="bd-example" data-example-id="">
+          <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+              <a class="navbar-brand" href="#">Navbar w/ text</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Home
+                      <span class="sr-only">(current)</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                  </li>
+                </ul>
+                <span class="navbar-text">
+                  Navbar text with an inline element
+                </span>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-expand-lg navbar-dark bg-primary"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"navbar-brand"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Navbar w/ text<span class="nt">&lt;/a&gt;</span>
     <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"navbar-toggler"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#navbarText"</span> <span class="na">aria-controls=</span><span class="s">"navbarText"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-label=</span><span class="s">"Toggle navigation"</span><span class="nt">&gt;</span>
@@ -858,219 +575,219 @@
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/nav&gt;</span></code></pre></div>
-
-<h2 id="color-schemes">Color schemes</h2>
-
-<p>Theming the navbar has never been easier thanks to the combination of theming classes and <code class="highlighter-rouge">background-color</code> utilities. Choose from <code class="highlighter-rouge">.navbar-light</code> for use with light background colors, or <code class="highlighter-rouge">.navbar-dark</code> for dark background colors. Then, customize with <code class="highlighter-rouge">.bg-*</code> utilities.</p>
-
-<div class="bd-example">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarColor01">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-        </ul>
-        <form class="form-inline ml-auto">
-            <div class="form-group has-white">
-              <input type="text" class="form-control" placeholder="Search" />
+        <h2 id="color-schemes">Color schemes</h2>
+        <p>Theming the navbar has never been easier thanks to the combination of theming classes and
+          <code class="highlighter-rouge">background-color</code> utilities. Choose from
+          <code class="highlighter-rouge">.navbar-light</code> for use with light background colors, or
+          <code class="highlighter-rouge">.navbar-dark</code> for dark background colors. Then, customize with
+          <code class="highlighter-rouge">.bg-*</code> utilities.</p>
+        <div class="bd-example">
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+              <a class="navbar-brand" href="#">Navbar</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Home
+                      <span class="sr-only">(current)</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                  </li>
+                </ul>
+                <form class="form-inline ml-auto">
+                  <div class="form-group has-white">
+                    <input type="text" class="form-control" placeholder="Search" />
+                  </div>
+                  <button type="submit" class="btn btn-white btn-raised btn-fab btn-fab-mini btn-round">
+                    <i class="material-icons">search</i>
+                  </button>
+                </form>
+              </div>
             </div>
-            <button type="submit" class="btn btn-white btn-raised btn-fab btn-fab-mini btn-round">
-                <i class="material-icons">search</i>
-            </button>
-        </form>
-      </div>
-    </div>
-  </nav>
-
-  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
-    <div class="container">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarColor01">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
-        </li>
-      </ul>
-      <form class="form-inline ml-auto">
-          <div class="form-group has-white">
-            <input type="text" class="form-control" placeholder="Search" />
-          </div>
-          <button type="submit" class="btn btn-white btn-raised btn-fab btn-fab-mini btn-round">
-              <i class="material-icons">search</i>
-          </button>
-      </form>
-    </div>
-  </div>
-</nav>
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
-  <div class="container">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarColor01">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
-      </li>
-    </ul>
-    <form class="form-inline ml-auto">
-        <div class="form-group has-white">
-          <input type="text" class="form-control" placeholder="Search" />
+          </nav>
+          <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+            <div class="container">
+              <a class="navbar-brand" href="#">Navbar</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Home
+                      <span class="sr-only">(current)</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                  </li>
+                </ul>
+                <form class="form-inline ml-auto">
+                  <div class="form-group has-white">
+                    <input type="text" class="form-control" placeholder="Search" />
+                  </div>
+                  <button type="submit" class="btn btn-white btn-raised btn-fab btn-fab-mini btn-round">
+                    <i class="material-icons">search</i>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </nav>
+          <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+            <div class="container">
+              <a class="navbar-brand" href="#">Navbar</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Home
+                      <span class="sr-only">(current)</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                  </li>
+                </ul>
+                <form class="form-inline ml-auto">
+                  <div class="form-group has-white">
+                    <input type="text" class="form-control" placeholder="Search" />
+                  </div>
+                  <button type="submit" class="btn btn-white btn-raised btn-fab btn-fab-mini btn-round">
+                    <i class="material-icons">search</i>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </nav>
+          <nav class="navbar navbar-expand-lg navbar-dark bg-warning">
+            <div class="container">
+              <a class="navbar-brand" href="#">Navbar</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Home
+                      <span class="sr-only">(current)</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                  </li>
+                </ul>
+                <form class="form-inline ml-auto">
+                  <div class="form-group has-white">
+                    <input type="text" class="form-control" placeholder="Search" />
+                  </div>
+                  <button type="submit" class="btn btn-white btn-raised btn-fab btn-fab-mini btn-round">
+                    <i class="material-icons">search</i>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </nav>
+          <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+              <a class="navbar-brand" href="#">Navbar</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Home
+                      <span class="sr-only">(current)</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                  </li>
+                </ul>
+                <form class="form-inline ml-auto">
+                  <div class="form-group has-white">
+                    <input type="text" class="form-control" placeholder="Search" />
+                  </div>
+                  <button type="submit" class="btn btn-white btn-raised btn-fab btn-fab-mini btn-round">
+                    <i class="material-icons">search</i>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </nav>
+          <nav class="navbar navbar-expand-lg navbar-light bg-info">
+            <div class="container">
+              <a class="navbar-brand" href="#">Navbar</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarColor03">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Home
+                      <span class="sr-only">(current)</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                  </li>
+                </ul>
+                <form class="form-inline ml-auto">
+                  <div class="form-group has-white">
+                    <input type="text" class="form-control" placeholder="Search" />
+                  </div>
+                  <button type="submit" class="btn btn-white btn-raised btn-fab btn-fab-mini btn-round">
+                    <i class="material-icons">search</i>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </nav>
         </div>
-        <button type="submit" class="btn btn-white btn-raised btn-fab btn-fab-mini btn-round">
-            <i class="material-icons">search</i>
-        </button>
-    </form>
-  </div>
-</div>
-</nav>
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-warning">
-  <div class="container">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarColor01">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
-      </li>
-    </ul>
-    <form class="form-inline ml-auto">
-        <div class="form-group has-white">
-          <input type="text" class="form-control" placeholder="Search" />
-        </div>
-        <button type="submit" class="btn btn-white btn-raised btn-fab btn-fab-mini btn-round">
-            <i class="material-icons">search</i>
-        </button>
-    </form>
-  </div>
-</div>
-</nav>
-
-
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarColor02">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-        </ul>
-        <form class="form-inline ml-auto">
-            <div class="form-group has-white">
-              <input type="text" class="form-control" placeholder="Search" />
-            </div>
-            <button type="submit" class="btn btn-white btn-raised btn-fab btn-fab-mini btn-round">
-                <i class="material-icons">search</i>
-            </button>
-        </form>
-      </div>
-    </div>
-  </nav>
-
-  <nav class="navbar navbar-expand-lg navbar-light bg-info">
-    <div class="container">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarColor03">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-        </ul>
-        <form class="form-inline ml-auto">
-            <div class="form-group has-white">
-              <input type="text" class="form-control" placeholder="Search" />
-            </div>
-            <button type="submit" class="btn btn-white btn-raised btn-fab btn-fab-mini btn-round">
-                <i class="material-icons">search</i>
-            </button>
-        </form>
-      </div>
-    </div>
-  </nav>
-</div>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-dark bg-dark"</span><span class="nt">&gt;</span>
+        <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-dark bg-dark"</span><span class="nt">&gt;</span>
   <span class="c">&lt;!-- Navbar content --&gt;</span>
 <span class="nt">&lt;/nav&gt;</span>
 
@@ -1094,219 +811,292 @@
 <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-light bg-info"</span><span class="nt">&gt;</span>
   <span class="c">&lt;!-- Navbar content --&gt;</span>
 <span class="nt">&lt;/nav&gt;</span></code></pre></figure>
-
-
-        </main>
-      </div>
+      </main>
     </div>
+  </div>
+  <!--   Core JS Files   -->
+  <script src="../../../assets/js/core/jquery.min.js" type="text/javascript"></script>
+  <script src="../../../assets/js/core/popper.min.js" type="text/javascript"></script>
+  <script src="../../../assets/js/core/bootstrap-material-design.min.js" type="text/javascript"></script>
+  <script src="../../../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2Yno10-YTnLjjn_Vtk0V8cdcY5lC4plU"></script>
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!-- Chartist JS -->
+  <script src="../../../assets/js/plugins/chartist.min.js"></script>
+  <!--  Notifications Plugin    -->
+  <script src="../../../assets/js/plugins/bootstrap-notify.js"></script>
+  <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="../../../assets/js/material-dashboard.min.js?v=2.1.0" type="text/javascript"></script>
+  <!-- Sharrre libray -->
+  <script src="../../../assets/demo/jquery.sharrre.js"></script>
+  <script>
+    $(document).ready(function() {
+
+      $('#facebook').sharrre({
+        share: {
+          facebook: true
+        },
+        enableHover: false,
+        enableTracking: false,
+        enableCounter: false,
+        click: function(api, options) {
+          api.simulateClick();
+          api.openPopup('facebook');
+        },
+        template: '<i class="fab fa-facebook-f"></i> Facebook',
+        url: 'https://demos.creative-tim.com/material-dashboard/examples/dashboard.html'
+      });
+
+      $('#google').sharrre({
+        share: {
+          googlePlus: true
+        },
+        enableCounter: false,
+        enableHover: false,
+        enableTracking: true,
+        click: function(api, options) {
+          api.simulateClick();
+          api.openPopup('googlePlus');
+        },
+        template: '<i class="fab fa-google-plus"></i> Google',
+        url: 'https://demos.creative-tim.com/material-dashboard/examples/dashboard.html'
+      });
+
+      $('#twitter').sharrre({
+        share: {
+          twitter: true
+        },
+        enableHover: false,
+        enableTracking: false,
+        enableCounter: false,
+        buttons: {
+          twitter: {
+            via: 'CreativeTim'
+          }
+        },
+        click: function(api, options) {
+          api.simulateClick();
+          api.openPopup('twitter');
+        },
+        template: '<i class="fab fa-twitter"></i> Twitter',
+        url: 'https://demos.creative-tim.com/material-dashboard/examples/dashboard.html'
+      });
+
+
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-46172202-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+      })();
+
+      // Facebook Pixel Code Don't Delete
+      ! function(f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function() {
+          n.callMethod ?
+            n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s)
+      }(window,
+        document, 'script', '//connect.facebook.net/en_US/fbevents.js');
+
+      try {
+        fbq('init', '111649226022273');
+        fbq('track', "PageView");
+
+      } catch (err) {
+        console.log('Facebook Track Error:', err);
+      }
 
-    <!--   Core JS Files   -->
-<script src="../../../assets/js/core/jquery.min.js"></script>
-<script src="../../../assets/js/core/popper.min.js"></script>
-
-
-<script src="../../../assets/js/bootstrap-material-design.min.js"></script>
-
-
-<script src="../../../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
-
-
-
-<!--  Google Maps Plugin  -->
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2Yno10-YTnLjjn_Vtk0V8cdcY5lC4plU"></script>
-
-
-
-
-<!--  Charts Plugin, full documentation here: https://gionkunz.github.io/chartist-js/ -->
-<script src="../../../assets/js/plugins/chartist.min.js"></script>
-
-<!-- Library for adding dinamically elements -->
-<script src="../../../assets/js/plugins/arrive.min.js" type="text/javascript"></script>
-
-<!--  Notifications Plugin, full documentation here: http://bootstrap-notify.remabledesigns.com/    -->
-<script src="../../../assets/js/plugins/bootstrap-notify.js"></script>
-
-<!-- Material Dashboard Core initialisations of plugins and Bootstrap Material Design Library -->
-
-
-
-
-<script src="../../../assets/js/material-dashboard.js?v=2.0.0"></script>
-
-<!-- demo init -->
-<script src="../../../assets/js/plugins/demo.js"></script>
-
-
-
-
-  <script src="../../../assets/assets-for-demo/js/docs.min.js"></script>
-<script src="../../../assets/assets-for-demo/js/vendor/anchor.min.js"></script>
-<script src="../../../assets/assets-for-demo/js/vendor/clipboard.min.js"></script>
-<script src="../../../assets/assets-for-demo/js/vendor/holder.min.js"></script>
-<script src="../../../assets/assets-for-demo/js/src/application.js"></script>
-<script src="../../../assets/js/plugins/demo.js"></script>
-
-<script>
-  $(document).ready(function(){
-Holder.addTheme('gray', {
-  bg: '#777',
-  fg: 'rgba(255,255,255,.75)',
-  font: 'Helvetica',
-  fontweight: 'normal'
-})
-
-// Javascript method's body can be found in assets/js/demos.js
-  demo.initDashboardPageCharts();
-
-// <!-- Bootstrap Notify -->
-// demo.showNotification(from, align);
-//
-// <!-- javascript for validation -->
-// function setFormValidation(id){
-// 	$(id).validate({
-// 		errorPlacement: function(error, element) {
-//             $(element).parent('div').addClass('has-error');
-//          }
-// 	});
-// }
-//
-// setFormValidation('#RegisterValidationDoc');
-
-});
-</script>
-
-
-
-<!-- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- -->
-
-
-
-    
-    
-<!-- Sharrre libray -->
-<script src="../../../assets/assets-for-demo/js/jquery.sharrre.js">
-
-</script>
-<script>
-
-$(document).ready(function(){
-    $('#twitter').sharrre({
-      share: {
-        twitter: true
-      },
-      enableHover: false,
-      enableTracking: false,
-      enableCounter: false,
-      buttons: { twitter: {via: 'CreativeTim'}},
-      click: function(api, options){
-        api.simulateClick();
-        api.openPopup('twitter');
-      },
-      template: '<i class="fa fa-twitter"></i> Twitter',
-      url: 'http://demos.creative-tim.com/material-dashboard/examples/dashboard.html'
     });
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=111649226022273&ev=PageView&noscript=1" />
+  </noscript>
+  <script>
+    $(document).ready(function() {
+      $().ready(function() {
+        $sidebar = $('.sidebar');
+        $sidebar_img_container = $sidebar.find('.sidebar-background');
 
-    $('#facebook').sharrre({
-      share: {
-        facebook: true
-      },
-      enableHover: false,
-      enableTracking: false,
-      enableCounter: false,
-      click: function(api, options){
-        api.simulateClick();
-        api.openPopup('facebook');
-      },
-      template: '<i class="fa fa-facebook-square"></i> Facebook',
-      url: 'http://demos.creative-tim.com/material-dashboard/examples/dashboard.html'
+        $full_page = $('.full-page');
+
+        $sidebar_responsive = $('body > .navbar-collapse');
+        sidebar_mini_active = true;
+
+        window_width = $(window).width();
+
+        fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
+
+        // if( window_width > 767 && fixed_plugin_open == 'Dashboard' ){
+        //     if($('.fixed-plugin .dropdown').hasClass('show-dropdown')){
+        //         $('.fixed-plugin .dropdown').addClass('show');
+        //     }
+        //
+        // }
+
+        $('.fixed-plugin a').click(function(event) {
+          // Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
+          if ($(this).hasClass('switch-trigger')) {
+            if (event.stopPropagation) {
+              event.stopPropagation();
+            } else if (window.event) {
+              window.event.cancelBubble = true;
+            }
+          }
+        });
+
+        $('.fixed-plugin .background-color span').click(function() {
+          $(this).siblings().removeClass('active');
+          $(this).addClass('active');
+
+          var new_color = $(this).data('color');
+
+          if ($sidebar.length != 0) {
+            $sidebar.attr('data-color', new_color);
+          }
+
+          if ($full_page.length != 0) {
+            $full_page.attr('filter-color', new_color);
+          }
+
+          if ($sidebar_responsive.length != 0) {
+            $sidebar_responsive.attr('data-color', new_color);
+          }
+        });
+
+        $('.fixed-plugin .img-holder').click(function() {
+          $full_page_background = $('.full-page-background');
+
+          $(this).parent('li').siblings().removeClass('active');
+          $(this).parent('li').addClass('active');
+
+
+          var new_image = $(this).find("img").attr('src');
+
+          if ($sidebar_img_container.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
+            $sidebar_img_container.fadeOut('fast', function() {
+              $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
+              $sidebar_img_container.fadeIn('fast');
+            });
+          }
+
+          if ($full_page_background.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
+            var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
+
+            $full_page_background.fadeOut('fast', function() {
+              $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
+              $full_page_background.fadeIn('fast');
+            });
+          }
+
+          if ($('.switch-sidebar-image input:checked').length == 0) {
+            var new_image = $('.fixed-plugin li.active .img-holder').find("img").attr('src');
+            var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
+
+            $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
+            $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
+          }
+
+          if ($sidebar_responsive.length != 0) {
+            $sidebar_responsive.css('background-image', 'url("' + new_image + '")');
+          }
+        });
+
+        $('.switch-sidebar-image input').on("switchChange.bootstrapSwitch", function() {
+          $full_page_background = $('.full-page-background');
+
+          $input = $(this);
+
+          if ($input.is(':checked')) {
+            if ($sidebar_img_container.length != 0) {
+              $sidebar_img_container.fadeIn('fast');
+              $sidebar.attr('data-image', '#');
+            }
+
+            if ($full_page_background.length != 0) {
+              $full_page_background.fadeIn('fast');
+              $full_page.attr('data-image', '#');
+            }
+
+            background_image = true;
+          } else {
+            if ($sidebar_img_container.length != 0) {
+              $sidebar.removeAttr('data-image');
+              $sidebar_img_container.fadeOut('fast');
+            }
+
+            if ($full_page_background.length != 0) {
+              $full_page.removeAttr('data-image', '#');
+              $full_page_background.fadeOut('fast');
+            }
+
+            background_image = false;
+          }
+        });
+
+        $('.switch-sidebar-mini input').on("switchChange.bootstrapSwitch", function() {
+          var $btn = $(this);
+
+          if (sidebar_mini_active == true) {
+            $('body').removeClass('sidebar-mini');
+            sidebar_mini_active = false;
+            materialDashboard.showSidebarMessage('Sidebar mini deactivated...');
+          } else {
+            $('body').addClass('sidebar-mini');
+            sidebar_mini_active = true;
+            materialDashboard.showSidebarMessage('Sidebar mini activated...');
+          }
+
+          // we simulate the window Resize so the charts will get updated in realtime.
+          var simulateWindowResize = setInterval(function() {
+            window.dispatchEvent(new Event('resize'));
+          }, 180);
+
+          // we stop the simulation of Window Resize after the animations are completed
+          setTimeout(function() {
+            clearInterval(simulateWindowResize);
+          }, 1000);
+        });
+      });
     });
+  </script>
+  <script>
+    $(document).ready(function() {
+      if ($('.card-header.card-chart').length != 0) {
+        md.initDashboardPageCharts();
+      }
 
-    $('#google').sharrre({
-      share: {
-        googlePlus: true
-      },
-      enableCounter: false,
-      enableHover: false,
-      enableTracking: true,
-      click: function(api, options){
-        api.simulateClick();
-        api.openPopup('googlePlus');
-      },
-      template: '<i class="fa fa-google-plus"></i> Google',
-      url: 'http://demos.creative-tim.com/material-dashboard/examples/dashboard.html'
+
     });
-});
+  </script>
+  <script>
+    Holder.addTheme('gray', {
+      bg: '#777',
+      fg: 'rgba(255,255,255,.75)',
+      font: 'Helvetica',
+      fontweight: 'normal'
+    })
+  </script>
+</body>
 
-
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-46172202-1']);
-_gaq.push(['_trackPageview']);
-
-(function() {
-    var ga = document.createElement('script');
-    ga.type = 'text/javascript';
-    ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(ga, s);
-})();
-
-// Facebook Pixel Code Don't Delete
-!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-document,'script','//connect.facebook.net/en_US/fbevents.js');
-
-try{
-	fbq('init', '111649226022273');
-	fbq('track', "PageView");
-
-}catch(err) {
-	console.log('Facebook Track Error:', err);
-}
-
-</script>
-
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=111649226022273&ev=PageView&noscript=1"
-/></noscript>
-
-    
-  </body>
 </html>
