@@ -1,17 +1,23 @@
 # Change Log
 
+## [2.1.0] 2018-06-13
+### Bug fixing
+- Card-chart fixed on Windows
+- Bug fixes for responsive devices
+- Small changes for components
+
 ## [2.0.0] 2018-03-27
 ### Bootstrap 4 update
 - Core base code on Bootstrap 4
 - Documentation code base written from scratch
 - Speed optimizations
 - Class changes : .card-block to .card-body
-- .navbar-toggleable-* to .navbar-expand-*
-- .hidden-*-down to .d-none .d-*-block
-- .hidden-*-up to .d-*-none
-- .checkbox to .form-check
-- .radio to .form-check
-- more class changes here:https://medium.com/@lukaszholeczek/how-to-upgrade-bootstrap-4-alpha-6-to-bootstrap-4-beta-d43b4210f2a3
+    - .navbar-toggleable-* to .navbar-expand-*
+    - .hidden-*-down to .d-none .d-*-block
+    - .hidden-*-up to .d-*-none
+    - .checkbox to .form-check
+    - .radio to .form-check
+    - more class changes here:https://getbootstrap.com/docs/4.0/migration/
 - Bug fixes for responsive devices
 - Small changes for components
 

@@ -1,0 +1,205 @@
+// Menus https://www.google.com/design/spec/components/menus.html#menus-specs
+// Dropdown buttons (mobile and desktop) https://www.google.com/design/spec/components/buttons.html#buttons-dropdown-buttons
+
+.dropdown-menu {
+  display: none;
+  padding: $bmd-dropdown-margin-y 0;
+  border: 0;
+  opacity: 0;
+  transform: scale(0);
+  transform-origin: 0 0;
+  will-change: transform, opacity;
+  transition: transform $bmd-menu-expand-duration $bmd-animation-curve-default,
+              opacity $bmd-menu-fade-duration $bmd-animation-curve-default;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+
+  &.showing {
+    animation-name: bmd-dropdown-animation;
+    animation-duration: $bmd-menu-expand-duration;
+    animation-fill-mode: forwards;
+    animation-timing-function: $bmd-animation-curve-default;
+  }
+
+  .open > &,
+  &.show {
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  &.hiding {
+    display: block;
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  &[x-placement="bottom-start"] {
+    transform-origin: 0 0;
+  }
+
+  &[x-placement="bottom-end"] {
+    transform-origin: 100% 0;
+  }
+
+  &[x-placement="top-start"] {
+    transform-origin: 0 100%;
+  }
+
+  &[x-placement="top-end"] {
+    transform-origin: 100% 100%;
+  }
+
+  .disabled > a{
+        color: $bmd-dropdown-header-color;
+
+        &:focus,
+        &:hover{
+            text-decoration: none;
+            background-color: transparent;
+            background-image: none;
+            color: $bmd-dropdown-header-color;
+        }
+    }
+
+    &.dropdown-with-icons .dropdown-item{
+        padding: $dropdown-item-padding-y + 0.125 $dropdown-item-padding-x $dropdown-item-padding-y + 0.125 $dropdown-item-padding-y + 0.125;
+
+        & .material-icons{
+            vertical-align: middle;
+            font-size: 24px;
+            position: relative;
+            margin-top: -4px;
+            top: 1px;
+            margin-right: 12px;
+            opacity: .5;
+        }
+    }
+
+
+  // https://www.google.com/design/spec/components/menus.html#menus-specs
+  .dropdown-item,
+  li > a{    // used to properly size the ripple container
+    position: relative;
+    width: auto;
+
+    display: flex;
+    flex-flow: nowrap;
+    align-items: center;
+    color: $bmd-dropdown-link-color;
+    font-weight: normal;
+    text-decoration: none;
+
+    font-size: .8125rem;
+    border-radius: $border-radius / 2;
+    margin: 0 $bmd-dropdown-margin-y;
+    @include transitions($fast-transition-time, $transition-linear);
+
+    min-width: $bmd-menu-item-min-width;
+
+    padding: $dropdown-item-padding-y  $dropdown-item-padding-x;
+
+    overflow: hidden;
+    line-height: $bmd-line-height;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+
+    @include media-breakpoint-up(md) {
+      padding-right: $bmd-menu-item-padding-right-md;
+      padding-left: $bmd-menu-item-padding-left-md;
+    }
+  }
+
+  .dropdown-item:hover,
+  .dropdown-item:focus,
+  a:hover,
+  a:focus,
+  a:active {
+    @include shadow-small-color($brand-primary);
+    background-color: $brand-primary;
+    color: #FFFFFF;
+  }
+}
+
+// this could be in a .btn-group or .dropdown
+.dropdown-toggle {
+  &.bmd-btn-icon,
+  &.bmd-btn-fab {
+    // remove the dropdown icon
+    &::after {
+      display: none;
+    }
+
+    ~ .dropdown-menu {
+      &.dropdown-menu-top-left,
+      &.dropdown-menu-top-right {
+        bottom: $bmd-btn-icon-size; // push up the bottom of the menu the height of the button
+      }
+    }
+  }
+
+  &:after{
+      will-change: transform;
+      transition: transform $bmd-animation-dropdown-caret linear;
+  }
+
+  .show &:after{
+    @include rotate-180();
+  }
+
+  &.bmd-btn-fab-sm {
+    ~ .dropdown-menu {
+      &.dropdown-menu-top-left,
+      &.dropdown-menu-top-right {
+        bottom: $bmd-btn-fab-size-sm; // push up the bottom of the menu the height of the button
+      }
+    }
+  }
+
+  &.bmd-btn-icon {
+    ~ .dropdown-menu {
+      // collapse some spacing
+      margin: 0;
+    }
+  }
+}
+
+.dropdown-header{
+  font-size: 0.75rem;
+  padding-top: .625rem;
+  padding-bottom: .625rem;;
+  text-transform: none;
+  color: $bmd-dropdown-header-color;
+  line-height: $bmd-line-height;
+  font-weight: inherit;
+}
+
+@keyframes bmd-dropdown-animation {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.dropdown-menu.bootstrap-datetimepicker-widget{
+    opacity: 0;
+    transform: scale(0);
+    transition-duration: $bmd-menu-expand-duration;
+    transition-timing-function: $bmd-animation-curve-default;
+    transform-origin: 0 0;
+    will-change: transform, opacity;
+    top: 0;
+}
+
+.dropdown-menu.bootstrap-datetimepicker-widget.top{
+    transform-origin: 0 100%;
+}
+
+.dropdown-menu.bootstrap-datetimepicker-widget.open{
+    opacity: 1;
+    transform: scale(1);
+    top: 0;
+}

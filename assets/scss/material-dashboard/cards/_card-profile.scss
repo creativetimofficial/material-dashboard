@@ -1,0 +1,48 @@
+.card-profile{
+  margin-top: 30px;
+  text-align: center;
+
+
+  .card-avatar {
+      margin: -50px auto 0;
+      border-radius: 50%;
+      overflow: hidden;
+      padding: 0;
+
+      @include shadow-big();
+
+      & + .card-body {
+          margin-top: 15px;
+      }
+      img {
+          width: 100%;
+          height: auto;
+      }
+  }
+
+  .card-body + .card-footer {
+      margin-top: -15px;
+  }
+
+  .card-footer {
+      .btn.btn-just-icon {
+          font-size: 20px;
+          padding: 12px 12px;
+          line-height: 1em;
+      }
+  }
+
+  &.card-plain {
+      .card-avatar {
+          margin-top: 0;
+      }
+  }
+
+  .card-header:not([class*="card-header-"]){
+    background: transparent;
+  }
+  .card-avatar {
+    max-width: 130px;
+    max-height: 130px;
+  }
+}

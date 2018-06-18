@@ -1,12 +1,11 @@
 /*!
 
  =========================================================
- * Material Dashboard - v2.0.0
+ * Material Dashboard - v2.1.0
  =========================================================
 
- * Product Page: http://www.creative-tim.com/product/now-ui-dashboard
+ * Product Page: https://www.creative-tim.com/product/material-dashboard
  * Copyright 2018 Creative Tim (http://www.creative-tim.com)
- * Licensed under MIT (https://github.com/creativetimofficial/material-dashboard/blob/master/LICENSE.md)
 
  * Designed by www.invisionapp.com Coded by www.creative-tim.com
 
@@ -16,51 +15,42 @@
 
  */
 
- @import "core/variables";
- @import "core/mixins";
- @import "core/core-bootstrap";
- @import "core/reboot";
+ @import "material-dashboard/variables";
+ @import "material-dashboard/mixins";
+ @import "material-dashboard/core-bootstrap";
 
-// Core Components
-@import "core/layout";
-@import "core/buttons";
-@import "core/checkboxes";
-@import "core/cards";
-@import "core/custom-forms";
-@import "core/switches";
-@import "core/radios";
-@import "core/carousel";
-@import "core/forms";
-@import "core/input-group";
-@import "core/list-group";
-@import "core/nav";
-@import "core/images";
-@import "core/navbar";
-@import "core/badges";
-@import "core/alerts";
-@import "core/pagination";
-@import "core/pills";
-@import "core/info-areas";
-@import "core/type";
-@import "core/tabs";
-@import "core/tooltip";
-@import "core/popover";
-@import "core/modal";
-@import "core/dropdown";
-@import "core/drawer";
-@import "core/progress";
-@import "core/togglebutton";
-@import "core/ripples";
-@import "core/footers";
-@import "core/sidebar-and-main-panel";
-@import "core/fixed-plugin";
-@import "core/tables";
-@import "core/misc";
-@import "core/pages";
-@import "core/social-buttons";
-@import "core/responsive";
+ // Core Components
+ @import "material-dashboard/buttons";
+ @import "material-dashboard/checkboxes";
+ @import "material-dashboard/radios";
+ @import "material-dashboard/forms";
+ @import "material-dashboard/input-group";
+ @import "material-dashboard/images";
+ @import "material-dashboard/navbar";
+ @import "material-dashboard/alerts";
+ @import "material-dashboard/headers";
+ @import "material-dashboard/type";
+ @import "material-dashboard/tabs";
+ @import "material-dashboard/tooltip";
+ @import "material-dashboard/popover";
+ @import "material-dashboard/dropdown";
+ @import "material-dashboard/togglebutton";
+ @import "material-dashboard/ripples";
+ @import "material-dashboard/footers";
+ @import "material-dashboard/sidebar-and-main-panel";
+ @import "material-dashboard/fixed-plugin";
+ @import "material-dashboard/tables";
+ @import "material-dashboard/misc";
+ @import "material-dashboard/social-buttons";
+
+@import "material-dashboard/cards";
+@import "material-dashboard/cards/card-stats";
+@import "material-dashboard/cards/card-profile";
+@import "material-dashboard/cards/card-plain";
 
  //plugin scss
-@import "core/plugins/animate";
-@import "core/plugins/chartist";
-@import "core/plugins/perfect-scrollbar";
+ @import "material-dashboard/plugins/animate";
+ @import "material-dashboard/plugins/chartist";
+ @import "material-dashboard/plugins/perfect-scrollbar";
+
+ @import "material-dashboard/responsive";

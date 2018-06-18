@@ -1,0 +1,115 @@
+body{
+    background-color: #eee;
+    color: $black-color;
+    font-weight: 300;
+}
+
+legend {
+  border-bottom: 0;
+}
+
+.serif-font{
+    font-family: $font-family-serif;
+}
+
+// Prevent highlight on mobile
+* {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
+  &:focus {
+    outline: 0;
+  }
+}
+
+a{
+  color: $link-color;
+  &:hover,
+  &:focus{
+      color: darken($link-color, 5%);
+      text-decoration: none;
+  }
+
+  &.text-info{
+      &:hover, &:focus{
+          color: darken($brand-info, 5%);
+      }
+  }
+
+  & .material-icons {
+    vertical-align: middle;
+  }
+}
+
+.form-check,
+label{
+    font-size: 14px;
+    line-height: 1.42857;
+    color: $checkboxes-text-color;
+    font-weight: 400;
+}
+
+/*           Animations              */
+.animation-transition-general{
+    @include transition-all($general-transition-time, $transition-linear);
+}
+
+.animation-transition-slow{
+    @include transition-all($slow-transition-time, $transition-linear);
+}
+
+.animation-transition-fast{
+    @include transition-all($fast-transition-time, $transition-ease);
+}
+
+.caret,
+.sidebar a{
+    @include transition-all($fast-transition-time, $transition-ease-in);
+}
+
+
+// Offline documentation
+
+.offline-doc {
+  .navbar.navbar-transparent{
+    padding-top: 25px;
+    border-bottom: none;
+
+    .navbar-minimize {
+      display: none;
+    }
+    .navbar-brand,
+    .collapse .navbar-nav .nav-link {
+      color: $white-color !important;
+    }
+  }
+  .footer {
+    z-index: 3 !important;
+    position: absolute;
+    width: 100%;
+    background: transparent;
+    bottom: 0;
+    color: $white-color;
+  }
+  .page-header{
+
+    .content-center {
+      z-index: 3;
+
+      .brand .title {
+        color: $white-color;
+      }
+    }
+
+    &:after {
+      background-color: rgba(0, 0, 0, 0.5);
+      content: "";
+      display: block;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 2;
+    }
+  }
+}

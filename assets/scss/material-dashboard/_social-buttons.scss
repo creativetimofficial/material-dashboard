@@ -1,0 +1,6 @@
+// style for the social buttons from fixed product_plugins (Twitter and Facebook)
+
+.btn{
+  // Social colors
+  @include bmd-social-buttons();
+}
