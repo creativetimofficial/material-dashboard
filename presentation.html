@@ -53,6 +53,25 @@
 
     <!-- CSS Just for demo purpose, don&apos;t include it in your project -->
     <link href="https://s3.amazonaws.com/creativetim_bucket/static-assets/material-kit-demo.min.css" rel="stylesheet" />
+    <style>
+
+    @media(max-width:767px){
+      .social-img{
+        display: none;
+      }
+      .area-img{
+        display: none;
+      }
+
+      .info-img{
+        display: none;
+      }
+
+      .navbar-nav .dropdown{
+        margin-top: 10px;
+      }
+    }
+    </style>
 </head>
 
 <body>
@@ -85,7 +104,7 @@
                       </a>
                   </li>
                   <li class="nav-item">
-                    <div class="dropdown">
+                    <div class="dropdown text-center">
                       <a href="#" class="btn btn-primary btn-round dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><i class="material-icons">cloud_download</i> Download
                         <b class="caret"></b>
                       </a>
