@@ -54,7 +54,7 @@ You can find the Github Repo here.
 
 | Dashboard | User Profile | Tables | Maps | Notification |
 | --- | --- | --- | --- | --- |
-| [![Start page](assets/github/dashboard.png)](https://demos.creative-tim.com/material-dashboard/examples/dashboard.html) | [![User profile page](assets/github/user_profile.png)](https://demos.creative-tim.com/material-dashboard/examples/user.html) | [![Tables page ](assets/github/tables.png)](https://demos.creative-tim.com/material-dashboard/examples/table.html) | [![Maps Page](assets/github/maps.png)](https://demos.creative-tim.com/material-dashboard/examples/maps.html) | [![Notification page](assets/github/notification.png)](https://demos.creative-tim.com/material-dashboard/examples/notifications.html)
+| [![Start page](assets/github/dashboard.png)](https://demos.creative-tim.com/material-dashboard/examples/dashboard.html) | [![User profile page](assets/github/user_profile.png)](https://demos.creative-tim.com/material-dashboard/examples/user.html) | [![Tables page ](assets/github/tables.png)](https://demos.creative-tim.com/material-dashboard/examples/tables.html) | [![Maps Page](assets/github/maps.png)](https://demos.creative-tim.com/material-dashboard/examples/map.html) | [![Notification page](assets/github/notification.png)](https://demos.creative-tim.com/material-dashboard/examples/notifications.html)
 
 [View More](https://demos.creative-tim.com/material-dashboard/examples/dashboard.html).
 
