@@ -693,8 +693,13 @@
   </script>
   <script>
     $(document).ready(function() {
-      //init DateTimePickers
-      md.initFormExtendedDatetimepickers();
+      if (window_width > 767) {
+        if ($('.fixed-plugin .dropdown').hasClass('show-dropdown')) {
+          $('.fixed-plugin .dropdown').addClass('show');
+          $('.fixed-plugin .dropdown-menu').addClass('show');
+        }
+      }
+
     });
   </script>
 </body>
