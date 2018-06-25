@@ -820,7 +820,7 @@
         s = b.getElementsByTagName(e)[0];
         s.parentNode.insertBefore(t, s)
       }(window,
-        document, 'script', '//connect.facebook.net/en_US/fbevents.js');
+        document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
 
       try {
         fbq('init', '111649226022273');
@@ -987,6 +987,12 @@
     $(document).ready(function() {
       // Javascript method's body can be found in assets/js/demos.js
       md.initDashboardPageCharts();
+      if (window_width > 767) {
+        if ($('.fixed-plugin .dropdown').hasClass('show-dropdown')) {
+          $('.fixed-plugin .dropdown').addClass('show');
+          $('.fixed-plugin .dropdown-menu').addClass('show');
+        }
+      }
 
     });
   </script>
