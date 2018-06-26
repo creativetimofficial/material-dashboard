@@ -83,6 +83,7 @@ material-dashboard/
 |   ├── css/
 |   |   ├── bootstrap.min.css
 |   |   ├── material-dashboard.css
+|   |   ├── material-dashboard-rtl.css
 |   |   └── demo.css
 |   ├── js/
 |   |   ├── bootstrap-notify.js
@@ -99,6 +100,7 @@ material-dashboard/
 |
 ├── documentation/
 ├── examples/
+├── examples.rtl/
 
 ```
 
