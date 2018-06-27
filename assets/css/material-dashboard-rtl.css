@@ -1,3 +1,14 @@
+/*!
+
+ =========================================================
+ * Material Dashboard rtl - v1.1
+ =========================================================
+ *
+ * author: Alireza Esfahani <aynzad@gmail.com>
+ * https://github.com/aynzad
+ * http://gonjeshk.ir
+ *
+ */
 html[dir="rtl"] {
   text-align: right;
   direction: rtl;
@@ -1172,6 +1183,15 @@ html[dir="rtl"] .sidebar .sidebar-wrapper .navbar-form .input-group {
   padding-left: unset;
 }
 
+html[dir="rtl"] .sidebar,
+html[dir="rtl"] .off-canvas-sidebar nav .navbar-collapse {
+  text-align: right;
+}
+
+html[dir="rtl"] .card .card-body, html[dir="rtl"] .card .card-footer {
+  direction: rtl;
+}
+
 @media (max-width: 991px) {
   html[dir="rtl"] .navbar-form .btn {
     left: -50px;
@@ -1179,16 +1199,17 @@ html[dir="rtl"] .sidebar .sidebar-wrapper .navbar-form .input-group {
   }
 }
 
-html[dir="rtl"] .sidebar,
-html[dir="rtl"] .off-canvas-sidebar nav .navbar-collapse {
-  text-align: right;
+@media (min-width: 992px) {
+  html[dir="rtl"] .navbar-expand-lg > .container,
+  html[dir="rtl"] .navbar-expand-lg > .container-fluid {
+    flex-wrap: nowrap;
+  }
 }
 
-html[dir="rtl"] .navbar > .container, html[dir="rtl"] .navbar > .container-fluid {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row-reverse;
+@media (max-width: 991px) {
+  html[dir="rtl"] [class*="navbar-expand-"] > .container,
+  html[dir="rtl"] [class*="navbar-expand-"] > .container-fluid {
+    flex-direction: row-reverse;
+  }
 }
 /*# sourceMappingURL=material-dashboard-rtl.css.map */

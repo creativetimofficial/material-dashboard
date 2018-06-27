@@ -63,21 +63,37 @@ html[dir="rtl"] {
         padding-right: 17px;
         padding-left: unset;
     }
+    .sidebar,
+    .off-canvas-sidebar nav .navbar-collapse {
+        text-align: right;
+    } 
+    .card .card-body,.card .card-footer{
+        direction: rtl;
+    }
+    // .navbar>.container,
+    // .navbar>.container-fluid {
+    //     display: flex;
+    //     flex-wrap: wrap;
+    //     align-items: center;
+    //     justify-content: space-between;
+    //     flex-direction: row-reverse;
+    // }
     @media (max-width: 991px) {
         .navbar-form .btn {
             left: -50px;
             right: unset;
         }
     }
-    .sidebar,
-    .off-canvas-sidebar nav .navbar-collapse {
-        text-align: right;
+    @media (min-width: 992px) {
+        .navbar-expand-lg>.container,
+        .navbar-expand-lg>.container-fluid {
+            flex-wrap: nowrap;
+        }
     }
-    .navbar > .container, .navbar > .container-fluid {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-        flex-direction: row-reverse;
+    @media (max-width: 991px) {
+        [class*="navbar-expand-"]>.container,
+        [class*="navbar-expand-"]>.container-fluid {
+            flex-direction: row-reverse;
+        }
     }
 }

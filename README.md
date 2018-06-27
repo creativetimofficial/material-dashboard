@@ -100,7 +100,6 @@ material-dashboard/
 |
 ├── documentation/
 ├── examples/
-├── examples.rtl/
 
 ```
 
