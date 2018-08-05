@@ -167,7 +167,7 @@
     &.bg-primary,
     &.card-rotate.bg-primary .front,
     &.card-rotate.bg-primary .back{
-      background: linear-gradient(60deg, $purple-400, $purple-600);
+      background: linear-gradient(60deg, $brand-primary, lighten($brand-primary, $card-gradient-pct));
     }
     .card-header-info .card-icon,
     .card-header-info .card-text,
@@ -175,7 +175,7 @@
     &.bg-info,
     &.card-rotate.bg-info .front,
     &.card-rotate.bg-info .back{
-      background: linear-gradient(60deg, $cyan-400, $cyan-600);
+      background: linear-gradient(60deg, $brand-info, lighten($brand-info, $card-gradient-pct));
     }
     .card-header-success .card-icon,
     .card-header-success .card-text,
@@ -183,7 +183,7 @@
     &.bg-success,
     &.card-rotate.bg-success .front,
     &.card-rotate.bg-success .back{
-      background: linear-gradient(60deg, $green-400, $green-600);
+      background: linear-gradient(60deg, $brand-success, lighten($brand-success, $card-gradient-pct));
     }
     .card-header-warning .card-icon,
     .card-header-warning .card-text,
@@ -191,7 +191,7 @@
     &.bg-warning,
     &.card-rotate.bg-warning .front,
     &.card-rotate.bg-warning .back{
-      background: linear-gradient(60deg, $orange-400, $orange-600);
+      background: linear-gradient(60deg, $brand-warning, lighten($brand-warning, $card-gradient-pct));
     }
     .card-header-danger .card-icon,
     .card-header-danger .card-text,
@@ -199,7 +199,7 @@
     &.bg-danger,
     &.card-rotate.bg-danger .front,
     &.card-rotate.bg-danger .back{
-      background: linear-gradient(60deg, $red-400, $red-600);
+      background: linear-gradient(60deg, $brand-danger, lighten($brand-danger, $card-gradient-pct));
     }
 
     .card-header-rose .card-icon,
@@ -208,7 +208,7 @@
     &.bg-rose,
     &.card-rotate.bg-rose .front,
     &.card-rotate.bg-rose .back{
-      background: linear-gradient(60deg, $pink-400, $pink-600);
+      background: linear-gradient(60deg, $brand-rose, lighten($brand-rose, $card-gradient-pct));
     }
 
     .card-header-primary .card-icon,
