@@ -1,0 +1,18 @@
+.card-chart {
+  .card-body {
+    .card-category {
+      color: $card-chart-category-color;
+
+      span {
+        -webkit-background-clip: text;
+        background-clip: text;
+        background-image: $header-success-gradient;
+        color: transparent;
+      }
+    }
+  }
+
+  .card-footer {
+    border-top: $footer-card-line-color;
+  }
+}

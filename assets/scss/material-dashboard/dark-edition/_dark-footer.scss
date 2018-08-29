@@ -1,0 +1,20 @@
+.footer {
+  border-top: 0;
+
+  ul li a,
+  .copyright {
+    color: $footer-color-links;
+  }
+
+  .copyright a {
+    color: $white-color;
+  }
+
+  .copyright i {
+    animation: heartbeat 1s infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: $heartbeat-color;
+    color: transparent;
+  }
+}

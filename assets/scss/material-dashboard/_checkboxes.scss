@@ -74,7 +74,7 @@
                 0 0 0 0,
                 0 0 0 0,
                 0 0 0 0 inset;
-                @include animation(checkbox-off $mdb-checkbox-animation-check forwards);
+                animation: checkboxOff $mdb-checkbox-animation-check forwards;
             }
         }
 
@@ -99,26 +99,26 @@
                             0px 32px 0 20px,
                             -5px 5px 0 10px,
                             20px -12px 0 11px;
-                @include animation(checkbox-on $mdb-checkbox-animation-check forwards);
+                animation: checkboxOn $mdb-checkbox-animation-check forwards;
             }
 
             & + .form-check-sign:before {
-            @include animation(rippleOn $mdb-checkbox-animation-ripple);
+            animation: rippleOn $mdb-checkbox-animation-ripple;
             }
 
             & + .form-check-sign .check:after {
             //background-color: $brand-success; // FIXME: seems like tho wrong color, test and make sure it can be removed
-            @include animation(rippleOn $mdb-checkbox-animation-ripple forwards);
+            animation: rippleOn $mdb-checkbox-animation-ripple forwards;
             }
         }
 
         &:not(:checked) {
           & + .form-check-sign:before {
-            @include animation(rippleOff $mdb-checkbox-animation-ripple);
+            animation: rippleOff $mdb-checkbox-animation-ripple;
           }
 
           & + .form-check-sign .check:after {
-            @include animation(rippleOff $mdb-checkbox-animation-ripple); // Ripple effect on uncheck
+            animation: rippleOff $mdb-checkbox-animation-ripple; // Ripple effect on uncheck
 
           }
         }
@@ -156,7 +156,7 @@
   }
 }
 
-@keyframes checkbox-on {
+@keyframes checkboxOn {
   0% {
     box-shadow:
       0 0 0 10px,

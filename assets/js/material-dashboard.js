@@ -1,13 +1,13 @@
 /*!
 
  =========================================================
- * Material Dashboard - v2.1.0
+ * Material Dashboard Dark Edition - v2.1.0
  =========================================================
 
  * Product Page: https://www.creative-tim.com/product/material-dashboard
  * Copyright 2018 Creative Tim (http://www.creative-tim.com)
 
- * Designed by www.invisionapp.com Coded by www.creative-tim.com
+ * Coded by www.creative-tim.com
 
  =========================================================
 
@@ -147,11 +147,13 @@ $(window).resize(function() {
   }, 500);
 });
 
+
+
 md = {
   misc: {
     navbar_menu_visible: 0,
     active_collapse: true,
-    disabled_collapse_init: 0,
+    disabled_collapse_init: 0
   },
 
   checkSidebarImage: function() {
@@ -162,99 +164,6 @@ md = {
       sidebar_container = '<div class="sidebar-background" style="background-image: url(' + image_src + ') "/>';
       $sidebar.append(sidebar_container);
     }
-  },
-
-  showNotification: function(from, align) {
-    type = ['', 'info', 'danger', 'success', 'warning', 'rose', 'primary'];
-
-    color = Math.floor((Math.random() * 6) + 1);
-
-    $.notify({
-      icon: "add_alert",
-      message: "Welcome to <b>Material Dashboard</b> - a beautiful freebie for every web developer."
-
-    }, {
-      type: type[color],
-      timer: 3000,
-      placement: {
-        from: from,
-        align: align
-      }
-    });
-  },
-
-  initFormExtendedDatetimepickers: function() {
-    $('.datetimepicker').datetimepicker({
-      icons: {
-        time: "fa fa-clock-o",
-        date: "fa fa-calendar",
-        up: "fa fa-chevron-up",
-        down: "fa fa-chevron-down",
-        previous: 'fa fa-chevron-left',
-        next: 'fa fa-chevron-right',
-        today: 'fa fa-screenshot',
-        clear: 'fa fa-trash',
-        close: 'fa fa-remove'
-      }
-    });
-
-    $('.datepicker').datetimepicker({
-      format: 'MM/DD/YYYY',
-      icons: {
-        time: "fa fa-clock-o",
-        date: "fa fa-calendar",
-        up: "fa fa-chevron-up",
-        down: "fa fa-chevron-down",
-        previous: 'fa fa-chevron-left',
-        next: 'fa fa-chevron-right',
-        today: 'fa fa-screenshot',
-        clear: 'fa fa-trash',
-        close: 'fa fa-remove'
-      }
-    });
-
-    $('.timepicker').datetimepicker({
-      //          format: 'H:mm',    // use this format if you want the 24hours timepicker
-      format: 'h:mm A', //use this format if you want the 12hours timpiecker with AM/PM toggle
-      icons: {
-        time: "fa fa-clock-o",
-        date: "fa fa-calendar",
-        up: "fa fa-chevron-up",
-        down: "fa fa-chevron-down",
-        previous: 'fa fa-chevron-left',
-        next: 'fa fa-chevron-right',
-        today: 'fa fa-screenshot',
-        clear: 'fa fa-trash',
-        close: 'fa fa-remove'
-
-      }
-    });
-  },
-
-
-  initSliders: function() {
-    // Sliders for demo purpose
-    var slider = document.getElementById('sliderRegular');
-
-    noUiSlider.create(slider, {
-      start: 40,
-      connect: [true, false],
-      range: {
-        min: 0,
-        max: 100
-      }
-    });
-
-    var slider2 = document.getElementById('sliderDouble');
-
-    noUiSlider.create(slider2, {
-      start: [20, 60],
-      connect: true,
-      range: {
-        min: 0,
-        max: 100
-      }
-    });
   },
 
   initSidebarsCheck: function() {
@@ -294,7 +203,6 @@ md = {
       var dailySalesChart = new Chartist.Line('#dailySalesChart', dataDailySalesChart, optionsDailySalesChart);
 
       md.startAnimationForLineChart(dailySalesChart);
-
 
 
       /* ----------==========     Completed Tasks Chart initialization    ==========---------- */
@@ -365,28 +273,22 @@ md = {
     }
   },
 
-  initMinimizeSidebar: function() {
+  showNotification: function(from, align) {
+    type = ['', 'info', 'danger', 'success', 'warning', 'primary'];
 
-    $('#minimizeSidebar').click(function() {
-      var $btn = $(this);
+    color = Math.floor((Math.random() * 5) + 1);
 
-      if (md.misc.sidebar_mini_active == true) {
-        $('body').removeClass('sidebar-mini');
-        md.misc.sidebar_mini_active = false;
-      } else {
-        $('body').addClass('sidebar-mini');
-        md.misc.sidebar_mini_active = true;
+    $.notify({
+      icon: "add_alert",
+      message: "Welcome to <b>Material Dashboard</b> - a beautiful freebie for every web developer."
+
+    }, {
+      type: type[color],
+      timer: 3000,
+      placement: {
+        from: from,
+        align: align
       }
-
-      // we simulate the window Resize so the charts will get updated in realtime.
-      var simulateWindowResize = setInterval(function() {
-        window.dispatchEvent(new Event('resize'));
-      }, 180);
-
-      // we stop the simulation of Window Resize after the animations are completed
-      setTimeout(function() {
-        clearInterval(simulateWindowResize);
-      }, 1000);
     });
   },
 
@@ -404,11 +306,12 @@ md = {
     }
   }, 17),
 
-
   initRightMenu: debounce(function() {
+
     $sidebar_wrapper = $('.sidebar-wrapper');
 
     if (!mobile_menu_initialized) {
+      console.log('intra');
       $navbar = $('nav').find('.navbar-collapse').children('.navbar-nav');
 
       mobile_menu_content = '';
@@ -417,7 +320,7 @@ md = {
 
       nav_content = '<ul class="nav navbar-nav nav-mobile-menu">' + nav_content + '</ul>';
 
-      navbar_form = $('nav').find('.navbar-form').get(0).outerHTML;
+      navbar_form = $('nav').find('.navbar-form').length != 0 ? $('nav').find('.navbar-form')[0].outerHTML : null;
 
       $sidebar_nav = $sidebar_wrapper.find(' > .nav');
 
@@ -448,9 +351,8 @@ md = {
   }, 200),
 
   startAnimationForLineChart: function(chart) {
-
     chart.on('draw', function(data) {
-      if (data.type === 'line' || data.type === 'area') {
+      if ((data.type === 'line' || data.type === 'area') && window.matchMedia("(min-width: 900px)").matches) {
         data.element.animate({
           d: {
             begin: 600,
@@ -472,14 +374,15 @@ md = {
           }
         });
       }
+
     });
 
     seq = 0;
+
   },
   startAnimationForBarChart: function(chart) {
-
     chart.on('draw', function(data) {
-      if (data.type === 'bar') {
+      if (data.type === 'bar' && window.matchMedia("(min-width: 900px)").matches) {
         seq2++;
         data.element.animate({
           opacity: {
@@ -491,9 +394,11 @@ md = {
           }
         });
       }
+
     });
 
     seq2 = 0;
+
   }
 }
 

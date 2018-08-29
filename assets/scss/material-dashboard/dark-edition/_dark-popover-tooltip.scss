@@ -1,0 +1,12 @@
+.popover, .tooltip-inner {
+  background: $tooltips-background-color;
+  color: $tooltips-text-color;
+}
+
+.tooltip {
+  // tooltips arrow color
+  @include dark-tooltip-color('top', $tooltips-arrow-color);
+  @include dark-tooltip-color('bottom', $tooltips-arrow-color);
+  @include dark-tooltip-color('right', $tooltips-arrow-color);
+  @include dark-tooltip-color('left', $tooltips-arrow-color);
+}

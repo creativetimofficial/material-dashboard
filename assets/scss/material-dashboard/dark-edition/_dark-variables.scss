@@ -1,0 +1,143 @@
+// background
+$dark-background:                #1a2035 !default;
+$sidebar-background:              #1f283e !default;
+
+// social normal color
+$social-facebook: 		           	#3b5998;
+$social-twitter: 			            #55acee;
+
+// header variables color
+$facebook-light:                  #617db9 !default;
+$twitter-light:                   #1b8de4 !default;
+$default-light:                   #b9b9b9 !default;
+$purple-light:                    #913f9e !default;
+$warning-dark:                    #f5700c !default;
+$success-light:                   #4ea752 !default;
+$success-dark:                    #288c6c !default;
+$danger-dark:                     #d22824 !default;
+$danger-light:                    #da3a36 !default;
+$info-light:                      #25b1c3 !default;
+$info-dark:                       #029eb1 !default;
+
+// navbar color links
+$navbar-color-links:              unquote('#a9afbbd1') !default;
+
+// sidebar links color
+$sidebar-link-color:              $navbar-color-links !default;
+$sidebar-link-hover:              rgba(200, 200, 200, 0.05) !default;
+$sidebar-link-hover-color:        rgba(255, 255, 255, .8) !default;
+$sidebar-icon-color:              $navbar-color-links !default;
+
+// sidebar separator
+$sidebar-separator-color:         rgba(180,180,180, .1) !default;
+
+// social colors
+$facebook-gradient-color:         linear-gradient(60deg, $social-facebook, $facebook-light) !default;
+$twitter-gradient-color:          linear-gradient(60deg, $twitter-light, $social-twitter) !default;
+
+// header gradient
+$header-warning-gradient:         linear-gradient(60deg, $warning-dark, $orange-500);
+$header-success-gradient:         linear-gradient(60deg, $success-dark, $success-light);
+$header-danger-gradient:          linear-gradient(60deg, $danger-dark, $danger-light);
+$header-info-gradient:            linear-gradient(60deg, $info-dark, $info-light);
+$header-purple-gradient:          linear-gradient(60deg, $purple-700, $purple-light);
+
+
+// alerts gradient
+$alert-info-gradient:             $header-info-gradient !default;
+$alert-success-gradient:          $header-success-gradient !default;
+$alert-warning-gradient:          $header-warning-gradient !default;
+$alert-danger-gradient:           $header-danger-gradient !default;
+$alert-primary-gradient:          $header-purple-gradient !default;
+
+
+// sidebar button active color
+$sidebar-default-button-active:   linear-gradient(60deg, $navbar-color-links, $default-light) !default;
+$sidebar-primary-button-active:   $header-purple-gradient;
+$sidebar-info-button-active:      $header-info-gradient;
+$sidebar-success-button-active:   $header-success-gradient;
+$sidebar-warning-button-active:   $header-warning-gradient;
+$sidebar-danger-button-active:    $header-danger-gradient;
+
+
+// buttons gradient
+
+
+// footer links color
+$footer-color-links:              $navbar-color-links !default;
+
+
+// notification badge
+$border-badge-notification:       0 !default;
+$height-badge-notification:       18px !default;
+$right-position:                  $border-badge-notification !default;
+
+// card color
+$card-color:                      #202940 !default;
+$card-category-color:             #8b92a9 !default;
+$card-body-color:                 $card-category-color !default;
+$card-list-item-color:            $card-category-color !default;
+$card-title-color:                #606477 !default;
+$card-description-color:          $card-title-color !default;
+$stats-primary-link-color:        $sidebar-primary-button-active !default;
+$stats-info-link-color:           $sidebar-info-button-active !default;
+$stats-success-link-color:        $sidebar-success-button-active !default;
+$stats-warning-link-color:        $sidebar-warning-button-active !default;
+$stats-danger-link-color:         $sidebar-danger-button-active !default;
+
+// footer card
+$footer-card-line-color:          1px solid $sidebar-separator-color !default;
+$footer-text-color:               $navbar-color-links !default;
+
+// footer heartbeat
+$heartbeat-color:                 $sidebar-primary-button-active !default;
+
+// card chart
+$card-chart-title-color:          $card-category-color !default;
+$card-chart-category-color:       $card-title-color !default;
+
+// table color
+$table-text-color:                $card-category-color !default;
+$table-borders-color:             $sidebar-separator-color !default;
+
+// transparency color
+$white-transparency-8:            rgba(255, 255, 255, .8) !default;
+$white-transparency-1:            rgba(255, 255, 255, .1) !default;
+
+// checkboxes variables
+$checkbox-border-color:           rgba(96,100,119, .5) !default;
+$checkbox-active-border-color:    #40475a !default;
+$checkbox-active-sign-gradient:   #ca9dd2 !default;
+$checkbox-active-sign-color:      linear-gradient(60deg, $white-color, $checkbox-active-sign-gradient) !default;
+
+// tooltips
+$tooltips-arrow-color:            $card-color !default;
+$tooltips-background-color:       $tooltips-arrow-color !default;
+$tooltips-text-color:             $card-category-color !default;
+
+// buttons color
+$dark-btn-default-bg:               #9095a2 !default;
+$dark-btn-default-border-color:     $dark-btn-default-bg !default;
+$dark-btn-white-color:              $dark-btn-default-bg !default;
+$dark-btn-primary-bg:               $purple-light !default;
+$dark-btn-primary-border-color:     $dark-btn-primary-bg !default;
+$dark-btn-warning-bg:               $warning-dark !default;
+$dark-btn-warning-border-color:     $dark-btn-warning-bg !default;
+$dark-btn-success-bg:               $success-dark !default;
+$dark-btn-success-border-color:     $dark-btn-success-bg !default;
+$dark-btn-danger-bg:                $danger-dark !default;
+$dark-btn-danger-border-color:      $dark-btn-danger-bg !default;
+$dark-btn-info-bg:                  $info-dark !default;
+$dark-btn-info-border-color:        $dark-btn-info-bg !default;
+
+// forms color
+$placeholder-color:               $navbar-color-links !default;
+$input-color:                     $navbar-color-links !default;
+$dark-input-border-color:           $sidebar-separator-color !default;
+
+// fixed plugin
+$fixed-plugin-separator:          $sidebar-separator-color !default;
+$fixed-plugin-bg-rgba:            rgba(47, 57, 84, .6) !default;
+$fixed-plugin-bg:                 #2f3954 !default;
+$badge-border-color:              #303c58 !default;
+$badge-border-active-color:       #596d9c !default;

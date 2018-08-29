@@ -46,9 +46,9 @@ form {
   }
 
   @include material-placeholder() {
-      color: $mdb-input-placeholder-color;
-      font-weight: 400;
-      font-size: $mdb-input-font-size-base;
+    color: $mdb-input-placeholder-color;
+    font-weight: 400;
+    font-size: $mdb-input-font-size-base;
 }
 
   .has-white &{

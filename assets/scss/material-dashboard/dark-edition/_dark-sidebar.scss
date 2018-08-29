@@ -1,0 +1,47 @@
+.sidebar {
+  @include dark-set-active-color-button($sidebar-primary-button-active, $brand-primary, 'purple');
+  @include dark-set-active-color-button($sidebar-info-button-active, $brand-info, 'azure');
+  @include dark-set-active-color-button($sidebar-success-button-active, $brand-success, 'green');
+  @include dark-set-active-color-button($sidebar-warning-button-active, $brand-warning, 'orange');
+  @include dark-set-active-color-button($sidebar-danger-button-active, $brand-danger, 'danger');
+
+  a {
+    @include transition-except-props($fast-transition-time $transition-ease-in, color, 0ms);
+  }
+
+  .sidebar-background:after,
+  & {
+    background: $sidebar-background;
+    opacity: .94;
+  }
+
+  &[data-background-color="black"] .nav li:not(.active) {
+    a,
+    .dropdown-menu a {
+      color: $sidebar-link-color;
+    }
+
+    i {
+      color: $sidebar-icon-color;
+    }
+
+    &:not(.active):hover > a,
+    & .dropdown-menu a:hover,
+    & .dropdown-menu a:focus,
+    &.active > [data-toggle="collapse"] {
+      background-color: $sidebar-link-hover;
+      color: $sidebar-link-hover-color;
+    }
+  }
+
+  .logo {
+    .simple-text {
+      color: $navbar-color-links;
+      font-weight: $font-weight-light;
+    }
+
+    &:after {
+      background-color: $sidebar-separator-color;
+    }
+  }
+}

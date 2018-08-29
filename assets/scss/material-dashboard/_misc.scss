@@ -62,54 +62,7 @@ label{
 }
 
 .caret,
-.sidebar a{
+.sidebar a,
+.animation-transition-fast-in{
     @include transition-all($fast-transition-time, $transition-ease-in);
-}
-
-
-// Offline documentation
-
-.offline-doc {
-  .navbar.navbar-transparent{
-    padding-top: 25px;
-    border-bottom: none;
-
-    .navbar-minimize {
-      display: none;
-    }
-    .navbar-brand,
-    .collapse .navbar-nav .nav-link {
-      color: $white-color !important;
-    }
-  }
-  .footer {
-    z-index: 3 !important;
-    position: absolute;
-    width: 100%;
-    background: transparent;
-    bottom: 0;
-    color: $white-color;
-  }
-  .page-header{
-
-    .content-center {
-      z-index: 3;
-
-      .brand .title {
-        color: $white-color;
-      }
-    }
-
-    &:after {
-      background-color: rgba(0, 0, 0, 0.5);
-      content: "";
-      display: block;
-      height: 100%;
-      left: 0;
-      position: absolute;
-      top: 0;
-      width: 100%;
-      z-index: 2;
-    }
-  }
 }

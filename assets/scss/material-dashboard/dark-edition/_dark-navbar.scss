@@ -1,0 +1,34 @@
+.navbar {
+  &:not([class*="bg-"]) {
+    .navbar-brand,
+    .collapse .navbar-nav .nav-item .nav-link {
+      color: $navbar-color-links;
+    }
+  }
+
+  &[class*="bg-"] {
+    .form-control {
+      @include material-placeholder() {
+        color: $white-color;
+      }
+    }
+  }
+
+  .notification {
+    background: $sidebar-primary-button-active;
+    border: $border-badge-notification;
+    height: $height-badge-notification;
+    min-width: $height-badge-notification;
+    right: $right-position + 12px;
+  }
+
+  .navbar-toggler .icon-bar {
+    background: $navbar-color-links !important;
+  }
+
+  @include navbar-colors('primary', $purple-light);
+  @include navbar-colors('info', $info-dark);
+  @include navbar-colors('warning', $warning-dark);
+  @include navbar-colors('danger', $danger-dark);
+  @include navbar-colors('success', $success-dark);
+}

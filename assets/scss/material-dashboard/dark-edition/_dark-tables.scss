@@ -1,0 +1,13 @@
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+  color: $table-text-color;
+  border-color: $table-borders-color;
+}
+
+.table-hover tbody tr:hover {
+  background-color: $table-hover-bg;
+}

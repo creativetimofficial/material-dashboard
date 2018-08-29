@@ -1,0 +1,21 @@
+.alert {
+  @include alert-gradient-color('info', $alert-info-gradient);
+  @include alert-gradient-color('warning', $alert-warning-gradient);
+  @include alert-gradient-color('success', $alert-success-gradient);
+  @include alert-gradient-color('danger', $alert-danger-gradient);
+  @include alert-gradient-color('primary', $alert-primary-gradient);
+
+  .close {
+    outline: 0;
+    text-shadow: none;
+    bottom: 0;
+    top: 0 !important;
+    margin-top: 0 !important;
+
+    &:hover,
+    &:focus {
+      color: $white-color;
+      opacity: 1;
+    }
+  }
+}

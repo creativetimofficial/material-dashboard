@@ -1,0 +1,25 @@
+.form-check {
+  .form-check-sign {
+    .check {
+      border-color: $checkbox-border-color;
+    }
+
+    &:before {
+      left: -1px;
+      top: -1px;
+    }
+  }
+
+  .form-check-input[disabled] ~ .form-check-sign .check {
+    border-color: $checkbox-border-color;
+  }
+
+  .form-check-input:checked + .form-check-sign .check {
+    border-color: $checkbox-active-border-color;
+    background: $checkbox-active-sign-color;
+
+    &:before {
+      color: $card-color;
+    }
+  }
+}

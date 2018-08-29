@@ -1,0 +1,17 @@
+.dropdown:not(.show-dropdown) .dropdown-menu {
+  // background-color: $card-color;
+
+  .dropdown-item,
+  li > a {
+    color: $card-title-color;
+    @include transition-except-props($fast-transition-time $transition-linear, color, box-shadow 0ms);
+
+    &:hover,
+    &:focus,
+    &:active {
+      @include shadow-small-color($brand-primary);
+      background: $sidebar-primary-button-active;
+      color: $white-color;
+    }
+  }
+}

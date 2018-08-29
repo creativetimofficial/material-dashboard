@@ -1,0 +1,66 @@
+.card {
+  background: $card-color;
+
+  .card-header {
+    &.card-header-text .card-title,
+    &.card-header-icon .card-title {
+      color: $card-title-color;
+    }
+
+    &.card-header-tabs .nav-tabs-title {
+      color: $white-transparency-8;
+    }
+  }
+
+  .card-body {
+    color: $card-body-color;
+    
+    .card-category + .card-title {
+      color: $white-color;
+    }
+
+    .card-category,
+    .card-title {
+      color: $card-category-color;
+    }
+
+    .card-description {
+      color: $card-description-color;
+    }
+  }
+
+  .card-body + .card-footer .stats,
+  .card-footer .stats {
+    color: $footer-text-color;
+  }
+
+  .card-footer .stats a{
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: $stats-primary-link-color;
+    color: transparent;
+  }
+
+  // gradients card headers
+  @include dark-header-gradient('warning', $header-warning-gradient);
+  @include dark-header-gradient('success', $header-success-gradient);
+  @include dark-header-gradient('danger', $header-danger-gradient);
+  @include dark-header-gradient('info', $header-info-gradient);
+  @include dark-header-gradient('primary', $header-purple-gradient);
+}
+
+// Card Footer Links Color
+@include dark-card-links-color('primary', $stats-primary-link-color !important);
+@include dark-card-links-color('info', $stats-info-link-color !important);
+@include dark-card-links-color('warning', $stats-warning-link-color !important);
+@include dark-card-links-color('success', $stats-success-link-color !important);
+@include dark-card-links-color('danger', $stats-danger-link-color !important);
+
+//  Card Stats
+@import './dark-card-stats';
+
+//  Card Plain
+@import './dark-card-plain';
+
+// Card Chart
+@import './dark-card-chart';
