@@ -3,7 +3,7 @@
 
  ![version](https://img.shields.io/badge/version-2.1.0-blue.svg)  ![license](https://img.shields.io/badge/license-MIT-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/material-dashboard.svg?maxAge=2592000)](https://github.com/creativetimofficial/material-dashboard/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/material-dashboard.svg?maxAge=2592000)](https://github.com/creativetimofficial/material-dashboard/issues?q=is%3Aissue+is%3Aclosed) [![Join the chat at https://gitter.im/NIT-dgp/General](https://badges.gitter.im/NIT-dgp/General.svg)](https://gitter.im/creative-tim-general/Lobby) [![Chat](https://img.shields.io/badge/chat-on%20discord-7289da.svg)](https://discord.gg/E4aHAQy)
 
-Â
+
 ![Product Gif](https://s3.amazonaws.com/creativetim_bucket/github/gif/material-dashboard-free.gif)
 
 Material Dashboard is a free Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design. We are very excited to introduce our take on the material concepts through an easy to use and beautiful set of components. Material Dashboard was built over the popular Bootstrap framework and it comes with a couple of third-party plugins redesigned to fit in with the rest of the elements.
@@ -24,7 +24,7 @@ We are very excited to share this dashboard with you and we look forward to hear
 
 ## Table of Contents
 
-* [Versions](#versions)
+* [Versions](#versions) 
 * [Demo](#demo)
 * [Quick Start](#quick-start)
 * [Documentation](#documentation)
@@ -46,7 +46,7 @@ We are very excited to share this dashboard with you and we look forward to hear
 
 | HTML | React | Vue | Angular  |
 | --- | --- | --- | ---  |
-| [![Material Dashboard Dark Edition  HTML](https://s3.amazonaws.com/creativetim_bucket/products/50/thumb/opt_md_thumbnail.jpg)](https://www.creative-tim.com/product/material-dashboard-dark)  | [![Material Dashboard React](https://s3.amazonaws.com/creativetim_bucket/products/71/thumb/opt_mdr_thumbnail.jpg)](https://www.creative-tim.com/product/material-dashboard-react)  | [![Vue Material Dashboard](https://s3.amazonaws.com/creativetim_bucket/products/81/thumb/opt_md_vue_thumbnail.jpg)](https://www.creative-tim.com/product/vue-material-dashboard)  | [![Material Dashboard Angular](https://s3.amazonaws.com/creativetim_bucket/products/53/thumb/opt_md_angular_thumbnail.jpg)](https://www.creative-tim.com/product/material-dashboard-angular2)
+| [![Material Dashboard Dark Edition  HTML](https://s3.amazonaws.com/creativetim_bucket/products/50/thumb/opt_md_thumbnail.jpg)](https://www.creative-tim.com/product/material-dashboard)  | [![Material Dashboard Dark Edition  React](https://s3.amazonaws.com/creativetim_bucket/products/71/thumb/opt_mdr_thumbnail.jpg)](https://www.creative-tim.com/product/material-dashboard-react)  | [![Vue Material Dashboard Dark Edition](https://s3.amazonaws.com/creativetim_bucket/products/81/thumb/opt_md_vue_thumbnail.jpg)](https://www.creative-tim.com/product/vue-material-dashboard)  | [![Material Dashboard Dark Edition  Angular](https://s3.amazonaws.com/creativetim_bucket/products/53/thumb/opt_md_angular_thumbnail.jpg)](https://www.creative-tim.com/product/material-dashboard-angular2) 
 
 
 
@@ -66,7 +66,7 @@ We are very excited to share this dashboard with you and we look forward to hear
 - `npm i material-dashboard-dark-edition`
 - Clone the repo: `git clone https://github.com/creativetimofficial/material-dashboard.git`.
 - [Download from Github](https://github.com/creativetimofficial/material-dashboard/archive/master.zip).
-- [Download from Creative Tim](https://www.creative-tim.com/product/material-dashboard).
+- [Download from Creative Tim](https://www.creative-tim.com/product/material-dashboard-dark).
 
 
 ## Documentation
@@ -77,20 +77,18 @@ The documentation for the Material Dashboard Dark Edition is hosted at our [webs
 Within the download you'll find the following directories and files:
 
 ```
-material-dashboard/
+material-dashboard-dark/
 ├── assets/
 |   ├── css/
-|   |   ├── bootstrap.min.css
 |   |   ├── material-dashboard.css
-|   |   └── demo.css
+|   |   └── material-dashboard.min.css
+|   ├── demo/
 |   ├── js/
-|   |   ├── bootstrap-notify.js
-|   |   ├── bootstrap.min.js
-|   |   ├── chartist.min.js
-|   |   ├── demo.js
-|   |   ├── jquery.min.js
+|   |   ├── plugins
+|   |   ├── core
 |   |   ├── material-dashboard.js
-|   |   └── material.min.js
+|   |   ├── material-dashboard.js.map
+|   |   └── material-dashboard.min.js
 |   ├── scss/
 |   |    ├── material-dashboard
 |   |    └── material-dashboard.scss
@@ -112,7 +110,7 @@ At present, we officially aim to support the last two versions of the following 
 
 ## Resources
 - Demo: <https://demos.creative-tim.com/material-dashboard-dark/examples/dashboard.html>
-- Download Page: <https://www.creative-tim.com/product/material-dashboard>
+- Download Page: <https://www.creative-tim.com/product/material-dashboard-dark>
 - Documentation: <https://demos.creative-tim.com/material-dashboard-dark/docs/2.0/getting-started/introduction.html>
 - License Agreement: <https://www.creative-tim.com/license>
 - Support: <https://www.creative-tim.com/contact-us>
@@ -160,3 +158,4 @@ Dribbble: <https://dribbble.com/creativetim>
 Google+: <https://plus.google.com/+CreativetimPage>
 
 Instagram: <https://www.instagram.com/CreativeTimOfficial>
+

@@ -4,7 +4,7 @@
  * Material Dashboard Dark Edition - v2.1.0
  =========================================================
 
- * Product Page: https://www.creative-tim.com/product/material-dashboard
+ * Product Page: https://www.creative-tim.com/product/material-dashboard-dark
  * Copyright 2018 Creative Tim (http://www.creative-tim.com)
 
  * Coded by www.creative-tim.com
