@@ -1,0 +1,55 @@
+@mixin dark-card-links-color($links-color, $color) {
+  .#{$links-color}-link {
+    background-image: $color;
+  }
+}
+
+@mixin dark-header-gradient($color-name, $color) {
+  .card-header-#{$color-name} .card-icon,
+  .card-header-#{$color-name} .card-text,
+  .card-header-#{$color-name}:not(.card-header-icon):not(.card-header-text),
+  &.bg-#{$color-name},
+  &.card-rotate.bg-#{$color-name} .front,
+  &.card-rotate.bg-#{$color-name} .back{
+    background: $color;
+  }
+}
+
+@mixin dark-set-active-color-button($color, $color-shadow, $data-color){
+  &[data-color="#{$data-color}"] {
+    li.active > a{
+        background: $color;
+        @include shadow-big-color($color-shadow);
+    }
+  }
+}
+
+@mixin dark-tooltip-color ($position, $color) {
+  &.bs-tooltip-#{$position},
+  &.bs-tooltip-auto[x-placement^="#{$position}"]{
+      & .arrow::before{
+          border-#{$position}-color: $color;
+      }
+  }
+}
+
+@mixin alert-gradient-color($color-name, $color-gradient) {
+  &.alert-#{$color-name} {
+    background: $color-gradient;
+    background-color: unset;
+  }
+}
+
+@mixin navbar-colors($color-name, $color) {
+  &.bg-#{$color-name} {
+    background-color: $color !important;
+  }
+}
+
+@mixin transition-except-props($property...){
+    -webkit-transition: all $property;
+    -moz-transition: all $property;
+    -o-transition: all $property;
+    -ms-transition: all $property;
+    transition: all $property;
+}

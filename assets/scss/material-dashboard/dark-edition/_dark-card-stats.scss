@@ -1,0 +1,9 @@
+.card-stats {
+  .card-header .card-category:not([class*="text-"]) {
+    color: $card-category-color;
+  }
+
+  .card-header + .card-footer {
+    border-top: $footer-card-line-color;
+  }
+}

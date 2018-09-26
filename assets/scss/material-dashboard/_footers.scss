@@ -84,7 +84,7 @@
             position: relative;
             top: 3px;
         }
-  
+
     }
 
     .pull-center{
@@ -99,4 +99,13 @@
     bottom: 0;
     width: 100%;
   }
+}
+
+@media screen and (min-width: 768px){
+  .footer{
+    .copyright {
+      padding-right: 15px;
+    }
+  }
+
 }

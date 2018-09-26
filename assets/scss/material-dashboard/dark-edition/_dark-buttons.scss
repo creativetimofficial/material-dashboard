@@ -1,0 +1,39 @@
+.btn {
+
+  &,
+  &.btn-default {
+    @include bmd-raised-button-variant($btn-default-color, $dark-btn-default-bg, $dark-btn-default-border-color);
+  }
+
+  &.btn-primary {
+    @include bmd-raised-button-variant($btn-primary-color, $dark-btn-primary-bg, $dark-btn-primary-border-color);
+  }
+
+  &.btn-warning {
+    @include bmd-raised-button-variant($btn-warning-color, $dark-btn-warning-bg, $dark-btn-warning-border-color);
+  }
+
+  &.btn-success {
+    @include bmd-raised-button-variant($btn-success-color, $dark-btn-success-bg, $dark-btn-success-border-color);
+  }
+
+  &.btn-danger {
+    @include bmd-raised-button-variant($btn-danger-color, $dark-btn-danger-bg, $btn-danger-border-color);
+  }
+
+  &.btn-info {
+    @include bmd-raised-button-variant($btn-info-color, $dark-btn-info-bg, $dark-btn-info-border-color);
+  }
+
+  &.btn-white {
+    @include bmd-raised-button-variant($dark-btn-white-color, $white-color, $white-color);
+  }
+
+  &.btn-facebook {
+    @include bmd-raised-button-variant($white, $social-facebook, $social-facebook);
+  }
+
+  &.btn-twitter {
+    @include bmd-raised-button-variant($white, $social-twitter, $social-twitter);
+  }
+}

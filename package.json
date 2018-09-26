@@ -1,7 +1,7 @@
 {
-  "name": "material-dashboard",
+  "name": "material-dashboard-dark",
   "version": "2.1.0",
-  "description": "Material Dasboard, a Google Material Desgin. Coded by Creative Tim",
+  "description": "Material Dasboard Dark Edition, a Google Material Desgin. Coded by Creative Tim",
   "main": "index.html",
   "directories": {
     "example": "root"
@@ -45,5 +45,5 @@
     "gulp-sourcemaps": "^2.6.4",
     "gulp-open": "^3.0.1"
   },
-  "homepage": "http://demos.creative-tim.com/material-dashboard/examples/dashboard.html"
+  "homepage": "http://demos.creative-tim.com/material-dashboard-dark/examples/dashboard.html"
 }

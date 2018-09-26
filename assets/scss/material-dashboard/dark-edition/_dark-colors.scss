@@ -1,0 +1,58 @@
+.text-primary {
+  color: lighten($dark-btn-primary-bg, 7%) !important;
+}
+
+.text-muted {
+  color: $dark-btn-default-bg !important;
+}
+
+.text-info {
+  color: $dark-btn-info-bg !important;
+}
+
+.text-success {
+  color: $dark-btn-success-bg !important;
+}
+
+.text-warning {
+  color: $dark-btn-warning-bg !important;
+}
+
+.text-danger {
+  color: $dark-btn-danger-bg !important;
+}
+
+.tim-typo {
+  color: $card-description-color;
+}
+
+.tim-typo .tim-note,
+.places-buttons .card-title  {
+  color: $card-category-color;
+}
+
+.places-buttons .card-title .category{
+  color: $card-title-color;
+}
+
+.list-group-item {
+  color: $card-list-item-color;
+}
+
+a {
+  color: $white-color;
+}
+
+&.offline-doc {
+  .brand .description {
+    color: $card-category-color;
+  }
+
+  .navbar.navbar-transparent .navbar-brand {
+    color: $navbar-color-links;
+  }
+
+  .page-header:after {
+    background-color: rgba(26, 32, 53, 0.7);
+  }
+}

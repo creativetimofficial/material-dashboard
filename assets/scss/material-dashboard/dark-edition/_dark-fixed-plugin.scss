@@ -1,0 +1,63 @@
+.fixed-plugin {
+  background: $fixed-plugin-bg-rgba;
+
+  .fa-cog {
+    color: $card-category-color;
+  }
+
+  .dropdown .dropdown-menu {
+    background-color: $fixed-plugin-bg;
+
+    &:after {
+      border-left-color: $fixed-plugin-bg;
+    }
+
+    li {
+      &.adjustments-line {
+        border-bottom-color: $fixed-plugin-separator;
+      }
+
+      > a.img-holder {
+        border-color: $badge-border-color;
+      }
+
+      > a.img-holder:hover,
+      &.active > a.img-holder {
+        border-color: $badge-border-active-color;
+      }
+    }
+  }
+
+  li.header-title {
+    color: $card-category-color;
+  }
+
+  .badge {
+    border: 2px solid $badge-border-color;
+
+    &.badge-purple {
+      background-color: $dark-btn-primary-bg;
+    }
+
+    &.badge-azure {
+      background-color: $dark-btn-info-bg;
+    }
+
+    &.badge-green {
+      background-color: $dark-btn-success-bg;
+    }
+
+    &.badge-warning {
+      background-color: $dark-btn-warning-bg;
+    }
+
+    &.badge-danger {
+      background-color: $dark-btn-danger-bg;
+    }
+
+    &.active,
+    &:hover {
+      border-color: $badge-border-active-color;
+    }
+  }
+}

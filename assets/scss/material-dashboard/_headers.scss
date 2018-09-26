@@ -1,6 +1,8 @@
 .page-header{
     min-height: 100vh;
-    max-height: 999px;
+    max-height: 1000px;
+    display: flex !important;
+    height: 100%;
     padding: 0;
     color: $white-color;
     position: relative;

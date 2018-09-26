@@ -3,6 +3,7 @@
     border-radius: $border-radius-base;
     padding: 0.625rem 0;
     margin-bottom: 20px;
+    height: auto !important;
     @include navbar-colors($white-color, $navbar-color);
 
     &.fixed-top{
@@ -155,9 +156,8 @@
     &.navbar-transparent{
         background-color: transparent !important;
         box-shadow: none;
-        padding-top: 25px;
-
     }
+
 
   .notification{
     position: absolute;
@@ -181,10 +181,6 @@
 .navbar{
   .navbar-minimize{
     padding: 3px 0 0 15px;
-  }
-
-  &.navbar-transparent{
-    padding-top: 10px;
   }
 
   .collapse{
@@ -247,6 +243,10 @@
           }
         }
       }
+    }
+
+    &.navbar-transparent {
+      padding-top: 25px !important;
     }
   }
 }

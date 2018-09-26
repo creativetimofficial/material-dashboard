@@ -1,0 +1,51 @@
+.form-control {
+  color: $white-color;
+
+  @include material-placeholder() {
+    color: $placeholder-color;
+  }
+}
+
+.bmd-form-group {
+  &:not(.has-success):not(.has-danger){
+      [class^='bmd-label'],
+      [class*=' bmd-label']{
+          &.bmd-label-floating{
+              color: $placeholder-color;
+          }
+      }
+  }
+}
+
+.form-group label {
+  color: $placeholder-color;
+}
+
+@include bmd-form-color($bmd-label-color, $bmd-label-color-focus, $dark-input-border-color, $dark-input-border-color);
+
+.has-success {
+  @include bmd-form-color($brand-success, $brand-success, $brand-success, $dark-input-border-color);
+}
+
+.has-info {
+  @include bmd-form-color($brand-info, $brand-info, $brand-info, $dark-input-border-color);
+}
+
+.has-white{
+  @include bmd-form-color($white-color, $white-color, $white-color, $input-border-color-white);
+
+    .form-control{
+        &:focus{
+            color: $white-color;
+        }
+    }
+}
+
+.has-warning {
+  @include bmd-form-color($brand-warning, $brand-warning, $brand-warning, $dark-input-border-color);
+}
+
+.has-danger,
+.has-error {
+  @include bmd-form-color($brand-danger, $brand-danger, $brand-danger, $dark-input-border-color);
+}

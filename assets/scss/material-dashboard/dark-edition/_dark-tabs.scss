@@ -1,0 +1,7 @@
+.nav-tabs .nav-item .nav-link {
+  position: relative;
+
+  &.active {
+    background-color: $white-transparency-1;
+  }
+}
