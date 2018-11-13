@@ -70,7 +70,7 @@ We are very excited to share this dashboard with you and we look forward to hear
 
 
 ## Documentation
-The documentation for the Material Dashboard is hosted at our [website](https://demos.creative-tim.com/material-dashboard/docs/2.0/getting-started/introduction.html).
+The documentation for the Material Dashboard is hosted at our [website](https://demos.creative-tim.com/material-dashboard/docs/2.1/getting-started/introduction.html).
 
 
 ## File Structure
@@ -114,7 +114,7 @@ At present, we officially aim to support the last two versions of the following 
 ## Resources
 - Demo: <https://demos.creative-tim.com/material-dashboard/examples/dashboard.html>
 - Download Page: <https://www.creative-tim.com/product/material-dashboard>
-- Documentation: <https://demos.creative-tim.com/material-dashboard/docs/2.0/getting-started/introduction.html>
+- Documentation: <https://demos.creative-tim.com/material-dashboard/docs/2.1/getting-started/introduction.html>
 - License Agreement: <https://www.creative-tim.com/license>
 - Support: <https://www.creative-tim.com/contact-us>
 - Issues: [Github Issues Page](https://github.com/creativetimofficial/material-dashboard/issues)
