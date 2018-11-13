@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="../../../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../../../assets/img/favicon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    Material Dashboard by Creative Tim
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <!-- Extra details for Live View on GitHub Pages -->
+  <!-- Canonical SEO -->
+  <link rel="canonical" href="https://www.creative-tim.com/product/material-dashboard" />
+  <!--  Social tags      -->
+  <meta name="keywords" content="creative tim, html dashboard, html css dashboard, web dashboard, bootstrap 4 dashboard, bootstrap 4, css3 dashboard, bootstrap 4 admin, material dashboard bootstrap 4 dashboard, frontend, responsive bootstrap 4 dashboard, free dashboard, free admin dashboard, free bootstrap 4 admin dashboard">
+  <meta name="description" content="Material Dashboard is a Free Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
+  <!-- Schema.org markup for Google+ -->
+  <meta itemprop="name" content="Material Dashboard by Creative Tim">
+  <meta itemprop="description" content="Material Dashboard is a Free Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
+  <meta itemprop="image" content="https://s3.amazonaws.com/creativetim_bucket/products/50/opt_md_thumbnail.jpg">
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="product">
+  <meta name="twitter:site" content="@creativetim">
+  <meta name="twitter:title" content="Material Dashboard by Creative Tim">
+  <meta name="twitter:description" content="Material Dashboard is a Free Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
+  <meta name="twitter:creator" content="@creativetim">
+  <meta name="twitter:image" content="https://s3.amazonaws.com/creativetim_bucket/products/50/opt_md_thumbnail.jpg">
+  <!-- Open Graph data -->
+  <meta property="fb:app_id" content="655968634437471">
+  <meta property="og:title" content="Material Dashboard by Creative Tim" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://demos.creative-tim.com/material-dashboard/examples/dashboard.html" />
+  <meta property="og:image" content="https://s3.amazonaws.com/creativetim_bucket/products/50/opt_md_thumbnail.jpg" />
+  <meta property="og:description" content="Material Dashboard is a Free Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design." />
+  <meta property="og:site_name" content="Creative Tim" />
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <!-- CSS Files -->
+  <link href="../../../assets/css/material-dashboard.min.css?v=2.1.1" rel="stylesheet" />
+  <link href="https://demos.creative-tim.com/test/material-dashboard-pro/assets/css/material-dashboard.min.css?v=2.0.3" rel="stylesheet"></link>
+  <!-- Documentation extras -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
+  <link rel="stylesheet" href="../../../assets/demo/docs.min.css">
+  <style>
+    .navbar-absolute-logo {
+      padding-left: 45px;
+    }
+
+    .navbar-absolute-logo img {
+      position: absolute;
+      left: 15px;
+      margin-top: -6px;
+    }
+
+    body {
+      background: white;
+    }
+  </style>
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="../../../assets/demo/demo.css" rel="stylesheet" />
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NKDMSK6');
+  </script>
+  <!-- End Google Tag Manager -->
+</head>
+
+<body class="bd-docs" data-spy="scroll" data-target=".bd-sidenav-active">
+  <!-- Extra details for Live View on GitHub Pages -->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKDMSK6" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+    <div class="container">
+      <span class="skiplink-text">Skip to main content</span>
+    </div>
+  </a>
+  <header class="navbar navbar-expand navbar-dark bg-primary flex-column flex-md-row bd-navbar">
+    <a class="navbar-brand mr-0 mr-md-2 navbar-absolute-logo" href="https://www.creative-tim.com/product/material-dashboard" target="_blank">
+      Material Dashboard
+    </a>
+    <ul class="navbar-nav flex-row d-none d-md-flex">
+      <!-- <li class="nav-item">
+      <a class="nav-link p-2" href="#version">
+        2.1.1
+      </a>
+    </li> -->
+      <li class="nav-item dropdown">
+        <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          v2.1.1
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+          <a class="dropdown-item active" href="../../../docs/2.1/getting-started/introduction.html">BS4 - 2.1.1</a>
+          <a class="dropdown-item" href="https://demos.creative-tim.com/bs3/material-dashboard/documentation/tutorial-components.html" target="_blank">BS3 - 1.0</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link p-2" href="https://github.com/creativetimofficial/material-dashboard" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 499.36" focusable="false">
+            <title>GitHub</title>
+            <path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd" />
+          </svg>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link p-2" href="https://twitter.com/CreativeTim" target="_blank" rel="noopener" aria-label="Twitter">
+          <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 416.32" focusable="false">
+            <title>Twitter</title>
+            <path d="M160.83 416.32c193.2 0 298.92-160.22 298.92-298.92 0-4.51 0-9-.2-13.52A214 214 0 0 0 512 49.38a212.93 212.93 0 0 1-60.44 16.6 105.7 105.7 0 0 0 46.3-58.19 209 209 0 0 1-66.79 25.37 105.09 105.09 0 0 0-181.73 71.91 116.12 116.12 0 0 0 2.66 24c-87.28-4.3-164.73-46.3-216.56-109.82A105.48 105.48 0 0 0 68 159.6a106.27 106.27 0 0 1-47.53-13.11v1.43a105.28 105.28 0 0 0 84.21 103.06 105.67 105.67 0 0 1-47.33 1.84 105.06 105.06 0 0 0 98.14 72.94A210.72 210.72 0 0 1 25 370.84a202.17 202.17 0 0 1-25-1.43 298.85 298.85 0 0 0 160.83 46.92" fill="currentColor" />
+          </svg>
+        </a>
+      </li>
+    </ul>
+    <div class="navbar-nav-scroll ml-md-auto ">
+      <ul class="navbar-nav bd-navbar-nav flex-row">
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.creative-tim.com/product/material-dashboard"> <i class="material-icons">card_membership</i> Upgrade to PRO </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://demos.creative-tim.com/material-dashboard/examples/dashboard.html"><i class="material-icons">view_carousel</i> Live Preview</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/creativetimofficial/material-dashboard" target="_blank" rel="noopener"><i class="material-icons">star</i> Help with a star</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="" target="_blank" rel="noopener"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="" target="_blank" rel="noopener"></a>
+        </li>
+      </ul>
+    </div>
+    <a href="https://github.com/creativetimofficial/material-dashboard" class="github-corner" aria-label="View source on Github">
+      <svg width="80" height="80" viewBox="0 0 250 250" style="fill:#fff; color:#9c27b0; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path>
+      </svg>
+    </a>
+    <style>
+      .github-corner:hover .octo-arm {
+        animation: octocat-wave 560ms ease-in-out
+      }
+
+      @keyframes octocat-wave {
+        0%,
+        100% {
+          transform: rotate(0)
+        }
+        20%,
+        60% {
+          transform: rotate(-25deg)
+        }
+        40%,
+        80% {
+          transform: rotate(10deg)
+        }
+      }
+
+      @media (max-width:500px) {
+        .github-corner:hover .octo-arm {
+          animation: none
+        }
+        .github-corner .octo-arm {
+          animation: octocat-wave 560ms ease-in-out
+        }
+      }
+    </style>
+  </header>
+  <div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+      <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+        <nav class="collapse bd-links" id="bd-docs-nav">
+          <div class="bd-toc-item active">
+            <a class="bd-toc-link" href="#docs">
+              Getting started
+            </a>
+            <ul class="nav bd-sidenav">
+              <li class="">
+                <a href="../../../docs/2.1/getting-started/introduction.html">
+                  Introduction
+                </a>
+              </li>
+              <li class="">
+                <a href="../../../docs/2.1/getting-started/license.html">
+                  License
+                </a>
+              </li>
+              <li class="">
+                <a href="../../../docs/2.1/getting-started/file-structure.html">
+                  File Structure
+                </a>
+              </li>
+              <li class="active bd-sidenav-active">
+                <a href="../../../docs/2.1/getting-started/build-tools.html">
+                  Build Tools
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="bd-toc-item active">
+            <a class="bd-toc-link" href="#docs">
+              Components
+            </a>
+            <ul class="nav bd-sidenav">
+              <li class="">
+                <a href="../../../docs/2.1/components/alerts.html">
+                  Alerts
+                </a>
+              </li>
+              <li class="">
+                <a href="../../../docs/2.1/components/badge.html">
+                  Badge
+                  <span class="badge badge-primary">Pro</span>
+                </a>
+              </li>
+              <li class="">
+                <a href="../../../docs/2.1/components/breadcrumb.html">
+                  Breadcrumb
+                  <span class="badge badge-primary">Pro</span>
+                </a>
+              </li>
+              <li class="">
+                <a href="../../../docs/2.1/components/buttons.html">
+                  Buttons
+                </a>
+              </li>
+              <li class="">
+                <a href="../../../docs/2.1/components/card.html">
+                  Card
+                </a>
+              </li>
+              <li class="">
+                <a href="../../../docs/2.1/components/carousel.html">
+                  Carousel
+                  <span class="badge badge-primary">Pro</span>
+                </a>
+              </li>
+              <li class="">
+                <a href="../../../docs/2.1/components/collapse.html">
+                  Collapse
+                  <span class="badge badge-primary">Pro</span>
+                </a>
+              </li>
+              <li class="">
+                <a href="../../../docs/2.1/components/dropdowns.html">
+                  Dropdowns
+                </a>
+              </li>
+              <li class="">
+                <a href="../../../docs/2.1/components/forms.html">
+                  Forms
+                </a>
+              </li>
+              <li class="">
+                <a href="../../../docs/2.1/components/google-maps.html">
+                  Google Maps
+                </a>
+              </li>
+              <li class="">
+                <a href="../../../docs/2.1/components/info-areas.html">
+                  Info Areas
+                  <span class="badge badge-primary">Pro</span>
+                </a>
+              </li>
+              <li class="">
+                <a href="../../../docs/2.1/components/material-icons.html">
+                  Material Icons
+                </a>
+              </li>
+              <li class="">
+                <a href="../../../docs/2.1/components/modal.html">
+                  Modal
+                </a>
+              </li>
+              <li class="">
+                <a href="../../../docs/2.1/components/navs.html">
+                  Navs
+                </a>
+              </li>
+              <li class="">
+                <a href="../../../docs/2.1/components/navbar.html">
+                  Navbar
+                </a>
+              </li>
+              <li class="">
+                <a href="../../../docs/2.1/components/pagination.html">
+                  Pagination
+                  <span class="badge badge-primary">Pro</span>
+                </a>
+              </li>
+              <li class="">
+                <a href="../../../docs/2.1/components/parallax.html">
+                  Parallax
+                  <span class="badge badge-primary">Pro</span>
+                </a>
+              </li>
+              <li class="">
+                <a href="../../../docs/2.1/components/popovers.html">
+                  Popovers
+                  <span class="badge badge-primary">Pro</span>
+                </a>
+              </li>
+              <li class="">
+                <a href="../../../docs/2.1/components/progress.html">
+                  Progress
+                  <span class="badge badge-primary">Pro</span>
+                </a>
+              </li>
+              <li class="">
+                <a href="../../../docs/2.1/components/tables.html">
+                  Tables
+                </a>
+              </li>
+              <li class="">
+                <a href="../../../docs/2.1/components/tooltips.html">
+                  Tooltips
+                  <span class="badge badge-primary">Pro</span>
+                </a>
+              </li>
+              <li class="">
+                <a href="../../../docs/2.1/components/typography.html">
+                  Typography
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="bd-toc-item active">
+            <a class="bd-toc-link" href="#docs">
+              Plugins
+            </a>
+            <ul class="nav bd-sidenav">
+              <li class="">
+                <a href="../../../docs/2.1/plugins/bootstrap-notify.html">
+                  Bootstrap Notify
+                </a>
+              </li>
+              <li class="">
+                <a href="../../../docs/2.1/plugins/perfect-scrollbar.html">
+                  Perfect Scrollbar
+                </a>
+              </li>
+              <li class="">
+                <a href="../../../docs/2.1/plugins/bootstrap-switch.html">
+                  Bootstrap Switch
+                  <span class="badge badge-primary">Pro</span>
+                </a>
+              </li>
+              <li class="">
+                <a href="../../../docs/2.1/plugins/datetimepicker.html">
+                  DateTimePicker
+                  <span class="badge badge-primary">Pro</span>
+                </a>
+              </li>
+              <li class="">
+                <a href="../../../docs/2.1/plugins/fullcalendar.html">
+                  FullCalendar
+                  <span class="badge badge-primary">Pro</span>
+                </a>
+              </li>
+              <li class="">
+                <a href="../../../docs/2.1/plugins/jvector-map.html">
+                  jVector Map
+                  <span class="badge badge-primary">Pro</span>
+                </a>
+              </li>
+              <li class="">
+                <a href="../../../docs/2.1/plugins/sweet-alert-2.html">
+                  Sweet Alert 2
+                  <span class="badge badge-primary">Pro</span>
+                </a>
+              </li>
+              <li class="">
+                <a href="../../../docs/2.1/plugins/jquery-validation.html">
+                  jQuery Validation
+                  <span class="badge badge-primary">Pro</span>
+                </a>
+              </li>
+              <li class="">
+                <a href="../../../docs/2.1/plugins/fileupload-jasny.html">
+                  FileUpload Jasny
+                  <span class="badge badge-primary">Pro</span>
+                </a>
+              </li>
+              <li class="">
+                <a href="../../../docs/2.1/plugins/jquery-tagsinput.html">
+                  jQuery Tagsinput
+                  <span class="badge badge-primary">Pro</span>
+                </a>
+              </li>
+              <li class="">
+                <a href="../../../docs/2.1/plugins/select-bootstrap.html">
+                  Select Bootstrap
+                  <span class="badge badge-primary">Pro</span>
+                </a>
+              </li>
+              <li class="">
+                <a href="../../../docs/2.1/plugins/sliders.html">
+                  Sliders
+                  <span class="badge badge-primary">Pro</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="d-none d-xl-block col-xl-2 bd-toc">
+        <ul class="section-nav">
+          <li class="toc-entry toc-h3">
+            <a href="#tooling-setup">Tooling setup</a>
+          </li>
+          <li class="toc-entry toc-h3">
+            <a href="#change-brand-colors">Change brand colors</a>
+          </li>
+          <li class="toc-entry toc-h3">
+            <a href="#compile-scss">Compile SCSS</a>
+          </li>
+          <li class="toc-entry toc-h3">
+            <a href="#using-input-labels-in-a-form">Using input labels in a form</a>
+          </li>
+        </ul>
+      </div>
+      <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+        <h1 class="bd-title" id="content">Build tools</h1>
+        <p class="bd-lead">Learn how to use Material Dashboard Pro using NPM scripts to build your admin theme, compile SCSS, change brand-colors and more.</p>
+        <h3 id="tooling-setup">Tooling setup</h3>
+        <p>You can install the Material Dashboard using NPM:</p>
+        <p>
+          <code class="highlighter-rouge">npm i material-dashboard</code>
+        </p>
+        <p>To see more details please visit the following
+          <a href="https://www.npmjs.com/package/material-dashboard" target="blank">link</a>.</p>
+        <h3 id="change-brand-colors">Change brand colors</h3>
+        <ul>
+          <li>You will find all the branding colors inside
+            <code class="highlighter-rouge">assets/scss/variables/_brand.scss</code>. You can change them with a
+            <code class="highlighter-rouge">HEX</code> value or with other predefined variables from
+            <code class="highlighter-rouge">assets/scss/variables/_colors.scss</code>.</li>
+        </ul>
+        <h3 id="compile-scss">Compile SCSS</h3>
+        <ol>
+          <li>Download the project’s zip.</li>
+          <li>Make sure you have node.js (https://nodejs.org/en/) installed.</li>
+          <li>Type
+            <code class="highlighter-rouge">npm install</code> in terminal/console in the source folder where
+            <code class="highlighter-rouge">package.json</code> is located.</li>
+          <li>Run in terminal
+            <code class="highlighter-rouge">gulp open-app</code> for opening the Dashboard Page (default) of the product. You can set in gulpfile.js from your downloaded archive any page you want to open in browser, at line 30:
+            <code class="highlighter-rouge">gulp.src('examples/dashboard.html')</code>.</li>
+          <li>Run in terminal
+            <code class="highlighter-rouge">gulp compile:scss</code> for a single compilation or
+            <code class="highlighter-rouge">gulp watch</code> for continous compilation of the changes that you make in
+            <code class="highlighter-rouge">*.scss</code> files. This command should be run in the same folder where
+            <code class="highlighter-rouge">gulpfile.js</code> and
+            <code class="highlighter-rouge">package.json</code> are located.</li>
+        </ol>
+        <h3 id="using-input-labels-in-a-form">Using input labels in a form</h3>
+        <p>You have two use-cases for using the inputs label inside of a form:</p>
+        <ul>
+          <li>
+            <code class="highlighter-rouge">.bmd-label-static</code> is recommended for using <strong>with a placeholder</strong> for an input</li>
+        </ul>
+        <div class="bd-example" data-example-id="">
+          <div class="form-group bmd-form-group">
+            <label class="bmd-label-static">Fist Name</label>
+            <input type="text" class="form-control" placeholder="Your name here" />
+          </div>
+        </div>
+        <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group bmd-form-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"bmd-label-static"</span><span class="nt">&gt;</span>Fist Name<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">placeholder=</span><span class="s">"Your name here"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+        <ul>
+          <li>
+            <code class="highlighter-rouge">.bmd-label-floating</code> is recommended for using <strong>without the placeholder</strong></li>
+        </ul>
+        <div class="bd-example" data-example-id="">
+          <div class="form-group bmd-form-group">
+            <label class="bmd-label-floating">Fist Name</label>
+            <input type="text" class="form-control" />
+          </div>
+        </div>
+        <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group bmd-form-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"bmd-label-floating"</span><span class="nt">&gt;</span>Fist Name<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+      </main>
+    </div>
+  </div>
+  <!--   Core JS Files   -->
+  <script src="../../../assets/js/core/jquery.min.js"></script>
+  <script src="../../../assets/js/core/popper.min.js"></script>
+  <script src="../../../assets/js/core/bootstrap-material-design.min.js"></script>
+  <script src="../../../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!-- Plugin for the momentJs  -->
+  <script src="../../../assets/js/plugins/moment.min.js"></script>
+  <!--  Plugin for Sweet Alert -->
+  <script src="../../../assets/js/plugins/sweetalert2.js"></script>
+  <!-- Forms Validations Plugin -->
+  <script src="../../../assets/js/plugins/jquery.validate.min.js"></script>
+  <!-- Plugin for the Wizard, full documentation here: https://github.com/VinceG/twitter-bootstrap-wizard -->
+  <script src="../../../assets/js/plugins/jquery.bootstrap-wizard.js"></script>
+  <!--	Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
+  <script src="../../../assets/js/plugins/bootstrap-selectpicker.js"></script>
+  <!--  Plugin for the DateTimePicker, full documentation here: https://eonasdan.github.io/bootstrap-datetimepicker/ -->
+  <script src="../../../assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
+  <!--  DataTables.net Plugin, full documentation here: https://datatables.net/  -->
+  <script src="../../../assets/js/plugins/jquery.dataTables.min.js"></script>
+  <!--	Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
+  <script src="../../../assets/js/plugins/bootstrap-tagsinput.js"></script>
+  <!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
+  <script src="../../../assets/js/plugins/jasny-bootstrap.min.js"></script>
+  <!--  Full Calendar Plugin, full documentation here: https://github.com/fullcalendar/fullcalendar    -->
+  <script src="../../../assets/js/plugins/fullcalendar.min.js"></script>
+  <!-- Vector Map plugin, full documentation here: http://jvectormap.com/documentation/ -->
+  <script src="../../../assets/js/plugins/jquery-jvectormap.js"></script>
+  <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+  <script src="../../../assets/js/plugins/nouislider.min.js"></script>
+  <!-- Include a polyfill for ES6 Promises (optional) for IE11, UC Browser and Android browser support SweetAlert -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+  <!-- Library for adding dinamically elements -->
+  <script src="../../../assets/js/plugins/arrive.min.js"></script>
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2Yno10-YTnLjjn_Vtk0V8cdcY5lC4plU"></script>
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!-- Chartist JS -->
+  <script src="../../../assets/js/plugins/chartist.min.js"></script>
+  <!--  Notifications Plugin    -->
+  <script src="../../../assets/js/plugins/bootstrap-notify.js"></script>
+  <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="../../../assets/js/material-dashboard.min.js?v=2.1.1" type="text/javascript"></script>
+  <!-- Sharrre libray -->
+  <script src="../../../assets/demo/jquery.sharrre.js"></script>
+  <script>
+    $(document).ready(function() {
+
+      $('#facebook').sharrre({
+        share: {
+          facebook: true
+        },
+        enableHover: false,
+        enableTracking: false,
+        enableCounter: false,
+        click: function(api, options) {
+          api.simulateClick();
+          api.openPopup('facebook');
+        },
+        template: '<i class="fab fa-facebook-f"></i> Facebook',
+        url: 'https://demos.creative-tim.com/material-dashboard/examples/dashboard.html'
+      });
+
+      $('#google').sharrre({
+        share: {
+          googlePlus: true
+        },
+        enableCounter: false,
+        enableHover: false,
+        enableTracking: true,
+        click: function(api, options) {
+          api.simulateClick();
+          api.openPopup('googlePlus');
+        },
+        template: '<i class="fab fa-google-plus"></i> Google',
+        url: 'https://demos.creative-tim.com/material-dashboard/examples/dashboard.html'
+      });
+
+      $('#twitter').sharrre({
+        share: {
+          twitter: true
+        },
+        enableHover: false,
+        enableTracking: false,
+        enableCounter: false,
+        buttons: {
+          twitter: {
+            via: 'CreativeTim'
+          }
+        },
+        click: function(api, options) {
+          api.simulateClick();
+          api.openPopup('twitter');
+        },
+        template: '<i class="fab fa-twitter"></i> Twitter',
+        url: 'https://demos.creative-tim.com/material-dashboard/examples/dashboard.html'
+      });
+
+
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-46172202-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+      })();
+
+      // Facebook Pixel Code Don't Delete
+      ! function(f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function() {
+          n.callMethod ?
+            n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s)
+      }(window,
+        document, 'script', '//connect.facebook.net/en_US/fbevents.js');
+
+      try {
+        fbq('init', '111649226022273');
+        fbq('track', "PageView");
+
+      } catch (err) {
+        console.log('Facebook Track Error:', err);
+      }
+
+    });
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=111649226022273&ev=PageView&noscript=1" />
+  </noscript>
+  <script>
+    $(document).ready(function() {
+      if ($('.card-header.card-chart').length != 0) {
+        md.initDashboardPageCharts();
+      }
+
+      if ($('#websiteViewsChart').length != 0) {
+        md.initDocumentationCharts();
+      }
+
+
+
+
+
+      if ($('.datetimepicker').length != 0) {
+        md.initFormExtendedDatetimepickers();
+      }
+      if ($('#fullCalendar').length != 0) {
+        md.initFullCalendar();
+      }
+
+      if ($('.slider').length != 0) {
+        md.initSliders();
+      }
+
+      //  Activate the tooltips
+      $('[data-toggle="tooltip"]').tooltip();
+
+      // Activate Popovers
+      $('[data-toggle="popover"]').popover();
+
+      // Vector map
+      if ($('#worldMap').length != 0) {
+        md.initVectorMap();
+      }
+
+      setFormValidation('#RegisterValidation');
+
+      function setFormValidation(id) {
+        $(id).validate({
+          highlight: function(element) {
+            $(element).closest('.form-group').removeClass('has-success').addClass('has-danger');
+            $(element).closest('.form-check').removeClass('has-success').addClass('has-danger');
+          },
+          success: function(element) {
+            $(element).closest('.form-group').removeClass('has-danger').addClass('has-success');
+            $(element).closest('.form-check').removeClass('has-danger').addClass('has-success');
+          },
+          errorPlacement: function(error, element) {
+            $(element).closest('.form-group').append(error);
+          },
+        });
+      }
+    });
+
+    // FileInput
+    $('.form-file-simple .inputFileVisible').click(function() {
+      $(this).siblings('.inputFileHidden').trigger('click');
+    });
+
+    $('.form-file-simple .inputFileHidden').change(function() {
+      var filename = $(this).val().replace(/C:\\fakepath\\/i, '');
+      $(this).siblings('.inputFileVisible').val(filename);
+    });
+
+    $('.form-file-multiple .inputFileVisible, .form-file-multiple .input-group-btn').click(function() {
+      $(this).parent().parent().find('.inputFileHidden').trigger('click');
+      $(this).parent().parent().addClass('is-focused');
+    });
+
+    $('.form-file-multiple .inputFileHidden').change(function() {
+      var names = '';
+      for (var i = 0; i < $(this).get(0).files.length; ++i) {
+        if (i < $(this).get(0).files.length - 1) {
+          names += $(this).get(0).files.item(i).name + ',';
+        } else {
+          names += $(this).get(0).files.item(i).name;
+        }
+      }
+      $(this).siblings('.input-group').find('.inputFileVisible').val(names);
+    });
+
+    $('.form-file-multiple .btn').on('focus', function() {
+      $(this).parent().siblings().trigger('focus');
+    });
+
+    $('.form-file-multiple .btn').on('focusout', function() {
+      $(this).parent().siblings().trigger('focusout');
+    });
+  </script>
+</body>
+
+</html>
