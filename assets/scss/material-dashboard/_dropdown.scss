@@ -81,23 +81,18 @@
   li > a{    // used to properly size the ripple container
     position: relative;
     width: auto;
-
     display: flex;
     flex-flow: nowrap;
     align-items: center;
     color: $bmd-dropdown-link-color;
     font-weight: normal;
     text-decoration: none;
-
     font-size: .8125rem;
     border-radius: $border-radius / 2;
     margin: 0 $bmd-dropdown-margin-y;
     @include transitions($fast-transition-time, $transition-linear);
-
     min-width: $bmd-menu-item-min-width;
-
     padding: $dropdown-item-padding-y  $dropdown-item-padding-x;
-
     overflow: hidden;
     line-height: $bmd-line-height;
     text-overflow: ellipsis;
@@ -119,6 +114,15 @@
     color: #FFFFFF;
   }
 }
+
+a[data-toggle="collapse"][aria-expanded="true"] .caret,
+a[aria-expanded="true"] .caret,
+.dropdown.open .caret,
+.dropup.open .caret,
+.btn-group.bootstrap-select.open .caret {
+    @include rotate-180();
+}
+
 
 // this could be in a .btn-group or .dropdown
 .dropdown-toggle {
@@ -142,10 +146,6 @@
       transition: transform $bmd-animation-dropdown-caret linear;
   }
 
-  .show &:after{
-    @include rotate-180();
-  }
-
   &.bmd-btn-fab-sm {
     ~ .dropdown-menu {
       &.dropdown-menu-top-left,
@@ -160,6 +160,10 @@
       // collapse some spacing
       margin: 0;
     }
+  }
+
+  .show > &:not(.dropdown-item):after {
+    @include rotate-180();
   }
 }
 

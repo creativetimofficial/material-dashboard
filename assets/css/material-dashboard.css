@@ -10886,11 +10886,7 @@ fieldset[disabled] .form-group.is-focused .form-check .form-check-label {
   color: #fff;
   height: 0;
   box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0 inset;
-  -webkit-animation: checkbox-off 0.3s forwards;
-  -moz-animation: checkbox-off 0.3s forwards;
-  -o-animation: checkbox-off 0.3s forwards;
-  -ms-animation: checkbox-off 0.3s forwards;
-  animation: checkbox-off 0.3s forwards;
+  animation: checkboxOff 0.3s forwards;
 }
 
 .form-check .form-check-input:focus+.form-check-sign .check:after {
@@ -10904,42 +10900,22 @@ fieldset[disabled] .form-group.is-focused .form-check .form-check-label {
 .form-check .form-check-input:checked+.form-check-sign .check:before {
   color: #FFFFFF;
   box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
-  -webkit-animation: checkbox-on 0.3s forwards;
-  -moz-animation: checkbox-on 0.3s forwards;
-  -o-animation: checkbox-on 0.3s forwards;
-  -ms-animation: checkbox-on 0.3s forwards;
-  animation: checkbox-on 0.3s forwards;
+  animation: checkboxOn 0.3s forwards;
 }
 
 .form-check .form-check-input:checked+.form-check-sign:before {
-  -webkit-animation: rippleOn 500ms;
-  -moz-animation: rippleOn 500ms;
-  -o-animation: rippleOn 500ms;
-  -ms-animation: rippleOn 500ms;
   animation: rippleOn 500ms;
 }
 
 .form-check .form-check-input:checked+.form-check-sign .check:after {
-  -webkit-animation: rippleOn 500ms forwards;
-  -moz-animation: rippleOn 500ms forwards;
-  -o-animation: rippleOn 500ms forwards;
-  -ms-animation: rippleOn 500ms forwards;
   animation: rippleOn 500ms forwards;
 }
 
 .form-check .form-check-input:not(:checked)+.form-check-sign:before {
-  -webkit-animation: rippleOff 500ms;
-  -moz-animation: rippleOff 500ms;
-  -o-animation: rippleOff 500ms;
-  -ms-animation: rippleOff 500ms;
   animation: rippleOff 500ms;
 }
 
 .form-check .form-check-input:not(:checked)+.form-check-sign .check:after {
-  -webkit-animation: rippleOff 500ms;
-  -moz-animation: rippleOff 500ms;
-  -o-animation: rippleOff 500ms;
-  -ms-animation: rippleOff 500ms;
   animation: rippleOff 500ms;
 }
 
@@ -10968,7 +10944,7 @@ fieldset[disabled] .form-check .form-check-input,
   background-color: #000000;
 }
 
-@keyframes checkbox-on {
+@keyframes checkboxOn {
   0% {
     box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px;
   }
@@ -11051,22 +11027,6 @@ fieldset[disabled] .form-group.is-focused .form-check .form-check-label {
   transform: scale3d(0, 0, 0);
 }
 
-.form-check .form-check-label .form-check-input:not(:checked)~.check:after {
-  -webkit-animation: rippleOff 500ms;
-  -moz-animation: rippleOff 500ms;
-  -o-animation: rippleOff 500ms;
-  -ms-animation: rippleOff 500ms;
-  animation: rippleOff 500ms;
-}
-
-.form-check .form-check-label .form-check-input:checked~.check:after {
-  -webkit-animation: rippleOff 500ms;
-  -moz-animation: rippleOff 500ms;
-  -o-animation: rippleOff 500ms;
-  -ms-animation: rippleOff 500ms;
-  animation: rippleOff 500ms;
-}
-
 .form-check .form-check-input {
   opacity: 0;
   height: 0;
@@ -11085,6 +11045,10 @@ fieldset[disabled] .form-group.is-focused .form-check .form-check-label {
 
 .form-check .form-check-input:checked~.circle {
   border-color: #9c27b0;
+}
+
+.form-check .form-check-input:checked .check:before {
+  animation: checkboxOn .5s forwards;
 }
 
 .form-check .form-check-input:checked~.circle .check {
@@ -11121,8 +11085,74 @@ fieldset[disabled] .form-group.is-focused .form-check .form-check-label {
   display: inline-block;
 }
 
+.form-check .form-check-label .circle:before {
+  display: block;
+  position: absolute;
+  left: -1px;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.84);
+  height: 15px;
+  width: 15px;
+  border-radius: 100%;
+  z-index: 1;
+  opacity: 0;
+  margin: 0;
+  top: -1px;
+  -webkit-transform: scale3d(2.3, 2.3, 1);
+  -moz-transform: scale3d(2.3, 2.3, 1);
+  -o-transform: scale3d(2.3, 2.3, 1);
+  -ms-transform: scale3d(2.3, 2.3, 1);
+  transform: scale3d(2.3, 2.3, 1);
+}
+
+.form-check .form-check-label .form-check-input:checked+.circle:before {
+  animation: rippleOn .5s;
+}
+
+.form-check .form-check-label .form-check-input:checked+.circle .check:before {
+  color: #FFFFFF;
+  box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
+  animation: checkboxOn 0.3s forwards;
+}
+
 .form-check+.form-check {
   margin-top: 0;
+}
+
+@keyframes checkboxOn {
+  0% {
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px;
+  }
+  50% {
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px 2px 0 11px;
+  }
+  100% {
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
+  }
+}
+
+@keyframes rippleOn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes rippleOff {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 form {
@@ -12999,6 +13029,7 @@ fieldset[disabled] .form-group .form-control {
   border-radius: 3px;
   padding: 0.625rem 0;
   margin-bottom: 20px;
+  height: auto !important;
   color: #555;
   background-color: #fff !important;
   box-shadow: 0 4px 18px 0px rgba(0, 0, 0, 0.12), 0 7px 10px -5px rgba(0, 0, 0, 0.15);
@@ -13253,7 +13284,6 @@ fieldset[disabled] .form-group .form-control {
 .navbar.navbar-transparent {
   background-color: transparent !important;
   box-shadow: none;
-  padding-top: 25px;
 }
 
 .navbar .notification {
@@ -13276,10 +13306,6 @@ fieldset[disabled] .form-group .form-control {
 
 .navbar .navbar-minimize {
   padding: 3px 0 0 15px;
-}
-
-.navbar.navbar-transparent {
-  padding-top: 10px;
 }
 
 .navbar .collapse .navbar-nav .nav-item .nav-link {
@@ -13332,6 +13358,10 @@ fieldset[disabled] .form-group .form-control {
 
 .off-canvas-sidebar .navbar .navbar-collapse .navbar-nav .nav-item .nav-link:hover {
   background: rgba(200, 200, 200, 0.2);
+}
+
+.off-canvas-sidebar .navbar.navbar-transparent {
+  padding-top: 25px !important;
 }
 
 .alert {
@@ -13546,7 +13576,9 @@ fieldset[disabled] .form-group .form-control {
 
 .page-header {
   min-height: 100vh;
-  max-height: 999px;
+  max-height: 1000px;
+  display: flex !important;
+  height: 100%;
   padding: 0;
   color: #fff;
   position: relative;
@@ -13753,6 +13785,7 @@ h2.title {
 }
 
 .nav-tabs .nav-item .nav-link {
+  position: relative;
   color: #fff;
   border: 0;
   margin: 0;
@@ -14108,6 +14141,17 @@ h2.title {
   color: #FFFFFF;
 }
 
+a[data-toggle="collapse"][aria-expanded="true"] .caret,
+a[aria-expanded="true"] .caret,
+.dropdown.open .caret,
+.dropup.open .caret,
+.btn-group.bootstrap-select.open .caret {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
 .dropdown-toggle.bmd-btn-icon::after,
 .dropdown-toggle.bmd-btn-fab::after {
   display: none;
@@ -14125,13 +14169,6 @@ h2.title {
   transition: transform 150ms linear;
 }
 
-.show .dropdown-toggle:after {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-
 .dropdown-toggle.bmd-btn-fab-sm~.dropdown-menu.dropdown-menu-top-left,
 .dropdown-toggle.bmd-btn-fab-sm~.dropdown-menu.dropdown-menu-top-right {
   bottom: 2.5rem;
@@ -14139,6 +14176,13 @@ h2.title {
 
 .dropdown-toggle.bmd-btn-icon~.dropdown-menu {
   margin: 0;
+}
+
+.show>.dropdown-toggle:not(.dropdown-item):after {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .dropdown-header {
@@ -14412,6 +14456,12 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
   position: absolute;
   bottom: 0;
   width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .footer .copyright {
+    padding-right: 15px;
+  }
 }
 
 .wrapper {
@@ -16094,6 +16144,11 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
   position: relative;
 }
 
+.table .flag img {
+  max-width: 18px;
+  margin-top: -2px;
+}
+
 .table>thead>tr>th,
 .table>tbody>tr>th,
 .table>tfoot>tr>th,
@@ -16102,6 +16157,7 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
 .table>tfoot>tr>td {
   padding: 12px 8px;
   vertical-align: middle;
+  border-color: #ddd;
 }
 
 .table thead tr th {
@@ -16220,6 +16276,15 @@ thead.thead-inverse th,
   background-color: #f5f5f5;
 }
 
+.dataTable>thead>tr>th,
+.dataTable>tbody>tr>th,
+.dataTable>tfoot>tr>th,
+.dataTable>thead>tr>td,
+.dataTable>tbody>tr>td,
+.dataTable>tfoot>tr>td {
+  padding: 5px !important;
+}
+
 body {
   background-color: #eee;
   color: #3C4858;
@@ -16331,6 +16396,11 @@ label {
   color: #fff;
 }
 
+.offline-doc .page-header {
+  display: flex;
+  align-items: center;
+}
+
 .offline-doc .page-header .content-center {
   z-index: 3;
 }
@@ -16349,6 +16419,25 @@ label {
   top: 0;
   width: 100%;
   z-index: 2;
+}
+
+.bd-docs .bd-toc-item .bd-sidenav a span {
+  float: right;
+  margin-top: 5px;
+  padding: 3px 7px;
+  font-size: 8px;
+  line-height: 9px;
+  background-color: #9c27b0;
+}
+
+.bootstrap-datetimepicker-widget .timepicker .table-condesed .btn .ripple-container {
+  width: 40px;
+  height: 40px;
+  margin: -11px 3px;
+}
+
+.off-canvas-sidebar .wrapper-full-page .page-header {
+  padding: 15vh 0 !important;
 }
 
 .btn.btn-facebook {
@@ -16557,7 +16646,7 @@ label {
 }
 
 .card .form-check {
-  margin-top: 15px;
+  margin-top: 5px;
 }
 
 .card .card-title {
@@ -16875,7 +16964,7 @@ label {
 
 .card .card-title {
   margin-top: 0;
-  margin-bottom: 15px;
+  margin-bottom: 3px;
 }
 
 .card .card-body {
@@ -16884,7 +16973,7 @@ label {
 }
 
 .card .card-body .form-group {
-  margin: 27px 0 0;
+  margin: 8px 0 0;
 }
 
 .card .card-header {
@@ -17020,7 +17109,7 @@ label {
 }
 
 .card [class*="card-header-"] .card-title+.card-category {
-  color: rgba(255, 255, 255, 0.62);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .card [class*="card-header-"] .card-title+.card-category a {
@@ -17224,7 +17313,7 @@ label {
 
 .card-stats .card-header+.card-footer {
   border-top: 1px solid #eee;
-  margin-top: 14px;
+  margin-top: 20px;
 }
 
 .card-stats .card-header.card-header-icon i {
@@ -17772,6 +17861,13 @@ Copyright (c) 2015 Daniel Eden
   .navbar .navbar-collapse .navbar-nav>li.button-container {
     padding: 15px;
   }
+  .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+    width: -webkit-fill-available !important;
+  }
+  .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) .dropdown-menu.show {
+    min-width: auto;
+    left: auto;
+  }
   .carousel .card .card-body {
     max-width: 340px;
     margin: 0 auto;
@@ -17916,6 +18012,13 @@ Copyright (c) 2015 Daniel Eden
   #navigation .navbar-collapse {
     display: none !important;
   }
+  .dropdown-menu.show .dropdown-item.open+.dropdown-menu.show {
+    right: 101% !important;
+  }
+  .dropdown-menu.show .dropdown-item.open+.dropdown-menu.show .dropdown-item.open+.dropdown-menu,
+  .dropdown-menu.show .dropdown-item.open+.dropdown-menu.show .dropdown-item.open+.dropdown-menu.show {
+    left: -165px !important;
+  }
 }
 
 @media all and (min-width: 991px) {
@@ -17989,6 +18092,9 @@ Copyright (c) 2015 Daniel Eden
   .presentation-page .section-components .coloured-card-btn-img {
     top: -2%;
   }
+  .login-page .container {
+    padding-top: 100px !important;
+  }
   .presentation-page #cd-vertical-nav,
   .index-page #cd-vertical-nav,
   .section-page #cd-vertical-nav {
@@ -18000,10 +18106,6 @@ Copyright (c) 2015 Daniel Eden
 }
 
 @media screen and (max-width: 400px) {
-  .pro-badge {
-    top: 90px !important;
-    right: 30px !important;
-  }
   .cd-vertical-nav {
     display: none !important;
   }

@@ -1,5 +1,13 @@
 # Change Log
 
+## [2.1.1] 2018-11-13
+### Improvements, BugFixing
+- Changes for responsive devices
+- Improvements and BugFixing for documentation
+- Change versions on CSS and JS files
+- Pro Documentation integrated in Free Version
+- Eliminated extra CSS and JS
+
 ## [2.1.0] 2018-06-13
 ### Bug fixing
 - Card-chart fixed on Windows

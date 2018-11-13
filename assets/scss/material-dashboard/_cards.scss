@@ -23,7 +23,7 @@
   }
 
   .form-check {
-      margin-top: 15px;
+      margin-top: 5px;
   }
 
     .card-title{
@@ -345,7 +345,7 @@
 
   .card-title{
     margin-top: 0;
-    margin-bottom: 15px;
+    margin-bottom: 3px;
   }
 
   .card-body{
@@ -353,7 +353,7 @@
     position: relative;
 
     .form-group {
-      margin: 27px 0 0;
+      margin: 8px 0 0;
     }
   }
 
@@ -487,7 +487,7 @@
       padding: 0;
 
       .card-title + .card-category{
-        color: rgba(255, 255, 255, 0.62);
+        color: rgba(255, 255, 255, 0.8);
         a {
           color: $white-color;
         }

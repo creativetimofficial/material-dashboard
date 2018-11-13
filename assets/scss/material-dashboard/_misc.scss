@@ -82,6 +82,7 @@ label{
       color: $white-color !important;
     }
   }
+
   .footer {
     z-index: 3 !important;
     position: absolute;
@@ -91,6 +92,8 @@ label{
     color: $white-color;
   }
   .page-header{
+    display: flex;
+    align-items: center;
 
     .content-center {
       z-index: 3;
@@ -110,6 +113,43 @@ label{
       top: 0;
       width: 100%;
       z-index: 2;
+    }
+  }
+}
+
+// docs
+
+ .bd-docs {
+   .bd-toc-item {
+     .bd-sidenav a span {
+       float: right;
+       margin-top: 5px;
+       padding: 3px 7px;
+       font-size: 8px;
+       line-height: 9px;
+       background-color: $brand-primary;
+     }
+   }
+ }
+
+
+// timepicker increase/decrease buttons
+
+.bootstrap-datetimepicker-widget .timepicker {
+  .table-condesed .btn{
+    .ripple-container {
+      width: 40px;
+      height: 40px;
+      margin: -11px 3px;
+    }
+  }
+}
+
+
+.off-canvas-sidebar {
+  .wrapper-full-page {
+    .page-header {
+      padding: 15vh 0 !important;
     }
   }
 }
