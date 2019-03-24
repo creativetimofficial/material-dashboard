@@ -9,5 +9,6 @@
             "email": "hello@creative-tim.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "minimum-stability": "dev",
 }
