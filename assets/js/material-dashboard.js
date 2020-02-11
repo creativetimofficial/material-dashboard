@@ -1,11 +1,11 @@
 /*!
 
  =========================================================
- * Material Dashboard - v2.1.1
+ * Material Dashboard - v2.1.2
  =========================================================
 
  * Product Page: https://www.creative-tim.com/product/material-dashboard
- * Copyright 2018 Creative Tim (http://www.creative-tim.com)
+ * Copyright 2020 Creative Tim (http://www.creative-tim.com)
 
  * Designed by www.invisionapp.com Coded by www.creative-tim.com
 
@@ -20,7 +20,7 @@
 
   if (isWindows) {
     // if we are on windows OS we activate the perfectScrollbar function
-    $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar();
+    $('.sidebar .sidebar-wrapper, .main-panel, .main').perfectScrollbar();
 
     $('html').addClass('perfect-scrollbar-on');
   } else {
