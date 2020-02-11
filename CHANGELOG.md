@@ -1,5 +1,11 @@
 # Change Log
 
+## [2.1.2] 2020-02-11
+### Improvements, BugFixing
+- Fixed the broken links
+- Improvements and BugFixing for documentation
+- Change versions on CSS and JS files
+
 ## [2.1.1] 2018-11-13
 ### Improvements, BugFixing
 - Changes for responsive devices

@@ -2373,7 +2373,8 @@
 
         isActive = that.$newElement.hasClass(classNames.SHOW);
 
-        if (!isActive &&
+        if (
+          !isActive &&
           (
             isArrowKey ||
             e.which >= 48 && e.which <= 57 ||
@@ -2464,7 +2465,8 @@
           } else {
             $this.focus();
           }
-        } else if (!$this.is('input') &&
+        } else if (
+          !$this.is('input') &&
           !REGEXP_TAB_OR_ESCAPE.test(e.which) ||
           (e.which === keyCodes.SPACE && that.selectpicker.keydown.keyHistory)
         ) {

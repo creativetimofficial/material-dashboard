@@ -87,11 +87,11 @@
         }
 
         &:checked {
-            & + .form-check-sign .check {
+            & ~ .form-check-sign .check {
                 background: $mdb-checkbox-checked-color;
             }
 
-            & + .form-check-sign .check:before {
+            & ~ .form-check-sign .check:before {
                 color: #FFFFFF;
                 box-shadow: 0 0 0 10px,
                             10px -10px 0 10px,
@@ -102,11 +102,11 @@
                 animation: checkboxOn $mdb-checkbox-animation-check forwards;
             }
 
-            & + .form-check-sign:before {
+            & ~ .form-check-sign:before {
             animation: rippleOn $mdb-checkbox-animation-ripple;
             }
 
-            & + .form-check-sign .check:after {
+            & ~ .form-check-sign .check:after {
             //background-color: $brand-success; // FIXME: seems like tho wrong color, test and make sure it can be removed
             animation: rippleOn $mdb-checkbox-animation-ripple forwards;
             }
