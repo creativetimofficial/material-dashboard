@@ -17138,6 +17138,48 @@ label {
   padding: 15vh 0 !important;
 }
 
+html[dir="rtl"] .main-panel {
+  float: left;
+}
+
+html[dir="rtl"] .sidebar,
+html[dir="rtl"] .off-canvas-sidebar nav .navbar-collapse {
+  text-align: right;
+}
+
+html[dir="rtl"] .sidebar {
+  left: unset;
+  right: 0;
+}
+
+html[dir="rtl"] .sidebar .nav {
+  padding-right: 0;
+}
+
+html[dir="rtl"] .sidebar .nav i {
+  float: right;
+  margin-left: 15px;
+  margin-right: unset;
+}
+
+html[dir="rtl"] .card.card-chart {
+  direction: ltr;
+}
+
+html[dir="rtl"] .card.card-chart .card-title,
+html[dir="rtl"] .card.card-chart .card-category {
+  text-align: right;
+}
+
+html[dir="rtl"] .card .card-body,
+html[dir="rtl"] .card .card-footer {
+  direction: rtl;
+}
+
+html[dir="rtl"] .form-check .form-check-sign .check:before {
+  margin-right: 10px;
+}
+
 .btn.btn-facebook {
   color: #ffffff;
   background-color: #3b5998;
