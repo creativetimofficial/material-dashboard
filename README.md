@@ -32,7 +32,7 @@ We are very excited to share this dashboard with you and we look forward to hear
 * [Browser Support](#browser-support)
 * [Resources](#resources)
 * [Reporting Issues](#reporting-issues)
-* [Update to PRO](#update-to-premium-version)
+* [Upgrade to PRO](#upgrade-to-premium-version)
 * [Technical Support or Questions](#technical-support-or-questions)
 * [Licensing](#licensing)
 * [Useful Links](#useful-links)
@@ -129,7 +129,7 @@ We use GitHub Issues as the official bug tracker for the Material Dashboard. Her
 2. Providing us reproducible steps for the issue will shorten the time it takes for it to be fixed.
 3. Some issues may be browser specific, so specifying in what browser you encountered the issue might help.
 
-## Update to Premium version
+## Upgrade to Premium version
 
 Are you looking for more components? Please check our Premium Version of Material Dashboard [here](https://www.creative-tim.com/product/material-dashboard-pro/)
 
