@@ -50,6 +50,10 @@ We are very excited to share this dashboard with you and we look forward to hear
 | --- | --- | --- | ---  |
 | [![Material Dashboard  Vuetify](https://s3.amazonaws.com/creativetim_bucket/products/100/original/opt_md_vuetify_thumbnail.jpg)](https://www.creative-tim.com/product/vuetify-material-dashboard)  | [![React Native](https://s3.amazonaws.com/creativetim_bucket/products/144/original/opt_mkrn_thumbnail.jpg)](https://www.creative-tim.com/product/material-kit-react-native)  | [![Nextjs Material Dashboard](https://s3.amazonaws.com/creativetim_bucket/products/341/original/opt_md_nextjs_thumbnail.jpg)](https://www.creative-tim.com/product/nextjs-material-dashboard)  | [![Material Dashboard React Nodejs](https://s3.amazonaws.com/creativetim_bucket/products/157/original/opt_md_react_node_thumbnail.jpg)](https://www.creative-tim.com/product/material-dashboard-react-nodejs)
 
+| Laravel | Asp.NET | Django | Flask |
+| --- | --- | --- | ---  |
+| [![Material Dashboard Laravel](https://s3.amazonaws.com/creativetim_bucket/products/154/original/opt_md_laravel_thumbnail.jpg)](https://www.creative-tim.com/product/material-dashboard-laravel) | [![Asp.NET](https://s3.amazonaws.com/creativetim_bucket/products/397/original/opt_md_aspnet_thumbnail.jpg)](https://www.creative-tim.com/product/material-dashboard-react-asp-net)  | [![Material Dashboard Django](https://s3.amazonaws.com/creativetim_bucket/products/337/original/opt_md_django_thumbnail.jpg)](https://www.creative-tim.com/product/material-dashboard-django)  | [![Material Dashboard Flask](https://s3.amazonaws.com/creativetim_bucket/products/338/original/opt_md_flask_thumbnail.jpg)](https://www.creative-tim.com/product/material-dashboard-flask)
+
 
 ## Demo
 
