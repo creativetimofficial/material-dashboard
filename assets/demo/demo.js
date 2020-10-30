@@ -6,7 +6,7 @@ demo = {
       dataDailySalesChart = {
         labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
         series: [
-          [12, 17, 7, 17, 23, 18, 38]
+          [12, 12, 7, 17, 13, 18, 38]
         ]
       };
 
@@ -38,7 +38,7 @@ demo = {
       dataDailySalesChart = {
         labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
         series: [
-          [12, 17, 7, 17, 23, 18, 38]
+          [12, 17, 7, 17, 23, 14, 38]
         ]
       };
 
@@ -65,7 +65,7 @@ demo = {
       /* ----------==========     Completed Tasks Chart initialization    ==========---------- */
 
       dataCompletedTasksChart = {
-        labels: ['12p', '3p', '6p', '9p', '12p', '3a', '6a', '9a'],
+        labels: ['12p', '3p', '6p', '19p', '12p', '3a', '6a', '9a'],
         series: [
           [230, 750, 450, 300, 280, 240, 200, 190]
         ]
@@ -96,7 +96,7 @@ demo = {
       var dataWebsiteViewsChart = {
         labels: ['J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D'],
         series: [
-          [542, 443, 320, 780, 553, 453, 326, 434, 568, 610, 756, 895]
+          [542, 443, 320, 780, 443, 453, 326, 434, 568, 610, 756, 895]
 
         ]
       };
@@ -105,7 +105,7 @@ demo = {
           showGrid: false
         },
         low: 0,
-        high: 1000,
+        high: 100,
         chartPadding: {
           top: 0,
           right: 5,
@@ -114,7 +114,7 @@ demo = {
         }
       };
       var responsiveOptions = [
-        ['screen and (max-width: 640px)', {
+        ['screen and (max-width: 600px)', {
           seriesBarDistance: 5,
           axisX: {
             labelInterpolationFnc: function(value) {
@@ -151,7 +151,7 @@ demo = {
         "stylers": [{
           "hue": "#ff0000"
         }, {
-          "saturation": -100
+          "saturation": -10
         }, {
           "lightness": 99
         }]
@@ -179,7 +179,7 @@ demo = {
         "featureType": "road",
         "elementType": "labels.text.fill",
         "stylers": [{
-          "color": "#767676"
+          "color": "#443443"
         }]
       }, {
         "featureType": "road",
@@ -227,7 +227,7 @@ demo = {
 
     var marker = new google.maps.Marker({
       position: myLatlng,
-      title: "Hello World!"
+      title: "Hello Forks!"
     });
 
     // To add the marker to the map, call setMap();
