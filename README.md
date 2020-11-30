@@ -1,9 +1,3 @@
-<a href="https://www.creative-tim.com/campaign?utm_medium=social&utm_source=github&utm_campaign=bf-readme-2020">
-<img border="0" alt="Creative Tim Black Friday Offer" src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/bf-github-banner.png" >
-</a>
-
-
-
 # [Material Dashboard](https://demos.creative-tim.com/material-dashboard/examples/dashboard.html) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.creative-tim.com%2Fproduct%2Fmaterial-dashboard&via=CreativeTim&text=Material%20Dashboard%20by%20Creative%20Tim&hashtags=material%2Cadmin%2Cdashbaord%2Ccreativetim)
 
 
