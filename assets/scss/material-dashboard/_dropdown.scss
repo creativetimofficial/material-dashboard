@@ -1,209 +1,292 @@
-// Menus https://www.google.com/design/spec/components/menus.html#menus-specs
-// Dropdown buttons (mobile and desktop) https://www.google.com/design/spec/components/buttons.html#buttons-dropdown-buttons
+@include media-breakpoint-up(lg) {
+  .dropdown,
+  .dropup,
+  .dropstart,
+  .dropend {
+    .dropdown-menu {
+      box-shadow: $dropdown-box-shadow;
+      transition: $dropdown-transition;
+      cursor: pointer;
+    }
 
-.dropdown-menu {
-  display: none;
-  padding: $bmd-dropdown-margin-y 0;
-  border: 0;
-  opacity: 0;
-  transform: scale(0);
-  transform-origin: 0 0;
-  will-change: transform, opacity;
-  transition: transform $bmd-menu-expand-duration $bmd-animation-curve-default,
-              opacity $bmd-menu-fade-duration $bmd-animation-curve-default;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-
-  &.showing {
-    animation-name: bmd-dropdown-animation;
-    animation-duration: $bmd-menu-expand-duration;
-    animation-fill-mode: forwards;
-    animation-timing-function: $bmd-animation-curve-default;
-  }
-
-  .open > &,
-  &.show {
-    display: block;
-    opacity: 1;
-    transform: scale(1);
-  }
-
-  &.hiding {
-    display: block;
-    opacity: 0;
-    transform: scale(0);
-  }
-
-  &[x-placement="bottom-start"] {
-    transform-origin: 0 0;
-  }
-
-  &[x-placement="bottom-end"] {
-    transform-origin: 100% 0;
-  }
-
-  &[x-placement="top-start"] {
-    transform-origin: 0 100%;
-  }
-
-  &[x-placement="top-end"] {
-    transform-origin: 100% 100%;
-  }
-
-  .disabled > a{
-        color: $bmd-dropdown-header-color;
-
-        &:focus,
-        &:hover{
-            text-decoration: none;
-            background-color: transparent;
-            background-image: none;
-            color: $bmd-dropdown-header-color;
+    .dropdown-toggle {
+      &:after{
+        content: "\f107";
+        font: normal normal normal 14px/1 FontAwesome;
+        border: none;
+        vertical-align: middle;
+        font-weight: $font-weight-bold;
+      }
+      &.show{
+        &:after{
+          transform: $dropdown-toggle-arrow-transform;
         }
-    }
-
-    &.dropdown-with-icons .dropdown-item{
-        padding: $dropdown-item-padding-y + 0.125 $dropdown-item-padding-x $dropdown-item-padding-y + 0.125 $dropdown-item-padding-y + 0.125;
-
-        & .material-icons{
-            vertical-align: middle;
-            font-size: 24px;
-            position: relative;
-            margin-top: -4px;
-            top: 1px;
-            margin-right: 12px;
-            opacity: .5;
-        }
-    }
-
-
-  // https://www.google.com/design/spec/components/menus.html#menus-specs
-  .dropdown-item,
-  li > a{    // used to properly size the ripple container
-    position: relative;
-    width: auto;
-    display: flex;
-    flex-flow: nowrap;
-    align-items: center;
-    color: $bmd-dropdown-link-color;
-    font-weight: normal;
-    text-decoration: none;
-    font-size: .8125rem;
-    border-radius: $border-radius / 2;
-    margin: 0 $bmd-dropdown-margin-y;
-    @include transitions($fast-transition-time, $transition-linear);
-    min-width: $bmd-menu-item-min-width;
-    padding: $dropdown-item-padding-y  $dropdown-item-padding-x;
-    overflow: hidden;
-    line-height: $bmd-line-height;
-    text-overflow: ellipsis;
-    word-wrap: break-word;
-
-    @include media-breakpoint-up(md) {
-      padding-right: $bmd-menu-item-padding-right-md;
-      padding-left: $bmd-menu-item-padding-left-md;
-    }
-  }
-
-  .dropdown-item:hover,
-  .dropdown-item:focus,
-  a:hover,
-  a:focus,
-  a:active {
-    @include shadow-small-color($brand-primary);
-    background-color: $brand-primary;
-    color: #FFFFFF;
-  }
-}
-
-a[data-toggle="collapse"][aria-expanded="true"] .caret,
-a[aria-expanded="true"] .caret,
-.dropdown.open .caret,
-.dropup.open .caret,
-.btn-group.bootstrap-select.open .caret {
-    @include rotate-180();
-}
-
-
-// this could be in a .btn-group or .dropdown
-.dropdown-toggle {
-  &.bmd-btn-icon,
-  &.bmd-btn-fab {
-    // remove the dropdown icon
-    &::after {
-      display: none;
-    }
-
-    ~ .dropdown-menu {
-      &.dropdown-menu-top-left,
-      &.dropdown-menu-top-right {
-        bottom: $bmd-btn-icon-size; // push up the bottom of the menu the height of the button
+      }
+      &:after{
+         transition: $dropdown-toggle-arrow-transition;
       }
     }
   }
 
-  &:after{
-      will-change: transform;
-      transition: transform $bmd-animation-dropdown-caret linear;
+  .dropdown {
+    &.dropdown-hover .dropdown-menu,
+    .dropdown-menu {
+      display: block;
+      position: absolute;
+      opacity: 0;
+      transform-origin: $dropdown-transform-origin;
+      inset: 0px auto auto 0px;
+      margin-top: $dropdown-mt !important;
+      pointer-events: none;
+      transform: $dropdown-transform;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      will-change: transform,box-shadow;
+
+      .dropdown {
+        &.dropdown-hover .dropdown-menu,
+        .dropdown-menu {
+          margin-top: 0 !important;
+        }
+      }
+    }
+
+    &.dropdown-hover:hover > .dropdown-menu,
+    .dropdown-menu.show {
+      opacity: 1;
+      pointer-events: auto;
+      visibility: visible;
+      transform: $dropdown-transform-show;
+    }
+
+    &.dropdown-hover:hover > .dropdown-menu:before,
+    .dropdown-menu.show:before {
+      top: $dropdown-hover-arrow-active-top;
+    }
+
+    &.dropdown-hover {
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: $dropdown-hover-after-bottom-pos;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &:not(.dropdown-hover) .dropdown-menu.show {
+      margin-top: $dropdown-mt !important;
+    }
+
+    .dropdown-menu {
+      &:before {
+        font-family: "FontAwesome";
+        content: "\f0d8";
+        position: absolute;
+        top: 0;
+        left: $dropdown-animation-arrow-left-position;
+        right: auto;
+        font-size: $dropdown-animation-arrow-font-size;
+        color: $white;
+        transition: $dropdown-animation-arrow-transition;
+      }
+    }
+
+    .dropdown-item .arrow {
+      transform: $dropdown-subitem-arrow-rotate;
+    }
   }
 
-  &.bmd-btn-fab-sm {
-    ~ .dropdown-menu {
-      &.dropdown-menu-top-left,
-      &.dropdown-menu-top-right {
-        bottom: $bmd-btn-fab-size-sm; // push up the bottom of the menu the height of the button
+  .dropdown-item {
+    transition: background-color $dropdown-transition-time, color $dropdown-transition-time;
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .navbar-toggler + .navbar-collapse {
+    .dropdown:not(.nav-item) {
+      .dropdown-menu {
+        display: block;
+        opacity: 0;
+        top: 0;
+        transform-origin: $dropdown-transform-origin;
+        pointer-events: none;
+        transform: $dropdown-transform;
+        transition: $dropdown-transition;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        will-change: transform,box-shadow;
+        box-shadow: $dropdown-box-shadow;
+
+        &:before {
+          font-family: "FontAwesome";
+          content: "\f0d8";
+          position: absolute;
+          top: 0;
+          left: $dropdown-animation-arrow-left-position;
+          right: auto;
+          font-size: $dropdown-animation-arrow-font-size;
+          color: $white;
+          transition: $dropdown-animation-arrow-transition;
+        }
+      }
+
+      &:not(.dropdown-hover) .dropdown-menu {
+        margin-top: $dropdown-mt !important;
+      }
+
+      .dropdown-menu.show {
+        opacity: 1;
+        pointer-events: auto;
+        visibility: visible;
+        transform: $dropdown-transform-show;
+
+        &:before {
+          top: $dropdown-hover-arrow-active-top;
+        }
+      }
+    }
+    .dropdown.nav-item .dropdown-menu {
+      background-color: transparent;
+      overflow: scroll;
+      position: relative;
+    }
+  }
+
+  .dropdown {
+    .dropdown-menu {
+      opacity: 0;
+      top: 0;
+      transform-origin: $dropdown-transform-origin;
+      pointer-events: none;
+      transform: $dropdown-multilevel-transform;
+      transition: $dropdown-transition;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      will-change: transform,box-shadow;
+      box-shadow: $dropdown-box-shadow;
+
+      &:before {
+        font-family: "FontAwesome";
+        content: "\f0d8";
+        position: absolute;
+        top: 0;
+        left: $dropdown-animation-arrow-left-position;
+        right: auto;
+        font-size: $dropdown-animation-arrow-font-size;
+        color: $white;
+        transition: $dropdown-animation-arrow-transition;
+      }
+    }
+    &:not(.dropdown-hover) .dropdown-menu {
+      margin-top: $dropdown-mt !important;
+    }
+
+    .dropdown-menu.show {
+      opacity: 1;
+      pointer-events: auto;
+      visibility: visible;
+      transform: $dropdown-multilevel-transform-show;
+
+      &:before {
+        top: $dropdown-hover-arrow-active-top;
+      }
+    }
+
+    &.nav-item {
+      .dropdown-menu {
+        position: absolute;
       }
     }
   }
 
-  &.bmd-btn-icon {
-    ~ .dropdown-menu {
-      // collapse some spacing
-      margin: 0;
+
+
+  .dropdown.nav-item .dropdown-menu-animation {
+    display: block;
+    height: 0;
+    transition: all .35s ease;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    opacity: 0;
+
+    &.show {
+      height: 250px;
+      opacity: 1;
+    }
+  }
+}
+
+// MultiLevel Dropdown Style
+
+.dropdown-menu li {
+  position: relative;
+}
+
+.dropdown {
+  &.dropdown-subitem:after {
+    left: 100%;
+    bottom: 0;
+    width: 50%;
+  }
+
+  .dropdown-menu {
+    .dropdown-item + .dropdown-menu:before {
+      transform: $dropdown-subitem-arrow-rotate;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      transition: left .35s ease;
+    }
+    &.dropdown-menu-end{
+      right: 0 !important;
+      left: auto !important;
+      &:before{
+        right: $dropdown-animation-arrow-left-position;
+        left: auto;
+      }
     }
   }
 
-  .show > &:not(.dropdown-item):after {
-    @include rotate-180();
+  &.dropdown-subitem:hover .dropdown-item + .dropdown-menu:before {
+    left: $dropdown-subitem-left-hover;
+  }
+
+  & > .dropdown-menu {
+    .dropdown-item + .dropdown-menu {
+      transform: $dropdown-multilevel-transform-show;
+    }
   }
 }
 
-.dropdown-header{
-  font-size: 0.75rem;
-  padding-top: .625rem;
-  padding-bottom: .625rem;;
-  text-transform: none;
-  color: $bmd-dropdown-header-color;
-  line-height: $bmd-line-height;
-  font-weight: inherit;
+.dropdown .dropdown-menu .dropdown-item+.dropdown-menu {
+  right: $dropdown-subitem-position-right;
+  left: auto;
+  top: 0;
+}
+// End MultiLevel Dropdown Style
+
+.dropdown-image {
+  background-size: cover;
 }
 
-@keyframes bmd-dropdown-animation {
-  from {
-    opacity: 0;
-    transform: scale(0);
+@include media-breakpoint-up(lg) {
+  .dropdown-xl {
+    min-width: $dropdown-xl-min-width;
   }
-  to {
-    opacity: 1;
-    transform: scale(1);
+
+  .dropdown-lg {
+    min-width: $dropdown-lg-min-width;
+  }
+
+  .dropdown-md {
+    min-width: $dropdown-md-min-width;
   }
 }
 
-.dropdown-menu.bootstrap-datetimepicker-widget{
-    opacity: 0;
-    transform: scale(0);
-    transition-duration: $bmd-menu-expand-duration;
-    transition-timing-function: $bmd-animation-curve-default;
-    transform-origin: 0 0;
-    will-change: transform, opacity;
-    top: 0;
-}
-
-.dropdown-menu.bootstrap-datetimepicker-widget.top{
-    transform-origin: 0 100%;
-}
-
-.dropdown-menu.bootstrap-datetimepicker-widget.open{
-    opacity: 1;
-    transform: scale(1);
-    top: 0;
+@include media-breakpoint-down(xl) {
+ .dropdown-lg-responsive {
+   min-width: $dropdown-lg-width-responsive;
+ }
 }

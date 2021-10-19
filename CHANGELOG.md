@@ -1,5 +1,12 @@
 # Change Log
 
+## [3.0.0] 2021-10-19
+### Refactor and Improvements
+- Update Bootstrap to v5.1.3
+- Update to Material Design 2
+- New Documentation version
+- New Product structure
+
 ## [2.1.2] 2020-02-11
 ### Improvements, BugFixing
 - Fixed the broken links

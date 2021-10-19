@@ -1,203 +1,365 @@
-body{
-    background-color: #eee;
-    color: $black-color;
-    font-weight: 300;
+// Blur effect
+
+.blur {
+  box-shadow: $blur-box-shadow;
+  -webkit-backdrop-filter: $blur-backdrop-filter;
+  backdrop-filter: $blur-backdrop-filter;
+  background-color: $card-background-blur !important;
+
+  &.saturation-less {
+    -webkit-backdrop-filter: $blur-backdrop-filter-less;
+    backdrop-filter: $blur-backdrop-filter-less;
+  }
+
+  &.blur-rounded {
+    border-radius: $blur-border-radius-rounded;
+  }
+
+  &.blur-light {
+    background-color: $blur-light-background;
+  }
+  &.blur-dark {
+    background-color: $blur-dark-background;
+  }
 }
 
-legend {
-  border-bottom: 0;
+.shadow-blur {
+  box-shadow: $shadow-blur-box-shadow !important;
 }
 
-.serif-font{
-    font-family: $font-family-serif;
+.shadow-card {
+  box-shadow: $card-box-shadow !important;
 }
 
-// Prevent highlight on mobile
+.navbar-blur {
+  -webkit-backdrop-filter: $blur-backdrop-filter;
+  backdrop-filter: $blur-backdrop-filter;
+  background-color: rgba($white, .58) !important;
+}
+
+.blur-section {
+  -webkit-backdrop-filter: $blur-backdrop-filter;
+  backdrop-filter: $blur-backdrop-filter;
+
+  &.blur-gradient-primary {
+    @include gradient-directional(rgba($primary-gradient, .95) 0%, rgba($primary-gradient-state, .95) 100%, $deg: 195deg);
+  }
+}
+
+// Transition on hover
 * {
-  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-  -webkit-tap-highlight-color: transparent;
-  &:focus {
-    outline: 0;
-  }
-}
+  &.move-on-hover {
+    -webkit-transition: $move-transition;
+    transition: $move-transition;
+    overflow: $move-overflow;
+    -webkit-transform-origin: $move-transform-origin;
+    transform-origin: $move-transform-origin;
+    transform-origin: $move-transform-origin;
+    -webkit-transform: $move-transform;
+    transform: $move-transform;
+    -webkit-backface-visibility: $move-backface-visibility;
+    backface-visibility: $move-backface-visibility;
+    will-change: $move-will-change;
 
-a{
-  color: $link-color;
-  &:hover,
-  &:focus{
-      color: darken($link-color, 5%);
-      text-decoration: none;
-  }
-
-  &.text-info{
-      &:hover, &:focus{
-          color: darken($brand-info, 5%);
-      }
-  }
-
-  & .material-icons {
-    vertical-align: middle;
-  }
-}
-
-.form-check,
-label{
-    font-size: 14px;
-    line-height: 1.42857;
-    color: $checkboxes-text-color;
-    font-weight: 400;
-}
-
-/*           Animations              */
-.animation-transition-general{
-    @include transition-all($general-transition-time, $transition-linear);
-}
-
-.animation-transition-slow{
-    @include transition-all($slow-transition-time, $transition-linear);
-}
-
-.animation-transition-fast{
-    @include transition-all($fast-transition-time, $transition-ease);
-}
-
-.caret,
-.sidebar a{
-    @include transition-all($fast-transition-time, $transition-ease-in);
-}
-
-
-// Offline documentation
-
-.offline-doc {
-  .navbar.navbar-transparent{
-    padding-top: 25px;
-    border-bottom: none;
-
-    .navbar-minimize {
-      display: none;
-    }
-    .navbar-brand,
-    .collapse .navbar-nav .nav-link {
-      color: $white-color !important;
+    &:hover {
+      -webkit-transform: $move-hover-transform;
+      transform: $move-hover-transform;
     }
   }
 
-  .footer {
-    z-index: 3 !important;
-    position: absolute;
-    width: 100%;
-    background: transparent;
-    bottom: 0;
-    color: $white-color;
+  &.gradient-animation {
+    background: $gradient-animation-background;
+    background-size: $gradient-animation-bg-size !important;
+    animation: $device-wrapper-animation;
   }
-  .page-header{
-    display: flex;
-    align-items: center;
+}
 
-    .content-center {
-      z-index: 3;
+// Vertical Line
+hr.vertical {
+  position: absolute;
+  background-color: $hr-bg-color;
+  height: 100%;
+  right: 0;
+  top: 0;
+  width: 1px;
 
-      .brand .title {
-        color: $white-color;
-      }
+  &.light {
+    background-color: $hr-bg-color-light;
+  }
+
+  &.dark {
+    background-color: $hr-bg-color-dark;
+  }
+
+  &.gray-light {
+    background-image: $hr-horizontal-bg-image-gray-light;
+  }
+}
+
+// Horizontal Line
+hr.horizontal {
+  background-color: $hr-bg-color;
+
+  &.light {
+    background-color: $hr-bg-color-light;
+  }
+  &.dark {
+    background-color: $hr-bg-color-dark;
+  }
+
+  &.gray-light {
+    background-image: $hr-horizontal-bg-image-gray-light;
+  }
+}
+
+// lock style
+.lock-size {
+  width: 1.7rem;
+  height: 1.7rem;
+}
+
+.border-radius-xs {
+  border-radius: $border-radius-xs;
+}
+
+.border-radius-sm {
+  border-radius: $border-radius-sm;
+}
+
+.border-radius-md {
+  border-radius: $border-radius-md;
+}
+
+.border-radius-lg {
+  border-radius: $border-radius-lg;
+}
+
+.border-radius-xl {
+  border-radius: $border-radius-xl;
+}
+
+.border-radius-2xl {
+  border-radius: $border-radius-2xl;
+}
+
+.border-radius-section {
+  border-radius: $border-radius-section;
+}
+
+.border-bottom-end-radius-0 {
+  border-bottom-right-radius: 0;
+}
+
+.border-top-end-radius-0 {
+  border-top-right-radius: 0;
+}
+
+.border-bottom-start-radius-0 {
+  border-bottom-left-radius: 0;
+}
+
+.border-top-start-radius-0 {
+  border-top-left-radius: 0;
+}
+
+.border-dashed{
+  border-style: dashed;
+}
+
+.z-index-sticky {
+  z-index: $zindex-sticky;
+}
+
+
+// moving waves animation
+.waves {
+  position: $waves-position;
+  width: $waves-width;
+  height: $waves-height;
+  margin-bottom: $waves-margin-bottom;
+  /*Fix for safari gap*/
+  min-height: $waves-min-height;
+  max-height: $waves-max-height;
+
+  &.waves-sm {
+    height: $waves-height-sm;
+    min-height: $waves-min-height-sm;
+  }
+
+  &.no-animation {
+    .moving-waves > use {
+      animation: none;
+    }
+  }
+}
+
+.wave-rotate {
+  transform: $waves-rotate;
+}
+/* Animation for the waves */
+.moving-waves > use {
+  animation: $moving-waves-animation;
+}
+
+.moving-waves > use:nth-child(1) {
+  animation-delay: $moving-waves-child-1-delay;
+  animation-duration: $moving-waves-child-1-duration;
+}
+
+.moving-waves > use:nth-child(2) {
+  animation-delay: $moving-waves-child-2-delay;
+  animation-duration: $moving-waves-child-2-duration;
+}
+
+.moving-waves > use:nth-child(3) {
+  animation-delay: $moving-waves-child-3-delay;
+  animation-duration: $moving-waves-child-3-duration;
+}
+
+.moving-waves > use:nth-child(4) {
+  animation-delay: $moving-waves-child-4-delay;
+  animation-duration: $moving-waves-child-4-duration;
+}
+
+.moving-waves > use:nth-child(5) {
+  animation-delay: $moving-waves-child-5-delay;
+  animation-duration: $moving-waves-child-5-duration;
+}
+
+.moving-waves > use:nth-child(6) {
+  animation-delay: $moving-waves-child-6-delay;
+  animation-duration: $moving-waves-child-6-duration;
+}
+@keyframes move-forever {
+  0% {
+    transform: $moving-waves-keyframe-0;
+  }
+
+  100% {
+    transform: $moving-waves-keyframe-100;
+  }
+}
+/*Shrinking for mobile*/
+@include media-breakpoint-down(md) {
+  .waves {
+    height: $waves-mobile-height;
+    min-height: $waves-mobile-height;
+  }
+
+  hr.horizontal {
+    background-color: $hr-bg;
+
+    &:not(.dark) {
+      background-image: $hr-bg-image;
     }
 
-    &:after {
-      background-color: rgba(0, 0, 0, 0.5);
-      content: "";
-      display: block;
-      height: 100%;
-      left: 0;
+    &.vertical {
+      transform: $hr-transform;
+    }
+
+    &.dark {
+      background-image: $hr-bg-dark-image;
+    }
+  }
+}
+
+.overflow-visible {
+  overflow: visible !important;
+}
+
+// popover title
+.popover {
+  .popover-header {
+    font-weight: 600;
+  }
+}
+
+
+// Background Sizes
+.bg-cover{
+  background-size: cover;
+}
+
+// Mask Class
+.mask {
+  position: $mask-position;
+  background-size: $mask-bg-size;
+  background-position: $mask-bg-position;
+  top: $mask-top;
+  left: $mask-left;
+  width: $mask-width;
+  height: $mask-height;
+  opacity: $mask-opacity;
+}
+
+
+// Cursor Pointer Class
+.cursor-pointer {
+  cursor: pointer;
+}
+
+// Translate 50% Class
+.transform-translate-50{
+  transform: translate(0,-50%)
+}
+
+// VR Pages
+
+@include media-breakpoint-up(lg) {
+  .virtual-reality {
+    .sidenav {
+      margin-top: $spacer * 2;
+      animation-name: $animation-name;
+      animation-fill-mode: $animation-mode;
+      animation-duration: $animation-duration;
+      transform: $transform-scale;
+      left: $position-left !important;
       position: absolute;
-      top: 0;
-      width: 100%;
-      z-index: 2;
     }
   }
 }
 
-// docs
+// Selectpicker
 
- .bd-docs {
-   .bd-toc-item {
-     .bd-sidenav a span {
-       float: right;
-       margin-top: 5px;
-       padding: 3px 7px;
-       font-size: 8px;
-       line-height: 9px;
-       background-color: $brand-primary;
-     }
-   }
- }
+.choices {
+  .choices__list {
+    background: $input-background;
+    background-size: $input-background-size;
+    transition: $input-transition;
 
-
-// timepicker increase/decrease buttons
-
-.bootstrap-datetimepicker-widget .timepicker {
-  .table-condesed .btn{
-    .ripple-container {
-      width: 40px;
-      height: 40px;
-      margin: -11px 3px;
-    }
-  }
-}
-
-
-.off-canvas-sidebar {
-  .wrapper-full-page {
-    .page-header {
-      padding: 15vh 0 !important;
-    }
-  }
-}
-
-// RTL Page
-
-html[dir="rtl"] {
-  .main-panel {
-    float: left;
-  }
-
-  .sidebar,
-  .off-canvas-sidebar nav .navbar-collapse {
-    text-align: right;
-  }
-
-  .sidebar {
-    left: unset;
-    right: 0;
-
-    .nav {
-      padding-right: 0;
-
-      i {
-        float: right;
-        margin-left: 15px;
-        margin-right: unset;
+    &.choices__list--single {
+      .choices__item--selectable {
+        margin-bottom: 0.5rem;
       }
-    }
-  }
 
-  .card {
-    &.card-chart {
-      direction: ltr;
-
-      .card-title,
-      .card-category {
-        text-align: right;
+      &,
+      &:focus {
+        background-image: $input-background-image;
       }
+
+
     }
 
-    .card-body,
-    .card-footer {
-      direction: rtl;
+    &.choices__list--dropdown {
+      background: $white;
     }
   }
 
-  .form-check .form-check-sign .check:before {
-    margin-right: 10px;
+  &.is-focused {
+    .choices__list {
+      background-size: $input-background-size-focus;
+    }
   }
+}
+
+// Vertical border w/ pseudo elem
+
+.border-right-after:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: $border-right-after-top;
+  height: $border-right-after-height;
+  width: $border-right-after-width;
+  border-right: 1px solid $border-right-after-border-color;
 }

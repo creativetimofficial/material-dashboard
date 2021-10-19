@@ -1,54 +1,30 @@
-/*!
+// =========================================================
+// * Material Dashboard - v3.0.0
+// =========================================================
+//
+// * Product Page: https://www.creative-tim.com/product/material-dashboard
+// * Copyright 2021 Creative Tim (https://www.creative-tim.com)
+//
+// Coded by www.creative-tim.com
+//
+// =========================================================
+//
+// * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
- =========================================================
- * Material Dashboard - v2.1.0
- =========================================================
+// Bootstrap Functions
+@import "material-dashboard/bootstrap/functions";
 
- * Product Page: https://www.creative-tim.com/product/material-dashboard
- * Copyright 2020 Creative Tim (http://www.creative-tim.com)
+// Custom Variables
+@import "material-dashboard/custom/variables";
 
- =========================================================
+// Theme Variables
+@import "material-dashboard/variables";
 
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+// Bootstrap Core
+@import "material-dashboard/bootstrap/bootstrap";
 
- */
+// Theme Core
+@import "material-dashboard/theme";
 
- @import "material-dashboard/variables";
- @import "material-dashboard/mixins";
- @import "material-dashboard/core-bootstrap";
-
- // Core Components
- @import "material-dashboard/buttons";
- @import "material-dashboard/checkboxes";
- @import "material-dashboard/radios";
- @import "material-dashboard/forms";
- @import "material-dashboard/input-group";
- @import "material-dashboard/images";
- @import "material-dashboard/navbar";
- @import "material-dashboard/alerts";
- @import "material-dashboard/headers";
- @import "material-dashboard/type";
- @import "material-dashboard/tabs";
- @import "material-dashboard/tooltip";
- @import "material-dashboard/popover";
- @import "material-dashboard/dropdown";
- @import "material-dashboard/togglebutton";
- @import "material-dashboard/ripples";
- @import "material-dashboard/footers";
- @import "material-dashboard/sidebar-and-main-panel";
- @import "material-dashboard/fixed-plugin";
- @import "material-dashboard/tables";
- @import "material-dashboard/misc";
- @import "material-dashboard/social-buttons";
-
-@import "material-dashboard/cards";
-@import "material-dashboard/cards/card-stats";
-@import "material-dashboard/cards/card-profile";
-@import "material-dashboard/cards/card-plain";
-
- //plugin scss
- @import "material-dashboard/plugins/animate";
- @import "material-dashboard/plugins/chartist";
- @import "material-dashboard/plugins/perfect-scrollbar";
-
- @import "material-dashboard/responsive";
+// Custom Variables
+@import "material-dashboard/custom/styles";

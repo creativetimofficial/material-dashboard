@@ -1,0 +1,24 @@
+.card {
+  &.card-horizontal {
+    box-shadow: none;
+
+    .card-image {
+      border-radius: $card-border-radius;
+
+      .img {
+        width: 100%;
+        border-radius: $card-border-radius;
+      }
+    }
+
+    .card-body {
+      .card-title {
+        font-size: $h4-font-size;
+
+        a {
+          color: $dark;
+        }
+      }
+    }
+  }
+}

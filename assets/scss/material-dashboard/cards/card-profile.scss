@@ -1,0 +1,59 @@
+.card {
+  &.card-profile {
+    .card-body {
+      padding: $card-profile-body-padding;
+    }
+
+    .card-avatar {
+      margin: $card-profile-avatar-margin;
+
+      .img {
+        margin-top: $card-profile-img-mt;
+        border-radius: $card-profile-img-radius;
+        width: $card-profile-img-width;
+      }
+    }
+
+    p.lead {
+      font-weight: $font-weight-bold;
+      font-size: $h6-font-size;
+      line-height: $card-profile-p-line-height;
+    }
+    .table {
+      td {
+        font-weight: $font-weight-light;
+        font-size: $font-size-base;
+      }
+    }
+
+    .card-before {
+      &:before {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        display: block;
+        z-index: 0;
+        content: '';
+        transition: opacity .65s cubic-bezier(.05,.2,.1,1);
+      }
+
+      &.mask-primary:before {
+        background: linear-gradient(to bottom,rgba(15,15,15,0),$primary 100%);
+      }
+      &.mask-info:before {
+        background: linear-gradient(to bottom,rgba(15,15,15,0),$info 100%);
+      }
+      &.mask-warning:before {
+        background: linear-gradient(to bottom,rgba(15,15,15,0),$warning-gradient-state 100%);
+      }
+      &.mask-danger:before {
+        background: linear-gradient(to bottom,rgba(15,15,15,0),$danger 100%);
+      }
+      &.mask-success:before {
+        background: linear-gradient(to bottom,rgba(15,15,15,0),$success 100%);
+      }
+    }
+  }
+}
