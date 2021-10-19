@@ -1,219 +1,190 @@
-.btn{
-  position: relative;
-  padding: 12px 30px;
-  margin: $bmd-btn-margin-bottom 1px;
-  font-size: .75rem; //  12px
-  font-weight: 400;
-  line-height: $bmd-line-height;
-  text-decoration: none;
+.btn {
+  margin-bottom: $btn-margin-bottom;
+  letter-spacing: $btn-letter-spacing;
   text-transform: uppercase;
-  letter-spacing: 0;
-  cursor: pointer;
-  background-color: transparent;
-  border: 0;
-  border-radius: $border-radius-sm;
-  outline: 0;
-  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: box-shadow, transform;
-  @include undo-bs-tab-focus();
-
-  //--
-  // Colors
-  @include bmd-raised-button-color();
-  &.btn-white {
-      &,
-      &:focus,
-      &:hover {
-          background-color: $white-color;
-          color: $gray-color;
-      }
-      &.btn-link {
-          color: $white-color;
-          background: transparent;
-          box-shadow: none;
-      }
-  }
-  &.btn-link:hover,
-  &.btn-link:focus,
-  &.btn-link:active {
-      text-decoration: none !important;
-  }
-
-  @include hover-focus();
-
-  //---
-  // btn-raised
-  &.btn-raised,
-  .btn-group-raised & {
-    // baseline shadow
-    // @include box-shadow($bmd-shadow-2dp);
-
-    // reverse any of the above for links
-    &.btn-link {
-      box-shadow: none;
-      @include bmd-hover-focus-active() {
-        box-shadow: none;
-      }
-    }
-
-    @include bmd-disabled() {
-      box-shadow: none;
-    }
-  }
-
-  //---
-  // btn-outline
-  @include bmd-outline-button-color();
-
-  // Size variations
-  &.btn-lg,
-  .btn-group-lg & {
-    @include button-size($input-btn-padding-y-lg, $input-btn-padding-x-lg, $bmd-btn-font-size, $btn-lg-line-height, $border-radius-sm);
-  }
-  &.btn-sm,
-  .btn-group-sm & {
-    @include button-size($input-btn-padding-y-sm, $input-btn-padding-x-sm, $bmd-btn-font-size-sm, $line-height-sm, $border-radius-sm);
-  }
-
-  &.btn-round {
-    border-radius: $border-radius-extreme;
-  }
-
-  &.btn-fab,
-  &.btn-just-icon {
-      // see above for color variations
-      font-size: $mdb-btn-fab-font-size;
-      height: $mdb-btn-fab-size;
-      min-width: $mdb-btn-fab-size;
-      width: $mdb-btn-fab-size;
-      // margin: auto;
-      padding: 0;
-      overflow: hidden;
-      position: relative;
-      line-height: $mdb-btn-fab-size;
-
-        &.btn-round{
-            border-radius: 50%;
-        }
-
-      .btn-group-sm &,
-      &.btn-sm,
-      &.btn-fab-mini{
-          height: $mdb-btn-fab-size-mini + 1;
-          min-width: $mdb-btn-fab-size-mini + 1;
-          width: $mdb-btn-fab-size-mini + 1;
-
-          .material-icons,
-          .fa{
-              font-size: $mdb-btn-icon-size-mini;
-              line-height: $mdb-btn-fab-size-mini;
-          }
-      }
-
-      .btn-group-lg &,
-      &.btn-lg{
-          height: $mdb-btn-fab-size-lg + 1;
-          min-width: $mdb-btn-fab-size-lg + 1;
-          width: $mdb-btn-fab-size-lg + 1;
-          line-height: $mdb-btn-fab-size-lg;
-
-          .material-icons,
-          .fa{
-              font-size: $mdb-btn-icon-size;
-              line-height: $mdb-btn-fab-size-lg;
-          }
-      }
-
-      .material-icons,
-      .fa {
-        margin-top: 0;
-        position: absolute;
-        width: 100%;
-        transform: none;
-        left: 0;
-        top: 0;
-        height: 100%;
-
-        line-height: $mdb-btn-fab-size;
-        font-size: $mdb-btn-just-icon-font-size;
-      }
-  }
-}
-
-.btn-just-icon{
-    &.btn-lg{
-        font-size: $mdb-btn-fab-font-size;
-        height: $mdb-btn-fab-size;
-        min-width: $mdb-btn-fab-size;
-        width: $mdb-btn-fab-size;
-    }
-}
-
-.input-group-btn > .btn{
-    border: 0;
-}
-
-
-// Align icons inside buttons with text
-.btn .material-icons,
-.btn:not(.btn-just-icon):not(.btn-fab) .fa{
-      position: relative;
-      display: inline-block;
-      top: 0;
-      margin-top: -1em;
-      margin-bottom: -1em;
-      font-size: 1.1rem;
-      vertical-align: middle;
-    }
-
-// Disabled buttons and button groups
-.btn,
-.input-group-btn .btn,
-.btn-group,
-.btn-group-vertical {
-  // have to ratchet up the specificity to kill drop shadows on disabled raised buttons
-  @include bmd-disabled() {
-    .bg-inverse & {
-      color: $bmd-inverse-btn-disabled;
-    }
-
-    // flat buttons shouldn't lose transparency on disabled hover/focus
-  }
-}
-
-// btn-group variations
-.btn-group,
-.btn-group-vertical {
+  background-size: $btn-background-size;
+  background-position-x: $btn-background-position-x;
   position: relative;
-  margin: 10px 1px;
+  overflow: hidden;
 
-  // spec: https://www.google.com/design/spec/components/buttons.html#buttons-toggle-buttons
-  //&.open {
-  //  .dropdown-toggle {
-  //  }
-  //
-  //  > .dropdown-toggle.btn {
-  //    @include bmd-raised-button-color-bg();
-  //  }
-  //}
-
-  .dropdown-menu {
-    border-radius: 0 0 $border-radius $border-radius;
+  &:not([class*="btn-outline-"]) {
+    border: 0;
   }
 
-  &.btn-group-raised {
-    @include box-shadow($bmd-shadow-2dp);
+  &:active,
+  &:active:focus,
+  &:active:hover {
+    box-shadow: $btn-hover-box-shadow;
+    transform: $btn-active-hover-transform;
+    opacity: $btn-hover-opacity;
   }
 
-  .btn + .btn,
-  .btn,
-  .btn:active,
-  .btn-group {
-    margin: 0;
+  &.bg-white {
+    @include hover {
+      color: $body-color;
+    }
   }
 
-  // remove margin from nested btn-group(s) to properly align them with the outer buttons
-  > .btn-group {
-    margin: 0;
+  &.btn-link{
+    box-shadow: none;
+    font-weight: $btn-font-weight;
+
+    &:hover,
+    &:focus{
+      box-shadow: none;
+    }
+  }
+  &.btn-round {
+    border-radius: $btn-border-rounded;
+  }
+  // Button Just Icon
+
+  &.btn-icon-only {
+    width: $btn-just-icon-width;
+    height: $btn-just-icon-height;
+    padding: $btn-just-icon-padding-y $btn-just-icon-padding-x;
+  }
+
+  // Button Icon Sizes
+
+  &.btn-sm {
+    &.btn-icon-only {
+      width: $btn-just-icon-width-sm;
+      height: $btn-just-icon-height-sm;
+      padding: $btn-just-icon-padding-y-sm $btn-just-icon-padding-x-sm;
+    }
+
+    i {
+      font-size: $btn-just-icon-sm-font-size;
+    }
+  }
+
+  &.btn-lg {
+    &.btn-icon-only {
+      width: $btn-just-icon-width-lg;
+      height: $btn-just-icon-height-lg;
+      padding: $btn-just-icon-padding-y-lg $btn-just-icon-padding-x-lg;
+    }
+
+    i {
+      font-size: $btn-just-icon-lg-font-size;
+      position: $btn-just-icon-lg-position;
+      top: $btn-just-icon-lg-top;
+    }
+  }
+
+  &.btn-rounded {
+    border-radius: $btn-border-rounded;
+  }
+
+  .material-icons {
+    vertical-align: middle;
+    margin-top: $btn-material-icon-margin;
+    margin-bottom: $btn-material-icon-margin;
+    font-size: $btn-material-icon-font-size;
+    display: $btn-material-icon-display;
+    top: $btn-material-icon-top;
+  }
+}
+
+.btn-check{
+  &:checked{
+    +.btn{
+      svg{
+        .color-background{
+          fill: $white;
+        }
+      }
+      &:hover{
+        svg{
+          .color-background{
+            fill: $dark;
+          }
+        }
+      }
+    }
+  }
+}
+
+.icon-move-right {
+  i {
+    transition: $btn-icon-transition;
+  }
+  &:hover,
+  &:focus {
+    i {
+      transform: $btn-icon-transform-right;
+    }
+  }
+}
+
+.icon-move-left{
+  i {
+    transition: $btn-icon-transition;
+  }
+  &:hover,
+  &:focus {
+    i {
+      transform: $btn-icon-transform-left;
+    }
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .btn-#{$color},
+  .btn.bg-gradient-#{$color} {
+    @include colored-shadows($value);
+
+    @include hover {
+      background-color: $value;
+      border-color: $value;
+
+      @include colored-shadows-hover($value);
+    }
+
+    .btn.bg-outline-#{$color} {
+      border: $border-width solid $value;
+    }
+
+    &:not(:disabled):not(.disabled).active,
+    &:not(:disabled):not(.disabled):active,
+    .show > &.dropdown-toggle {
+      color: color-yiq($value);
+      background-color: $value;
+    }
+
+    @if $value != $white and $value != $light {
+      &.focus,
+      &:focus {
+        color: $white;
+      }
+    }
+  }
+
+  .btn-outline-#{$color} {
+    box-shadow: none;
+    @include hover {
+      &:not(.active){
+        background-color: transparent;
+        opacity: .75;
+        box-shadow: none;
+        color: $value;
+      }
+    }
+  }
+}
+
+.btn-outline-white{
+  border-color: rgba($white, .75);
+  background: rgba($white, .1);
+}
+
+@each $color, $value in $btn-font-colors {
+  .btn-#{$color},
+  .btn.bg-gradient-#{$color} {
+    color: $value;
+    @include hover {
+      color: $value;
+    }
   }
 }

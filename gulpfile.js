@@ -27,7 +27,7 @@ gulp.task('watch', function() {
 });
 
 gulp.task('open', function() {
-  gulp.src('examples/dashboard.html')
+  gulp.src('pages/dashboard.html')
     .pipe(open());
 });
 

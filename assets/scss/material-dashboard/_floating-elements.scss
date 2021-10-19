@@ -1,0 +1,73 @@
+.floating-man {
+  width: $floating-man-width;
+}
+
+.fadeIn1 {
+  animation-duration: $fade-in-1-animation-duration;
+}
+.fadeIn2 {
+  animation-duration: $fade-in-2-animation-duration;
+}
+.fadeIn3 {
+  animation-duration: $fade-in-3-animation-duration;
+}
+.fadeIn4 {
+  animation-duration: $fade-in-4-animation-duration;
+}
+.fadeIn5 {
+  animation-duration: $fade-in-5-animation-duration;
+}
+.fadeIn1,
+.fadeIn2,
+.fadeIn3,
+.fadeIn4,
+.fadeIn5 {
+  animation-fill-mode: both;
+}
+.fadeInBottom {
+  animation-name: $fade-in-animation-name;
+}
+
+@keyframes fadeInBottom {
+  from {
+    opacity: 0;
+    transform: $fade-in-bottom-transform;
+  }
+  to {
+    opacity: 1
+  }
+}
+
+
+
+
+// Headers
+
+.header-rounded-images {
+  .shape-1 {
+    width: $shape-1-width;
+    left: $shape-1-left;
+  }
+
+  .shape-2 {
+    width: $shape-2-width;
+    left: $shape-2-left;
+  }
+
+  .shape-3 {
+    width: $shape-3-width;
+    margin-top: $shape-3-left;
+  }
+
+  .img-1 {
+    right: $shape-img-1-right;
+    width: $shape-img-1-width;
+    margin-top: $shape-img-1-margin-top;
+  }
+
+  .img-2 {
+    left: $shape-img-2-left;
+    width: $shape-img-2-width;
+    margin-top: $shape-img-2-margin-top;
+  }
+}

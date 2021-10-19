@@ -1,0 +1,93 @@
+//
+// Badge
+//
+
+
+// General styles
+
+.badge {
+
+
+    a {
+        color: $white;
+    }
+}
+
+
+// Size variations
+
+.badge-sm{
+  padding: $badge-sm-padding;
+  font-size: $badge-sm-font-size;
+  border-radius: $border-radius-md;
+}
+
+.badge-md {
+    padding: $badge-md-padding;
+}
+
+.badge-lg {
+    padding: $badge-lg-padding;
+}
+
+
+// Multiple inline badges
+
+.badge-inline {
+    margin-right: $badge-inline-margin-right;
+
+    + span {
+        top: $badge-inline-span-top;
+        position: relative;
+
+        > a {
+            text-decoration: underline;
+        }
+    }
+}
+
+
+// Color fixes
+
+.badge-default {
+    color: $white;
+}
+
+.badge.badge-secondary {
+    background-color: lighten($secondary, 32%);
+    color: $gray-600;
+}
+
+
+// Badge spacing inside a btn with some text
+
+.btn {
+    .badge {
+        &:not(:first-child) {
+            margin-left: $badge-btn-margin;
+        }
+        &:not(:last-child) {
+            margin-right: $badge-btn-margin;
+        }
+    }
+}
+
+// Colors
+//
+// Contextual variations (linked badges get darker on :hover).
+
+@each $color, $value in $theme-colors {
+  .badge-#{$color} {
+    @include badge-variant($value);
+  }
+}
+
+
+
+// card-pricing badge position
+
+.card {
+  >.badge {
+    margin-top: $card-badge-position !important;
+  }
+}
