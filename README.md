@@ -2,7 +2,7 @@
 
 ![version](https://img.shields.io/badge/version-3.0.0-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/material-dashboard.svg)](https://github.com/creativetimofficial/material-dashboard/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/material-dashboard.svg)](https://github.com/creativetimofficial/material-dashboard/issues?q=is%3Aissue+is%3Aclosed)
 
-![Image](https://s3.amazonaws.com/creativetim_bucket/products/450/original/material-dashboard.jpg)
+![Image](https://s3.amazonaws.com/creativetim_bucket/products/50/original/material-dashboard.jpg?1634648873)
 
 Most complex and innovative Dashboard Made by [Creative Tim](https://creative-tim.com/). Check our latest Free Bootstrap 5 Dashboard with a fresh, new design inspired by Google's Material Design 2.
 
@@ -66,7 +66,7 @@ Let us know your thoughts below. And good luck with development!
 
 | HTML |
 | --- |
-| [![Material Dashboard HTML](https://s3.amazonaws.com/creativetim_bucket/products/450/original/material-dashboard.jpg)](http://demos.creative-tim.com/material-dashboard/pages/dashboard.html?ref=readme-md2)
+| [![Material Dashboard HTML](https://s3.amazonaws.com/creativetim_bucket/products/50/original/material-dashboard.jpg?1634648873)](http://demos.creative-tim.com/material-dashboard/pages/dashboard.html?ref=readme-md2)
 
 ## Demo
 
