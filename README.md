@@ -80,29 +80,26 @@ The documentation for the Material Dashboard is hosted at our [website](https://
 Within the download you'll find the following directories and files:
 
 ```
-material-dashboard/
-├── assets/
-|   ├── css/
-|   |   ├── bootstrap.min.css
-|   |   ├── material-dashboard.css
-|   |   ├── material-dashboard-rtl.css
-|   |   └── demo.css
-|   ├── js/
-|   |   ├── bootstrap-notify.js
-|   |   ├── bootstrap.min.js
-|   |   ├── chartist.min.js
-|   |   ├── demo.js
-|   |   ├── jquery-3.1.0.min.js
-|   |   ├── material-dashboard.js
-|   |   └── material.min.js
-|   ├── sass/
-|   |    ├── md
-|   |    └── material-dashboard.scss
-|   └── img/
-|
-├── documentation/
-├── examples/
-
+material-dashboard
+    ├── assets
+    │   ├── css
+    │   ├── fonts
+    │   ├── img
+    │   ├── js
+    │   │   ├── core
+    │   │   ├── plugins
+    │   │   └── material-dashboard.js
+    │   │   └── material-dashboard.js.map
+    │   │   └── material-dashboard.min.js
+    │   └── scss
+    │       ├── material-dashboard
+    │       └── material-dashboard.scss
+    ├── docs
+    │   ├── documentation.html
+    ├── pages
+    ├── CHANGELOG.md
+    ├── gulpfile.js
+    ├── package.json
 ```
 
 
