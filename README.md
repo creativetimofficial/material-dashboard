@@ -40,7 +40,7 @@ We are very excited to share this dashboard with you and we look forward to hear
 [<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/html-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/material-dashboard)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/react-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/material-dashboard-react)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/vue-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/vue-material-dashboard)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/angular-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/material-dashboard-angular2)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/react-native-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/material-kit-react-native)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/laravel-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/material-dashboard-laravel)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/vuetify-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/vuetify-material-dashboard)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/django-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/material-dashboard-django)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/nextjs-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/nextjs-material-dashboard)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/flask-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/material-dashboard-flask)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/aspnet-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/material-dashboard-react-asp-net)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/nodejs-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/material-dashboard-react-nodejs)
 
 
-| HTML 5 | HTML 4 | Dark HTML| React | Vue | Angular  |
+| BS5 | BS4 | Dark BS4| React | Vue | Angular  |
 | --- | --- | --- | --- | --- | ---  |
 | [![Material Dashboard  HTML](https://s3.amazonaws.com/creativetim_bucket/products/50/thumb/material-dashboard.jpg)](https://www.creative-tim.com/product/material-dashboard)  | [![Material Dashboard  HTML](https://github.com/creativetimofficial/public-assets/raw/master/material-dashboard-html/material-dashboard.jpeg?raw=true)](https://www.creative-tim.com/product/material-dashboard-bs4)  | [![Material Dashboard Dark Edition](https://s3.amazonaws.com/creativetim_bucket/products/95/thumb/opt_mdb_thumbnail.jpg)](https://www.creative-tim.com/product/material-dashboard-dark) | [![Material Dashboard  React](https://s3.amazonaws.com/creativetim_bucket/products/71/thumb/opt_mdr_thumbnail.jpg)](https://www.creative-tim.com/product/material-dashboard-react)  | [![Vue Material Dashboard](https://s3.amazonaws.com/creativetim_bucket/products/81/thumb/opt_md_vue_thumbnail.jpg)](https://www.creative-tim.com/product/vue-material-dashboard)  | [![Material Dashboard  Angular](https://s3.amazonaws.com/creativetim_bucket/products/53/thumb/opt_md_angular_thumbnail.jpg)](https://www.creative-tim.com/product/material-dashboard-angular2)
 
@@ -159,8 +159,8 @@ If you have questions or need help integrating the product please [contact us](h
 
 ##### Social Media
 
-Twitter: <https://twitter.com/CreativeTim>
-Facebook: <https://www.facebook.com/CreativeTim>
-Dribbble: <https://dribbble.com/creativetim>
-TikTok: <https://tiktok.com/@creative.tim>
-Instagram: <https://instagram.com/creativetimofficial>
+- Twitter: <https://twitter.com/CreativeTim>
+- Facebook: <https://www.facebook.com/CreativeTim>
+- Dribbble: <https://dribbble.com/creativetim>
+- TikTok: <https://tiktok.com/@creative.tim>
+- Instagram: <https://instagram.com/creativetimofficial>
