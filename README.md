@@ -114,7 +114,7 @@ At present, we officially aim to support the last two versions of the following 
 ## Resources
 - Demo: <https://demos.creative-tim.com/material-dashboard/pages/dashboard.html>
 - Download Page: <https://www.creative-tim.com/product/material-dashboard>
-- Documentation: <https://demos.creative-tim.com/material-dashboard/docs/2.1/getting-started/introduction.html>
+- Documentation: <https://www.creative-tim.com/learning-lab/bootstrap/overview/material-dashboard>
 - License Agreement: <https://www.creative-tim.com/license>
 - PRO Version: <https://www.creative-tim.com/product/material-dashboard-pro>
 - Support: <https://www.creative-tim.com/contact-us>
