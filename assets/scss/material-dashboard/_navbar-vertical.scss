@@ -28,7 +28,7 @@
         border: none;
 
         .dropdown-menu {
-          margin-left: $dropdown-item-padding-x / 2;
+          margin-left: $dropdown-item-padding-x * 0.5;
         }
       }
       .avatar{
@@ -196,7 +196,7 @@
 //
 
 .sidenav {
-  z-index: 999;
+  z-index: 9999;
 
   .navbar-brand,
   .navbar-heading {
@@ -239,6 +239,25 @@
 
           i {
             color: $white !important;
+          }
+        }
+      }
+    }
+  }
+}
+body:not(.dark-version) {
+  .sidenav {
+    &.bg-white,
+    &.bg-transparent {
+      .collapse {
+        .nav-item {
+          .nav-link {
+            &.active.text-dark {
+              i,
+              .nav-link-text {
+                color: $dark !important;
+              }
+            }
           }
         }
       }

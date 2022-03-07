@@ -308,7 +308,6 @@ hr.horizontal {
 @include media-breakpoint-up(lg) {
   .virtual-reality {
     .sidenav {
-      margin-top: $spacer * 2;
       animation-name: $animation-name;
       animation-fill-mode: $animation-mode;
       animation-duration: $animation-duration;

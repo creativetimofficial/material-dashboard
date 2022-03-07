@@ -32,7 +32,7 @@
 
 
   &.avatar-raised {
-    margin-top: -($avatar-height / 2);
+    margin-top: -$avatar-height * 0.5;
   }
 
   &.avatar-scale-up:hover {
@@ -56,7 +56,7 @@
 	height: $avatar-xxl-height !important;
 
   &.avatar-raised {
-    margin-top: -($avatar-xxl-height / 2);
+    margin-top: -$avatar-xxl-height * 0.5;
   }
 }
 
@@ -65,7 +65,7 @@
 	height: $avatar-xl-height !important;
 
   &.avatar-raised {
-    margin-top: -($avatar-xl-height / 2);
+    margin-top: -$avatar-xl-height * 0.5;
   }
 }
 
@@ -75,7 +75,7 @@
 	font-size: $font-size-sm;
 
   &.avatar-raised {
-    margin-top: -($avatar-lg-height / 2);
+    margin-top: -$avatar-lg-height * 0.5;
   }
 }
 
@@ -85,7 +85,7 @@
 	font-size: $font-size-sm;
 
   &.avatar-raised {
-    margin-top: -($avatar-sm-height / 2);
+    margin-top: -$avatar-sm-height * 0.5;
   }
 }
 
@@ -95,7 +95,7 @@
 	font-size: $font-size-xs;
 
   &.avatar-raised {
-    margin-top: -($avatar-xs-height / 2);
+    margin-top: -$avatar-xs-height * 0.5;
   }
 }
 

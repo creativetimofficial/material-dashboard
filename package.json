@@ -1,6 +1,6 @@
 {
   "name": "material-dashboard",
-  "version": "1.0.0",
+  "version": "3.0.1",
   "description": "Freebie Dashboard for Bootstrap 5",
   "main": "pages/dashboard.html",
   "directories": {
@@ -41,9 +41,10 @@
     "gulp-autoprefixer": "^7.0.1",
     "gulp-clean": "^0.4.0",
     "gulp-install": "^1.1.0",
-    "gulp-sass": "^4.1.0",
+    "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^2.6.5",
-    "gulp-open": "^3.0.1"
+    "gulp-open": "^3.0.1",
+    "sass": "^1.49.9"
   },
   "homepage": "http://creative-tim.com/product/material-dashboard"
 }

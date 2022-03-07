@@ -12,7 +12,7 @@
 
 
 @each $prop, $value in $theme-colors {
-  &.bg-gradient-faded-#{$prop}-vertical{
+  .bg-gradient-faded-#{$prop}-vertical{
     background-image: radial-gradient(200px circle at 50% 70%, rgba($value, .3) 0, $value 100%);
   }
 }
