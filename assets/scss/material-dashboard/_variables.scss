@@ -273,8 +273,8 @@ $gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
 $spacer: 1rem !default;
 $spacers: (
   0: 0,
-  1: $spacer / 4,
-  2: $spacer / 2,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
   3: $spacer,
   4: $spacer * 1.5,
   5: $spacer * 3,
@@ -539,7 +539,7 @@ $text-sm-font-size:           .875rem !default;
 $text-xs-font-size:           .75rem !default;
 $p-font-size:                 1rem !default;
 
-$headings-margin-bottom:      $spacer / 2 !default;
+$headings-margin-bottom:      $spacer * 0.5 !default;
 $headings-font-family:        null !default;
 $headings-font-style:         null !default;
 $headings-font-weight:        400 !default;
@@ -1154,7 +1154,7 @@ $nav-pills-vertical-link-radius:    .875rem !default;
 
 // Navbar
 
-$navbar-padding-y:                  $spacer / 2 !default;
+$navbar-padding-y:                  $spacer * 0.5 !default;
 $navbar-padding-x:                  null !default;
 $navbar-box-shadow:                 0 2px 12px 0 rgba(0, 0, 0, .16) !default;
 
@@ -1165,7 +1165,7 @@ $navbar-brand-font-size:            $font-size-lg !default;
 // Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
 $nav-link-height:                   $font-size-base * $line-height-base + $nav-link-padding-y * 2 !default;
 $navbar-brand-height:               $navbar-brand-font-size * $line-height-base !default;
-$navbar-brand-padding-y:            ($nav-link-height - $navbar-brand-height) / 2 !default;
+$navbar-brand-padding-y:            ($nav-link-height - $navbar-brand-height) * 0.5 !default;
 $navbar-brand-margin-right:         1rem !default;
 
 $navbar-toggler-padding-y:          .25rem !default;
@@ -1222,7 +1222,7 @@ $dropdown-border-width:             0 !default;
 $dropdown-inner-border-radius:      subtract($dropdown-border-radius, $dropdown-border-width) !default;
 $dropdown-transition-time:          .3s ease !default;
 $dropdown-divider-bg:               $dropdown-border-color !default;
-$dropdown-divider-margin-y:         $spacer / 2 !default;
+$dropdown-divider-margin-y:         $spacer * 0.5 !default;
 $dropdown-box-shadow:               $box-shadow-lg !default;
 
 $dropdown-link-color:               $font-color !default;
@@ -1293,12 +1293,12 @@ $pagination-transition:              color .15s ease-in-out, background-color .1
 
 $card-spacer-y:                     $spacer !default;
 $card-spacer-x:                     $spacer !default;
-$card-title-spacer-y:               $spacer / 2 !default;
+$card-title-spacer-y:               $spacer * 0.5 !default;
 $card-border-width:                 0 !default;
 $card-border-radius:                $border-radius-xl !default;
 $card-border-color:                 rgba($black, .125) !default;
 $card-inner-border-radius:          subtract($card-border-radius, $card-border-width) !default;
-$card-cap-padding-y:                $card-spacer-y / 2 !default;
+$card-cap-padding-y:                $card-spacer-y * 0.5 !default;
 $card-cap-padding-x:                $card-spacer-x !default;
 $card-cap-bg:                       $white !default;
 $card-cap-color:                    null !default;
@@ -1308,7 +1308,7 @@ $card-bg:                           $white !default;
 
 $card-img-overlay-padding:          $spacer !default;
 
-$card-group-margin:                 $grid-gutter-width / 2 !default;
+$card-group-margin:                 $grid-gutter-width * 0.5 !default;
 
 
 // Accordion
@@ -1352,8 +1352,8 @@ $tooltip-color:                     $white !default;
 $tooltip-bg:                        $black !default;
 $tooltip-border-radius:             $border-radius-md !default;
 $tooltip-opacity:                   .9 !default;
-$tooltip-padding-y:                 $spacer / 4 !default;
-$tooltip-padding-x:                 $spacer / 2 !default;
+$tooltip-padding-y:                 $spacer * 0.25 !default;
+$tooltip-padding-x:                 $spacer * 0.5 !default;
 $tooltip-margin:                    0 !default;
 
 $tooltip-arrow-width:               .8rem !default;
@@ -1510,7 +1510,7 @@ $list-group-border-color:           rgba($black, .125) !default;
 $list-group-border-width:           $border-width !default;
 $list-group-border-radius:          $border-radius-md !default;
 
-$list-group-item-padding-y:         $spacer / 2 !default;
+$list-group-item-padding-y:         $spacer * 0.5 !default;
 $list-group-item-padding-x:         $spacer !default;
 $list-group-item-bg-level:          -9 !default;
 $list-group-item-color-level:       6 !default;
@@ -1549,7 +1549,7 @@ $figure-caption-color:              $gray-600 !default;
 // Breadcrumbs
 
 $breadcrumb-font-size:              null !default;
-$breadcrumb-padding-y:              $spacer / 2 !default;
+$breadcrumb-padding-y:              $spacer * 0.5 !default;
 $breadcrumb-padding-x:              $spacer !default;
 $breadcrumb-item-padding-x:         .5rem !default;
 $breadcrumb-margin-bottom:          1rem !default;

@@ -134,8 +134,8 @@
   .navbar {
     &.navbar-transparent {
       .navbar-collapse {
-        padding-top: $spacer / 2;
-        padding-bottom: $spacer / 2;
+        padding-top: $spacer * 0.5;
+        padding-bottom: $spacer * 0.5;
         box-shadow: $box-shadow-lg;
       }
 

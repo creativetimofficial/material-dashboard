@@ -69,7 +69,7 @@ Docs & License: https://fullcalendar.io/
 
 .fc .fc-button{
   font-size: $font-size-sm;
-  padding-top: $spacer/4;
+  padding-top: $spacer * 0.25;
   box-shadow: $btn-box-shadow;
   transition: $btn-transition;
   .fc-icon{
