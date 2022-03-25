@@ -1,5 +1,9 @@
 # Change Log
 
+## [3.0.2] 2022-03-25
+### Updates
+- update SCSS folder
+
 ## [3.0.1] 2022-03-07
 ### Update and Improvements
 - fix running 'npm install' issue
