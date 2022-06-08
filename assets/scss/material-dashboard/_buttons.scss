@@ -6,6 +6,7 @@
   background-position-x: $btn-background-position-x;
   position: relative;
   overflow: hidden;
+  -webkit-appearance: none;
 
   &:not([class*="btn-outline-"]) {
     border: 0;
