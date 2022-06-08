@@ -1,5 +1,16 @@
 # Change Log
 
+## [3.0.3] 2022-06-08
+### Update and Improvements
+- update Bootstrap to v5.2.0-beta1
+- fix modal close button on docs
+- update color of `.form-control` on Dark Mode
+- update typo on card stats
+- fix Safari browser button styling issue
+- add sticky navbar option on Profile page
+- add link to Sign In page in navbar
+- update dropdown item color on hover - Dark Mode
+
 ## [3.0.2] 2022-03-25
 ### Updates
 - update SCSS folder

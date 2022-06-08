@@ -74,6 +74,11 @@
   }
 }
 
+hr {
+  border-top: none;
+  height: 1px;
+}
+
 // Vertical Line
 hr.vertical {
   position: absolute;

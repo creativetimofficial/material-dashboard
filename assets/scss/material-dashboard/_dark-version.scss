@@ -270,6 +270,10 @@
   .ql-toolbar.ql-snow .ql-picker-label{
     color: $light;
   }
+
+  .form-control {
+    color: $dark-version-body-color !important;
+  }
 }
 
 body.dark-version {

@@ -1,5 +1,6 @@
 @import "./bootstrap/functions";
 @import "./bootstrap/variables";
+@import "./bootstrap/maps";
 @import "./bootstrap/utilities";
 
 $utilities: (
@@ -483,7 +484,7 @@ $utilities: (
   "font-family": (
     property: font-family,
     class: font,
-    values: (monospace: var(--#{$variable-prefix}font-monospace))
+    values: (monospace: var(--#{$prefix}font-monospace))
   ),
   "font-size": (
     rfs: true,
@@ -595,7 +596,7 @@ $utilities: (
   "gradient": (
     property: background-image,
     class: bg,
-    values: (gradient: var(--#{$variable-prefix}gradient))
+    values: (gradient: var(--#{$prefix}gradient))
   ),
   // scss-docs-start utils-interaction
   "user-select": (
