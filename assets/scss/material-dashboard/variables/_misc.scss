@@ -48,8 +48,8 @@ $hr-bg-color:                         transparent !default;
 $hr-width:                            1px !default;
 $hr-margin:                           .75rem 0 !default;
 $hr-horizontal-bg-image-gray-light:   linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, .1), rgba(0, 0, 0, 0)) !default;
-$hr-bg-color-light:                   #ffffff94 !default;
-$hr-bg-color-dark:                    #7b809a33 !default;
+$hr-bg-color-light:                   linear-gradient(90deg,hsla(0,0%,100%,0),#fff,hsla(0,0%,100%,0)) !default;
+$hr-bg-color-dark:                    linear-gradient(90deg,transparent,rgba(0,0,0,.4),transparent) !default;
 
 // border right - pseudo
 

@@ -1,5 +1,10 @@
 # Change Log
 
+## [3.0.4] 2022-06-15
+### BugFixing
+- fix inputs on RTL
+- update <html> tag border
+
 ## [3.0.3] 2022-06-08
 ### Update and Improvements
 - update Bootstrap to v5.2.0-beta1
