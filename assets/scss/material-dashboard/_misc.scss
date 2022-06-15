@@ -1,5 +1,9 @@
-// Blur effect
+// update <html> tag border
+html {
+  border: none !important;
+}
 
+// Blur effect
 .blur {
   box-shadow: $blur-box-shadow;
   -webkit-backdrop-filter: $blur-backdrop-filter;
@@ -89,11 +93,11 @@ hr.vertical {
   width: 1px;
 
   &.light {
-    background-color: $hr-bg-color-light;
+    background-image: $hr-bg-color-light;
   }
 
   &.dark {
-    background-color: $hr-bg-color-dark;
+    background-image: $hr-bg-color-dark;
   }
 
   &.gray-light {
@@ -106,10 +110,10 @@ hr.horizontal {
   background-color: $hr-bg-color;
 
   &.light {
-    background-color: $hr-bg-color-light;
+    background-image: $hr-bg-color-light;
   }
   &.dark {
-    background-color: $hr-bg-color-dark;
+    background-image: $hr-bg-color-dark;
   }
 
   &.gray-light {

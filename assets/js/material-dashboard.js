@@ -183,6 +183,7 @@ function sidebarType(a) {
       textWhites[i].classList.remove('text-white');
       textWhites[i].classList.add('text-dark');
     }
+
   } else {
     var textDarks = document.querySelectorAll('.sidenav .text-dark');
     for (let i = 0; i < textDarks.length; i++) {

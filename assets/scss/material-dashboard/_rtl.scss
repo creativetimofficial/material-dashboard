@@ -84,6 +84,26 @@
   }
 
   .input-group {
+    &.input-group-outline {
+      .form-label:before {
+        margin-left: 4px;
+        margin-right: 0;
+        border-radius: 0 4px;
+      }
+      .form-label:after {
+        margin-left: 0;
+        margin-right: 4px;
+        border-radius: 5px 0;
+      }
+
+      &.is-valid,
+      &.is-invalid {
+        .form-control {
+          background-position: left 0.75rem center !important;
+        }
+      }
+    }
+
     .input-group-text {
       border-left: 0;
       border-top-left-radius: 0;
