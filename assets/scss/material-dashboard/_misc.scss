@@ -371,3 +371,34 @@ hr.horizontal {
   width: $border-right-after-width;
   border-right: 1px solid $border-right-after-border-color;
 }
+
+// sidebar caret RTL
+.rotate-caret {
+  .collapse {
+    .nav-link:after {
+      margin-right: auto;
+      margin-left: 0;
+    }
+  }
+}
+
+@media (min-width: 1200px){
+  .g-sidenav-hidden.rtl .main-content {
+    margin-right: 7rem!important; 
+  }
+}
+
+// perfectScrollbar on RTL page
+.rtl {
+  .ps__rail-y {
+    right: auto !important;
+    left: 0;
+  }
+
+  .start-0 {
+    right: 0 !important;
+  }
+  .end-0 {
+    left: 0 !important;
+  }
+}

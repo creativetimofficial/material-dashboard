@@ -4,14 +4,14 @@
   &:not(.has-validation) {
     > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu),
     > .dropdown-toggle:nth-last-child(n + 3) {
-      @include border-end-radius(inherit);
+      @include border-end-radius($border-radius-md);
     }
   }
 
   &.has-validation {
     > :nth-last-child(n + 3):not(.dropdown-toggle):not(.dropdown-menu),
     > .dropdown-toggle:nth-last-child(n + 4) {
-      @include border-end-radius(inherit);
+      @include border-end-radius($border-radius-md);
     }
   }
 

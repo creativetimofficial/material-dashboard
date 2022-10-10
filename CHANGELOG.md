@@ -1,5 +1,13 @@
 # Change Log
 
+## [3.0.5] 2022-10-10
+### Updates & Improvements
+- update Bootstrap to v5.2.2
+- update Popper to v2.11.6
+- update `start-0` and `end-0` classes on RTL
+- fix perfectScrollbar issue on RTL
+- fix the NavTabs second active tab issue
+
 ## [3.0.4] 2022-06-15
 ### BugFixing
 - fix inputs on RTL
