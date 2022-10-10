@@ -1,6 +1,6 @@
 {
   "name": "material-dashboard",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "description": "Freebie Dashboard for Bootstrap 5",
   "main": "pages/dashboard.html",
   "directories": {

@@ -49,3 +49,10 @@
     -ms-transform: rotateY(180deg);
     transform: rotateY( 180deg );
 }
+
+@mixin border-end-radius($radius: $border-radius) {
+  @if $enable-rounded {
+    border-top-right-radius: valid-radius($radius) !important;
+    border-bottom-right-radius: valid-radius($radius) !important;
+  }
+}
