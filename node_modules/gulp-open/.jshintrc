@@ -1,0 +1,19 @@
+{
+  "camelcase": true,
+  "curly": true,
+  "eqeqeq": true,
+  "freeze": true,
+  "indent": 2,
+  "newcap": false,
+  "quotmark": "single",
+  "maxdepth": 5,
+  "maxstatements": 50,
+  "maxlen": 100,
+  "eqnull": true,
+  "funcscope": true,
+  "strict": true,
+  "undef": true,
+  "unused": true,
+  "node": true,
+  "mocha": true
+}

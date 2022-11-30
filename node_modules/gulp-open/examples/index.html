@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>gulp-open example file</title>
+</head>
+<body>
+
+<h1>gulp-open example</h1>
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #66d9ef">var</span> <span style="color: #a6e22e">gulp</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">require</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;gulp&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #66d9ef">var</span> <span style="color: #a6e22e">open</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">require</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;../&quot;</span><span style="color: #f8f8f2">);</span>
+
+<span style="color: #a6e22e">gulp</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">task</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;simple&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #66d9ef">function</span><span style="color: #f8f8f2">(){</span>
+  <span style="color: #a6e22e">gulp</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">src</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;./index.html&quot;</span><span style="color: #f8f8f2">)</span>
+  <span style="color: #f8f8f2">.</span><span style="color: #a6e22e">pipe</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">open</span><span style="color: #f8f8f2">());</span>
+<span style="color: #f8f8f2">});</span>
+
+<span style="color: #a6e22e">gulp</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">task</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;template&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #66d9ef">function</span><span style="color: #f8f8f2">(){</span>
+  <span style="color: #a6e22e">gulp</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">src</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;./second.html&quot;</span><span style="color: #f8f8f2">)</span>
+  <span style="color: #f8f8f2">.</span><span style="color: #a6e22e">pipe</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">open</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;&lt;%file.path%&gt;&quot;</span><span style="color: #f8f8f2">));</span>
+<span style="color: #f8f8f2">});</span>
+
+<span style="color: #a6e22e">gulp</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">task</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;open&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #66d9ef">function</span><span style="color: #f8f8f2">(){</span>
+  <span style="color: #66d9ef">var</span> <span style="color: #a6e22e">options</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">{</span>
+    <span style="color: #a6e22e">app</span><span style="color: #f92672">:</span> <span style="color: #e6db74">&quot;google-chrome&quot;</span>
+  <span style="color: #f8f8f2">};</span>
+  <span style="color: #a6e22e">gulp</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">src</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;./*.html&quot;</span><span style="color: #f8f8f2">)</span>
+  <span style="color: #f8f8f2">.</span><span style="color: #a6e22e">pipe</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">open</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;file://&lt;%= file.path %&gt;&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">options</span><span style="color: #f8f8f2">));</span>
+<span style="color: #f8f8f2">});</span>
+
+
+
+<span style="color: #a6e22e">gulp</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">task</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;default&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #66d9ef">function</span><span style="color: #f8f8f2">(){</span>
+  <span style="color: #a6e22e">gulp</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">run</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;simple&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;template&quot;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&quot;open&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">});</span>
+</pre></div>
+
+
+
+
+
+
+</body>
+</html>
