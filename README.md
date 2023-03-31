@@ -12,11 +12,11 @@ This product came as a result of users asking for a material dashboard after we 
 
 Material Dashboard comes with 5 color filter choices for both the sidebar and the card headers (blue, green, orange, red and purple) and an option to have a background image on the sidebar.
 
-[Nepcha Analytics](https://nepcha.com?ref=readme-md2) for the analytics tool. Nepcha is already integrated with Material Dashboard 2. You can use it to gain insights into your sources of traffic.
-
 Special thanks go to:
 - [Robert McIntosh](https://github.com/mouse0270/bootstrap-notify) for the notification system.
 - [Chartist](https://gionkunz.github.io/chartist-js/) for the wonderful charts.
+- [Nepcha Analytics](https://nepcha.com?ref=readme-md2) for the analytics tool. Nepcha is already integrated with Material Dashboard 2. You can use it to gain insights into your sources of traffic.
+
 We are very excited to share this dashboard with you and we look forward to hearing your feedback!
 
 
