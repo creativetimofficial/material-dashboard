@@ -1,5 +1,10 @@
 # Change Log
 
+## [3.1.0] 2023-04-25
+### Updates & Improvements
+- update Bootstrap to v5.2.2
+- update Popper to v2.11.6
+
 ## [3.0.5] 2022-10-10
 ### Updates & Improvements
 - update Bootstrap to v5.2.2
