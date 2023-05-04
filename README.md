@@ -16,6 +16,7 @@ Special thanks go to:
 - [Robert McIntosh](https://github.com/mouse0270/bootstrap-notify) for the notification system.
 - [Chartist](https://gionkunz.github.io/chartist-js/) for the wonderful charts.
 We are very excited to share this dashboard with you and we look forward to hearing your feedback!
+- [Nepcha Analytics](https://nepcha.com?ref=readme) for the analytics tool. Nepcha is already integrated with Material Dashboard. You can use it to gain insights into your sources of traffic.
 
 
 ## Table of Contents
@@ -127,6 +128,7 @@ At present, we officially aim to support the last two versions of the following 
 - Support: <https://www.creative-tim.com/contact-us>
 - Issues: [Github Issues Page](https://github.com/creativetimofficial/material-dashboard/issues)
 - [Material Kit](https://www.creative-tim.com/product/material-kit?ref=github-md-free) - For Front End Development
+- [Nepcha Analytics](https://nepcha.com?ref=readme) - Analytics tool for your website
 
 ## Reporting Issues
 
@@ -149,7 +151,6 @@ If you have questions or need help integrating the product please [contact us](h
 ## Licensing
 
 - Copyright 2023 Creative Tim (https://www.creative-tim.com/)
-
 - Licensed under MIT (https://github.com/creativetimofficial/material-dashboard/blob/master/LICENSE.md)
 
 
@@ -167,7 +168,11 @@ If you have questions or need help integrating the product please [contact us](h
 ##### Social Media
 
 Twitter: <https://twitter.com/CreativeTim>
+
 Facebook: <https://www.facebook.com/CreativeTim>
+
 Dribbble: <https://dribbble.com/creativetim>
+
 TikTok: <https://tiktok.com/@creative.tim>
+
 Instagram: <https://instagram.com/creativetimofficial>
