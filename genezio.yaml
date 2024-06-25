@@ -13,7 +13,7 @@ frontend:
   publish: ./
   scripts:
     # List of scripts that build your frontend before deployment. It should populate the specified `publish` directory.
-    build: npm i
+    build: npm install
     # List of scripts to run before deploying the frontend.
     deploy:
       - npm install
