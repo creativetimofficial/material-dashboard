@@ -2,6 +2,7 @@
 
 ![version](https://img.shields.io/badge/version-3.1.0-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/material-dashboard.svg)](https://github.com/creativetimofficial/material-dashboard/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/material-dashboard.svg)](https://github.com/creativetimofficial/material-dashboard/issues?q=is%3Aissue+is%3Aclosed)
 
+
 ![Image](https://s3.amazonaws.com/creativetim_bucket/products/50/original/material-dashboard.jpg?1634648873)
 
 [Material Dashboard](https://www.creative-tim.com/product/material-dashboard) is a free Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design. We are very excited to introduce our take on the material concepts through an easy to use and beautiful set of components. Material Dashboard was built over the popular Bootstrap framework and it comes with a couple of third-party plugins redesigned to fit in with the rest of the elements.
@@ -26,6 +27,7 @@ We are very excited to share this dashboard with you and we look forward to hear
   - [Versions](#versions)
   - [Demo](#demo)
   - [Quick start](#quick-start)
+  - [Deploy](#deploy)
   - [Documentation](#documentation)
   - [File Structure](#file-structure)
   - [Browser Support](#browser-support)
@@ -78,6 +80,11 @@ We are very excited to share this dashboard with you and we look forward to hear
 - Clone the repo: `git clone https://github.com/creativetimofficial/material-dashboard.git`.
 - [Download from Github](https://github.com/creativetimofficial/material-dashboard/archive/master.zip).
 - [Download from Creative Tim](https://www.creative-tim.com/product/material-dashboard).
+
+## Deploy
+:rocket: You can deploy your own version of the template to Genezio with one click:
+
+[![Deploy to Genezio](https://raw.githubusercontent.com/Genez-io/graphics/main/svg/deploy-button.svg)](https://app.genez.io/start/deploy?repository=https://github.com/creativetimofficial/material-dashboard&utm_source=github&utm_medium=referral&utm_campaign=github-creativetim&utm_term=deploy-project&utm_content=button-head)
 
 
 ## Documentation
