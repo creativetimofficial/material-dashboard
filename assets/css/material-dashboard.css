@@ -22483,6 +22483,7 @@ fieldset:disabled .btn {
 .card.card-plain {
   background-color: transparent;
   box-shadow: none;
+  border: none;
 }
 
 .card .card-footer {
@@ -22725,8 +22726,8 @@ fieldset:disabled .btn {
   top: 0;
   content: "";
   border-radius: 0.5rem;
-  background-image: linear-gradient(195deg, #EC407A, #D81B60);
-  opacity: 0.85;
+  background-image: linear-gradient(195deg, #42424a, #191919);
+  opacity: 0.5;
 }
 
 .rotating-card-container .card .front {
@@ -27427,6 +27428,10 @@ p {
 
 .font-weight-bolder {
   font-weight: 700 !important;
+}
+
+.font-weight-black {
+  font-weight: 800 !important;
 }
 
 .font-italic {
