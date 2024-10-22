@@ -3,23 +3,23 @@
 // Variables should follow the `$component-state-property-size` formula for
 // consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
 
-$soft-background-color: #ffffff !default; // Testing
-$font-color:            #7b809a !default;
-$h-color:               #344767 !default;
 
-// Color system
+// Color system 
+
+// gray neutral
 
 $white:    #fff !default;
-$gray-100: #f8f9fa !default;
-$gray-200: #f0f2f5 !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
-$gray-600: #6c757d !default;
-$gray-700: #495057 !default;
-$gray-800: #343a40 !default;
-$gray-900: #212529 !default;
-$black:    #000 !default;
+$gray-50:  #fafafa !default;
+$gray-100: #f5f5f5 !default;
+$gray-200: #e5e5e5 !default;
+$gray-300: #d4d4d4 !default;
+$gray-400: #a3a3a3 !default;
+$gray-500: #737373 !default;
+$gray-600: #525252 !default;
+$gray-700: #404040 !default;
+$gray-800: #262626 !default;
+$gray-900: #171717 !default;
+$black:    #0a0a0a !default;
 
 // fusv-enable
 
@@ -34,6 +34,11 @@ $yellow:  #FBD38D !default;
 $green:   #81E6D9 !default;
 $teal:    #20c997 !default;
 $cyan:    #0dcaf0 !default;
+
+
+$soft-background-color: #ffffff !default; // Testing
+$font-color:            $gray-500 !default;
+$h-color:               $gray-800 !default;
 
 // scss-docs-start colors-map
 $colors: (
@@ -54,13 +59,13 @@ $colors: (
 // scss-docs-end colors-map
 
 $primary:       #e91e63 !default;
-$secondary:     #7b809a !default;
+$secondary:     $gray-500 !default;
 $info:          #1A73E8 !default;
 $success:       #4CAF50 !default;
 $warning:       #fb8c00 !default;
 $danger:        #F44335 !default;
 $light:         $gray-200 !default;
-$dark:          $h-color !default;
+$dark:          $gray-800 !default;
 $dark-blue:     #1A237E !default;
 
 
@@ -466,9 +471,9 @@ $aspect-ratios: (
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      'Roboto', Helvetica, Arial, sans-serif !default;
+$font-family-sans-serif:      Inter, Helvetica, Arial, sans-serif !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
-$font-family-roboto-slab:     'Roboto Slab', sans-serif !default;
+$font-family-roboto-slab:     Inter, sans-serif !default;
 
 // stylelint-enable value-keyword-case
 $font-family-base:            var(--bs-font-sans-serif) !default;
@@ -495,6 +500,7 @@ $font-size-9xl:               $font-size-base * 5 !default;
 $font-weight-lighter:         lighter !default;
 $font-weight-light:           300 !default;
 $font-weight-normal:          400 !default;
+$font-weight-semibold:        500 !default;
 $font-weight-bold:            600 !default;
 $font-weight-bolder:          700 !default;
 
@@ -546,7 +552,7 @@ $headings-font-family:        null !default;
 $headings-font-style:         null !default;
 $headings-font-weight:        400 !default;
 $headings-line-height:        1.2 !default;
-$headings-color:              #344767 !default;
+$headings-color:              $gray-800 !default;
 
 // scss-docs-start display-headings
 $display-font-sizes: (
@@ -642,7 +648,7 @@ $table-cell-padding-x-sm:     .25rem !default;
 
 $table-cell-vertical-align:   top !default;
 
-$table-color:                 $body-color !default;
+$table-color:                 $gray-500 !default;
 $table-bg:                    transparent !default;
 
 $table-th-font-weight:        null !default;
@@ -716,11 +722,11 @@ $input-btn-border-width:      $border-width !default;
 //
 // For each of Bootstrap's buttons, define text, background, and border color.
 
-$btn-padding-y:               .625rem !default;
-$btn-padding-x:               1.5rem !default;
+$btn-padding-y:               .5rem !default;
+$btn-padding-x:               1rem !default;
 $btn-font-family:             $input-btn-font-family !default;
-$btn-font-size:               $text-xs-font-size !default;
-$btn-line-height:             1.667 !default;
+$btn-font-size:               $text-sm-font-size !default;
+$btn-line-height:             1.25rem !default;
 $btn-white-space:             null !default; // Set to `nowrap` to prevent text wrapping
 $btn-letter-spacing:          0 !default; // Set to `nowrap` to prevent text wrapping
 
@@ -735,8 +741,8 @@ $btn-font-size-lg:            .875rem !default;
 
 $btn-border-width:            $input-btn-border-width !default;
 
-$btn-font-weight:             $font-weight-bolder !default;
-$btn-box-shadow:              0 4px 7px -1px rgba(0,0,0,.11), 0 2px 4px -1px rgba(0,0,0,.07) !default;
+$btn-font-weight:             500 !default;
+$btn-box-shadow:              0 1px 2px 0 rgba(0,0,0,.05) !default;
 $btn-box-shadow-values:       0 5px 8px 0 !default;
 $btn-box-shadow-hover-values: 0 8px 10px 0 !default;
 $btn-hover-box-shadow:        0 3px 5px -1px rgba(0,0,0,.09), 0 2px 3px -1px rgba(0,0,0,.07) !default;
@@ -763,7 +769,7 @@ $shadow-focus:                0 0 8px rgba($black, .18),
                               0 8px 16px rgba($black, .36);
 
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius:           .5rem !default;
+$btn-border-radius:           .375rem !default;
 $btn-border-radius-lg:        .5rem !default;
 $btn-border-radius-sm:        .5rem !default;
 $btn-border-rounded:          1.875rem !default;
@@ -1297,8 +1303,8 @@ $card-spacer-y:                     $spacer !default;
 $card-spacer-x:                     $spacer !default;
 $card-title-spacer-y:               $spacer * 0.5 !default;
 $card-border-width:                 0 !default;
-$card-border-radius:                $border-radius-xl !default;
-$card-border-color:                 rgba($black, .125) !default;
+$card-border-radius:                $border-radius-lg !default;
+$card-border-color:                 $gray-200 !default;
 $card-inner-border-radius:          subtract($card-border-radius, $card-border-width) !default;
 $card-cap-padding-y:                $card-spacer-y * 0.5 !default;
 $card-cap-padding-x:                $card-spacer-x !default;

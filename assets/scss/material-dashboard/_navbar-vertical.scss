@@ -16,11 +16,11 @@
       padding-right: $navbar-padding-x;
       font-weight: $navbar-nav-link-font-weight;
       color: $white;
+      font-size: $font-size-xs;
       // Icon
       > i {
         min-width: $navbar-icon-min-width;
-        font-size: $font-size-2xl;
-        line-height: ($font-size-base * $line-height-base);
+        font-size: $font-size-lg;
         text-align: center;
       }
       // Dropdown
@@ -39,7 +39,7 @@
 
     .nav-sm {
       .nav-link {
-        font-size: 0.8125rem;
+        font-size: $navbar-nav-link-font-size;
       }
     }
   }
@@ -212,11 +212,11 @@
     }
 
     &.fixed-start + .main-content {
-      margin-left: $navbar-vertical-open-width + 1.5;
+      margin-left: $navbar-vertical-open-width + 1;
     }
 
     &.fixed-end + .main-content {
-      margin-right: $navbar-vertical-open-width + 1.5;
+      margin-right: $navbar-vertical-open-width + 1;
     }
   }
 
@@ -228,46 +228,42 @@
     transition: all 0.1s ease;
   }
 
-  .navbar-brand {
-    padding: 1.5rem 2rem;
-  }
-  .collapse {
-    .nav-item {
-      .nav-link {
-        &.active {
-          color: $white !important;
+  // ! to be checked !
+  // .collapse {
+  // 
+  //   .nav-item {
+  //     .nav-link {
+  //       &.active {
+  //         color: $white !important;
 
-          i {
-            color: $white !important;
-          }
-        }
-      }
-    }
-  }
-}
-body:not(.dark-version) {
-  .sidenav {
-    &.bg-white,
-    &.bg-transparent {
-      .collapse {
-        .nav-item {
-          .nav-link {
-            &.active.text-dark {
-              i,
-              .nav-link-text {
-                color: $dark !important;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
+  //         i {
+  //           color: $white !important;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 
-.sidenav-header {
-  height: $sidenav-header-width;
 }
+// body:not(.dark-version) {
+//   .sidenav {
+//     &.bg-white,
+//     &.bg-transparent {
+//       .collapse {
+//         .nav-item {
+//           .nav-link {
+//             &.active.text-dark {
+//               i,
+//               .nav-link-text {
+//                 color: $dark !important;
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 
 .sidenav-footer {
   .card {
@@ -334,6 +330,7 @@ body:not(.dark-version) {
 .navbar-vertical {
   &.bg-white {
     box-shadow: $card-box-shadow;
+    border: 1px solid $gray-200;
 
     .navbar-nav {
       .nav-link {
@@ -356,7 +353,7 @@ body:not(.dark-version) {
   }
 
   .navbar-nav .nav-link.active {
-    font-weight: $font-weight-normal;
+    font-weight: $navbar-nav-link-font-weight;
     box-shadow: $card-box-shadow;
     border-radius: $border-radius-md;
     margin-top: 1.5px;
@@ -372,7 +369,7 @@ body:not(.dark-version) {
     & + .collapsing{
       .nav-item.active{
         .nav-link.active{
-          @include gradient-directional(nth($rose, 1) 0%, nth($rose, -1) 100%, $deg: 195deg);
+          @include gradient-directional(nth($dark, 1) 0%, nth($dark, -1) 100%, $deg: 195deg);
           span{
             color: $white;
           }
@@ -384,7 +381,8 @@ body:not(.dark-version) {
           & + .collapse{
             .nav-item{
               .nav-link.active{
-                @include gradient-directional(nth($rose, 1) 0%, nth($rose, -1) 100%, $deg: 195deg);
+                @include gradient-directional(nth($dark, 1) 0%, nth($dark, -1) 100%, $deg: 195deg);
+                color: $white !important;
               }
             }
           }
@@ -576,7 +574,7 @@ body:not(.dark-version) {
         }
         .nav-item {
           .nav-link {
-            .material-icons-round{
+            .material-symbols-rounded{
               margin-right: $navbar-icon-material-margin-left;
             }
           }
@@ -615,19 +613,10 @@ body:not(.dark-version) {
             padding: 10px;
           }
 
-          .material-icons-round{
-            margin-left: $navbar-icon-material-margin-left;
-          }
-
           .nav-link-text,
           .sidenav-normal {
             opacity: 0;
             width: 0;
-          }
-
-          .sidenav-mini-icon {
-            min-width: $navbar-icon-min-width;
-            margin-left: $navbar-icon-margin-left !important;
           }
 
           &[data-bs-toggle="collapse"]:after {

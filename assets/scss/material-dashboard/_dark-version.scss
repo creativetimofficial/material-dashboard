@@ -13,6 +13,7 @@
 
   .sidenav {
     background: $dark-version-sidenav-bg-color !important;
+    border: 1px solid $dark-version-border-color;
 
     &.bg-transparent {
       background: transparent !important;
@@ -109,7 +110,7 @@
           background-color: $dark-version-bg-color !important;
         }
         i,
-        .material-icons {
+        .material-symbols-rounded {
           color: $white;
         }
       }
@@ -131,6 +132,10 @@
       color: $white !important;
       opacity: .6;
     }
+  }
+
+  .card{
+    border: 1px solid rgba(255, 255, 255, 0.04);
   }
 
   .kanban-item {

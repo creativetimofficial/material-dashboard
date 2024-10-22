@@ -1,0 +1,29 @@
+//
+// Circle badge
+//
+
+
+// General styles
+
+.badge-circle {
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: $badge-circle-border-radius;
+    padding: 0 !important;
+    width: $badge-circle-width;
+    height: $badge-circle-height;
+    font-size: $badge-circle-font-size;
+    font-weight: $badge-circle-font-weight;
+
+    &.badge-md {
+        width: $badge-circle-md-width;
+        height: $badge-circle-md-height;
+    }
+
+    &.badge-lg {
+      width: $badge-circle-lg-width;
+      height: $badge-circle-lg-height;
+    }
+}

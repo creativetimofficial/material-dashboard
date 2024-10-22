@@ -1,0 +1,269 @@
+
+// Perspective effect
+.change-perspective {
+  transform: $transform-perspective;
+}
+
+.change-perspective-inverse {
+  transform: $transform-perspective-inverse;
+}
+// Device Wrapper
+.device-wrapper {
+  border-radius: $device-wrapper-radius;
+  box-shadow: $device-wrapper-box-shadow;
+}
+
+.z-index2 {
+  z-index: $z-index2;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+.line-height-0{
+  line-height: 0;
+}
+// Colored Shadow on Cards images
+.colored-shadow {
+  transform: scale(0.92);
+  top: 1.5%;
+  filter: blur(12px);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  z-index: -1;
+
+  &.rounded {
+    border-radius: 50% !important;
+  }
+
+  &.avatar-xs {
+    transform: scale($colored-shadow-scale-avatar);
+    width: $avatar-xs-width;
+    height: $avatar-xs-height;
+  }
+
+  &.avatar-sm {
+    transform: scale($colored-shadow-scale-avatar);
+    width: $avatar-sm-width;
+    height: $avatar-sm-height;
+  }
+
+  &.avatar-lg {
+    transform: scale($colored-shadow-scale-avatar);
+    width: $avatar-lg-width;
+    height: $avatar-lg-height;
+  }
+
+  &.avatar-xl {
+    transform: scale($colored-shadow-scale-avatar);
+    width: $avatar-xl-width;
+    height: $avatar-xl-height;
+  }
+
+  &.avatar-xxl {
+    transform: scale($colored-shadow-scale-avatar);
+    width: $avatar-xxl-width;
+    height: $avatar-xxl-height;
+  }
+}
+
+// Width in PX
+.width-32-px {
+  width: $width-32-px;
+}
+
+.width-48-px {
+  width: $width-48-px;
+}
+
+.width-64-px {
+  width: $width-64-px;
+}
+
+// Animated shapes
+.animated-blur {
+  filter: blur(40px);
+}
+
+.animated-blur-1 {
+  animation: animation-blur-one 8s infinite;
+}
+
+.animated-blur-2 {
+  animation: animation-blur-one 4s infinite;
+}
+
+.animated-blur-3 {
+  animation: animation-blur-two 6s infinite;
+}
+
+.animated-blur-4 {
+  animation: animation-blur-two 5s infinite;
+}
+@keyframes animation-blur-one {
+  0% {
+    transform: scale(.8);
+  }
+
+  25% {
+    transform: translateX(10%);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  75% {
+    transform: translateX(5%);
+  }
+
+  100% {
+    transform: scale(.8);
+  }
+}
+@keyframes animation-blur-two {
+  0% {
+    transform: scale(1.2);
+  }
+
+  50% {
+    transform: scale(.8);
+  }
+
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+// Text with border
+.text-border {
+  &:after,
+  &:before {
+    content: "";
+    display: $text-border-display;
+    width: $text-border-width;
+    height: $text-border-height;
+    position: $text-border-position;
+    vertical-align: $text-border-vertical-align;
+  }
+
+  &:after{
+    background: $text-border-bg-color-after;
+  }
+
+  &:before{
+    background: $text-border-bg-color-before;
+  }
+
+  &:before {
+    right: $text-border-before-right;
+    margin-left: $text-border-before-ml;
+  }
+
+  &:after {
+    left: $text-border-after-left;
+    margin-right: $text-border-after-mr;
+  }
+}
+
+a[data-scroll]{
+  border-radius: $border-radius-md;
+   &:hover{
+    background: $gray-200;
+    color: $h-color;
+  }
+}
+
+// Round Slider Styling
+round-slider {
+  max-width: $round-slider-m-width;
+  transition: $round-slider-transition;
+}
+
+round-slider.scaling:hover {
+  max-width: $round-slider-scale-m-width;
+}
+
+
+// Smart Home - Room Selectpicker
+.room-select {
+  .choices {
+    .choices__inner {
+      background: $white;
+      border-color: $white;
+    }
+  }
+}
+
+
+// Page Sections Breadcrumb
+@include media-breakpoint-down(lg) {
+  .page-headers-sections {
+    .container {
+      .row {
+        .col-lg-12.mx-auto > .mb-4.w-25 {
+          width: 50% !important;
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-down(sm) {
+  .page-headers-sections {
+    .container {
+      .row {
+        .col-lg-12.mx-auto > .mb-4.w-25 {
+          width: 100% !important;
+        }
+      }
+    }
+  }
+}
+// Coming Soon Page
+.transform-rotate {
+  transform: $coming-rotate-transform;
+}
+
+// validation
+
+.input-group {
+  small {
+    position: absolute;
+    bottom: -1.5rem;
+    left: 5px;
+    visibility: hidden;
+  }
+
+  &.is-valid {
+    input {
+      border-color: $success;
+    }
+    small {
+      color: $success;
+      visibility: visible;
+    }
+  }
+
+  &.is-invalid {
+    input {
+      border-color: $danger;    
+    }
+    small {
+      color: $danger;
+      visibility: visible;
+    }
+  }
+}

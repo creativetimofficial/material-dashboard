@@ -1,0 +1,17 @@
+.card {
+  &.card-blog {
+    .card-image {
+      box-shadow: $box-shadow;
+
+      .img {
+        width: 100%;
+      }
+    }
+
+    .card-title {
+      a {
+        color: $dark;
+      }
+    }
+  }
+}

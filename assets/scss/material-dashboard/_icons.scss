@@ -1,7 +1,5 @@
-.material-icons {
-  font-family: 'Material Icons Round';
-  font-weight: normal;
-  font-style: normal;
+.material-symbols-rounded {
+  
   font-size: 20px;  /* Preferred icon size */
   display: inline-block;
   line-height: 1;
@@ -10,6 +8,12 @@
   word-wrap: normal;
   white-space: nowrap;
   direction: ltr;
+
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
 
   /* Support for all WebKit browsers. */
   -webkit-font-smoothing: antialiased;
@@ -25,7 +29,7 @@
 
 .nav.nav-pills {
   .nav-link {
-    .material-icons {
+    .material-symbols-rounded {
       top: 3px;
     }
   }

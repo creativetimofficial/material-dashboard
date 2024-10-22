@@ -47,8 +47,9 @@
     &:not(.active) {
       background-color: transparent;
       background-image: none;
-      border: 1px solid $dark;
-      color: $dark;
+      border: 1px solid $gray-200;
+      color: $gray-800;
+      box-shadow: $box-shadow-xs;
     }
   }
 

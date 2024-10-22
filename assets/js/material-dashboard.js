@@ -1,17 +1,3 @@
-// =========================================================
-// Material Dashboard 2 - v3.1.0
-// =========================================================
-
-// Product Page: https://www.creative-tim.com/product/material-dashboard
-// Copyright 2023 Creative Tim (https://www.creative-tim.com)
-// Licensed under MIT (https://github.com/creativetimofficial/material-dashboard/blob/master/LICENSE.md)
-
-// Coded by www.creative-tim.com
-
-// =========================================================
-
-// The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
 "use strict";
 (function() {
   var isWindows = navigator.platform.indexOf('Win') > -1 ? true : false;
@@ -192,7 +178,7 @@ function sidebarType(a) {
 
   // Remove text-white/text-dark classes
   if (color == 'bg-transparent' || color == 'bg-white') {
-    var textWhites = document.querySelectorAll('.sidenav .text-white');
+    var textWhites = document.querySelectorAll('.sidenav .text-white:not(.nav-link-text):not(.active)');
     for (let i = 0; i < textWhites.length; i++) {
       textWhites[i].classList.remove('text-white');
       textWhites[i].classList.add('text-dark');
@@ -683,8 +669,8 @@ function darkMode(el) {
   const secondary = document.querySelectorAll('.text-secondary');
   const bg_gray_100 = document.querySelectorAll('.bg-gray-100');
   const bg_gray_600 = document.querySelectorAll('.bg-gray-600');
-  const btn_text_dark = document.querySelectorAll('.btn.btn-link.text-dark, .material-icons.text-dark');
-  const btn_text_white = document.querySelectorAll('.btn.btn-link.text-white, .material-icons.text-white');
+  const btn_text_dark = document.querySelectorAll('.btn.btn-link.text-dark, .material-symbols-rounded.text-dark');
+  const btn_text_white = document.querySelectorAll('.btn.btn-link.text-white, .material-symbols-rounded.text-white');
   const card_border = document.querySelectorAll('.card.border');
   const card_border_dark = document.querySelectorAll('.card.border.border-dark');
 
@@ -846,7 +832,9 @@ if (indicators) {
             resetCurrentActiveIndicator();
             const element = entry.target;
             const indicator = document.querySelector(`a[href='#${element.id}']`);
-            indicator.classList.add("active");
+            if (indicator) {
+              indicator.classList.add("active");
+            }
             return;
           }
         });

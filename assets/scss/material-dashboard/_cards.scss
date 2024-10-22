@@ -1,5 +1,6 @@
 .card {
   box-shadow: $card-box-shadow;
+  border: 1px solid $gray-200;
 
   &[data-animation="true"] {
     .card-header {

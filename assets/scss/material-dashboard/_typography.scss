@@ -127,7 +127,6 @@ p, .p {
 
 p {
   line-height: 1.625;
-  font-weight: $font-weight-light;
 }
 
 // stylelint-disable declaration-no-important
@@ -169,6 +168,10 @@ p {
 
 .font-weight-normal {
   font-weight: $font-weight-normal !important;
+}
+
+.font-weight-semibold {
+  font-weight: $font-weight-semibold !important;
 }
 
 .font-weight-bold {

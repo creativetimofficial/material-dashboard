@@ -1,7 +1,6 @@
 .btn {
   margin-bottom: $btn-margin-bottom;
   letter-spacing: $btn-letter-spacing;
-  text-transform: uppercase;
   background-size: $btn-background-size;
   background-position-x: $btn-background-position-x;
   position: relative;
@@ -78,7 +77,7 @@
     border-radius: $btn-border-rounded;
   }
 
-  .material-icons {
+  .material-symbols-rounded {
     vertical-align: middle;
     margin-top: $btn-material-icon-margin;
     margin-bottom: $btn-material-icon-margin;
