@@ -24696,7 +24696,7 @@ hr.horizontal.gray-light {
 .bullets ul {
   display: flex;
   flex-direction: column;
-  align-items: end;
+  align-items: flex-end;
   list-style-type: none;
   margin-right: -1rem;
 }
